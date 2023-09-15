@@ -1,0 +1,141 @@
+// === SITE TITLE === //
+
+// = SECTION TITLE = //
+.section-title {
+	//display: inline-block;
+	font-weight: 900;
+	letter-spacing: rem(2);
+	text-transform: uppercase;
+	//padding: 20px 0px 10px 0px;
+	@include adaptiveValue("padding-top", 20, 10, 991.98, 500, 1);
+	@include adaptiveValue("padding-botom", 10, 6, 991.98, 500, 1);
+}
+.section-title span {
+	letter-spacing: rem(1);
+	text-transform: capitalize;
+	margin: 0px 0px 0px 5px;
+	font-weight: 700;
+	color: $gray;
+	@include adaptiveValue("font-size", 18, 16, 1600, 992, 1);
+	@include adaptiveValue("line-height", 24, 22, 1600, 992, 1);
+	@media (max-width: rem(991.98)) {
+		@include adaptiveValue("font-size", 16, 14, 991.98, 768, 1);
+		@include adaptiveValue("line-height", 20, 18, 991.98, 768, 1);
+	}
+	@media (max-width: rem(767.98)) {
+		@include adaptiveValue("font-size", 14, 12, 767.98, 620, 1);
+		@include adaptiveValue("line-height", 18, 16, 767.98, 620, 1);
+	}
+	@media (max-width: rem(619.98)) {
+		@include adaptiveValue("font-size", 12, 10, 619.98, 360, 1);
+		@include adaptiveValue("line-height", 16, 12, 619.98, 360, 1);
+	}
+}
+
+// = PUBLICATION TITLE = //
+.publication-title {
+	font-weight: 900;
+	color: $white;
+	letter-spacing: rem(1.2);
+	text-transform: uppercase;
+}
+
+.title-none-450 {
+	@media (max-width: rem(449.98)) {
+		display: none;
+	}
+}
+
+// = TITLE-BLOCK = //
+.title-block {
+	//margin: 30px 0px 0px 0px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@media (max-width: rem(539.98)) {
+		//margin: 10px 0px 0px 0px;
+	}
+}
+
+// = SECTION TITLE - SIZE = //
+.section-title-h1 {
+	@include adaptiveValue("font-size", 46, 26, 991.98, 600, 1);
+	@include adaptiveValue("line-height", 50, 30, 991.98, 600, 1);
+}
+.section-title-h2 {
+	@include adaptiveValue("font-size", 40, 24, 991.98, 600, 1);
+	@include adaptiveValue("line-height", 50, 40, 991.98, 600, 1);
+}
+.section-title-h3 {
+	@include adaptiveValue("font-size", 30, 20, 992, 600, 1);
+	@include adaptiveValue("line-height", 36, 26, 992, 600, 1);
+}
+
+// = SECTION TITLE - LOGO = //
+.section-title-logo::before {
+	content: "";
+	background-image: url("@img/RUNA/LOGO/league-logo/superliga-logo.png");
+	background-size: cover;
+	height: rem(50);
+	width: rem(50);
+	margin-right: rem(12);
+	display: inline-block;
+	vertical-align: baseline;
+	@media (max-width: rem(449.98)) {
+		display: none;
+	}
+}
+
+// = SECTION TITLE - COLOR = //
+.section-title-green {
+	color: $color-base-1;
+}
+// .section-title-green::before {
+// 	content: "";
+// 	background-image: url("@img/RUNA/LOGO/axes-green.svg");
+// 	background-size: cover;
+// 	height: rem(40);
+// 	width: rem(48.5);
+// 	margin-right: rem(12);
+// 	display: inline-block;
+// 	vertical-align: baseline;
+// 	@media (max-width: rem(479.98)) {
+// 		display: none;
+// 	}
+// }
+.section-title-purple {
+	color: $color-base-2;
+}
+.section-title-white {
+	color: $white;
+}
+// .section-title-white::before {
+// 	content: "";
+// 	background-image: url("@img/RUNA/LOGO/axes-white.svg");
+// 	background-size: cover;
+// 	height: rem(40);
+// 	width: rem(48.5);
+// 	margin-right: rem(12);
+// 	display: inline-block;
+// 	vertical-align: baseline;
+// 	@media (max-width: rem(479.98)) {
+// 		display: none;
+// 	}
+// }
+
+.section-title-black {
+	color: $mainColor;
+}
+.section-title-gold {
+	color: $gold;
+}
+.section-title-red {
+	color: $mia_red;
+}
+
+// = SECTION TITLE - POSITION = //
+.section-title-center {
+	width: 100%;
+	text-align: center;
+}

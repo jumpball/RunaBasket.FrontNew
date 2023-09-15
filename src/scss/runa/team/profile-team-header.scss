@@ -1,0 +1,38 @@
+// === PROFILE TEAM HEADER == //
+.profile-team {
+	&__header {
+		//margin: 40px 0px 0px 0px;
+	}
+
+	// = HEADER CARDS = //
+	&__header-cards {
+		position: relative;
+	}
+	&__header-cards-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		gap: rem(20);
+		@media (max-width: rem(1459.98)) {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+		@media (max-width: rem(1169.98)) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		@media (max-width: rem(879.98)) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: rem(479.98)) {
+			gap: rem(10);
+		}
+	}
+
+	// = HEADER TABLE = //
+	&__header-table-box {
+	}
+
+	// = MENU BLOCK = //
+	&__menu-block {
+		margin: 0px 0px 0px 0px;
+	}
+}

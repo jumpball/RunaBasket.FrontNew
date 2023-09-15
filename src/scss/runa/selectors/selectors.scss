@@ -1,0 +1,317 @@
+// === SELECTOR (CONTENT) === // (AD)
+
+// === HIDE (CONTENT) === //
+.hide {
+	visibility: hidden;
+	opacity: 0;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	display: none;
+}
+
+// === PUBLICATION SELECTOR (CONTENT) === // (AD)
+.publication-selector {
+	// === MENU === //
+	&__menu {
+		z-index: 2;
+	}
+
+	// === BUTTON === //
+	&__btn {
+		margin: 20px 0px 20px 0px;
+		display: inline-flex;
+		width: 100%;
+		font-size: rem(15);
+		background-color: $white;
+		padding: rem(25) rem(35);
+		border-radius: rem(3);
+		min-width: 205px;
+		color: $color-base-1;
+		border: rem(1) solid $color-base-1;
+		text-decoration: none;
+		font-weight: 500;
+		justify-content: center;
+		text-align: center;
+		letter-spacing: 1px;
+		cursor: pointer;
+		text-transform: uppercase;
+		white-space: nowrap;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $color-base-2;
+				color: $white;
+				transition: all 0.5s ease 0s;
+			}
+		}
+	}
+
+	&__btn-active {
+		background-color: $color-base-1;
+		color: $white;
+	}
+
+	// === LIST === //
+	&__list {
+		width: 100%;
+		//column-count: 4;
+		//margin: auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 20px;
+		@media (max-width: 1299.98px) {
+			//column-count: 3;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		@media (max-width: 949.98px) {
+			//column-count: 2;
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: 639.98px) {
+			//column-count: 1;
+			grid-template-columns: 1fr;
+		}
+	}
+
+	// === ITEM === //
+	&__item {
+		float: left;
+		//display: block;
+		//margin-top: 20px;
+		page-break-inside: avoid;
+		break-inside: avoid;
+		position: relative;
+		transition: 0.14s linear;
+	}
+}
+
+// === ROSTER SELECTOR (CONTENT) === // (AD)
+.roster-selector {
+	// === MENU === //
+	&__menu {
+		margin: 32px 0px 20px 0px;
+		z-index: 2;
+	}
+
+	// === LIST === //
+	&__list {
+		z-index: 2;
+		overflow: hidden;
+		max-height: rem(500);
+		margin: 0px 0px 0px 0px;
+	}
+
+	// === ITEM === //
+	&__item {
+		z-index: 2;
+	}
+
+	// === DEMO === //
+	&__demo {
+		width: 100%;
+		padding: 200px 0px 0px 0px;
+		height: rem(480);
+		@include adaptiveValue("font-size", 40, 16, 1600, 450, 1);
+		font-weight: 900;
+		color: $color-base-1;
+		text-align: center;
+		opacity: 0.3;
+	}
+}
+
+// === LEADERS SELECTOR (CONTENT) === // (AD)
+.leaders-selector {
+	// === MENU === //
+	&__menu {
+		margin: 32px 0px 20px 0px;
+		z-index: 2;
+	}
+
+	// === LIST === //
+	&__list {
+		z-index: 2;
+		overflow: hidden;
+		//max-height: rem(500);
+		margin: 0px 0px 0px 0px;
+	}
+
+	// === ITEM === //
+	&__item {
+		z-index: 2;
+	}
+
+	// === DEMO === //
+	&__demo {
+		width: 100%;
+		padding: 200px 0px 0px 0px;
+		height: rem(480);
+		@include adaptiveValue("font-size", 40, 16, 1600, 450, 1);
+		font-weight: 900;
+		color: $color-base-4;
+		text-align: center;
+		opacity: 0.3;
+	}
+}
+
+// === TEAM LEAD SELECTOR (CONTENT) === // (AD)
+.team-lead-selector {
+	// === MENU === //
+	&__menu {
+		//overflow: hidden;
+		margin: 32px 0px 20px 0px;
+		z-index: 2;
+	}
+
+	// === LIST === //
+	&__list {
+		z-index: 2;
+		overflow: hidden;
+		//max-height: rem(500);
+		margin: 0px 0px 0px 0px;
+	}
+
+	// === ITEM === //
+	&__item {
+		z-index: 2;
+	}
+
+	// === DEMO === //
+	&__demo {
+		width: 100%;
+		padding: 200px 0px 0px 0px;
+		height: rem(480);
+		@include adaptiveValue("font-size", 40, 16, 1600, 450, 1);
+		font-weight: 900;
+		color: $color-base-1;
+		text-align: center;
+		opacity: 0.3;
+	}
+}
+
+// === PERSON SELECTOR (CONTENT) === // (AD)
+.person-selector {
+	// === MENU === //
+	&__menu {
+		margin: 0px 0px 30px 0px;
+		z-index: 2;
+	}
+	// === TITLE-BLOCK === //
+	&__title-block {
+	}
+
+	// === TABS HOR MENU / TITLE === //
+	&__btn {
+		padding: 26px 30px 16px 30px;
+		@include adaptiveValue("font-size", 20, 18, 1600, 991.98, 1);
+		font-weight: 400;
+		color: $mainColor;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: rem(1);
+		border-bottom: rem(10) solid transparent;
+		border-radius: rem(3) rem(3) 0px 0px;
+		transition: all 0.5s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $color-base-1;
+				background-color: $white;
+				border-bottom: rem(10) solid $bgColor_2;
+				transition: all 0.5s ease 0s;
+			}
+		}
+	}
+
+	// === .TAB-ACTIVE === //
+	._btn-active {
+		border-bottom: rem(10) solid $color-base-1;
+		font-weight: 700;
+		color: $color-base-1;
+		transition: all 0.5s ease 0s;
+	}
+
+	// === LIST === //
+	&__list {
+		z-index: 2;
+		overflow: hidden;
+		margin: 0px 0px 30px 0px;
+	}
+
+	// === ITEM === //
+	&__item {
+		z-index: 2;
+	}
+}
+
+// === CLUB HISTORY SELECTOR (CONTENT) === // (AD)
+.club-history-selector {
+	// === MENU === //
+	&__menu {
+		margin: 0px 0px 0px 0px;
+		z-index: 2;
+	}
+
+	// === LIST === //
+	&__list {
+		z-index: 2;
+		overflow: hidden;
+		height: fit-content;
+	}
+
+	// === ITEM === //
+	&__item {
+		z-index: 2;
+		padding: 50px 0px 0px 0px;
+		@media (max-width: rem(539.98)) {
+			padding: 30px 0px 0px 0px;
+		}
+	}
+	// === SEASON === //
+	&__season {
+		width: 100%;
+		font-family: $fontFamily;
+		font-weight: 900;
+		color: $mainColor;
+		text-align: left;
+		@include adaptiveValue("font-size", 66, 54, 1600, 992, 1);
+		@media (max-width: rem(1099.98)) {
+			display: none;
+		}
+		@media (max-width: rem(991.98)) {
+			display: block;
+			text-align: right;
+		}
+		@media (max-width: rem(539.98)) {
+			@include adaptiveValue("font-size", 54, 40, 539.98, 320, 1);
+		}
+	}
+	&__short-season {
+		width: 100%;
+		font-family: $fontFamily;
+		font-weight: 900;
+		color: $mainColor;
+		text-align: left;
+		@include adaptiveValue("font-size", 66, 54, 1600, 992, 1);
+		@media (min-width: rem(1099.98)) {
+			display: none;
+		}
+		@media (max-width: rem(1099.98)) {
+			display: block;
+		}
+		@media (max-width: rem(991.98)) {
+			display: none;
+		}
+
+		//opacity: 0.3;
+	}
+	// === DEMO === //
+	&__demo {
+		width: 100%;
+		padding: 80px 0px 0px 0px;
+		height: rem(200);
+		@include adaptiveValue("font-size", 40, 16, 1600, 450, 1);
+		font-weight: 900;
+		color: $color-base-1;
+		text-align: center;
+		opacity: 0.3;
+	}
+}

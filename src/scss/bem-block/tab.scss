@@ -1,0 +1,323 @@
+// === TAB === //
+
+.tab {
+	// === TAB BLOCK === //
+	&__block {
+	}
+
+	// === TAB NAV === //
+	&__nav {
+		display: flex;
+		gap: rem(20);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("gap", 20, 3, 991.98, 420, 1);
+		}
+	}
+	// === TAB TITLE === //
+	&__title {
+		margin-top: rem(20);
+		display: inline-flex;
+		background-color: $white;
+		padding: 25px 35px;
+		border-radius: 3px;
+		min-width: 205px;
+		color: $mainColor;
+		border: rem(1) solid $mainColor;
+		text-decoration: none;
+		font-weight: 500;
+		justify-content: center;
+		text-align: center;
+		letter-spacing: 1px;
+		cursor: pointer;
+		text-transform: uppercase;
+		white-space: nowrap;
+		@media (max-width: rem(991.98)) {
+			width: 100%;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $mainColor;
+				color: $white;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+
+	&__title-w {
+		//background-color: $color-zenit;
+		border-radius: 3px;
+		min-width: 172px;
+		width: 100%;
+		color: $white;
+		border: rem(1) solid $white;
+		text-decoration: none;
+		font-weight: 500;
+		justify-content: center;
+		text-align: center;
+		letter-spacing: 1px;
+		cursor: pointer;
+		text-transform: uppercase;
+		white-space: nowrap;
+		@media (max-width: rem(991.98)) {
+			width: 100%;
+			margin-top: rem(20);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $mainColor;
+				color: $white;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+
+	&__title-w-1 {
+		//background-color: $color-zenit;
+		position: relative;
+		border-radius: rem(3);
+		min-width: 200px;
+		width: 100%;
+		color: $white;
+		border: rem(1) solid $white;
+		text-decoration: none;
+		font-weight: 500;
+		justify-content: center;
+		text-align: center;
+		letter-spacing: 1px;
+		cursor: pointer;
+		text-transform: uppercase;
+		white-space: nowrap;
+		@media (max-width: rem(1160)) {
+			width: 100%;
+			margin-top: rem(20);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $mainColor;
+				color: $white;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+
+	&__title-w-2 {
+		//background-color: $color-zenit;
+		//position: relative;
+		border-radius: rem(3);
+		padding: 25px 35px;
+		width: 100%;
+		color: $white;
+		border: rem(1) solid $white;
+		text-decoration: none;
+		font-weight: 500;
+		justify-content: center;
+		text-align: center;
+		letter-spacing: 1px;
+		cursor: pointer;
+		text-transform: uppercase;
+		white-space: nowrap;
+		@media (max-width: $tablet) {
+			@include adaptiveValue("padding-top", 25, 6, 991.98, 420, 1);
+			@include adaptiveValue("padding-bottom", 25, 6, 991.98, 420, 1);
+			@include adaptiveValue("padding-left", 35, 10, 991.98, 420, 1);
+			@include adaptiveValue("padding-right", 35, 10, 991.98, 420, 1);
+			//padding: 15px 25px;
+		}
+		// @media (max-width: rem(1160)) {
+		// 	width: 100%;
+		// 	margin-top: rem(20);
+		// }
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $mainColor;
+				color: $white;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+	// === TAB LINK === //
+	&__link {
+		display: block;
+		line-height: 60px;
+		padding: 0px 50px;
+		font-size: 16px;
+		font-weight: 500;
+		text-transform: uppercase;
+		//color: $mainColor;
+		//white-space: nowrap;
+		transition: all 0.3s ease 0s;
+		@media (max-width: rem(991.98)) {
+			width: 100%;
+			//border: 1px solid $color-zenit;
+			margin-bottom: 10px;
+		}
+	}
+	&__link:hover {
+		background-color: $mainColor;
+		color: $color-gold;
+		transition: all 0.3s ease 0s;
+	}
+
+	&__link-w {
+		display: block;
+		//background-color: $color-zenit;
+		padding: 25px 35px;
+		border-radius: rem(3);
+		min-width: 172px;
+		width: 100%;
+		color: $white;
+		border: rem(1) solid $white;
+		text-decoration: none;
+		font-weight: 500;
+		justify-content: center;
+		text-align: center;
+		letter-spacing: 1px;
+		cursor: pointer;
+		text-transform: uppercase;
+		white-space: nowrap;
+		transition: all 0.3s ease 0s;
+		@media (max-width: rem(991.98)) {
+			width: 100%;
+			//margin-bottom: 10px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $mainColor;
+				color: $color-gold;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+
+	&__link-w-1 {
+		display: block;
+		//background-color: $color-zenit;
+		padding: 25px 35px;
+		border-radius: rem(3);
+		min-width: 200px;
+		width: 100%;
+		color: $white;
+		border: rem(1) solid $white;
+		text-decoration: none;
+		font-weight: 500;
+		justify-content: center;
+		text-align: center;
+		letter-spacing: 1px;
+		cursor: pointer;
+		text-transform: uppercase;
+		white-space: nowrap;
+		transition: all 0.3s ease 0s;
+		@media (max-width: rem(1160)) {
+			width: 100%;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $mainColor;
+				color: $color-gold;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+	// === TAB TEXT === //
+	&__text {
+		@media (max-width: $tablet) {
+			display: none;
+		}
+	}
+	// === TAB IMAGE === //
+	&__img::before {
+		position: relative;
+		margin: 0 auto;
+		display: block;
+		@include adaptiveValue("width", 40, 30, 991.98, 420, 1);
+		@include adaptiveValue("height", 40, 30, 991.98, 420, 1);
+		//width: rem(40);
+		//height: rem(40);
+		background-repeat: no-repeat;
+		background-size: 80% auto;
+		background-position: center;
+		@media (min-width: $tablet) {
+			display: none;
+		}
+	}
+	&__img-1::before {
+		content: "";
+		background-image: url("@img/icon/menu-stats.svg");
+	}
+	&__img-2::before {
+		content: "";
+		background-image: url("@img/icon/menu-ball.svg");
+	}
+	&__img-3::before {
+		content: "";
+		background-image: url("@img/icon/menu-calendar.svg");
+	}
+	&__img-4::before {
+		content: "";
+		background-image: url("@img/icon/menu-photo.svg");
+	}
+	&__img-5::before {
+		content: "";
+		background-image: url("@img/icon/menu-desc.svg");
+	}
+	&__img-6::before {
+		content: "";
+		background-image: url("@img/icon/menu-star-circle.svg");
+	}
+	&__img-7::before {
+		content: "";
+		background-image: url("@img/icon/icon-man-white.svg");
+	}
+	&__img-8::before {
+		content: "";
+		background-image: url("@img/icon/icon-search-white.svg");
+	}
+	&__img-9::before {
+		content: "";
+		background-image: url("@img/icon/icon-two-arrow-white.svg");
+	}
+	&__img-10::before {
+		content: "";
+		background-image: url("@img/icon/icon-pencil-white.svg");
+	}
+	&__img-11::before {
+		content: "";
+		background-image: url("@img/icon/icon-clock-white.svg");
+	}
+	&__img-12::before {
+		content: "";
+		background-image: url("@img/icon/icon-online-white.svg");
+	}
+
+	// === TAB CONTENT === //
+	&__content {
+	}
+
+	// === TAB BODY === //
+	&__body {
+		padding: 20px 0px 0px 0px;
+	}
+}
+
+// === TAB ACTIVE === //
+.tab__title-w-2.active {
+	background-color: $mainColor;
+	color: $white;
+}
+.tab__title-w-2.active a {
+	background-color: $white;
+	color: $color-base-1;
+}
+
+.active.tab__link-w {
+	background-color: $white;
+	//color: $mainColor;
+	color: $color-base-1;
+	transition: all 0.3s ease 0s;
+}
+.active.tab__link-w-1 {
+	background-color: $white;
+	color: $mainColor;
+	//color: $color-zenit;
+	transition: all 0.3s ease 0s;
+}

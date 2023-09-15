@@ -1,0 +1,74 @@
+// === TABS SELECTOR === //
+
+.tabs-selector {
+	// = BOX = //
+	&__box {
+	}
+
+	// = TABS = //
+	&__tabs {
+		position: relative;
+		//margin: 0px 0px 20px 0px;
+		padding: 0px 0px 20px 0px;
+	}
+
+	// = TABS NAVIGATION = //
+	&__tabs-navigation {
+		grid-column: 3 / 4;
+		grid-row: 1 / 2;
+		position: relative;
+		//position: absolute;
+		//@include adaptiveValue("top", -70, -50, 1600, 600, 1);
+		//right: 0;
+		margin: 0px 0px 0px 0px;
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		//@include adaptiveValue("gap", 30, 20, 1600, 600, 1);
+		gap: rem(20);
+	}
+
+	// = TABS TITLE = //
+	&__tabs-title {
+		z-index: 3;
+		height: rem(40);
+		width: rem(40);
+		border: rem(1) solid $white;
+		//background-color: $color-base-6;
+		//border: rem(1) solid $color-base-7;
+		//@include adaptiveValue("height", 50, 30, 1600, 600, 1);
+		//@include adaptiveValue("width", 50, 30, 1600, 600, 1);
+		//opacity: 0.3;
+		background-color: transparent;
+		border-radius: rem(3);
+		transition: all 0.5s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				transition: all 0.5s ease 0s;
+				transform: scale(1.2);
+				opacity: 1;
+			}
+		}
+	}
+	&__tabs-title img {
+		padding: 10px;
+		transition: all 0.5s ease 0s;
+	}
+
+	&__tabs-title._tab-active {
+		transition: all 0.5s ease 0s;
+		opacity: 1;
+		//background-color: transparent;
+		background-color: $color-base-6;
+		border: rem(1) solid $white;
+		//border: none;
+	}
+
+	// = TABS BODY = //
+	&__tabs-body {
+		.pattern-game-card-1,
+		.pattern-game-card-2 {
+			margin-top: 0px;
+		}
+	}
+}

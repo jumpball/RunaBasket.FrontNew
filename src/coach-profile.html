@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/runa/_head.htm',{
+"title":"Профайл тренера"
+})
+<!-- BODY -->
+
+<body>
+	<!-- WRAPPER -->
+	<div data-sticky class="wrapper">
+		<!-- HEADER -->
+		@@include('html/runa/_header.htm',{})
+		<!-- MAIN - PAGE -->
+		<main class="page site-bg-1">
+
+			<!-- BREADCRUMS -->
+
+			<div class="section__container">
+				<ul class="page__breadcrumb">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Команды</a></li>
+					<li><a href="#">Единая Лига ВТБ</a></li>
+					<li><a href="#">Тренеры</a></li>
+					<li>Олег Бартунов</li>
+				</ul>
+			</div>
+
+			<!-- PERSON PROFILE HEADER -->
+			<section class="site-bg-1 profile-person__header">
+				<div class="section__container">
+					<!-- SPOLLERS / NAV SELECT - 3 BOX -->
+					<div data-spollers="767.98,max" class="spollers spollers__box spollers__box-767">
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title spollers__title-767 -ibg">
+								<img src="@img/RUNA/icons/icon-select-green.svg" alt="">
+							</button>
+							<div class="spollers__body">
+								<!-- NAV SELECT / 3 BOX -->
+								<!-- PERSON PROFILE - NAV / SELECT -->
+								<div class="nav-select__nav">
+									<!-- PERSON PROFILE - FORM / 3 BOXES -->
+									<form action="#" class="nav-select__form-3-box">
+										<!-- PERSON PROFILE - FORM - SELECT / TEAM -->
+										<div class="nav-select__box">
+											<label class="nav-select__label nav-select__label-white" for="select-team">Выбрать
+												команду</label>
+											<select data-label data-scroll data-show name="form[]" id="select-team"
+												class="nav-select__list">
+												<option class="nav-select__item" value="1" selected="selected">Единая Лига ВТБ
+												</option>
+												<option class="nav-select__item" value="2">Женская суперлига</option>
+												<option class="nav-select__item" value="3">Молодежная Лига ВТБ</option>
+												<option class="nav-select__item" value="4">ДЮБЛ юноши</option>
+												<option class="nav-select__item" value="5">ДЮБЛ девушки</option>
+												<option class="nav-select__item" value="6">Руна 3х3</option>
+											</select>
+										</div>
+										<!-- PERSON PROFILE - FORM - SELECT / PERSON TYPE -->
+										<div class="nav-select__box">
+											<label class="nav-select__label nav-select__label-white"
+												for="select-person-type">Выбрать
+												тип персоны</label>
+											<select data-label data-scroll data-show name="form[]" id="select-person-type"
+												class="nav-select__list">
+												<option class="nav-select__item" value="1">Игрок</option>
+												<option class="nav-select__item" value="2" selected="selected">Тренер</option>
+												<option class="nav-select__item" value="3">Администрация</option>
+												<option class="nav-select__item" value="4">Персонал</option>
+											</select>
+										</div>
+										<!-- PERSON PROFILE - FORM - SELECT / PERSON -->
+										<div class="nav-select__box">
+											<label class="nav-select__label nav-select__label-white" for="select-person">Выбрать
+												персону</label>
+											<select data-label data-scroll data-show name="form[]" id="select-person"
+												class="nav-select__list">
+												<option class="nav-select__item" value="1" selected="selected">Бартунов
+													Олег
+												</option>
+												<option class="nav-select__item" value="2">Ключников Федор</option>
+												<option class="nav-select__item" value="3">Заряжко Виктор</option>
+												<option class="nav-select__item" value="4">Карпачев Михаил</option>
+												<option class="nav-select__item" value="5">Митькин Борис</option>
+											</select>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- === LEADERS CARD === -->
+					<div class="team-leader-card">
+						<div class="team-leader-card__body">
+							<div class="team-leader-card__info">
+								<div class="team-leader-card__box">
+									<h4 class="team-leader-card__name">Олег</h4>
+									<h3 class="team-leader-card__surname">Бартунов</h3>
+									<div class="team-leader-card__bage">
+										<p class="team-leader-card__position">Главный тренер</p>
+										<p class="team-leader-card__border">●</p>
+										<p class="team-leader-card__age">32 года</p>
+										<!-- <p class="team-leader-card__border">●</p>
+										<p class="team-leader-card__height">206 см</p>
+										<p class="team-leader-card__border">●</p>
+										<p class="team-leader-card__weight">104 кг</p> -->
+									</div>
+									<div class="team-leader-card__social-nets">
+										<a href="#" class="team-leader-card__social-net-btn -ibg">
+											<img src="@img/RUNA/icons/vk-1-white.svg" alt="">
+										</a>
+										<a href="#" class="team-leader-card__social-net-btn -ibg">
+											<img src="@img/RUNA/icons/instagram-1-white 1.svg" alt="">
+										</a>
+										<a href="#" class="team-leader-card__social-net-btn -ibg">
+											<img src="@img/RUNA/icons/telegram-1-white.svg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="team-leader-card__stats">
+									<div class="team-leader-card__stats-item">
+										<div class="team-leader-card__stats-label">игры</div>
+										<div class="team-leader-card__stats-index">100</div>
+									</div>
+									<div class="team-leader-card__stats-item">
+										<div class="team-leader-card__stats-label">победы</div>
+										<div class="team-leader-card__stats-index">74</div>
+									</div>
+									<div class="team-leader-card__stats-item">
+										<div class="team-leader-card__stats-label">поражения</div>
+										<div class="team-leader-card__stats-index">26</div>
+									</div>
+									<div class="team-leader-card__stats-item">
+										<div class="team-leader-card__stats-label">% побед</div>
+										<div class="team-leader-card__stats-index">74%</div>
+									</div>
+								</div>
+							</div>
+							<div class="team-leader-card__photo -ibg">
+								<img src="@img/RUNA/personal/38.png" alt="">
+							</div>
+							<!-- <div class="team-leader-card__num">32</div> -->
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="site-bg">
+				<div class="profile-person__menu-block">
+					<!-- TABS HORIZONTAL MENU -->
+					<div class="tabs-hor-menu">
+						<div data-tabs class="tabs-hor-menu__box">
+							<!-- TABS MENU / NAV TITLE -->
+							<nav data-tabs-titles class="tabs-hor-menu__tabs-nav">
+								<button type="button" class="tabs-hor-menu__tabs-title _tab-active">статистика</button>
+								<button type="button" class="tabs-hor-menu__tabs-title">карьера</button>
+								<button type="button" class="tabs-hor-menu__tabs-title">достижения</button>
+								<button type="button" class="tabs-hor-menu__tabs-title">медиа</button>
+							</nav>
+							<!-- TABS MENU / TAB BODY -->
+							<div data-tabs-body class="tabs-hor-menu__tabs-content">
+								<div class="tabs-hor-menu__tabs-body">
+									<div class="section__container">
+										<!-- SPOLLERS / NAV SELECT - 3 BOX -->
+										<div data-spollers="767.98,max" class="spollers spollers__box spollers__box-767">
+											<div class="spollers__item">
+												<button type="button" data-spoller class="spollers__title spollers__title-767 -ibg">
+													<img src="@img/RUNA/icons/icon-select-green.svg" alt="">
+												</button>
+												<div class="spollers__body">
+													<!-- NAV SELECT / 3 BOX -->
+													<!-- PLAYER STATS NAV -->
+													<div class="nav-select__nav">
+														<form action="#" class="nav-select__form-3-box">
+															<div class="nav-select__box">
+																<label class="nav-select__label nav-select__label-white"
+																	for="select-season">Выбрать
+																	сезон</label>
+																<select data-label data-scroll data-show name="form[]"
+																	id="select-season" class="nav-select__list">
+																	<option class="nav-select__item" value="1" selected="selected">
+																		2022/2023
+																	</option>
+																	<option class="nav-select__item" value="2">2021/2022</option>
+																	<option class="nav-select__item" value="3">2020/2021</option>
+																	<option class="nav-select__item" value="4">2019/2020</option>
+																	<option class="nav-select__item" value="5">2018/2019</option>
+																	<option class="nav-select__item" value="6">2017/2018</option>
+																</select>
+															</div>
+															<div class="nav-select__box">
+																<label class="nav-select__label nav-select__label-white"
+																	for="select-tournament">Выбрать
+																	турнир</label>
+																<select data-label data-scroll data-show name="form[]"
+																	id="select-tournament" class="nav-select__list">
+																	<option class="nav-select__item" value="1" selected="selected">
+																		Суперлига
+																	</option>
+																	<option class="nav-select__item" value="2">Кубок России</option>
+																	<option class="nav-select__item" value="3">все турниры</option>
+																</select>
+															</div>
+															<div class="nav-select__box">
+																<label class="nav-select__label nav-select__label-white"
+																	for="select-opponent">соперник</label>
+																<select data-label data-scroll data-show name="form[]"
+																	id="select-opponent" class="nav-select__list">
+																	<option class="nav-select__item" value="1" selected="selected">все
+																		соперники
+																	</option>
+																	<option class="nav-select__item" value="2">Уралмаш</option>
+																	<option class="nav-select__item" value="3">Барнаул</option>
+																	<option class="nav-select__item" value="4">Химки</option>
+																	<option class="nav-select__item" value="5">Иркут</option>
+																</select>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- TABLE COACH (TEAM) SEASON STATS / GAME by GAME -->
+										<div class="table__wrapper-dark">
+											<div class="table__block">
+												<table>
+													<thead>
+														<tr>
+															<th rowspan="2" class="text-bottom th-thead">дата</th>
+															<th rowspan="2" class="text-bottom th-thead1">
+																<div class="table__head-image -ibg">
+																	<img src="@img/RUNA/LOGO/league-logo/vtb-logo.png"
+																		alt="Логотип турнира">
+																</div>
+															</th>
+															<th rowspan="2" class="text-left text-bottom">соперник</th>
+															<th rowspan="2" class="text-bottom">Игра</th>
+															<th rowspan="2" class="text-bottom">+</th>
+															<th rowspan="2" class="text-bottom">-</th>
+															<th colspan="6" class="table__th-colspan">броски</th>
+															<th colspan="3" class="table__th-colspan">подборы</th>
+															<th rowspan="2" class="text-bottom">рп</th>
+															<th rowspan="2" class="text-bottom">пх</th>
+															<th rowspan="2" class="text-bottom">бш</th>
+															<th rowspan="2" class="text-bottom">пт</th>
+															<th rowspan="2" class="text-bottom">ф</th>
+															<th rowspan="2" class="text-bottom">фс</th>
+														</tr>
+														<tr>
+															<th>2-х</th>
+															<th>%</th>
+															<th>3-х</th>
+															<th>%</th>
+															<th>шб</th>
+															<th>%</th>
+															<th>сщ</th>
+															<th>чщ</th>
+															<th>вс</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="td-tbody3">19.02.23</td>
+															<td class="td-tbody3-1">
+																<div class="table__image -ibg">
+																	<img nophotoplaceholder="" alt=""
+																		src="@img/RUNA/LOGO/team-logo/uralmash.png">
+																</div>
+															</td>
+															<td class="text-left">
+																<a href="#"><span>Уралмаш</span></a>
+															</td>
+															<td><a href="#">88:94</a></td>
+															<td></td>
+															<td>-6</td>
+															<td>17/42</td>
+															<td>33.4%</td>
+															<td>8/19</td>
+															<td>37.8%</td>
+															<td>14/21</td>
+															<td>66.6%</td>
+															<td>1</td>
+															<td></td>
+															<td>1</td>
+															<td>1</td>
+															<td>3</td>
+															<td></td>
+															<td>6</td>
+															<td></td>
+															<td>3</td>
+														</tr>
+														<tr>
+															<td class="td-tbody3">05.02.23</td>
+															<td class="td-tbody3-1">
+																<div class="table__image -ibg">
+																	<img nophotoplaceholder="" alt=""
+																		src="@img/RUNA/LOGO/team-logo/barnaul.png">
+																</div>
+															</td>
+															<td class="text-left">
+																<a href="#"><span>Барнаул</span></a>
+															</td>
+															<td><a href="#">101:78</a></td>
+															<td>+23</td>
+															<td></td>
+															<td>5/10</td>
+															<td>50%</td>
+															<td>0/4</td>
+															<td>0%</td>
+															<td>3/4</td>
+															<td>75%</td>
+															<td>3</td>
+															<td>2</td>
+															<td>5</td>
+															<td>2</td>
+															<td>1</td>
+															<td></td>
+															<td>1</td>
+															<td>2</td>
+															<td>2</td>
+														</tr>
+														<tr>
+															<td class="td-tbody3">29.01.23</td>
+															<td class="td-tbody3-1">
+																<div class="table__image -ibg">
+																	<img nophotoplaceholder="" alt=""
+																		src="@img/RUNA/LOGO/team-logo/loko.png">
+																</div>
+															</td>
+															<td class="text-left">
+																<a href="#"><span>Локомотив-Кубань</span></a>
+															</td>
+															<td><a href="#">92:80</a></td>
+															<td>+12</td>
+															<td></td>
+
+															<td>20/38</td>
+															<td>54.6%</td>
+															<td>10/21</td>
+															<td>48.3%</td>
+															<td>12/12</td>
+															<td>100%</td>
+															<td>4</td>
+															<td></td>
+															<td>4</td>
+															<td>2</td>
+															<td>1</td>
+															<td></td>
+															<td>3</td>
+															<td>4</td>
+															<td>4</td>
+
+														</tr>
+
+													</tbody>
+													<tfoot>
+														<tr>
+															<td colspan="2" class="table-footer td-tbody3">всего</td>
+															<td class="table-footer"></td>
+															<td class="table-footer">3</td>
+															<td class="table-footer">2</td>
+															<td class="table-footer">1</td>
+															<td class="table-footer">37/68</td>
+															<td class="table-footer">54.6%</td>
+															<td class="table-footer">19/52</td>
+															<td class="table-footer">36.1%</td>
+															<td class="table-footer">26/31</td>
+															<td class="table-footer">86.2%</td>
+															<td class="table-footer">18</td>
+															<td class="table-footer">4</td>
+															<td class="table-footer">22</td>
+															<td class="table-footer">15</td>
+															<td class="table-footer">12</td>
+															<td class="table-footer">2</td>
+															<td class="table-footer">18</td>
+															<td class="table-footer">15</td>
+															<td class="table-footer">22</td>
+
+														</tr>
+													</tfoot>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabs-hor-menu__tabs-body">
+									<div class="section__container">
+										<!-- SPOLLERS / NAV SELECT - 3 BOX -->
+										<div data-spollers="767.98,max" class="spollers spollers__box spollers__box-767">
+											<div class="spollers__item">
+												<button type="button" data-spoller class="spollers__title spollers__title-767 -ibg">
+													<img src="@img/RUNA/icons/icon-select-green.svg" alt="">
+												</button>
+												<div class="spollers__body">
+													<!-- NAV SELECT / 3 BOX -->
+													<!-- PLAYER CARRIER NAV -->
+													<div class="nav-select__nav">
+														<form action="#" class="nav-select__form-3-box">
+															<div class="nav-select__box">
+																<label class="nav-select__label nav-select__label-white"
+																	for="select-season-1">Выбрать сезон</label>
+																<select data-label data-scroll data-show name="form[]"
+																	id="select-season-1" class="nav-select__list">
+																	<option class="nav-select__item" value="1" selected="selected">все
+																		сезоны
+																	</option>
+																	<option class="nav-select__item" value="2">2022/2023</option>
+																	<option class="nav-select__item" value="3">2021/2022</option>
+																	<option class="nav-select__item" value="4">2020/2021</option>
+																	<option class="nav-select__item" value="5">2019/2020</option>
+																	<option class="nav-select__item" value="6">2018/2019</option>
+																</select>
+															</div>
+															<div class="nav-select__box">
+																<label class="nav-select__label nav-select__label-white"
+																	for="select-tournament-1">Выбрать
+																	турнир</label>
+																<select data-label data-scroll data-show name="form[]"
+																	id="select-tournament-1" class="nav-select__list">
+																	<option class="nav-select__item" value="1" selected="selected">все
+																		турниры
+																	</option>
+																	<option class="nav-select__item" value="2">Суперлига</option>
+																	<option class="nav-select__item" value="3">Единая Лига ВТБ</option>
+																	<option class="nav-select__item" value="4">Молодежная Лига ВТБ
+																	</option>
+																</select>
+															</div>
+															<div class="nav-select__box">
+																<label class="nav-select__label nav-select__label-white"
+																	for="type-stats">тип
+																	статистики</label>
+																<select data-label data-scroll data-show name="form[]" id="type-stats"
+																	class="nav-select__list">
+																	<option class="nav-select__item" value="1" selected="selected">в
+																		среднем за
+																		игру</option>
+																	<option class="nav-select__item" value="2">абсолютные показатели
+																	</option>
+																</select>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- TABLE PLAYER CARRIER STATS / SEASON by SEASON -->
+										<div class="table__wrapper-dark">
+											<div class="table__block">
+												<table>
+													<thead>
+														<tr>
+															<th rowspan="2" class="th-thead  text-bottom">сезон</th>
+															<th rowspan="2" class="th-thead1">
+																<div class="table__head-image -ibg">
+																	<img src="@img/RUNA/LOGO/league-logo/vtb-logo.png"
+																		alt="Логотип турнира">
+																</div>
+															</th>
+															<th rowspan="2" class="text-left text-bottom">команда</th>
+															<th rowspan="2" class="text-bottom">и</th>
+															<th rowspan="2" class="text-bottom">в</th>
+															<th rowspan="2" class="text-bottom">п</th>
+															<th rowspan="2" class="text-bottom">%</th>
+															<th rowspan="2" class="text-bottom">очки</th>
+															<th colspan="6" class="table-th-colspan">броски</th>
+															<th colspan="3" class="table-th-colspan">подборы</th>
+															<th rowspan="2" class="text-bottom">гп</th>
+															<th rowspan="2" class="text-bottom">пх</th>
+															<th rowspan="2" class="text-bottom">бш</th>
+															<th rowspan="2" class="text-bottom">пт</th>
+															<th rowspan="2" class="text-bottom">ф</th>
+															<th rowspan="2" class="text-bottom">фс</th>
+														</tr>
+														<tr>
+															<th>2-х</th>
+															<th>%</th>
+															<th>3-х</th>
+															<th>%</th>
+															<th>шт</th>
+															<th>%</th>
+															<th>сщ</th>
+															<th>чщ</th>
+															<th>вс</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="td-tbody3">22/23</td>
+															<td class="td-tbody3-1">
+																<div class="table__image -ibg"><img alt=""
+																		class="team-box-score__team-image"
+																		src="@img/RUNA/LOGO/team-logo/runa.png"></div>
+															</td>
+															<td class="text-left"><a href="#">БК Руна</a>
+															</td>
+															<td> 20 </td>
+															<td> 19 </td>
+															<td> 1 </td>
+															<td> 95% </td>
+															<td> 89.7 </td>
+															<td> 6.5/12.4 </td>
+															<td> 54.7% </td>
+															<td> 3.1/7.6 </td>
+															<td> 42.2% </td>
+															<td> 6.5/8.4 </td>
+															<td> 87.3% </td>
+															<td> 5.2 </td>
+															<td> 4.9 </td>
+															<td> 10.1 </td>
+															<td> 6.6 </td>
+															<td> 3.1 </td>
+															<td> 4.3 </td>
+															<td> 2.9 </td>
+															<td> 1.6 </td>
+															<td> 4.2 </td>
+														</tr>
+														<tr>
+															<td class="td-tbody3">21/22</td>
+															<td class="td-tbody3-1">
+																<div class="table__image -ibg"><img alt=""
+																		class="team-box-score__team-image"
+																		src="@img/RUNA/LOGO/team-logo/runa.png"></div>
+															</td>
+															<td class="text-left"><a href="#">БК Руна</a>
+															</td>
+															<td> 20 </td>
+															<td> 10 </td>
+															<td> 10 </td>
+															<td> 50% </td>
+															<td> 76.7 </td>
+															<td> 6.5/12.4 </td>
+															<td> 54.7% </td>
+															<td> 3.1/7.6 </td>
+															<td> 42.2% </td>
+															<td> 6.5/8.4 </td>
+															<td> 87.3% </td>
+															<td> 5.2 </td>
+															<td> 4.9 </td>
+															<td> 10.1 </td>
+															<td> 6.6 </td>
+															<td> 3.1 </td>
+															<td> 4.3 </td>
+															<td> 2.9 </td>
+															<td> 1.6 </td>
+															<td> 4.2 </td>
+														</tr>
+
+													</tbody>
+													<tfoot>
+														<tr>
+															<td colspan="2" class="td-tbody3 table-footer">всего</td>
+															<td class="text-left table-footer"></td>
+															<td>40</td>
+															<td>29</td>
+															<td>11</td>
+															<td>73.6%</td>
+															<td>82.8</td>
+															<td>25.5/51.0</td>
+															<td>50%</td>
+															<td>8.7/20.4</td>
+															<td>36.6%</td>
+															<td>15.5/22.1</td>
+															<td>69.7%</td>
+															<td>1.7</td>
+															<td>0.7</td>
+															<td>2.4</td>
+															<td>2.7</td>
+															<td>1.7</td>
+															<td>1.7</td>
+															<td>0.3</td>
+															<td>2.3</td>
+															<td>1.3</td>
+														</tr>
+													</tfoot>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabs-hor-menu__tabs-body">
+									<div class="section__container">
+										@@include('html/runa/_time-line.htm',{})
+									</div>
+								</div>
+								<div class="tabs-hor-menu__tabs-body">
+									<div class="section__container">
+										@@include('html/runa/_galery-to-slider.htm',{})
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- PERSON PUBLICATION SELECTOR -->
+			<section class="site-bg section-offset">
+				<div class="section__container">
+					<div class="title-block">
+						<h2 class="section-title section-title-h1 section-title-center section-title-white element-animation">
+							О тренере</h2>
+					</div>
+					<!-- === SLIDER - PUBLICATION CARDS === -->
+					<div class="pulications-slider__box">
+						@@include('html/runa/_net-to-slider.htm',{})
+					</div>
+				</div>
+			</section>
+
+			<!-- PARTNERS -->
+			<section class="site-bg section-offset">
+				<div class="section__container">
+					<div class="publication-selector__title-block">
+						<h2 class="section-title section-title-h1 section-title-white section-title-center element-animation">
+							партнеры</h2>
+					</div>
+					@@include('html/runa/_partners-slider.htm',{})
+				</div>
+			</section>
+
+		</main>
+		<!-- FOOTER -->
+		@@include('html/runa/_footer.htm',{})
+	</div>
+	@@include('html/runa/_popup.htm',{})
+	@@include('html/runa/_js.htm',{})
+</body>
+
+</html>

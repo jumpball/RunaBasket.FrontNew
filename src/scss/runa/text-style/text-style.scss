@@ -1,0 +1,104 @@
+// === TEXT STYLE === //
+
+// = INDENT - Отступ первой строки = //
+.text-style {
+	// = PUBLICATION = //
+	&__publication {
+		p {
+			font-size: rem(22);
+			line-height: 1.6;
+			padding: 8px 0px 8px 0px;
+			color: $white;
+			span {
+				font-weight: 900;
+			}
+			a {
+				color: $color-base-4;
+				font-weight: 600;
+				cursor: pointer;
+				@media (any-hover: hover) {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+			// = 650 - Ширина страницы менее 650px = //
+			@media (max-width: rem(649.98)) {
+				@include adaptiveValue("font-size", 22, 20, 649.98, 340, 1);
+			}
+		}
+	}
+	// = CONTENT BLOCK = //
+	&__content-block {
+		p {
+			font-size: rem(21);
+			line-height: 1.5;
+			padding: 8px 0px 8px 0px;
+			span {
+				font-weight: 600;
+			}
+			a {
+				color: $color-base-4;
+				font-weight: 600;
+				cursor: pointer;
+				@media (any-hover: hover) {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+
+			// = 650 - Ширина страницы менее 650px = //
+			@media (max-width: rem(649.98)) {
+				@include adaptiveValue("font-size", 21, 19, 649.98, 340, 1);
+			}
+		}
+	}
+}
+
+// = INDENT - Отступ первой строки = //
+.text-style-indent {
+	h1,
+	h2,
+	h3,
+	h4 {
+		text-indent: rem(0);
+	}
+
+	p {
+		text-indent: rem(20);
+	}
+}
+
+// = ALIGN - выравнивание текста по ширине = //
+.text-style-align {
+	// = 992 - Свойство действует на ширине экрана менее 992px = //
+	&__992 {
+		p {
+			@media (max-width: rem(991.98)) {
+				text-align: justify;
+			}
+			@media (max-width: rem(991.98)) {
+				text-align: justify;
+			}
+		}
+	}
+
+	// = 768 - Свойство действует на ширине экрана менее 768px = //
+	&__768 {
+		p {
+			@media (max-width: rem(767.98)) {
+				text-align: justify;
+			}
+		}
+	}
+
+	// = 650 - Свойство действует на ширине экрана менее 650px = //
+	&__650 {
+		p {
+			@media (max-width: rem(649.98)) {
+				text-align: justify;
+			}
+		}
+	}
+}

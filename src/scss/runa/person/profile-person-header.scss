@@ -1,0 +1,158 @@
+// === PROFILE PERSON HEADER == //
+.profile-person {
+	&__header {
+		padding: 40px 0px 0px 0px;
+		@media (max-width: rem(991.98)) {
+		}
+	}
+
+	&__header-col {
+		position: relative;
+		@media (max-width: rem(991.98)) {
+			display: flex;
+			justify-content: center;
+			align-items: start;
+		}
+	}
+	&__photo-box {
+		position: relative;
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("width", 660, 290, 991.98, 320, 1);
+		}
+	}
+
+	&__header-desc {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: rem(588);
+		@media (max-width: rem(1149.98)) {
+			height: rem(460);
+		}
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("height", 380, 320, 991.98, 320, 1);
+			margin: 0px 0px 20px 0px;
+		}
+	}
+
+	&__menu-block {
+		margin: 0px 0px 0px 0px;
+	}
+
+	// === PROFILE PERSON HEADER / NUM == //
+	&__num {
+		position: absolute;
+		bottom: rem(58);
+		left: rem(130);
+		font-family: $fontFamily;
+		font-size: rem(140);
+		font-weight: 900;
+		color: $white;
+		-webkit-text-stroke-width: rem(2);
+		-webkit-text-stroke-color: $color-base-1;
+		//-webkit-text-shadow: 2px 2px 4px rgba(34, 60, 80, 0.2);
+		//-moz-text-shadow: 2px 2px 4px rgba(34, 60, 80, 0.2);
+		//text-shadow: 2px 2px 4px rgba(34, 60, 80, 0.4);
+		@media (max-width: rem(1149.98)) {
+			bottom: rem(11);
+			left: rem(70);
+			font-size: rem(140);
+		}
+		@media (max-width: rem(991.98)) {
+			bottom: none;
+			left: 0;
+			top: 0;
+			@include adaptiveValue("font-size", 160, 80, 991.98, 320, 1);
+			//font-size: rem(140);
+		}
+	}
+
+	// === PROFILE PERSON HEADER / NAME == //
+	&__name {
+		color: $mainColor;
+		text-transform: uppercase;
+		margin: 50px 0px 0px 20px;
+		@media (max-width: rem(1149.98)) {
+			margin: 30px 0px 0px 20px;
+		}
+		@media (max-width: rem(991.98)) {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+	&__name span {
+		font-weight: 900;
+		@include adaptiveValue("font-size", 42, 24, 1600, 1149.98, 1);
+		letter-spacing: rem(1);
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("font-size", 36, 16, 991.98, 320, 1);
+		}
+	}
+	&__name h2 {
+		font-weight: 900;
+		@include adaptiveValue("font-size", 60, 36, 1600, 1149.98, 1);
+		letter-spacing: rem(2);
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("font-size", 54, 18, 991.98, 320, 1);
+		}
+		@media (max-width: rem(499.98)) {
+			line-height: 150%;
+		}
+	}
+
+	// === PROFILE PERSON HEADER / INFO == //
+	&__info-list {
+		margin: 50px 0px 26px 30px;
+		height: rem(260);
+		@media (max-width: rem(1149.98)) {
+			margin: 0px 0px 0px 30px;
+		}
+		@media (max-width: rem(499.98)) {
+			margin: 0px 0px 0px 10px;
+		}
+	}
+
+	&__info-item {
+		display: grid;
+		grid-template-columns: rem(250) 1fr;
+		margin: 0px 0px 0px 0px;
+		align-items: baseline;
+		color: $color-base-1;
+		text-transform: uppercase;
+		@include adaptiveValue("font-size", 20, 18, 1600, 991.98, 1);
+		line-height: rem(36);
+		letter-spacing: rem(1.2);
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("font-size", 18, 14, 991.98, 320, 1);
+		}
+		@media (max-width: rem(499.98)) {
+			grid-template-columns: rem(120) 1fr;
+			line-height: rem(32);
+		}
+	}
+	&__info-item p {
+		display: inline-block;
+	}
+	&__info-item span {
+		@include adaptiveValue("font-size", 22, 20, 1600, 991.98, 1);
+		margin: 0px 4px 0px 0px;
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("font-size", 20, 16, 991.98, 320, 1);
+		}
+	}
+
+	// === PROFILE PERSON HEADER / BUTTON == //
+	&__button-box {
+		margin: 0px 0px 0px 30px;
+		@media (max-width: rem(991.98)) {
+			margin: 0px 0px 0px 0px;
+			position: absolute;
+			top: rem(-100);
+			left: 0;
+		}
+		@media (max-width: rem(499.98)) {
+			top: rem(-80);
+			//margin: 0px 0px 0px -8px;
+		}
+	}
+}

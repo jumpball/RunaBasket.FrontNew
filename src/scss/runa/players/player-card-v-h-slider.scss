@@ -1,0 +1,400 @@
+// === PLAYER-CARD / VERT - HORIZONTAL SLIDER === //
+// SLIDER VERTICAL - 1600 / 1429.98
+// SLIDER HORIZONTAL-1 - 1429.98 / 767.98
+// HORIZONTAL-2 - 768.98 / 320
+
+.player-card-vh-slider {
+	position: relative;
+	height: rem(105);
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	background-color: $white;
+	border: rem(1) solid $white;
+	border-radius: rem(3);
+	overflow: hidden;
+
+	@media (max-width: rem(767.98)) {
+		padding: 10px 0px 0px 0px;
+		height: auto;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__left {
+		flex-direction: row;
+	}
+	&__right {
+		flex-direction: row-reverse;
+	}
+
+	// = PHOTO = //
+	&__photo {
+		position: relative;
+		width: rem(105);
+		height: rem(105);
+		z-index: 1;
+		@media (max-width: rem(767.98)) {
+			height: rem(250);
+			//min-height: rem(250);
+			width: rem(250);
+		}
+		@media (max-width: rem(649.98)) {
+			@include adaptiveValue("width", 240, 200, 649.98, 480, 1);
+			@include adaptiveValue("height", 240, 200, 649.98, 480, 1);
+		}
+		@media (max-width: rem(479.98)) {
+			@include adaptiveValue("width", 200, 140, 479.98, 320, 1);
+			@include adaptiveValue("height", 200, 140, 479.98, 320, 1);
+		}
+	}
+	&__photo img {
+		object-position: top;
+	}
+	&__image {
+		-webkit-filter: drop-shadow(-5px 13px 15px #05050580);
+		filter: drop-shadow(-5px 13px 14px rgba(5, 5, 5, 0.5));
+	}
+
+	// = CORNER = //
+	&__left-corner {
+		transition: all 0.5s ease 0s;
+		z-index: 2;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		border-top: 0px solid transparent;
+		border-left: 40px solid $gold;
+		border-bottom: 40px solid transparent;
+		@media (max-width: rem(767.98)) {
+			//border-left: none;
+			//border-right: 40px solid $sa_silver;
+			//left: auto;
+			//right: 0;
+		}
+		@media (max-width: rem(499.98)) {
+			//border-right: 40px solid $sa_silver;
+			//border-bottom: 40px solid transparent;
+		}
+	}
+	&__right-corner {
+		transition: all 0.5s ease 0s;
+		z-index: 2;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 0;
+		height: 0;
+		border-top: 0px solid transparent;
+		border-right: 40px solid $color-base-1;
+		border-bottom: 40px solid transparent;
+		@media (max-width: rem(499.98)) {
+			//border-right: 40px solid $gold;
+			//border-bottom: 40px solid transparent;
+		}
+	}
+
+	// = MAIN = //
+	&__main {
+		display: flex;
+		align-items: flex-start;
+		@include adaptiveValue("gap", 10, 5, 1600, 767.98, 1);
+		@media (max-width: rem(767.98)) {
+			gap: rem(0);
+		}
+	}
+	&__main-left {
+		margin: 0px 0px 0px 14px;
+		flex-direction: row;
+		text-align: left;
+		@media (max-width: rem(767.98)) {
+			width: 100%;
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			margin: 0px 0px 10px 0px;
+		}
+	}
+	&__main-right {
+		margin: 0px 14px 0px 0px;
+		flex-direction: row-reverse;
+		text-align: right;
+		@media (max-width: rem(767.98)) {
+			width: 100%;
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			margin: 0px 0px 10px 0px;
+		}
+	}
+
+	// = HEAD = //
+	&__head {
+		margin: 5px 0px 0px 0px;
+		background-color: $white;
+		@media (max-width: rem(767.98)) {
+			z-index: 1;
+			width: 100%;
+			margin: 5px 0px 5px 0px;
+			padding: 20px 0px 0px 0px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: rem(6);
+		}
+		@media (max-width: rem(479.98)) {
+			margin: 4px 0px 4px 0px;
+			padding: 15px 0px 0px 0px;
+			//@include adaptiveValue("font-size", 8, 30, 479.98, 340, 1);
+			gap: rem(4);
+		}
+	}
+
+	// = NAME = //
+	&__name {
+		width: 100%;
+		//text-align: left;
+		display: inline-block;
+		color: $mainColor;
+		text-transform: uppercase;
+		@media (max-width: rem(767.98)) {
+			text-align: center;
+		}
+	}
+	&__name span {
+		font-weight: 900;
+		@include adaptiveValue("font-size", 16, 14, 1429.98, 1149.98, 1);
+		letter-spacing: rem(1);
+		@media (max-width: rem(1149.98)) {
+			@include adaptiveValue("font-size", 16, 14, 1149.98, 768, 1);
+		}
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 14, 12, 767.98, 480, 1);
+		}
+		@media (max-width: rem(479.98)) {
+			@include adaptiveValue("font-size", 12, 9, 479.98, 340, 1);
+		}
+	}
+	&__name h2 {
+		font-weight: 900;
+		@include adaptiveValue("font-size", 19, 16, 1429.98, 1149.98, 1);
+		@include adaptiveValue("line-height", 26, 21, 1429.98, 1149.98, 1);
+		letter-spacing: rem(1);
+		@media (max-width: rem(1149.98)) {
+			@include adaptiveValue("font-size", 19, 16, 1149.98, 768, 1);
+			@include adaptiveValue("line-height", 26, 21, 1149.98, 768, 1);
+		}
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 16, 14, 767.98, 480, 1);
+			@include adaptiveValue("line-height", 20, 16, 767.98, 480, 1);
+		}
+		@media (max-width: rem(479.98)) {
+			@include adaptiveValue("font-size", 14, 9, 479.98, 340, 1);
+			@include adaptiveValue("line-height", 16, 12, 479.98, 340, 1);
+		}
+	}
+
+	// = DIVIDER = //
+	&__divider {
+		height: rem(4);
+		@include adaptiveValue("width", 80, 60, 1600, 768, 1);
+		border-radius: rem(3);
+		margin: 4px 0px 4px 0px;
+		background-color: $color-base-1;
+	}
+	&__divider-left {
+		margin-right: auto;
+		@media (max-width: rem(767.98)) {
+			margin: 0 auto;
+		}
+	}
+	&__divider-right {
+		margin-left: auto;
+		@media (max-width: rem(767.98)) {
+			margin: 0 auto;
+		}
+	}
+
+	// = DESC = //
+	&__desc {
+		@include adaptiveValue("font-size", 12, 10, 1600, 768, 1);
+		//font-size: rem(12);
+		color: $mainColor;
+		text-transform: uppercase;
+		letter-spacing: rem(2);
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 10, 8, 767.98, 480, 1);
+		}
+	}
+
+	// = INFO = //
+	&__info {
+		position: absolute;
+		//text-align: center;
+		padding: rem(8);
+		color: $mainColor;
+		display: flex;
+
+		align-items: baseline;
+		gap: rem(3);
+		z-index: 2;
+		display: flex;
+		@media (max-width: rem(767.98)) {
+			width: 100%;
+			background-color: $color-base-1;
+		}
+	}
+	&__info-left {
+		bottom: 0;
+		right: 0;
+
+		text-align: right;
+		@media (max-width: rem(767.98)) {
+			//text-align: center;
+			flex-direction: row-reverse;
+			justify-content: start;
+			@include adaptiveValue("bottom", 85, 66, 767.98, 340, 1);
+		}
+	}
+	&__info-right {
+		bottom: 0;
+		left: 0;
+		text-align: left;
+		flex-direction: row-reverse;
+		@media (max-width: rem(767.98)) {
+			text-align: left;
+			flex-direction: row;
+			justify-content: end;
+			@include adaptiveValue("bottom", 85, 66, 767.98, 340, 1);
+		}
+	}
+	&__info-item {
+		display: inline-block;
+		font-weight: 900;
+		color: $mainColor;
+		font-family: $fontFamily;
+		@include adaptiveValue("font-size", 46, 34, 1600, 767.98, 1);
+		@media (max-width: rem(767.98)) {
+			font-size: rem(34);
+			line-height: rem(36);
+			color: $white;
+		}
+		@media (max-width: rem(479.98)) {
+			@include adaptiveValue("font-size", 34, 30, 479.98, 340, 1);
+		}
+	}
+	&__info-label {
+		display: block;
+		font-weight: 700;
+		letter-spacing: rem(1.5);
+		color: $mainColor;
+		@include adaptiveValue("font-size", 14, 11, 1149.98, 768, 1);
+
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 12, 10, 767.98, 480, 1);
+			letter-spacing: rem(1);
+			color: $white;
+		}
+		@media (max-width: rem(479.98)) {
+			@include adaptiveValue("font-size", 10, 9, 479.98, 340, 1);
+		}
+	}
+
+	// = LOGO BG = //
+	&__logo-bg-l {
+		position: absolute;
+		top: rem(10);
+		right: rem(10);
+		opacity: 0.1;
+		z-index: 1;
+		@include adaptiveValue("height", 165.12, 115.58, 1600, 1309.98, 1);
+		@include adaptiveValue("width", 200, 140, 1600, 1309.98, 1);
+		@media (max-width: rem(767.98)) {
+			display: none;
+		}
+	}
+	&__logo-bg-r {
+		position: absolute;
+		top: rem(10);
+		left: rem(10);
+		opacity: 0.1;
+		z-index: 1;
+		@include adaptiveValue("height", 165.12, 115.58, 1600, 1309.98, 1);
+		@include adaptiveValue("width", 200, 140, 1600, 1309.98, 1);
+	}
+
+	// = LOGO TEAM = //
+	&__logo-team-l {
+		position: absolute;
+		top: 0;
+		right: rem(30);
+		opacity: 0.3;
+		z-index: 1;
+		@include adaptiveValue("height", 85, 75, 1600, 1309.98, 1);
+		@include adaptiveValue("width", 85, 75, 1600, 1309.98, 1);
+		@media (max-width: rem(667.98)) {
+			display: none;
+		}
+	}
+	&__logo-team-r {
+		position: absolute;
+		top: 0;
+		left: rem(30);
+		opacity: 0.3;
+		z-index: 1;
+		@include adaptiveValue("height", 85, 75, 1600, 1309.98, 1);
+		@include adaptiveValue("width", 85, 75, 1600, 1309.98, 1);
+		@media (max-width: rem(667.98)) {
+			display: none;
+		}
+	}
+
+	// = NUM = //
+	&__num {
+		position: absolute;
+		top: rem(5);
+		color: $color-base-1;
+		font-family: $fontFamily;
+		font-size: rem(24);
+		font-weight: 900;
+		z-index: 2;
+		@media (max-width: rem(767.98)) {
+			display: inline-block;
+			top: rem(10);
+			@include adaptiveValue("font-size", 50, 30, 767.98, 480, 1);
+			color: $white;
+			-webkit-text-stroke-width: rem(1);
+			-webkit-text-stroke-color: $color-base-1;
+		}
+		@media (max-width: rem(479.98)) {
+			@include adaptiveValue("font-size", 30, 24, 479.98, 340, 1);
+			top: rem(7);
+		}
+	}
+	&__num-left {
+		left: rem(5);
+		text-align: left;
+		@media (max-width: rem(767.98)) {
+			left: rem(10);
+		}
+		@media (max-width: rem(479.98)) {
+			left: rem(7);
+		}
+	}
+	&__num-right {
+		right: rem(5);
+		text-align: left;
+		@media (max-width: rem(767.98)) {
+			right: rem(10);
+		}
+		@media (max-width: rem(479.98)) {
+			right: rem(7);
+		}
+	}
+}

@@ -1,0 +1,227 @@
+// === SITE PAGE - GRIDS === //
+
+// = PAGE TWO COLUMNS = //
+.page-two-columns {
+	// = WRAPPER = //
+	&__wrapper-sb-r {
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr 320px;
+		grid-template-rows: auto;
+		gap: rem(20);
+		margin-bottom: rem(30);
+		@media (max-width: rem(991.98)) {
+			display: flex;
+			flex-direction: column;
+
+			//margin-bottom: 0px;
+		}
+	}
+
+	&__wrapper-sb-l {
+		position: relative;
+		display: grid;
+		grid-template-columns: 320px 1fr;
+		grid-template-rows: auto;
+		gap: rem(20);
+		margin-bottom: rem(30);
+		@media (max-width: rem(1299.98)) {
+			grid-template-columns: 290px 1fr;
+		}
+		@media (max-width: rem(1199.98)) {
+			grid-template-columns: 270px 1fr;
+		}
+		@media (max-width: rem(1099.98)) {
+			grid-template-columns: 180px 1fr;
+		}
+		@media (max-width: rem(991.98)) {
+			display: flex;
+			flex-direction: column;
+			//margin-bottom: 0px;
+		}
+	}
+
+	// = BODY = //
+	&__body {
+		//max-width: rem(940);
+		@media (max-width: rem(991.98)) {
+			width: 100%;
+		}
+	}
+
+	// = SIDEBAR = //
+	&__sidebar {
+		@media (max-width: rem(991.98)) {
+			margin: 0px 0px 40px 0px;
+			display: flex;
+			flex-direction: column-reverse;
+			@media (max-width: rem(991.98)) {
+				margin: 0px 0px 0px 0px;
+			}
+		}
+	}
+
+	// = SIDEBAR SLIDERS = //
+	&__sidebar-sliders {
+		margin: 0px 0px 40px 0px;
+		@media (max-width: rem(991.98)) {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+	// = STORE SLIDER = //
+	&__sidebar-store-slider {
+		overflow: hidden;
+	}
+	// = BANNER SLIDER = //
+	&__sidebar-banner-slider {
+		overflow: hidden;
+		margin: 20px 0px 0px 0px;
+		@media (max-width: rem(991.98)) {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+
+	// = SIDEBAR SPOLLERS = //
+	&__sidebar-spollers {
+		//margin: 0px 0px 10px 0px;
+		display: flex;
+		flex-direction: column;
+		gap: rem(10);
+		@media (max-width: rem(991.98)) {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			gap: rem(10);
+		}
+		@media (max-width: rem(767.98)) {
+			width: 100%;
+			flex-direction: column;
+		}
+	}
+
+	// = SPOLLERS BOX = //
+	&__spollers-box {
+		background-color: $color-base-1;
+		border-radius: rem(10);
+	}
+
+	// = SPOLLERS = //
+	&__spollers {
+		@media (max-width: rem(991.98)) {
+			flex-basis: rem(240);
+			flex-grow: 1;
+		}
+		@media (max-width: rem(767.98)) {
+			flex-basis: rem(75);
+		}
+	}
+
+	// = SPOLLERS TITLE = //
+
+	&__spollers-title {
+		position: relative;
+		width: 100%;
+		cursor: default;
+		padding: 24px 16px 24px 16px;
+		text-align: left;
+		color: $white;
+		//border: rem(1) solid $color-base-1;
+		border-radius: rem(10);
+		background-color: $color-base-1;
+		letter-spacing: rem(1);
+		text-transform: uppercase;
+		font-size: rem(18);
+		transition: transform 0.5s ease 0s;
+
+		._spoller-init & {
+			cursor: pointer;
+			//border: 1px solid $white;
+			//padding: rem(10) rem(15);
+
+			@media (max-width: rem(767.98)) {
+				margin-bottom: rem(0);
+			}
+			//&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				right: rem(12);
+				height: 0;
+				width: 0;
+				border-left: 8px solid transparent;
+				border-right: 8px solid transparent;
+				border-top: 12px solid $white;
+				transition: transform 0.5s ease 0s;
+			}
+			// &::before {
+			// 	left: rem(12);
+			// }
+			&::after {
+				top: rem(28);
+				right: rem(16);
+			}
+			&._spoller-active {
+				transition: transform 0.5s ease 0s;
+				border-radius: rem(10) rem(10) 0px 0px;
+				&::before {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+				&::after {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+
+	// = SPOLLERS BODY = //
+	&__spollers-body {
+		//margin: 0px 0px 10px 0px;
+		padding: 10px 10px 10px 10px;
+		background-color: $color-base-1;
+		border-radius: 0px 0px rem(10) rem(10);
+	}
+
+	// = SPOLLERS LIST = //
+	&__spollers-list {
+		cursor: pointer;
+		padding: 0px 0px 0px 4px;
+		font-size: rem(16);
+		color: $color-base-4;
+		//font-weight: 900;
+		text-transform: uppercase;
+		@media (max-width: rem(991.98)) {
+			font-size: rem(14);
+			font-weight: 400;
+		}
+		@media (max-width: rem(899.98)) {
+			font-size: rem(12);
+		}
+		@media (max-width: rem(767.98)) {
+			font-size: rem(16);
+		}
+		@media (max-width: em(399.98)) {
+			font-size: rem(14);
+		}
+	}
+
+	// = SPOLLERS ITEM = //
+	&__spollers-item {
+		padding: 0px 0px 20px 0px;
+	}
+
+	// = SPOLLERS LINK = //
+	&__spollers-link {
+		@media (any-hover: hover) {
+			&:hover {
+				color: $color-base-5;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+// = PAGE THREE COLUMNS = //
+.page-three-columns {
+}

@@ -1,0 +1,241 @@
+// === GAME MINI CARD === //
+.game-mini-card {
+	position: relative;
+	width: 100%;
+	height: fit-content;
+	border-radius: rem(3);
+	//border: 1px solid transparent;
+	background: $white;
+	transition: all 0.5s ease 0s;
+
+	// = GAME MINI CARD / HOVER = //
+	&:hover {
+		transition: all 0.5s ease 0s;
+		box-shadow: $shadow-1;
+		.game-mini-card__header {
+			background-color: $gold;
+			color: $mainColor;
+			transition: all 0.5s ease 0s;
+		}
+	}
+
+	// = BODY = //
+	&__body {
+		overflow: hidden;
+	}
+
+	// = HEADER = //
+	&__header {
+		width: 100%;
+		height: 48px;
+		padding: 8px 10px 0px 10px;
+		background: $mainColor;
+		border-radius: rem(3) rem(3) 0px 0px;
+		transition: all 0.5s ease 0s;
+		color: $white;
+		font-weight: 900;
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		@media (max-width: rem(549.98)) {
+			height: 40px;
+			padding: 8px 8px 0px 8px;
+		}
+		h3 {
+			display: inline-block;
+			font-family: $fontFamily;
+			font-size: rem(30);
+			@media (max-width: rem(549.98)) {
+				font-size: rem(24);
+			}
+			@media (max-width: rem(449.98)) {
+				font-size: rem(20);
+			}
+		}
+
+		span {
+			font-family: $fontFamily;
+			font-size: rem(20);
+			text-transform: uppercase;
+			text-align: center;
+			@media (max-width: rem(549.98)) {
+				font-size: rem(16);
+			}
+			@media (max-width: rem(449.98)) {
+				font-size: rem(14);
+			}
+		}
+	}
+
+	// = TEAMS = //
+	&__teams {
+		padding: 0px 8px 0px 8px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	&__team-row {
+		display: flex;
+		gap: rem(8);
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: rem(549.98)) {
+			align-items: baseline;
+		}
+		@media (max-width: rem(449.98)) {
+			align-items: center;
+		}
+	}
+	&__team-name {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		@media (max-width: rem(549.98)) {
+			align-items: baseline;
+		}
+	}
+
+	// = TOURNAMENT LOGO = //
+	&__tournament-logo {
+		align-self: center;
+		position: relative;
+		height: rem(40);
+		width: rem(40);
+		overflow: hidden;
+		padding: 0px 0px 2px 0px;
+		@media (max-width: rem(449.98)) {
+			position: absolute;
+			top: rem(45);
+			@include adaptiveValue("left", 70, 38, 449.98, 320, 1);
+			height: rem(75);
+			width: rem(75);
+			opacity: 0.1;
+		}
+	}
+	&__tournament-logo img {
+		//padding: rem(2);
+	}
+
+	// = TEAM LOGO = //
+	&__team-logo {
+		width: rem(40);
+		height: rem(40);
+		overflow: hidden;
+		margin: 0px 3px 0px 0px;
+		//border-radius: 3px;
+		//background: $white;
+		@media (max-width: rem(649.98)) {
+			width: rem(35);
+			height: rem(35);
+		}
+		@media (max-width: rem(549.98)) {
+			display: none;
+		}
+		@media (max-width: rem(449.98)) {
+			display: block;
+		}
+	}
+	&__team-logo img {
+		//padding: rem(2);
+	}
+
+	// = ICON = //
+	&__icon {
+		position: relative;
+		width: 14px;
+		height: 14px;
+		@media (max-width: rem(449.98)) {
+			display: none;
+		}
+	}
+
+	// = CONTENT = //
+	&__content {
+		margin: 8px 0px 20px 0px;
+		padding: 0px 8px 0px 8px;
+		text-align: center;
+	}
+
+	// = GYM = //
+	&__gym {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: rem(3);
+		margin-bottom: rem(8);
+		p {
+			margin: 2px 0px 0px 0px;
+			font-size: 12px;
+			line-height: 14px;
+			@media (max-width: rem(649.98)) {
+				display: none;
+			}
+		}
+	}
+
+	// = TOURNAMENT = //
+	&__tournament {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin: 10px 0px 0px 0px;
+		padding: 0px 10px 0px 10px;
+	}
+	&__tournament span {
+		font-size: 11px;
+		letter-spacing: rem(1.5);
+		text-transform: uppercase;
+		line-height: 16px;
+		@media (max-width: rem(649.98)) {
+			display: none;
+		}
+	}
+
+	// = TITLE = //
+	&__title {
+		margin-bottom: 0;
+		color: $mainColor;
+		font-family: $fontFamily;
+		//letter-spacing: rem(1);
+		font-size: rem(13);
+		line-height: rem(40);
+		text-transform: uppercase;
+		font-weight: 900;
+		text-align: left;
+		@media (max-width: rem(649.98)) {
+			font-size: rem(11);
+			line-height: rem(35);
+		}
+		@media (max-width: rem(549.98)) {
+			font-size: rem(10);
+			line-height: rem(26);
+		}
+		@media (max-width: rem(449.98)) {
+			display: none;
+		}
+	}
+
+	// = SCORE = //
+	&__team-score {
+		font-family: $fontFamily;
+		text-align: end;
+		min-width: rem(38);
+		font-size: rem(20);
+		line-height: 40px;
+		letter-spacing: rem(2);
+		text-transform: uppercase;
+		font-weight: 900;
+		@media (max-width: rem(649.98)) {
+			font-size: rem(18);
+			line-height: rem(35);
+		}
+		@media (max-width: rem(549.98)) {
+			line-height: rem(26);
+		}
+		@media (max-width: rem(449.98)) {
+			min-width: rem(40);
+			font-size: rem(22);
+			line-height: rem(35);
+		}
+	}
+}

@@ -1,0 +1,109 @@
+// === GAME PROFILE BODY === //
+
+.game-profile-body {
+	// = MENU BLOCK = //
+	&__menu-block {
+		//background-color: $white;
+	}
+
+	// = TEAM = //
+
+	&__team {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin: 10px 0px 10px 0px;
+		//flex-direction: column;
+		@media (max-width: rem(767.98)) {
+			//min-width: rem(170);
+		}
+		@media (max-width: rem(599.98)) {
+			//min-width: 0;
+		}
+	}
+	&__team-left {
+		align-items: center;
+		@media (max-width: rem(449.98)) {
+			grid-column: 1/1 span;
+			grid-row: 1/1 span;
+		}
+	}
+	&__team-right {
+		align-items: center;
+		@media (max-width: rem(449.98)) {
+			grid-column: 2/1 span;
+			grid-row: 1/1 span;
+		}
+	}
+
+	// = TEAM NAME = //
+	&__team-name {
+		margin: 0px 0px 0px 8px;
+		@media (max-width: rem(599.98)) {
+			//display: none;
+		}
+	}
+	&__team-name-left {
+		text-align: left;
+	}
+	&__team-name-right {
+		//text-align: center;
+	}
+	&__team-title {
+		font-weight: 900;
+		//text-transform: uppercase;
+		@include adaptiveValue("font-size", 30, 24, 1600, 992, 1);
+		@include adaptiveValue("line-height", 32, 26, 1600, 992, 1);
+		@media (max-width: rem(991.98)) {
+			//@include adaptiveValue("font-size", 24, 20, 991.98, 768, 1);
+			//@include adaptiveValue("line-height", 26, 22, 991.98, 768, 1);
+		}
+		@media (max-width: rem(767.98)) {
+			//@include adaptiveValue("font-size", 20, 17, 767.98, 620, 1);
+			//@include adaptiveValue("line-height", 22, 20, 767.98, 620, 1);
+		}
+		@media (max-width: rem(619.98)) {
+			//@include adaptiveValue("font-size", 17, 14, 619.98, 360, 1);
+			//@include adaptiveValue("line-height", 20, 16, 619.98, 360, 1);
+		}
+	}
+	&__team-subtitle {
+		//font-weight: 700;
+		//text-transform: uppercase;
+		color: $gray;
+		@include adaptiveValue("font-size", 15, 14, 1600, 992, 1);
+		@include adaptiveValue("line-height", 18, 17, 1600, 992, 1);
+		@media (max-width: rem(991.98)) {
+			//@include adaptiveValue("font-size", 16, 14, 991.98, 768, 1);
+			//@include adaptiveValue("line-height", 20, 18, 991.98, 768, 1);
+		}
+		@media (max-width: rem(767.98)) {
+			//@include adaptiveValue("font-size", 14, 12, 767.98, 620, 1);
+			//@include adaptiveValue("line-height", 18, 16, 767.98, 620, 1);
+		}
+		@media (max-width: rem(619.98)) {
+			//@include adaptiveValue("font-size", 12, 10, 619.98, 360, 1);
+			//@include adaptiveValue("line-height", 16, 12, 619.98, 360, 1);
+		}
+	}
+
+	// = TEAM LOGO = //
+	&__team-logo {
+		@include adaptiveValue("height", 80, 70, 1600, 992, 1);
+		@include adaptiveValue("width", 80, 70, 1600, 992, 1);
+		@media (max-width: rem(767.98)) {
+			//@include adaptiveValue("height", 180, 150, 767.98, 620, 1);
+			//@include adaptiveValue("width", 180, 150, 767.98, 620, 1);
+		}
+		@media (max-width: rem(619.98)) {
+			//@include adaptiveValue("height", 150, 100, 619.98, 450, 1);
+			//@include adaptiveValue("width", 150, 100, 619.98, 450, 1);
+		}
+	}
+	&__team-logo-left {
+		//align-self: flex-end;
+	}
+	&__team-logo-right {
+		//align-self: flex-start;
+	}
+}

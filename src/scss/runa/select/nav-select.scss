@@ -1,0 +1,321 @@
+// === nav-select (SELECTED) === //
+.nav-select {
+	// === nav-select NAV === //
+	&__nav {
+		margin: 0px 0px 30px 0px;
+		//padding: 0px 16px 20px 16px;
+	}
+	&__nav-on-tab {
+		margin: 30px 0px 0px 0px;
+		padding: 10px 16px 20px 16px;
+		background-color: $color-base-7;
+		border-radius: rem(10) rem(10) 0px 0px;
+		@media (max-width: rem(767.98)) {
+			margin: 0px 0px 0px 0px;
+			padding: 10px 0px 20px 0px;
+			background-color: $mainColor;
+		}
+	}
+
+	// === nav-select FORM === //
+	&__form-2-box {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: rem(20);
+		align-items: flex-start;
+		@media (max-width: rem(499.98)) {
+			grid-template-columns: 1fr;
+			gap: rem(4);
+		}
+	}
+
+	&__form-3-box {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: rem(20);
+		align-items: flex-start;
+		@media (max-width: rem(991.98)) {
+			gap: rem(10);
+		}
+		@media (max-width: rem(767.98)) {
+			grid-template-columns: 1fr;
+			gap: rem(5);
+		}
+	}
+
+	&__form-4-box {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: rem(20);
+		align-items: flex-start;
+		@media (max-width: rem(991.98)) {
+			gap: rem(10);
+		}
+		@media (max-width: rem(767.98)) {
+			grid-template-columns: 1fr;
+			gap: rem(4);
+		}
+	}
+
+	&__form {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		gap: rem(20);
+		align-items: flex-end;
+		@media (max-width: rem(1599.98)) {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+		@media (max-width: rem(1219.98)) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		@media (max-width: rem(949.98)) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media (max-width: rem(499.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	// === nav-select BOX=== //
+	&__box {
+		width: 100%;
+
+		@media (any-hover: hover) {
+			&:hover {
+				.nav-select__label,
+				.nav-select__label-1,
+				.nav-select__label-3 {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	// === nav-select LABEL === //
+	&__label {
+		font-family: $fontFamily;
+		opacity: 0;
+		display: inline-block;
+		@include adaptiveValue("font-size", 12, 11, 1600, 767.98, 1);
+		text-transform: uppercase;
+		letter-spacing: rem(1.5);
+		font-weight: 400;
+		padding: 0px 0px 3px 5px;
+	}
+	// &__label-black {
+	// 	color: $color-base-5;
+	// }
+	&__label-white {
+		color: $white;
+	}
+
+	// === nav-select LIST === //
+	&__list {
+	}
+	// === nav-select ITEM === //
+	&__item {
+	}
+}
+
+// === SELECT === //
+.select {
+	position: relative;
+	font-family: $fontFamily;
+	text-transform: uppercase;
+	//Тело селекта
+	&__body {
+		position: relative;
+	}
+	// Заголовок
+	&__title {
+		font-family: $fontFamily;
+		text-transform: uppercase;
+		border: rem(1) solid $white;
+		border-radius: rem(3);
+		width: 100%;
+		position: relative;
+		//height: rem(40);
+		background-color: $color-base-6;
+		cursor: pointer;
+		//color: inherit;
+		color: $white;
+		text-align: left;
+	}
+	// Значение в заголовке
+	&__value {
+		font-family: $fontFamily;
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		height: rem(40);
+		padding: 0 rem(12);
+		gap: rem(10);
+
+		> * {
+			flex: 1 1 auto;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: rem(15);
+			right: rem(10);
+			height: 0;
+			width: 0;
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-top: 10px solid $white;
+			transition: transform 0.5s ease 0s;
+
+			._select-open & {
+				transform: rotate(-180deg);
+				transition: transform 0.5s ease 0s;
+			}
+		}
+
+		&._select-pseudo-label {
+			&::before {
+				content: attr(data-pseudo-label);
+				opacity: 0.5;
+			}
+		}
+	}
+	// Лейбл
+	&__label {
+		font-family: $fontFamily;
+		font-style: italic;
+		@include adaptiveValue("font-size", 14, 12, 1600, 415, 1);
+		text-transform: uppercase;
+		color: $white;
+		font-weight: 400;
+	}
+
+	&__label-1 {
+		font-family: $fontFamily;
+		font-style: italic;
+		@include adaptiveValue("font-size", 14, 12, 1600, 415, 1);
+		text-transform: uppercase;
+		color: $white;
+		font-weight: 400;
+	}
+	// Поле ввода
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		height: 100%;
+	}
+	// Оболочка текстовых данных
+	&__text {
+		flex: 1 1 auto;
+	}
+	// Ссылка в элементе
+	&__link {
+	}
+	// Выпадающий список
+	&__options {
+		font-family: $fontFamily;
+		color: $white;
+		text-transform: uppercase;
+		position: absolute;
+		top: rem(39);
+		border-radius: 0 0 3px 3px;
+		min-width: 100%;
+		height: fit-content;
+		left: 0;
+		background-color: $color-base-6;
+		border-top: 0;
+		border: 1px solid $white;
+		border-top: 0;
+		padding: 10px 0px 10px 0px;
+		z-index: 2;
+	}
+	// Оболочка при скролле
+	&__scroll {
+		overflow-y: auto;
+		overflow-x: hidden;
+		// Максимальная высота
+		max-height: 200px;
+		// Стили скроллбара
+		.simplebar-scrollbar {
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+	// Пункт
+	&__option {
+		font-family: $fontFamily;
+		text-transform: uppercase;
+		width: 100%;
+		text-align: left;
+		@include adaptiveValue("font-size", 17, 15, 1600, 991.98, 1);
+		cursor: pointer;
+		padding: 8px 12px;
+		color: inherit;
+
+		&._select-selected {
+			background-color: $color-base-8;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $color-base-7;
+				color: $color-base-4;
+			}
+		}
+	}
+
+	// Оболочка контента в заголовке
+	&__content {
+		width: 100%;
+		text-align: start;
+		@include adaptiveValue("font-size", 17, 15, 1600, 991.98, 1);
+		@media (max-width: rem(850)) {
+			@include adaptiveValue("font-size", 17, 14, 991.98, 768, 1);
+			width: rem(190);
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		@media (max-width: rem(767.98)) {
+			//@include adaptiveValue("font-size", 18, 16, 767.98, 360, 1);
+			font-size: rem(16);
+			width: 100%;
+		}
+	}
+	// Ряд
+	&__row {
+		display: inline-flex;
+		align-items: center;
+	}
+	// Дополнительные данные
+	&__asset {
+	}
+	// === ДОПОЛНИТЕЛЬНЫЕ КЛАССЫ === //
+	// Список выбран
+	&._select-active {
+	}
+	// Запрещен
+	&._select-disabled {
+	}
+	// Список открыт
+	&._select-open {
+		z-index: 5;
+	}
+	// Список в фокусе
+	&._select-focus {
+	}
+	// Мультивыбор
+	&._select-multiple {
+	}
+	// Стиль чекбокса
+	&._select-checkbox {
+	}
+	// Выбранный пункт
+	&._select-selected {
+	}
+}
+// Класс тега
+._select-tag {
+	cursor: pointer;
+}

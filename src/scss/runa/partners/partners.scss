@@ -1,0 +1,72 @@
+// === PARTNERS === //
+.partners {
+	// = BLOCK = //
+	&__block {
+		margin: 20px 0px 0px 0px;
+	}
+
+	// = LIST = //
+	&__list {
+	}
+
+	// = ITEM = //
+	&__item {
+	}
+
+	// = BOX = //
+	&__box {
+		padding: 0px 0px 0px 0px;
+		margin: 0px 0px 20px 0px;
+		border-bottom: rem(1) solid $sa_silver;
+	}
+
+	// = CONTENT = //
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: rem(20);
+		@media (max-width: rem(559.98)) {
+			flex-direction: column;
+			//justify-content: flex-start;
+			align-items: center;
+		}
+	}
+
+	// = LOGO = //
+	&__logo {
+		//@include adaptiveValue("height", 180, 112.5, 1600, 768, 1);
+		//@include adaptiveValue("width", 300, 200, 1600, 768, 1);
+		min-width: rem(300);
+		height: rem(160);
+		//background-color: $white;
+		//border-top: rem(1) solid $sa_silver;
+		border-right: rem(1) solid $sa_silver;
+		@media (max-width: rem(649.98)) {
+			min-width: rem(270);
+			height: rem(144);
+		}
+		@media (max-width: rem(559.98)) {
+			width: rem(270);
+			min-height: rem(144);
+			//background-color: none;
+			border-right: none;
+		}
+	}
+
+	// = IMG = //
+	&__img {
+	}
+
+	// = BUTTON = //
+	&__button {
+		width: 100%;
+		color: $blue;
+		font-size: rem(16);
+		text-transform: uppercase;
+		text-align: right;
+		//font-weight: 900;
+		letter-spacing: rem(2);
+		padding: 8px 5px 8px 5px;
+	}
+}

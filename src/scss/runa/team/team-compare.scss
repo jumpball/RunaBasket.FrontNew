@@ -1,0 +1,53 @@
+// === TEAM COMPARE === //
+.team-compare {
+	// = TEAM NAV = //
+	&__teams {
+		//background-color: $white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__teams-hidden {
+		@media (max-width: rem(767.98)) {
+			display: none;
+		}
+	}
+
+	// = TEAM TITLE = //
+	&__team-title-box {
+		padding: 16px 16px 16px 16px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		transition: all 0.5s ease 0s;
+		@media (max-width: rem(767.98)) {
+			padding: 12px 10px 12px 10px;
+		}
+	}
+	&__team-title {
+		@include adaptiveValue("font-size", 24, 16, 1600, 768, 1);
+		font-weight: 900;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: rem(1);
+		transition: all 0.5s ease 0s;
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 16, 14, 767.98, 650, 1);
+		}
+		@media (max-width: rem(649.98)) {
+			display: none;
+		}
+	}
+
+	// = TEAM LOGO = //
+	&__team-logo {
+		@include adaptiveValue("height", 80, 70, 1600, 992, 1);
+		@include adaptiveValue("width", 80, 70, 1600, 992, 1);
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("height", 70, 60, 767.98, 650, 1);
+			@include adaptiveValue("width", 70, 60, 767.98, 650, 1);
+		}
+	}
+}

@@ -1,0 +1,39 @@
+// === TEAM SLIDER / ROSTER === //
+.team-slider {
+	position: relative;
+
+	// === TEAM SLIDER WRAPPER === //
+	&__wrapper {
+	}
+
+	// === TEAM SLIDER BG LOGO === //
+	&__bg-logo {
+	}
+
+	// === TEAM SLIDER ITEM === //
+	&__item {
+		//min-height: 100%;
+	}
+	// === PUBLICATION SLIDER PAGINATION === //
+
+	&__pagination {
+		//position: relative;
+		//height: rem(50);
+	}
+
+	.swiper-pagination {
+		//display: none;
+		position: relative;
+		margin-top: rem(30);
+		@media (max-width: rem(767.98)) {
+			display: none;
+		}
+	}
+	.swiper-pagination-bullet {
+		width: rem(10);
+		height: rem(10);
+		line-height: rem(16);
+		background-color: $color-base-3;
+		border: rem(1) solid $color-base-4;
+	}
+}

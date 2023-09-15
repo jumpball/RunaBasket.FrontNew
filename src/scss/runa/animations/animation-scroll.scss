@@ -1,0 +1,81 @@
+// ==== БАЗОВЫЙ КЛАСС - element-animation ==== //
+
+.element-animation {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+	&.element-show {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.element-animation {
+	/* Скроем элемент в начальном состоянии */
+	//opacity: 0;
+	//transform: translateY(20px);
+}
+
+// ==== ПОКАЗ ПРИ СКРОЛЛЕ - КЛАСС - element-show ==== //
+
+.element-animation.element-show {
+	//opacity: 1;
+	//transition: all 1.5s;
+	//transform: translateY(0%);
+}
+
+// ==== ПОКАЗ при СКРОЛЛЕ + СДВИГ ВНИЗ ==== //
+
+.my-photo.element-animation {
+	opacity: 0;
+	-webkit-transform: translateY(-20px);
+	-ms-transform: translateY(-20px);
+	transform: translateY(-20px);
+	-webkit-transition: all 1.5s;
+	-o-transition: all 1.5s;
+	transition: all 1.5s;
+}
+
+.my-photo.element-animation.element-show {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}
+
+// ==== ПОКАЗ при СКРОЛЛЕ + ПООЧЕРЕДНОЕ ПОЯВЛЕНИЕ ==== //
+
+.my-item.element-animation {
+	opacity: 0;
+	-webkit-transform: translateY(-20px);
+	-ms-transform: translateY(-20px);
+	transform: translateY(-20px);
+	-webkit-transition: all 1.5s;
+	-o-transition: all 1.5s;
+	transition: all 1.5s;
+}
+.my-item.element-animation.element-show {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.my-item.element-animation:nth-of-type(3).element-show {
+	opacity: 1;
+	-webkit-transition-delay: 0.5s;
+	-o-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+}
+.my-item.element-animation:nth-of-type(2).element-show {
+	opacity: 1;
+	-webkit-transition-delay: 1s;
+	-o-transition-delay: 1s;
+	transition-delay: 1s;
+}
+
+.animation-block {
+	display: flex;
+	column-gap: rem(20);
+}

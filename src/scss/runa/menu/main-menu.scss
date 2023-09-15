@@ -1,0 +1,170 @@
+// === MAIN MENU === // (AD)
+
+.menu {
+	&__container {
+	}
+
+	&__body {
+		position: relative;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__body::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		height: 70px;
+		background-color: $color-zenit;
+		z-index: 3;
+	}
+
+	// .menu__logo
+	&__logo {
+		height: rem(50);
+		width: rem(105);
+		position: relative;
+		z-index: 5;
+		margin: 10px 0px;
+		opacity: 0;
+
+		@media (max-width: rem(1050)) {
+			opacity: 1;
+		}
+	}
+
+	&__icons {
+		@media (min-width: rem(1050)) {
+			display: none;
+		}
+		@media (max-width: rem(1050)) {
+			display: block;
+			z-index: 5;
+		}
+	}
+
+	&__nav {
+		@media (max-width: 1050px) {
+			position: fixed;
+			top: -120%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			transition: all 0.3s ease 0s;
+			background-color: $color-zenit;
+			padding: 80px 0px 0px 0px;
+			.menu-open & {
+				top: 120px;
+				@media (max-width: rem(1050)) {
+					top: 0;
+				}
+			}
+		}
+	}
+
+	// .menu__list
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		//gap: 40px;
+		position: relative;
+		z-index: 5;
+
+		@media (max-width: rem(1050)) {
+			display: block;
+		}
+	}
+
+	&__list li {
+		cursor: pointer;
+		padding: 0px 18px 0px 18px;
+		@media (max-width: rem(1050)) {
+			width: 100%;
+			padding: 0px 0px 0px 50px;
+			//text-align: center;
+			//padding: 0px 0px 0px 50px;
+		}
+	}
+
+	&__list li:hover {
+		background-color: $mainColor;
+		transition: all 0.3s ease 0s;
+	}
+
+	// .menu__item
+	&__item {
+		@media (max-width: rem(1050)) {
+		}
+	}
+
+	// .menu__link
+	&__link {
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 80px;
+
+		@media (max-width: rem(1050)) {
+			font-size: 24px;
+			font-weight: 700;
+		}
+	}
+}
+
+// === MENU OPEN === //
+
+// === BURGER === //
+
+.icon-menu {
+	display: none;
+	@media (max-width: rem(1050)) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: $white;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

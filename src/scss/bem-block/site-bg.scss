@@ -1,0 +1,91 @@
+:root {
+	--width: 100vw;
+	--full-width: 100vw;
+
+	@media (min-width: 42em) {
+		--width: 42rem;
+	}
+
+	--angle: -3deg;
+	--angle-1: -8deg;
+	/*-----------------
+  Magic Number Alert:
+  
+  the 0.09719 is calculated by this formula:
+  tan(11°) / 2
+  11° is the current skewY value.
+  ------------------*/
+	--magic-number: 0.09719;
+	--skew-padding: calc(var(--width) * var(--magic-number));
+	--clip-padding: calc(var(--full-width) * var(--magic-number));
+}
+
+.diagonal-box {
+	position: relative;
+	padding: var(--skew-padding) 0;
+	margin-top: -1px;
+	z-index: 2;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		transform: skewy(var(--angle));
+		transform-origin: 62% 0;
+		outline: 1px solid transparent;
+		backface-visibility: hidden;
+	}
+}
+
+.diagonal-box-1 {
+	position: relative;
+	padding: var(--skew-padding) 0;
+	margin-top: -1px;
+	//z-index: 2;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		transform: skewy(var(--angle-1));
+		transform-origin: 2% 0;
+		outline: 1px solid transparent;
+		backface-visibility: hidden;
+	}
+}
+
+.bg-one:before {
+	//background-image: linear-gradient(45deg, #654ea3, #eaafc8);
+	//background-image: linear-gradient(45deg, #71a6dc, #4ea4fa);
+	//background-image: linear-gradient(45deg, #71a6dc, #eef0f2);
+	background-image: linear-gradient(45deg, #a80d1c, #a80d1c);
+}
+
+.bg-two:before {
+	//background-image: linear-gradient(-45deg, #fff, #fff);
+	background-image: linear-gradient(45deg, #3a3a3a, #3a3a3a);
+}
+
+.bg-three:before {
+	background-image: linear-gradient(-135deg, #007, #003);
+}
+
+.content__box {
+	//max-width: var(--width);
+	margin: 0 auto;
+	//padding: 1.5em;
+	padding: 20px 15px 20px 15px;
+	position: relative;
+
+	/* -----------
+  включить границу, чтобы увидеть, что содержимое
+  отлично вписывается в раздел
+  ------------ */
+	// border: 2px dashed #fff8;
+}

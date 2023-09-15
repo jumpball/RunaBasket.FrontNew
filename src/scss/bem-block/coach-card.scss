@@ -1,0 +1,306 @@
+// === COACH CARD === //
+.coach-card {
+	width: 100%;
+	position: relative;
+	background-color: $white;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	border-radius: rem(3);
+	overflow: hidden;
+	@media (max-width: $mobile) {
+		padding: 10px 0px 20px 0px;
+	}
+
+	// === COACH CARD LEFT-RIGHT === //
+	&__left {
+		flex-direction: row;
+	}
+	&__right {
+		flex-direction: row-reverse;
+	}
+	// === COACH CARD IMG === //
+	&__img {
+		@include adaptiveValue("height", 120, 100, 1600, 991.98, 1);
+		@include adaptiveValue("width", 120, 100, 1600, 991.98, 1);
+		z-index: 2;
+		@media (max-width: $mobile) {
+			@include adaptiveValue("height", 200, 130, 767.98, 360, 1);
+			@include adaptiveValue("width", 200, 130, 767.98, 360, 1);
+			border-bottom: rem(4) solid $mainColor;
+		}
+	}
+
+	// === COACH CARD MAIN === //
+	&__main {
+		display: flex;
+		align-items: flex-start;
+		@include adaptiveValue("gap", 10, 5, 1600, 767.98, 1);
+	}
+
+	&__main-left {
+		margin: 0px 0px 0px 14px;
+		flex-direction: row;
+		text-align: left;
+		@media (max-width: $mobile) {
+			width: 100%;
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			margin: 0px 0px 40px 0px;
+		}
+	}
+
+	&__main-right {
+		margin: 0px 14px 0px 0px;
+		flex-direction: row-reverse;
+		text-align: right;
+		@media (max-width: $mobile) {
+			width: 100%;
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			margin: 0px 0px 40px 0px;
+		}
+	}
+
+	// === COACH CARD TOP === //
+	&__top {
+		@media (max-width: $mobile) {
+			z-index: 2;
+			position: absolute;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			//align-items: center;
+			gap: rem(5);
+		}
+	}
+	&__top-left {
+		bottom: 0;
+		right: 0;
+		text-align: left;
+		@media (max-width: $mobile) {
+			text-align: center;
+			bottom: rem(20);
+			//@include adaptiveValue("bottom", 20, 24, 767.98, 360, 1);
+		}
+	}
+	&__top-right {
+		bottom: 0;
+		left: 0;
+		text-align: right;
+		@media (max-width: $mobile) {
+			text-align: center;
+			bottom: rem(20);
+			//@include adaptiveValue("bottom", 20, 24, 767.98, 360, 1);
+		}
+	}
+
+	// === COACH CARD HEAD === //
+	&__head {
+		margin: 5px 0px 0px 0px;
+		@media (max-width: $mobile) {
+			margin: 5px 0px 5px 0px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: rem(6);
+			padding: rem(5);
+			text-align: center;
+			background-color: $mainColor;
+			border-top: rem(3) solid $color-gold;
+			opacity: 0.9;
+		}
+	}
+
+	// === COACH CARD TITLE === //
+	&__title {
+		color: $mainColor;
+		font-weight: 900;
+		text-transform: uppercase;
+		@include adaptiveValue("font-size", 24, 20, 1600, 991.98, 1);
+		@include adaptiveValue("line-height", 28, 24, 1600, 991.98, 1);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("font-size", 22, 16, 991.98, 767.98, 1);
+			@include adaptiveValue("line-height", 26, 20, 991.98, 767.98, 1);
+		}
+		@media (max-width: $mobile) {
+			color: $white;
+			@include adaptiveValue("font-size", 16, 10, 767.98, 320, 1);
+			@include adaptiveValue("line-height", 22, 16, 767.98, 320, 1);
+		}
+	}
+
+	&__title-name {
+		display: block;
+	}
+
+	&__title-bg {
+	}
+
+	// === COACH CARD DIVIDER === //
+	&__divider {
+		height: rem(4);
+		@include adaptiveValue("width", 80, 60, 1600, 991.98, 1);
+		border-radius: rem(3);
+		margin: 4px 0px 4px 0px;
+		background-color: $color-base-1;
+	}
+	&__divider-left {
+		margin-right: auto;
+		@media (max-width: $mobile) {
+			margin: 0 auto;
+		}
+	}
+	&__divider-right {
+		margin-left: auto;
+		@media (max-width: $mobile) {
+			margin: 0 auto;
+		}
+	}
+
+	// === COACH CARD DESC === //
+	&__desc {
+		@include adaptiveValue("font-size", 14, 11, 1600, 991.98, 1);
+		color: $mainColor;
+		letter-spacing: rem(1.2);
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 12, 8, 767.98, 360, 1);
+		}
+	}
+
+	// === COACH CARD BAGE === //
+	&__bage {
+		position: absolute;
+	}
+
+	&__bage-left {
+		top: 0;
+		left: 0;
+	}
+	&__bage-right {
+		top: 0;
+		right: 0;
+	}
+
+	// === COACH CARD LOGO === //
+	&__logo {
+		@include adaptiveValue("height", 50, 40, 1600, 991.98, 1);
+		@include adaptiveValue("width", 50, 40, 1600, 991.98, 1);
+		border-radius: rem(3);
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("height", 70, 40, 767.98, 360, 1);
+			@include adaptiveValue("width", 70, 40, 767.98, 360, 1);
+		}
+	}
+	&__logo img {
+		@include adaptiveValue("padding", 8, 5, 1600, 991.98, 1);
+	}
+
+	&__logo-bg-l {
+		position: absolute;
+		top: rem(10);
+		right: rem(10);
+		opacity: 0.06;
+		z-index: 1;
+		@include adaptiveValue("height", 100, 70, 1600, 991.98, 1);
+		@include adaptiveValue("width", 440, 308, 1600, 991.98, 1);
+		@media (max-width: rem(767.98)) {
+			right: rem(5);
+			@include adaptiveValue("height", 74, 29.5, 767.98, 360, 1);
+			@include adaptiveValue("width", 325, 130, 767.98, 360, 1);
+		}
+	}
+	&__logo-bg-r {
+		position: absolute;
+		top: rem(10);
+		left: rem(10);
+		opacity: 0.05;
+		z-index: 1;
+		@include adaptiveValue("height", 100, 70, 1600, 991.98, 1);
+		@include adaptiveValue("width", 440, 308, 1600, 991.98, 1);
+		@media (max-width: rem(767.98)) {
+			left: rem(5);
+			@include adaptiveValue("height", 74, 29.5, 767.98, 360, 1);
+			@include adaptiveValue("width", 325, 130, 767.98, 360, 1);
+		}
+	}
+}
+
+// === PLAYER CARD-1 === //
+.player-card-1 {
+	// === PLAYER CARD-1 TOP === //
+	&__top {
+	}
+
+	// === PLAYER CARD-1 HEAD === //
+	&__head {
+	}
+
+	&__info-item {
+		display: block;
+		font-weight: 900;
+		color: $mainColor;
+		@include adaptiveValue("font-size", 50, 36, 1600, 991.98, 1);
+		@media (max-width: $mobile) {
+			font-size: rem(30);
+			line-height: rem(32);
+			color: $color-gold;
+		}
+	}
+
+	&__info-label {
+		display: block;
+		font-weight: 900;
+		letter-spacing: rem(1.2);
+		color: $mainColor;
+		@include adaptiveValue("font-size", 14, 10, 1600, 991.98, 1);
+		@include adaptiveValue("line-height", 16, 12, 1600, 991.98, 1);
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 11, 9, 767.98, 360, 1);
+			letter-spacing: rem(1);
+			color: $white;
+		}
+	}
+
+	// === PLAYER CARD-1 LOGO === //
+
+	// === PLAYER CARD-1 BAGE === //
+	&__bage {
+		margin: 5px 5px 5px 5px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(15);
+		@media (max-width: $mobile) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	// === PLAYER CARD-1 NUM === //
+	&__num {
+		display: block;
+		width: 100%;
+		text-align: center;
+		@include adaptiveValue("font-size", 34, 24, 1600, 991.98, 1);
+		font-weight: 900;
+		@media (max-width: $mobile) {
+			width: rem(50);
+		}
+		@media (max-width: rem(490)) {
+			width: rem(40);
+			height: rem(40);
+			line-height: rem(40);
+			text-align: start;
+		}
+	}
+}

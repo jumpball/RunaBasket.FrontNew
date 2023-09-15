@@ -1,0 +1,83 @@
+// === TEAM ROSTER === //
+.team-roster {
+	&__section {
+		position: relative;
+	}
+
+	// === TEAM ROSTER PARTNER === //
+	&__partner {
+		position: absolute;
+		right: rem(25);
+		top: 0;
+		@include adaptiveValue("top", -20, -10, 1600, 420, 1);
+		@include adaptiveValue("width", 300, 100, 1600, 320, 1);
+		@include adaptiveValue("height", 68.3, 22.8, 1600, 320, 1);
+	}
+
+	&__partner-1 {
+		position: absolute;
+		right: rem(25);
+		top: 0;
+		//@include adaptiveValue("top", -20, -10, 1600, 420, 1);
+		@include adaptiveValue("width", 300, 100, 1600, 320, 1);
+		@include adaptiveValue("height", 68.3, 22.8, 1600, 320, 1);
+	}
+	&__tabs {
+	}
+
+	&__nav {
+	}
+
+	// .team-roster__tab-body
+	&__tab-body {
+		display: block;
+		//grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+		//gap: 20px;
+		//margin: 0 auto;
+	}
+
+	// .team-roster__tab-item
+	&__tab-item {
+		//min-width: 290px;
+	}
+	&__tab-item-1 {
+		//@include adaptiveValue("width", 298, 270, 1600, 1460, 1);
+		//@media (max-width: rem(1459)) {
+		//@include adaptiveValue("width", 342, 270, 1459, 1170, 1);
+		//}
+		//@media (max-width: rem(1169)) {
+		//	@include adaptiveValue("width", 366, 270, 1169, 880, 1);
+		//}
+	}
+}
+
+// === TEAM BOX === //
+.team-box {
+	width: 100%;
+	height: rem(480);
+	background-color: $white;
+	border-radius: rem(3);
+	text-align: center;
+	font-weight: 900;
+	color: $bgColor_2;
+	line-height: rem(480);
+	@include adaptiveValue("font-size", 120, 18);
+}
+// === TAB to SLIDER === //
+.b-tab {
+	display: none;
+	//background-color: $white;
+	overflow: hidden;
+}
+
+.b-tab.active {
+	display: block;
+	height: auto;
+}
+
+.b-nav-tab {
+	display: inline-block;
+}
+
+.b-nav-tab.active {
+}

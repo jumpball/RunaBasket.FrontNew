@@ -1,0 +1,357 @@
+// === SITE TABS === //
+
+// === TABS MENU / HORIZONTAL === //
+.tabs-logo-menu {
+	// = BOX = //
+	&__box {
+		position: relative;
+	}
+
+	// = TABS NAV = //
+	&__tabs-nav {
+		background-color: $white;
+		//min-height: 70px;
+		//overflow-x: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		//gap: rem(3);
+		@media (max-width: rem(599.98)) {
+			//justify-content: start;
+			//padding: 0px 15px 0px 15px;
+		}
+	}
+	&__tabs-nav::-webkit-scrollbar {
+		//display: none;
+	}
+
+	// = TABS TITLE = //
+	&__tabs-title-box {
+		margin: 0px 0px 10px 0px;
+		padding: 26px 24px 16px 24px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		border-bottom: rem(10) solid transparent;
+		transition: all 0.5s ease 0s;
+		@media (max-width: rem(767.98)) {
+			padding: 20px 16px 10px 16px;
+		}
+		@media (max-width: rem(649.98)) {
+			margin: 0px 0px 0px 0px;
+			padding: 16px 10px 6px 10px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				transition: all 0.5s ease 0s;
+			}
+		}
+	}
+	&__tabs-title {
+		@include adaptiveValue("font-size", 24, 18, 1600, 768, 1);
+		color: $sa_silver;
+		font-weight: 900;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: rem(1);
+		transition: all 0.5s ease 0s;
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 18, 14, 767.98, 650, 1);
+		}
+		@media (max-width: rem(649.98)) {
+			display: none;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				//color: $color-base-1;
+				//background-color: $white;
+				//border-bottom: rem(10) solid $bgColor_2;
+				//transition: all 0.5s ease 0s;
+			}
+		}
+	}
+
+	// = TABS LOGO = //
+	&__tabs-logo {
+		//opacity: 0.5;
+		@include adaptiveValue("height", 80, 70, 1600, 992, 1);
+		@include adaptiveValue("width", 80, 70, 1600, 992, 1);
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("height", 70, 60, 767.98, 650, 1);
+			@include adaptiveValue("width", 70, 60, 767.98, 650, 1);
+		}
+	}
+
+	// = .TAB-ACTIVE = //
+	._tab-active {
+		transition: all 0.5s ease 0s;
+		.tabs-logo-menu__tabs-title-box {
+			border-bottom: rem(10) solid $color-base-1;
+			background-color: $bgColor_8;
+			transition: all 0.5s ease 0s;
+		}
+		.tabs-logo-menu__tabs-title {
+			color: $mainColor;
+		}
+		.tabs-logo-menu__tabs-logo {
+			//opacity: 1;
+		}
+	}
+
+	// = TABS CONTENT = //
+	&__tabs-content {
+	}
+
+	// = TABS BODY = //
+	&__tabs-body {
+		padding: 20px 0px 20px 0px;
+	}
+}
+
+// = TABS MINI BUTTONS = //
+.tabs-mini-buttons {
+	&__tabs {
+		//margin: 20px 0px 20px 0px;
+	}
+
+	&__tabs-navigation {
+		background-color: $white;
+		min-height: 70px;
+		overflow-x: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 20px 0px 30px 0px;
+		//gap: rem(3);
+		@media (max-width: rem(499.98)) {
+			justify-content: space-between;
+		}
+	}
+	// === GAME PROGRESS / TITLE === //
+	&__tabs-title {
+		padding: 22px 15px 12px 15px;
+		//@include adaptiveValue("font-size", 18, 15, 1600, 768, 1);
+		font-size: rem(16);
+		font-weight: 400;
+		min-width: rem(140);
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: rem(1);
+		border-bottom: rem(10) solid transparent;
+		border-radius: rem(3) rem(3) 0px 0px;
+		transition: all 0.5s ease 0s;
+		@media (max-width: rem(849.98)) {
+			//font-weight: 900;
+			min-width: rem(50);
+			width: 100%;
+			width: fit-content;
+			padding: 22px 20px 12px 20px;
+		}
+		@media (max-width: rem(399.98)) {
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $color-base-1;
+				background-color: $white;
+				border-bottom: rem(10) solid $bgColor_2;
+				transition: all 0.5s ease 0s;
+			}
+		}
+	}
+	&__tabs-mini-title {
+		min-width: rem(85);
+	}
+
+	&__tabs-title span {
+		@media (max-width: rem(849.98)) {
+			display: none;
+		}
+	}
+
+	// = .TAB-ACTIVE = //
+	._tab-active {
+		border-bottom: rem(10) solid $color-base-1;
+		font-weight: 700;
+		color: $color-base-1;
+		transition: all 0.5s ease 0s;
+	}
+
+	&__tabs-content {
+	}
+
+	&__tabs-body {
+	}
+
+	&__tabs-active {
+	}
+}
+
+// = TABS VIDEO  = //
+.tabs-video {
+	margin: 40px 0px 40px 0px;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	gap: rem(10);
+	align-items: flex-start;
+	z-index: 2;
+	@media (max-width: rem(991.98)) {
+		flex-direction: column-reverse;
+		//margin: 20px 0px 20px 0px;
+	}
+	//@media (max-width: rem(449.98)) {
+	//	margin: 0px 0px 20px 0px;
+	//}
+	// = TABS NAV  = //
+	&__tabs-nav {
+		height: rem(540);
+		width: 100%;
+		overflow-y: scroll;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		gap: rem(10);
+		@media (max-width: rem(1469.98)) {
+			@include adaptiveValue("height", 538, 320, 1469.98, 992, 1);
+		}
+		@media (max-width: rem(991.98)) {
+			flex-direction: row;
+			height: rem(102);
+		}
+		@media (max-width: rem(549.98)) {
+			height: rem(180);
+		}
+	}
+	&__tabs-nav::-webkit-scrollbar {
+		display: none;
+	}
+
+	&__tabs-title-box {
+		overflow: hidden;
+		min-height: rem(100);
+		width: 100%;
+		min-width: 100%;
+		//min-width: rem(420);
+		border: rem(1) solid $color-base-1;
+		border-radius: rem(10);
+		color: $white;
+		background-color: $color-base-2;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		z-index: 2;
+		@media (max-width: rem(991.98)) {
+			min-height: rem(95);
+			min-width: rem(400);
+			//min-height: 100%;
+			//min-width: 100%;
+		}
+		@media (max-width: rem(549.98)) {
+			flex-direction: column;
+			@include adaptiveValue("font-size", 12, 10, 549.98, 340, 1);
+			@include adaptiveValue("min-width", 170, 140, 549.98, 340, 1);
+			min-height: 100%;
+		}
+	}
+
+	&__tabs-mini-img {
+		height: rem(98);
+		min-width: rem(177);
+		@media (max-width: rem(991.98)) {
+			height: rem(93);
+			min-width: rem(170);
+		}
+		@media (max-width: rem(549.98)) {
+			@include adaptiveValue("min-width", 170, 140, 549.98, 340, 1);
+			@include adaptiveValue("height", 95, 78, 549.98, 340, 1);
+		}
+	}
+
+	&__info-bage {
+		padding: 8px 8px 8px 8px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		@media (max-width: rem(549.98)) {
+			padding: 8px 6px 8px 6px;
+		}
+	}
+
+	&__tag {
+		font-size: rem(16);
+		text-align: left;
+		text-transform: uppercase;
+		line-height: 150%;
+		font-weight: 900;
+		letter-spacing: rem(1.2);
+		//border-bottom: rem(1) solid $sa_silver;
+		@media (max-width: rem(991.98)) {
+			font-size: rem(14);
+			font-weight: 700;
+		}
+		@media (max-width: rem(549.98)) {
+			@include adaptiveValue("font-size", 12, 10, 549.98, 340, 1);
+			font-weight: 500;
+		}
+	}
+
+	&__tabs-title {
+		display: inline-block;
+		padding: 4px 0px 0px 0px;
+		font-size: rem(15);
+		text-align: left;
+		line-height: 120%;
+		@media (max-width: rem(991.98)) {
+			font-size: rem(14);
+		}
+		@media (max-width: rem(549.98)) {
+			@include adaptiveValue("font-size", 12, 10, 549.98, 340, 1);
+		}
+	}
+
+	&__tabs-content {
+	}
+
+	&__tabs-body {
+		border-radius: rem(10);
+		overflow: hidden;
+		width: 100%;
+		border: rem(1) solid $color-base-1;
+	}
+
+	&__box {
+		width: rem(960);
+		height: rem(540);
+		position: relative;
+		//aspect-ratio: 16/9;
+		overflow: hidden;
+		z-index: 2;
+		@media (max-width: rem(1469.98)) {
+			padding: 0px 0px 56% 0px;
+			@include adaptiveValue("width", 960, 560, 1469.98, 992, 1);
+			@include adaptiveValue("height", 540, 320, 1469.98, 992, 1);
+		}
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("width", 960, 290, 991.98, 320, 1);
+			@include adaptiveValue("height", 540, 162, 991.98, 320, 1);
+		}
+	}
+	&__box video,
+	&__box iframe {
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+._tab-active {
+}

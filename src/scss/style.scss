@@ -1,0 +1,374 @@
+@use "sass:math";
+
+// Подключение миксинов ===========================================================================================================================================================================================================================================================================
+@import "base/mixins";
+
+// Подключение шрифтов ===========================================================================================================================================================================================================================================================================
+//&display=swap - добавить при подключении через плагин
+//@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,regular,700&display=swap");
+//@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,regular,500,700,900&display=swap");
+//@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap");
+// Подключить если есть локальные файлы шрифтов
+@import "fonts/fonts";
+
+// Подключение иконочных шрифтов ==============================================================================================================================================================================================================================================================================
+
+// Подключить если есть файл иконочного шрифта
+@import "fonts/icons";
+
+// Шрифт по умолчанию ==============================================================================================================================================================================================================================================================================
+$fontFamily: "bebasneuepro";
+//$fontFamily: "Roboto Condensed";
+$fontSize: rem(16); // где 16(px) - размер шрифта по умолчанию из макета
+
+// Основные цвета
+$mainColor: #181220; // Цвет шрифта по умолчанию
+//$mainColor: #3a3a3a; // Цвет шрифта по умолчанию
+// BG COLOR
+$bgColor_1: #f9f1e7;
+$bgColor_2: #eef0f2;
+$bgColor_3: #fcf8f3;
+$bgColor_4: #eee;
+$bgColor_5: #fffafa;
+$bgColor_6: #f0ffff;
+$bgColor_7: #f0f8ff;
+$bgColor_8: #f8f8ff;
+$bgColor_9: #fffff0;
+$bgColor_10: #f1f2f6;
+
+$gradient_zenit-rl: linear-gradient(to right, #71a6dc, #ffffff);
+// PRIMARY COLORS
+
+//$color-base-1: #e7362e;
+//$color-base-1: #a80d1c;
+$color-gold: #f9d110;
+$color-zenit: #71a6dc;
+$color-base-1: #5b2a98;
+//$color-base-1: #0f524d;
+//$color-base-2: #3d308e;
+$color-base-2: #2e006a;
+$color-base-3: #a3d43f;
+$color-base-4: #8bc218;
+$color-base-5: #c4c5c8;
+$color-base-6: #423356;
+$color-base-7: #69597e;
+$color-base-8: #352945;
+
+$blue: #146eb4;
+$orange: #ff9900;
+$red: #cc0202;
+$green: #606c38;
+$black: #202a25;
+$yellow: #fec42f;
+$blue_grey: #86a5d9;
+$gold: #ccae61;
+$gray: #a4a9ad;
+$white: #ffffff;
+$gray-dark: #576574;
+
+// LIGHT COLORS
+$blue_l: #85c2f1;
+$orange_l: #ffd28f;
+$red_l: #ff9191;
+$green_l: #c0cb9b;
+$black_l: #505050;
+
+// TOURNAMENTS COLORS
+$t_russia: #00ab96;
+$t_euroleague: #e9540d;
+$t_vtb: #2b378c;
+$t_superliga: #95569e;
+$t_ncaa: #1879bf;
+$t_premier: #d24351;
+$t_nba_red: #cc2229;
+$t_nba_blue: #33348e;
+
+// NBA TEAM COLORS
+$bos_green: #008348;
+$cha_blue: #008ca8;
+$chi_red: #c21f32;
+$cle_red: #690031;
+$ny_orange: #f26729;
+$mil_green: #00471a;
+$sa_silver: #c4cdd3;
+$sac_blue: #5a2c81;
+$mia_red: #8b2231;
+$mem_blue: #5d76a9;
+
+// BRAND COLORS
+$sibur: #4f8485;
+
+// GRADIENT
+
+// SHADOW
+$shadow-1: 0px 10px 10px rgba(0, 0, 0, 0.2);
+$shadow-2: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+
+// НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
+// Минимальная ширина страницы
+$minWidth: 320;
+// Ширина полотна (макета)
+$maxWidth: 1920;
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+//$maxWidthContainer: 1570;
+$maxWidthContainer: 1370;
+// Общий отступ у контейнера
+// (30 = по 15px слева и справа, 0 = нет отступа)
+$containerPadding: 30;
+
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поинты
+$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(767.98); // Телефоны L
+$mobileSmall: em(479.98); // Телефоны S
+
+// Тип адаптива:
+// 1 = отзывчивость (у контейнера нет брейкпоинтов),
+// 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
+$responsiveType: 1;
+
+// Обнуление и общие параметры ============================================================================================================================================================================================== =============================================================================================== ===============================================================================================
+@import "base/null";
+
+body {
+	// Скролл заблокирован
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+	}
+	// Сайт загружен
+	.loaded & {
+	}
+}
+
+// === PAGE === //
+.page {
+	background-color: $mainColor;
+}
+
+// === BLOCK HIDDEN === //
+.block-hidden-1319 {
+	@media (max-width: rem(1319.98)) {
+		display: none;
+	}
+}
+
+.block-hidden-1274 {
+	@media (max-width: rem(1274.98)) {
+		display: none;
+	}
+}
+.block-hidden-1089 {
+	@media (max-width: rem(1089.98)) {
+		display: none;
+	}
+}
+.block-hidden-991 {
+	@media (max-width: rem(991.98)) {
+		display: none;
+	}
+}
+.block-hidden-767 {
+	@media (max-width: rem(767.98)) {
+		display: none;
+	}
+}
+.block-hidden-449 {
+	@media (max-width: rem(449.98)) {
+		display: none;
+	}
+}
+
+// === COVER CONTAIN === //
+.cover-contain {
+	position: relative;
+	z-index: 0;
+}
+
+.cover-contain img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center 33.3%;
+}
+// === LOWER-CASE === //
+.lower-case {
+	text-transform: lowercase;
+}
+
+// Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	// Прижимаем footer
+	> main {
+		flex: 1 1 auto;
+	}
+	// Фикс для слайдеров
+	> * {
+		min-width: 0;
+	}
+}
+// Страница - хлебные крошки ======================================================================================================================================================================================================================
+
+/* Style the list */
+ul.page__breadcrumb {
+	position: relative;
+	height: rem(30);
+	overflow: hidden;
+	//margin-top: rem(180);
+	margin: 200px 0px 0px 0px;
+	padding: 10px 0px 10px 0px;
+	list-style: none;
+	word-wrap: normal;
+	//background-color: $mainColor;
+	color: $color-base-5;
+	z-index: 2;
+	//white-space: nowrap;
+	@media (max-width: $tablet) {
+		margin-top: rem(110);
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-box;
+		display: -webkit-box;
+		line-clamp: 1;
+		box-orient: vertical;
+		-moz-box-orient: vertical;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+	}
+}
+
+/* Display list items side by side */
+ul.page__breadcrumb li {
+	display: inline;
+	font-size: 18px;
+	line-height: rem(20);
+	padding-bottom: rem(10);
+	@media (max-width: $tablet) {
+		font-size: 16px;
+	}
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.page__breadcrumb li + li:before {
+	padding: 8px;
+	color: $color-base-5;
+	//display: inline-block;
+	//position: relative;
+	//margin: 0px 5px 0px 5px;
+	content: "|";
+
+	//content: "/";
+	@media (max-width: $tablet) {
+		padding: 6px;
+	}
+}
+
+/* Add a color to all links inside the list */
+ul.page__breadcrumb li a {
+	//color: $mainColor;
+	color: $color-base-5;
+	text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.page__breadcrumb li a:hover {
+	color: $color-base-4;
+	//text-decoration: underline;
+}
+
+// Content Block ======================================================================================================================================================================================================================
+
+.content {
+	&__list {
+		width: 100%;
+		display: flex;
+		//align-items: flex-start;
+		flex-direction: column;
+		//display: grid;
+		//grid-template-columns: 1fr;
+		@include adaptiveValue("gap", 50, 30, 991.98, 420, 1);
+	}
+
+	&__item {
+	}
+}
+
+// Borders ======================================================================================================================================================================================================================
+.border__runa-1-white {
+	height: rem(16);
+	width: rem(94);
+}
+
+// Ограничивающий контейнер ======================================================================================================================================================================================================================
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+@if ($responsiveType==1) {
+	// Отзывчивая
+	[class*="__container"] {
+		@if ($maxWidthContainer>0) {
+			max-width: rem($maxWidthContainer);
+			box-sizing: content-box;
+			margin: 0 auto;
+		}
+		@if ($containerPadding>0) {
+			padding: 0 rem(math.div($containerPadding, 2));
+		}
+	}
+} @else {
+	// По брейк-поинтам
+	[class*="__container"] {
+		margin: 0 auto;
+		@if ($maxWidthContainer>0) {
+			max-width: rem($maxWidthContainer);
+			box-sizing: content-box;
+		} @else {
+			@if ($containerPadding>0) {
+				padding: 0 rem(math.div($containerPadding, 2));
+			}
+		}
+		@media (max-width: $pc) {
+			max-width: rem(970);
+		}
+		@media (max-width: $tablet) {
+			max-width: rem(750);
+		}
+		@media (max-width: $mobile) {
+			max-width: none;
+			@if ($containerPadding>0 and $maxWidthContainer>0) {
+				padding: 0 rem(math.div($containerPadding, 2));
+			}
+		}
+	}
+}
+
+// Подключение базовых стилей, шаблонов (заготовок) и вспомогательных  классов
+// Для подключения/отключения конкретных стилей смотри base.scss
+@import "base";
+
+// Подключение стилей общих элементов проекта
+@import "common";
+
+// Подключение стилей отдельных блоков
+@import "header";
+@import "footer";
+// Подключение стилей отдельных страниц
+
+// Подключение кастомных стилей (из проекта Web)
+@import "custom.scss";
+@import "articleBody.scss";

@@ -1,0 +1,119 @@
+// === PAGE-PROFILE HEADER === //
+.page-profile-header {
+	&__body {
+		padding: 80px 0px 0px 0px;
+		position: relative;
+		width: 100%;
+		@include adaptiveValue("height", 600, 450, 1600, 991.98, 1);
+		margin: 0px 0px 18px 0px;
+	}
+
+	&__bg-logo {
+		@include adaptiveValue("width", 600, 280, 1600, 360, 1);
+		@include adaptiveValue("height", 400, 186, 1600, 360, 1);
+		opacity: 0.1;
+		position: absolute;
+		@include adaptiveValue("top", 0, 20, 1600, 720, 1);
+		right: 50%;
+		transform: translate(50%);
+	}
+
+	&__content {
+		text-align: center;
+		color: $mainColor;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include adaptiveValue("gap", 20, 12, 1600, 991.98, 1);
+	}
+
+	&__basket {
+		@include adaptiveValue("width", 160, 120, 1600, 991.98, 1);
+		@include adaptiveValue("height", 160, 120, 1600, 991.98, 1);
+		margin: 0 auto;
+	}
+
+	&__title {
+		@include adaptiveValue("font-size", 60, 20, 1600, 720, 1);
+		//@include adaptiveValue("line-height", 24, 20, 1600, 720, 1);
+		letter-spacing: rem(1.1);
+		font-weight: 900;
+	}
+
+	&__ball {
+		@include adaptiveValue("width", 60, 50, 1600, 991.98, 1);
+		@include adaptiveValue("height", 60, 50, 1600, 991.98, 1);
+		margin: 0 auto;
+		animation-name: rotation;
+		animation-duration: 8s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+	@keyframes rotation {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	&__dev {
+		border-top: rem(4) solid $color-gold;
+		//border-radius: rem(2);
+		padding: 5px 0px 0px 0px;
+	}
+	&__text {
+		@include adaptiveValue("font-size", 12, 10, 1600, 720, 1);
+		@include adaptiveValue("line-height", 20, 16, 1600, 720, 1);
+		letter-spacing: rem(1.2);
+		text-transform: uppercase;
+		font-weight: 400;
+	}
+
+	&__link {
+		display: inline-block;
+		@include adaptiveValue("font-size", 24, 18, 1600, 720, 1);
+		@include adaptiveValue("line-height", 30, 24, 1600, 720, 1);
+		text-transform: uppercase;
+		letter-spacing: rem(2.5);
+		font-weight: 900;
+		transition: all 0.5s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				transition: all 0.5s ease 0s;
+				transform: scale(1.2, 1.2);
+				color: $color-base-1;
+			}
+		}
+	}
+
+	&__btn {
+		display: inline-flex;
+		width: 100%;
+		background-color: $color-base-1;
+		padding: rem(25) rem(35);
+		border-radius: rem(3);
+		min-width: rem(205);
+		max-width: rem(300);
+		color: $white;
+		border: rem(1) solid $color-base-1;
+		text-decoration: none;
+		font-weight: 500;
+		justify-content: center;
+		text-align: center;
+		letter-spacing: 1px;
+		cursor: pointer;
+		text-transform: uppercase;
+		white-space: nowrap;
+		transition: all 0.5s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $mainColor;
+				color: $white;
+				transform: scale(1.2, 1.2);
+				transition: all 0.5s ease 0s;
+			}
+		}
+	}
+}

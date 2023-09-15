@@ -1,0 +1,522 @@
+// === TABLE === //
+.table {
+	// === TABLE WRAPPER === //
+	&__wrapper {
+		max-width: 1570px;
+		position: relative;
+		border-radius: rem(3);
+	}
+	&__wrapper-light {
+		border: rem(1) solid $white;
+	}
+
+	&__wrapper-dark {
+		border: 1px solid rgba(113, 166, 220, 0.2);
+	}
+
+	// === TABLE BOX === //
+	&__box {
+		position: relative;
+		//display: block;
+		width: 100%;
+		overflow-x: auto;
+	}
+	&__box-1 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		//position: relative;
+		//display: block;
+		//width: auto;
+		overflow: hidden;
+	}
+	// === TABLE ROW === //
+	&__row {
+	}
+
+	&__row-1 {
+		//border-bottom: rem(1) solid $white;
+		//background-color: $color-base-1;
+	}
+
+	// === TABLE COL === //
+	&__col-left {
+		font-weight: 900;
+		text-transform: uppercase;
+
+		@include adaptiveValue("font-size", 24, 15, 1600, 479.98, 1);
+		@include adaptiveValue("padding-right", 20, 10, 1600, 479.98, 1);
+		@include adaptiveValue("padding-left", 20, 10, 1600, 479.98, 1);
+	}
+	&__col-center {
+		font-weight: 900;
+		text-transform: uppercase;
+
+		@include adaptiveValue("font-size", 24, 15, 1600, 479.98, 1);
+		@include adaptiveValue("padding-right", 20, 10, 1600, 479.98, 1);
+		@include adaptiveValue("padding-left", 20, 10, 1600, 479.98, 1);
+	}
+
+	&__col-right {
+		font-weight: 900;
+		text-transform: uppercase;
+
+		@include adaptiveValue("font-size", 24, 15, 1600, 479.98, 1);
+		@include adaptiveValue("padding-right", 20, 10, 1600, 479.98, 1);
+		@include adaptiveValue("padding-left", 20, 10, 1600, 479.98, 1);
+	}
+
+	// === TABLE COL - HIDDEN === //
+	&__col-hide {
+		@media (max-width: em(720)) {
+			display: none;
+		}
+	}
+	&__col-scroll {
+		@media (min-width: em(1599.98)) {
+			display: none;
+		}
+	}
+	&__col-flex {
+		display: flex;
+		align-items: center;
+	}
+
+	// === TABLE COL -HEIGHT or WIDTH === //
+	&__col-h2r {
+		height: rem(97.5);
+	}
+	&__col-f2r {
+		height: rem(71);
+	}
+	&__col-fix-h {
+		height: rem(61.5);
+	}
+	&__col-2res-fix-h {
+		height: rem(73);
+		min-height: rem(73);
+		max-height: rem(73);
+	}
+	&__col-fix-head-img {
+		height: rem(74.5);
+		min-height: rem(74.5);
+		max-height: rem(74.5);
+	}
+
+	&__col-full {
+		width: 100%;
+	}
+	&__col-s {
+		min-width: rem(55);
+		//min-width: rem(62);
+	}
+	&__col-s-fix {
+		width: rem(55);
+		max-width: rem(55);
+		min-width: rem(55);
+	}
+	&__col-sm {
+		min-width: rem(80);
+	}
+	&__col-sm-fix {
+		width: rem(80);
+		min-width: rem(80);
+		max-width: rem(80);
+	}
+	&__col-m {
+		min-width: rem(100);
+	}
+	&__col-m-fix {
+		width: rem(100);
+		min-width: rem(100);
+		max-width: rem(100);
+	}
+	&__col-ml {
+		min-width: rem(122);
+	}
+	&__col-ml-fix {
+		width: rem(122);
+	}
+	&__col-l {
+		min-width: rem(166);
+	}
+	&__col-l-fix {
+		width: rem(166);
+	}
+	&__col-x {
+		min-width: rem(205);
+	}
+	&__col-x-fix {
+		width: rem(205);
+	}
+	&__col-xl {
+		min-width: rem(245);
+	}
+	&__col-xl-fix {
+		width: rem(245);
+	}
+	&__col-xxl {
+		min-width: rem(330);
+	}
+	&__col-xxl-fix {
+		width: rem(330);
+	}
+	// === TABLE LINK === //
+	&__link {
+		display: block;
+		line-height: rem(30);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $blue;
+
+				text-decoration: underline;
+			}
+		}
+	}
+	// === TABLE HEADER === //
+	&__header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		height: 68px;
+		background-color: $mainColor;
+		color: #d5dde5;
+		//font-size: 20px;
+		font-size: 18px;
+		text-transform: uppercase;
+		font-weight: 100;
+		text-align: left;
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+		display: flex;
+		align-items: flex-start;
+		justify-content: start;
+	}
+
+	// === TABLE HEADER-COL === //
+	&__header-col {
+		//border-right: rem(1) solid $gray-dark;
+		border-right: 1px solid rgba(113, 166, 220, 0.2);
+	}
+	&__header-col-logo {
+		height: rem(68);
+		width: rem(62);
+		padding: 15px 10px 16px 10px;
+	}
+	&__header-col-text {
+		height: rem(68);
+		padding: rem(24);
+	}
+
+	&__header-col-1 {
+	}
+	&__header-col-2 {
+	}
+
+	&__th-colspan {
+		border-bottom: rem(1) solid rgba(113, 166, 220, 0.2);
+	}
+
+	&__text-bottom {
+		vertical-align: text-bottom;
+	}
+
+	// === TABLE BODY-COL === //
+	&__body-col {
+	}
+	&__body-col-logo {
+		height: rem(59);
+		width: rem(62);
+		padding: 9px 10px 10px 10px;
+	}
+	&__body-col-logo span {
+		position: absolute;
+		text-align: center;
+		width: rem(40);
+		line-height: rem(40);
+		opacity: 1;
+		font-weight: 900;
+		z-index: 2;
+		margin: 0 auto;
+	}
+
+	&__body-col-logo-1 {
+		height: rem(73);
+		width: rem(62);
+		padding: rem(10);
+	}
+	&__body-col-team {
+		height: rem(59);
+		width: rem(245);
+		padding: rem(20);
+	}
+	&__body-col-text {
+		height: rem(59);
+		padding: rem(20);
+	}
+
+	&__body-col-res {
+		padding: 5px 15px;
+	}
+	&__body-col-2 {
+	}
+
+	// === TABLE IMAGE === //
+
+	&__image {
+		position: relative;
+		width: rem(40);
+		height: rem(40);
+		margin: 0 auto;
+	}
+	&__arrow {
+		position: relative;
+		width: rem(40);
+		height: rem(40);
+		opacity: 0.2;
+		margin: 0 auto;
+	}
+
+	&__photo {
+		position: relative;
+		width: rem(40);
+		height: rem(40);
+		margin: 0 auto;
+		//border: rem(1) solid $bgColor_2;
+		border-radius: rem(100);
+		overflow: hidden;
+	}
+	&__image-1 {
+		position: relative;
+		width: rem(40);
+		height: rem(40);
+		margin: 0 auto;
+		border-radius: rem(100);
+		background-color: $white;
+	}
+	&__image-1 img {
+		padding: rem(4);
+	}
+	&__icon {
+		position: relative;
+		display: block;
+		width: rem(40);
+		height: rem(40);
+		margin: 0 auto;
+		border-radius: rem(100);
+		//background-color: $color-gold;
+	}
+
+	&__icon img {
+		padding: rem(4);
+	}
+
+	// === TABLE ICONS === //
+
+	&__icons-list {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		gap: rem(3);
+	}
+	&__icon-item {
+		width: rem(19);
+		height: rem(19);
+		background-color: $white;
+		border-radius: rem(100);
+	}
+}
+
+// === BASIC TABLE STYLES === //
+
+.table-fill {
+	background: $white;
+	border-collapse: collapse;
+	margin: auto;
+	padding: 5px;
+	width: 100%;
+	//box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+	animation: float 5s infinite;
+}
+.table-fill-1 {
+	background: $white;
+	border-collapse: collapse;
+	margin-right: auto;
+	padding: 5px;
+	//width: 100%;
+	//box-shadow: $shadow-1;
+	border-right: rem(1) solid rgba(113, 166, 220, 0.2);
+	animation: float 5s infinite;
+}
+
+// === TABLE BASIC === //
+th {
+	color: #d5dde5;
+	background-color: $mainColor;
+	border-bottom: rem(4) solid $gray;
+	border-right: 1px solid rgba(113, 166, 220, 0.2);
+	//border-right: rem(1) solid $gray;
+	//font-size: 20px;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 100;
+	//padding: 24px;
+	padding: 16px;
+	text-align: left;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+th:first-child {
+	//border-top-left-radius: rem(3);
+}
+
+th:last-child {
+	//border-top-right-radius: rem(3);
+	//border-right: none;
+}
+
+tr {
+	//border-top: rem(1) solid #c1c3d1;
+	//border-bottom: 1px solid #c1c3d1;
+
+	border-top: rem(1) solid transparent;
+	border-bottom: rem(1) solid transparent;
+
+	//color: #666b85;
+	background-color: $mainColor;
+	font-size: 16px;
+	font-weight: normal;
+	//text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+tbody tr:hover td {
+	background-color: $gray;
+	color: $white;
+	border-top: rem(1) solid transparent;
+	border-bottom: rem(1) solid transparent;
+}
+
+tfoot tr:hover td {
+	background-color: $mainColor;
+	color: $color-gold;
+	border-top: rem(1) solid transparent;
+	border-bottom: rem(1) solid transparent;
+}
+tfoot tr {
+	//background-color: $green;
+	//font-size: rem(14);
+	//text-transform: uppercase;
+	//font-weight: 900;
+}
+
+tr:first-child {
+	//border-top: none;
+	border-top: rem(1) solid transparent;
+}
+
+tr:last-child {
+	//border-bottom: none;
+	border-bottom: rem(1) solid transparent;
+}
+
+tbody tr:nth-child(odd) td {
+	//background: #ebebeb;
+	background-color: $bgColor_2;
+}
+
+tbody tr:nth-child(odd):hover td {
+	//background: #4e5066;
+	//background-color: $color-zenit;
+	background-color: $gray;
+}
+
+tr:last-child td:first-child {
+	//border-bottom-left-radius: 3px;
+}
+
+tr:last-child td:last-child {
+	//border-bottom-right-radius: 3px;
+}
+
+td {
+	background: #ffffff;
+	//padding: 20px;
+	padding: 15px;
+	text-align: left;
+	vertical-align: middle;
+	font-weight: 400;
+	//font-size: 18px;
+	font-size: 16px;
+	//text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+	//border-right: rem(1) solid $bgColor_2;
+	white-space: nowrap;
+	border-right: 1px solid rgba(113, 166, 220, 0.2);
+}
+
+td a {
+	@media (any-hover: hover) {
+		&:hover {
+			color: $blue;
+		}
+	}
+}
+
+td:last-child {
+	border-right: 0px;
+}
+
+td.text-bold {
+	font-weight: 900;
+	text-transform: uppercase;
+}
+td.text-tel {
+	@include adaptiveValue("font-size", 18, 14, 991.98, 320, 1);
+}
+
+th.text-left {
+	text-align: left;
+}
+
+th.text-center {
+	text-align: center;
+}
+
+th.text-right {
+	text-align: right;
+}
+
+th.text-bottom {
+	vertical-align: bottom;
+}
+
+td.text-left {
+	text-align: left;
+}
+
+td.text-center {
+	text-align: center;
+}
+
+td.text-right {
+	text-align: right;
+}
+
+td.text-bottom {
+	vertical-align: bottom;
+}
+
+td.table-footer {
+	border-top: 1px solid rgba(113, 166, 220, 0.2);
+	//background-color: $white;
+	background-color: $gray-dark;
+	color: $white;
+	font-weight: 300;
+	padding: 15px;
+	text-transform: uppercase;
+	letter-spacing: rem(1);
+	font-size: rem(16);
+	//text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	vertical-align: middle;
+}

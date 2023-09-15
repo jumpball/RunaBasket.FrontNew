@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/runa/_head.htm',{
+"title":"Главная"
+})
+<!-- BODY -->
+
+<body>
+	<!-- WRAPPER -->
+	<div data-sticky class="wrapper">
+		<!-- HEADER -->
+		@@include('html/runa/_header.htm',{})
+		<!-- MAIN - PAGE -->
+		<main class="page">
+
+			<!-- HEAD SLIDER -->
+			<div class="first-section site-bg section-offset">
+				<div class="head-slider__box section__container">
+					@@include('html/runa/_head-slider.htm',{})
+					<div class="block-hidden-767">
+						@@include('html/runa/_pattern-game-card.htm',{})</div>
+				</div>
+			</div>
+
+			<!-- CALENDAR SLIDER -->
+			<section class="site-bg section-offset">
+				<div class="section__container">
+					<h2 class="section-title section-title-h1 section-title-center section-title-white element-animation">
+						Календарь</h2>
+					@@include('html/runa/_calendar-slider.htm',{})
+				</div>
+			</section>
+
+			<!-- BANNER SLIDER -->
+			<div class="site-bg">
+				<div class="section__container">
+					@@include('html/runa/_banner-slider.htm',{})
+				</div>
+			</div>
+
+			<!-- PUBLICATION SELECTOR -->
+			<section class="site-bg section-offset">
+				<div class="section__container">
+					<div class="title-block">
+						<h2 class="section-title section-title-h1 section-title-center section-title-white element-animation">
+							Новости клуба</h2>
+						<!-- <div class="publications-slider__navigation">
+							<div class="publications-slider__nav-prev -ibg">
+								<img src="@img/RUNA/icons/arrow-mini-left-green.svg" alt="стрелка назад">
+							</div>
+							<div class="publications-slider__nav-next -ibg">
+								<img src="@img/RUNA/icons/arrow-mini-right-green.svg" alt="стрелка вперед">
+							</div>
+						</div> -->
+					</div>
+					<!-- === SLIDER - PUBLICATION CARDS === -->
+					<div class="pulications-slider__box">
+						@@include('html/runa/_net-to-slider.htm',{})
+					</div>
+					<div class="button__box-center">
+						<!-- === BUTTON - ALL PUBLICATION === -->
+						<button type="button" class="base-button cards-button grey-button">все новости</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- TEAM LEADERS -->
+			<section class="site-bg section-offset">
+				<div class="section__container">
+					<div class="title-block">
+						<h2 class="section-title section-title-h1 section-title-white section-title-center element-animation">
+							лидеры</h2>
+					</div>
+					@@include('html/runa/_leaders-selector.htm',{})
+				</div>
+			</section>
+
+			<!-- MEDIA MAIN -->
+			<section class="site-bg section-offset">
+				<div class="section__container">
+					<div class="title-block">
+						<h2 class="section-title section-title-h1 section-title-white section-title-center element-animation">
+							медиа</h2>
+					</div>
+					@@include('html/runa/_tabs-video.htm',{})
+				</div>
+				<div class="section__container">
+					<div class="title-block">
+						<h2 class="section-title section-title-h1 section-title-white section-title-center element-animation">
+							трансляции</h2>
+						<!-- <div class="video-slider__navigation">
+							<div class="video-slider__nav-prev -ibg">
+								<img src="@img/RUNA/icons/arrow-wh-l.svg" alt="стрелка назад">
+							</div>
+							<div class="video-slider__nav-next -ibg">
+								<img src="@img/RUNA/icons/arrow-wh-r.svg" alt="стрелка вперед">
+							</div>
+						</div> -->
+					</div>
+					@@include('html/runa/_media-main.htm',{})
+					<div class="button__box-center">
+						<!-- === BUTTON - ALL VIDEO === -->
+						<button type="button" class="base-button cards-button grey-button">все видео</button>
+					</div>
+				</div>
+
+
+
+
+			</section>
+
+			<!-- STORE -->
+			<section class="site-bg section-offset">
+				<div class="section__container">
+					<div class="title-block">
+						<h2 class="section-title section-title-h1 section-title-white section-title-center element-animation">
+							магазин</h2>
+						<!-- <div class="store-slider__navigation">
+							<div class="store-slider__nav-prev -ibg">
+								<img src="@img/RUNA/icons/arrow-wh-l.svg" alt="">
+							</div>
+							<div class="store-slider__nav-next -ibg">
+								<img src="@img/RUNA/icons/arrow-wh-r.svg" alt="">
+							</div>
+						</div> -->
+					</div>
+					<div class="banner">
+						<a href="#" class="banner__link">
+							<div class="banner__image -ibg">
+								<img data-src="@img/RUNA/banner/banner-9.svg" alt="">
+							</div>
+						</a>
+					</div>
+					<!-- STORE SLIDER -->
+					<div class="store-slider__box">
+						<div class="store-slider">
+							<div class="swiper-wrapper store-slider__wrapper">
+								<div class="store-slider__item swiper-slide">
+									<div class="store-card">
+										<div class="store-card__body">
+											<div class="store-card__header">
+												<h3>1200</h3>
+
+											</div>
+											<div class="store-card__photo -ibg">
+												<img data-src="@img/RUNA/store/5.jpg" alt="">
+											</div>
+											<!-- <div class="store-card__product">
+												<a href="#" class="store-card__title">Майка компрессионная</a>
+												<div class="store-card__subtitle">коллекция "Викинг"</div>
+											</div>
+											<div class="store-card__content">
+												<span>Старая цена 2400 ₽</span>
+												<button class="base-button average-button purple-button">купить</button>
+											</div> -->
+										</div>
+									</div>
+								</div>
+
+								<div class="store-slider__item swiper-slide">
+									<div class="store-card">
+										<div class="store-card__body">
+											<div class="store-card__header">
+												<h3>1600</h3>
+											</div>
+											<div class="store-card__photo -ibg">
+												<img data-src="@img/RUNA/store/3.jpg" alt="">
+											</div>
+											<!-- <div class="store-card__product">
+												<a href="#" class="store-card__title">Накидка разминочная</a>
+												<div class="store-card__subtitle">коллекция "Викинг"</div>
+											</div>
+											<div class="store-card__content">
+												<span>Старая цена 2000 ₽</span>
+												<button class="base-button average-button purple-button">купить</button>
+											</div> -->
+										</div>
+									</div>
+								</div>
+								<div class="store-slider__item swiper-slide">
+									<div class="store-card">
+										<div class="store-card__body">
+											<div class="store-card__header">
+												<h3>910</h3>
+											</div>
+											<div class="store-card__photo -ibg">
+												<img data-src="@img/RUNA/store/4.jpg" alt="">
+											</div>
+											<!-- <div class="store-card__product">
+												<a href="#" class="store-card__title">штаны спортивные</a>
+												<div class="store-card__subtitle">коллекция "Викинг"</div>
+											</div>
+											<div class="store-card__content">
+												<span>Старая цена 1300 ₽</span>
+												<button class="base-button average-button purple-button">купить</button>
+											</div> -->
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="store-slider__pagination swiper-pagination"></div>
+						</div>
+					</div>
+					<!-- === BUTTON - GO TO STORE === -->
+					<div class="button__box-center">
+						<!-- === BUTTON - STORE === -->
+						<button type="button" class="base-button cards-button grey-button">все товары</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- TEAM ROSTERS -->
+			<section class="site-bg section-offset">
+				<div class="section__container">
+					<div class="title-block">
+						<h2 class="section-title section-title-h1 section-title-white section-title-center element-animation">
+							Команды клуба</h2>
+						<!-- <div class="roster-menu-slider__navigation">
+							<div class="roster-menu-slider__nav-prev -ibg">
+								<img src="@img/RUNA/icons/arrow-mini-left-green.svg" alt="">
+							</div>
+							<div class="roster-menu-slider__nav-next -ibg">
+								<img src="@img/RUNA/icons/arrow-mini-right-green.svg" alt="">
+							</div>
+						</div> -->
+					</div>
+					@@include('html/runa/_roster-selector.htm',{})
+				</div>
+			</section>
+
+			<!-- PARTNERS -->
+			<section class="site-bg section-offset">
+				<div class="section__container">
+					<div class="publication-selector__title-block">
+						<h2 class="section-title section-title-h1 section-title-white section-title-center element-animation">
+							партнеры</h2>
+					</div>
+					@@include('html/runa/_partners-slider.htm',{})
+				</div>
+			</section>
+		</main>
+
+		<!-- FOOTER -->
+		@@include('html/runa/_footer.htm',{})
+	</div>
+	@@include('html/runa/_popup.htm',{})
+	@@include('html/runa/_js.htm',{})
+</body>
+
+</html>

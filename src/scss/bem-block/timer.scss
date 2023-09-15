@@ -1,0 +1,79 @@
+// === TIMER NEXT GAME === // (AD)
+
+.time-count {
+	color: $mainColor;
+	border-radius: rem(3);
+	padding: rem(20);
+	@media (max-width: rem(420)) {
+		padding: rem(10);
+	}
+}
+
+.time-count__title {
+	margin: 0;
+	width: 100%;
+	letter-spacing: rem(1.5);
+	font-weight: 900;
+	font-size: rem(20);
+	line-height: rem(36);
+	text-align: center;
+	text-transform: uppercase;
+	text-align: center;
+	@media (max-width: rem(480)) {
+		font-size: rem(14);
+		line-height: rem(24);
+	}
+}
+
+.time-count__content {
+	display: flex;
+	justify-content: center;
+}
+
+.time-count__item {
+	text-align: center;
+}
+
+.time-count__val {
+	min-width: 50px;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 36px;
+	@media (max-width: rem(480)) {
+		min-width: rem(40);
+		font-size: rem(20);
+		line-height: rem(24);
+	}
+}
+
+.time-count__separator {
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 36px;
+	text-align: center;
+	margin: 0 rem(10);
+	@media (max-width: rem(520)) {
+		font-size: rem(20);
+		line-height: rem(24);
+		margin: 0 rem(5);
+	}
+	@media (max-width: rem(420)) {
+		margin: 0;
+	}
+}
+
+.time-count__text {
+	display: block;
+	font-weight: 400;
+	font-size: rem(14);
+	line-height: rem(20);
+	min-width: rem(57);
+	@media (max-width: rem(480)) {
+		font-size: rem(10);
+		line-height: rem(18);
+		min-width: rem(50);
+	}
+	@media (max-width: rem(420)) {
+		min-width: rem(46);
+	}
+}

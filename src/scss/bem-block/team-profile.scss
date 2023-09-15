@@ -1,0 +1,403 @@
+// === TEAM PROFILE === //
+.team-profile {
+	&__header {
+		height: auto;
+		margin-bottom: rem(120);
+	}
+	&__header-1 {
+		height: auto;
+		//margin-bottom: rem(120);
+	}
+	&__logo {
+		position: absolute;
+		//top: 0;
+		//right: 0;
+		@include adaptiveValue("top", -70, -30, 991.98, 540, 1);
+		@include adaptiveValue("right", 25, 15, 991.98, 540, 1);
+		@include adaptiveValue("height", 80, 50, 1600, 420, 1);
+		@include adaptiveValue("width", 80, 50, 1600, 420, 1);
+	}
+
+	// === TEAM PROFILE SPOLLERS === //
+	&__spollers {
+		display: grid;
+	}
+
+	&__spollers-item {
+		font-size: rem(18);
+		height: auto;
+	}
+
+	&__spollers-title {
+		width: 100%;
+		cursor: default;
+		text-align: left;
+		position: relative;
+		color: $color-base-1;
+		._spoller-init & {
+			cursor: pointer;
+			border: 1px solid $color-base-1;
+			padding: rem(10) rem(15);
+			border-radius: rem(3);
+			margin-bottom: rem(10);
+			//&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: rem(15);
+				height: 0;
+				width: 0;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-top: 10px solid $color-base-1;
+				transition: transform 0.5s ease 0s;
+			}
+			// &::before {
+			// 	left: rem(12);
+			// }
+			&::after {
+				right: rem(12);
+			}
+			&._spoller-active {
+				&::before {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+				&::after {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+			}
+		}
+		@media (min-width: rem(449.98)) {
+			display: none;
+		}
+	}
+	&__spollers-title-1 {
+		width: 100%;
+		cursor: default;
+		text-align: left;
+		position: relative;
+		color: $color-base-1;
+		._spoller-init & {
+			cursor: pointer;
+			border: 1px solid $color-base-1;
+			padding: rem(10) rem(15);
+			border-radius: rem(3);
+			margin-bottom: rem(10);
+			//&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: rem(15);
+				height: 0;
+				width: 0;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-top: 10px solid $color-base-1;
+				transition: transform 0.5s ease 0s;
+			}
+			// &::before {
+			// 	left: rem(12);
+			// }
+			&::after {
+				right: rem(12);
+			}
+			&._spoller-active {
+				&::before {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+				&::after {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+			}
+		}
+		@media (min-width: rem(639.98)) {
+			display: none;
+		}
+	}
+	&__spollers-title-3 {
+		width: 100%;
+		cursor: default;
+		text-align: left;
+		position: relative;
+		color: $color-base-1;
+		._spoller-init & {
+			cursor: pointer;
+			border: 1px solid $color-base-1;
+			padding: rem(10) rem(15);
+			border-radius: rem(3);
+			margin-bottom: rem(10);
+			//&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: rem(15);
+				height: 0;
+				width: 0;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-top: 10px solid $color-base-1;
+				transition: transform 0.5s ease 0s;
+			}
+			// &::before {
+			// 	left: rem(12);
+			// }
+			&::after {
+				right: rem(12);
+			}
+			&._spoller-active {
+				&::before {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+				&::after {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+			}
+		}
+		@media (min-width: rem(949.98)) {
+			display: none;
+		}
+	}
+
+	// === TEAM PROFILE NAV & FORM === //
+	&__nav {
+		margin: 0px 0px 40px 0px;
+	}
+
+	&__form {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		@include adaptiveValue("gap", 40, 10, 1600, 449.98, 1);
+
+		@media (max-width: rem(450)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__form-1 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		@include adaptiveValue("gap", 40, 10, 1600, 639.98, 1);
+
+		@media (max-width: rem(639.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__form-3 {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		@include adaptiveValue("gap", 40, 10, 1600, 949.98, 1);
+
+		@media (max-width: rem(949.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	// === TEAM PROFILE TABS === //
+	&__tabs {
+		position: relative;
+	}
+
+	&__tabs-navigation {
+		position: absolute;
+		@include adaptiveValue("top", -150, -140, 1600, 450, 1);
+		right: 0;
+		display: flex;
+		gap: rem(30);
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: rem(450)) {
+			top: rem(15);
+			//@include adaptiveValue("top", 20, 10, 540, 320, 1);
+		}
+	}
+	&__tabs-navigation-2 {
+		position: absolute;
+		@include adaptiveValue("top", -150, -140, 1600, 450, 1);
+		//top: rem(-50);
+		right: 0;
+		display: flex;
+		gap: rem(30);
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: rem(639.98)) {
+			top: rem(15);
+			//@include adaptiveValue("top", 20, 10, 540, 320, 1);
+		}
+	}
+	&__tabs-navigation-3 {
+		position: absolute;
+		@include adaptiveValue("top", -150, -140, 1600, 450, 1);
+		//top: rem(-50);
+		right: 0;
+		display: flex;
+		gap: rem(30);
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: rem(949.98)) {
+			top: rem(15);
+			//@include adaptiveValue("top", 20, 10, 540, 320, 1);
+		}
+	}
+	&__tabs-navigation-4 {
+		position: absolute;
+		@include adaptiveValue("top", -252, -240, 1600, 450, 1);
+		//top: rem(-50);
+		right: 0;
+		display: flex;
+		gap: rem(30);
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: rem(949.98)) {
+			top: rem(15);
+			//@include adaptiveValue("top", 20, 10, 540, 320, 1);
+		}
+	}
+
+	&__tabs-title {
+		@include adaptiveValue("height", 50, 40, 1600, 420, 1);
+		@include adaptiveValue("width", 50, 40, 1600, 420, 1);
+		opacity: 0.2;
+		border-radius: rem(3);
+		transition: all 0.5s ease 0s;
+	}
+	&__tabs-title._tab-active {
+		transition: all 0.5s ease 0s;
+		opacity: 1;
+		background-color: transparent;
+	}
+
+	&__tabs-content {
+	}
+
+	&__tabs-body {
+		padding-top: rem(20);
+		margin: 0px 0px 30px 0px;
+		@media (max-width: rem(450)) {
+			padding-top: rem(70);
+		}
+	}
+	&__tabs-body-2 {
+		padding-top: rem(20);
+		margin: 0px 0px 30px 0px;
+		@media (max-width: rem(639.98)) {
+			padding-top: rem(70);
+		}
+	}
+	&__tabs-body-3 {
+		padding-top: rem(20);
+		margin: 0px 0px 30px 0px;
+		@media (max-width: rem(949.98)) {
+			padding-top: rem(70);
+		}
+	}
+
+	// === TEAM PROFILE TABS-1 === //
+	&__tabs-1 {
+		position: relative;
+	}
+	&__tabs-navigation-1 {
+		position: absolute;
+		top: rem(-150);
+		//@include adaptiveValue("top", -150, -140, 1600, 969.98, 1);
+		right: 0;
+		display: flex;
+		gap: rem(30);
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: rem(969.98)) {
+			top: rem(15);
+		}
+	}
+
+	&__tabs-title-1 {
+		z-index: 3;
+		@include adaptiveValue("height", 50, 40, 1600, 420, 1);
+		@include adaptiveValue("width", 50, 40, 1600, 420, 1);
+		opacity: 0.3;
+		border-radius: rem(3);
+		transition: all 0.5s ease 0s;
+	}
+	&__tabs-title-1._tab-active {
+		transition: all 0.5s ease 0s;
+		opacity: 1;
+		background-color: transparent;
+	}
+
+	&__tabs-body-1 {
+		padding-top: rem(30);
+		@media (max-width: rem(969.98)) {
+			padding-top: rem(70);
+		}
+	}
+	// === TEAM PROFILE TABS-2 === //
+
+	&__header-nav {
+	}
+	&__header-box {
+	}
+
+	&__roster-cards {
+		overflow: hidden;
+	}
+
+	&__players-block {
+		padding: 0px 0px 20px 0px;
+	}
+	&__players {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+		gap: 20px;
+		@media (max-width: rem(879.98)) {
+			display: none;
+		}
+	}
+	&__players-slider {
+		@media (min-width: rem(880)) {
+			display: none;
+		}
+	}
+	&__staff-slider {
+	}
+	&__team-staff {
+	}
+}
+
+.team-profile-nav {
+	// .team-profile-nav__form
+
+	&__form {
+		// @media (max-width: rem(540)) {
+		// 	width: 100%;
+		// 	display: grid;
+		// 	grid-template-columns: rem(120) 1fr;
+		// 	column-gap: rem(10);
+		// }
+	}
+
+	// .team-profile-nav__box
+
+	&__box {
+	}
+
+	// .team-profile-nav__label
+
+	&__label {
+	}
+
+	// .team-profile-nav__list
+
+	&__list {
+	}
+
+	// .team-profile-nav__item
+
+	&__item {
+	}
+}

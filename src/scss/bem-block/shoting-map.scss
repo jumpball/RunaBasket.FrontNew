@@ -1,0 +1,1087 @@
+// === PERSON STATS CHART === //
+
+.person-stats-chart {
+	// === STATS CHART BODY === //
+	&__body {
+		position: relative;
+		display: flex;
+		@include adaptiveValue("gap", 20, 10, 1600, 991.98, 1);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+	// === STATS CHART SPOLLERS === //
+	// &__spollers {
+	// 	display: grid;
+	// }
+
+	// &__spollers-item {
+	// 	font-size: rem(18);
+	// }
+
+	&__spollers-title {
+		width: 100%;
+		cursor: default;
+		text-align: left;
+		position: relative;
+		font-size: rem(16);
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: rem(1.5);
+		background-color: $white;
+		color: $color-base-1;
+		._spoller-init & {
+			cursor: pointer;
+			border: 1px solid $white;
+			padding: rem(10) rem(15);
+			border-radius: rem(3);
+			margin-bottom: rem(10);
+			//&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: rem(15);
+				height: 0;
+				width: 0;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-top: 10px solid $color-base-1;
+				transition: transform 0.5s ease 0s;
+			}
+			// &::before {
+			// 	left: rem(12);
+			// }
+			&::after {
+				right: rem(12);
+			}
+			&._spoller-active {
+				&::before {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+				&::after {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+			}
+		}
+		@media (min-width: rem(969.98)) {
+			display: none;
+		}
+	}
+
+	&__spollers-title-1 {
+		width: 100%;
+		cursor: default;
+		text-align: left;
+		position: relative;
+		color: $white;
+		._spoller-init & {
+			cursor: pointer;
+			border: 1px solid $white;
+			padding: rem(10) rem(15);
+			border-radius: rem(3);
+			margin-bottom: rem(10);
+			//&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: rem(15);
+				height: 0;
+				width: 0;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-top: 10px solid $white;
+				transition: transform 0.5s ease 0s;
+			}
+			// &::before {
+			// 	left: rem(12);
+			// }
+			&::after {
+				right: rem(12);
+			}
+			&._spoller-active {
+				&::before {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+				&::after {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+			}
+		}
+		@media (min-width: rem(991.98)) {
+			display: none;
+		}
+	}
+
+	&__spollers-title-2 {
+		@media (min-width: rem(479.98)) {
+			display: none;
+		}
+	}
+	&__spollers-title-3 {
+		width: 100%;
+		cursor: default;
+		text-align: left;
+		position: relative;
+		font-size: rem(16);
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: rem(1.5);
+		background-color: $white;
+		color: $color-base-1;
+		._spoller-init & {
+			cursor: pointer;
+			border: 1px solid $white;
+			padding: rem(10) rem(15);
+			border-radius: rem(3);
+			margin-bottom: rem(10);
+			//&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: rem(15);
+				height: 0;
+				width: 0;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-top: 10px solid $color-base-1;
+				transition: transform 0.5s ease 0s;
+			}
+			// &::before {
+			// 	left: rem(12);
+			// }
+			&::after {
+				right: rem(12);
+			}
+			&._spoller-active {
+				&::before {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+				&::after {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+			}
+		}
+		@media (min-width: rem(679.98)) {
+			display: none;
+		}
+	}
+
+	&__spollers-title-4 {
+		width: 100%;
+		cursor: default;
+		text-align: left;
+		position: relative;
+		font-size: rem(16);
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: rem(1.5);
+		background-color: $white;
+		color: $color-base-1;
+		._spoller-init & {
+			cursor: pointer;
+			border: 1px solid $white;
+			padding: rem(10) rem(15);
+			border-radius: rem(3);
+			margin-bottom: rem(10);
+			//&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: rem(15);
+				height: 0;
+				width: 0;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-top: 10px solid $color-base-1;
+				transition: transform 0.5s ease 0s;
+			}
+			// &::before {
+			// 	left: rem(12);
+			// }
+			&::after {
+				right: rem(12);
+			}
+			&._spoller-active {
+				&::before {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+				&::after {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+			}
+		}
+		@media (min-width: rem(749.98)) {
+			display: none;
+		}
+	}
+
+	// === STATS CHART TABLE === //
+	&__table {
+		position: relative;
+		//margin-top: rem(40);
+		//display: block;
+		//max-width: rem(900);
+		width: 100%;
+		overflow-x: auto;
+		//align-self: flex-start;
+		//flex: 1 1 auto;
+		//margin: 0 auto;
+		@media (max-width: $mobile) {
+		}
+	}
+	// === STATS CHART BG-LOGO === //
+	&__bg-logo {
+		position: absolute;
+		@include adaptiveValue("top", 340, 200, 1600, 991.98, 1);
+		right: rem(10);
+		opacity: 0.15;
+		//@include adaptiveValue("right", 10, 15, 1600, 991.98, 1);
+		@include adaptiveValue("width", 900, 520, 1600, 991.98, 1);
+		@include adaptiveValue("height", 205, 118.4, 1600, 991.98, 1);
+		@media (max-width: $tablet) {
+			display: none;
+		}
+	}
+	// === STATS CHART CONTENT === //
+	// &__content {
+	// 	position: relative;
+	// 	align-self: flex-end;
+	// 	flex: 1 1 auto;
+	// 	margin: 0 auto;
+	// 	@media (max-width: $mobile) {
+	// 		position: relative;
+	// 	}
+	// }
+	// === CHARTS === //
+
+	&__list {
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
+		@media (max-width: $mobile) {
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			margin: 0px 0px 20px 0px;
+		}
+		@media (max-width: rem(409.98)) {
+			display: none;
+		}
+	}
+
+	&__item {
+		position: relative;
+		padding: 0px 0px 6px 0px;
+		@include adaptiveValue("width", 300, 178, 1600, 991.98, 1);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("width", 200, 160, 991.98, 767.98, 1);
+		}
+		@media (max-width: $mobile) {
+			@include adaptiveValue("width", 239, 120.5, 767.98, 410, 1);
+		}
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("width", 360, 272, 410, 320, 1);
+		}
+	}
+
+	&__item-1 {
+		position: relative;
+		padding: 5px 8px 5px 8px;
+		background-color: $white;
+		margin-top: rem(20);
+		border-radius: rem(3);
+		//max-height: rem(300);
+		//@include adaptiveValue("width", 900, 600, 1600, 991.98, 1);
+
+		// @media (max-width: $tablet) {
+		// 	@include adaptiveValue("width", 200, 160, 991.98, 767.98, 1);
+		// }
+		// @media (max-width: $mobile) {
+		// 	@include adaptiveValue("width", 239, 120.5, 767.98, 410, 1);
+		// }
+		// @media (max-width: rem(410)) {
+		// 	@include adaptiveValue("width", 360, 272, 410, 320, 1);
+		// }
+	}
+
+	&__info {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -25%);
+		color: $white;
+		text-align: center;
+	}
+	&__stats {
+		//position: relative;
+	}
+
+	&__stats-2pt {
+		font-weight: 900;
+		@include adaptiveValue("font-size", 40, 24, 1600, 991.98, 1);
+		width: 100%;
+		@media (max-width: rem(540)) {
+			@include adaptiveValue("font-size", 24, 17, 540, 410, 1);
+		}
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("font-size", 54, 34, 410, 320, 1);
+		}
+	}
+	&__stats-2pt::before {
+		content: "2-х";
+		@include adaptiveValue("font-size", 18, 11, 1600, 991.98, 1);
+		font-weight: 500;
+		position: absolute;
+		@include adaptiveValue("top", -18, -12, 1600, 991.98, 1);
+		left: 0;
+		width: 100%;
+		// @media (max-width: rem(540)) {
+		// 	@include adaptiveValue("top", -90, -70, 540, 410, 1);
+		// 	font-size: rem(18);
+		// }
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("font-size", 24, 16, 410, 320, 1);
+			@include adaptiveValue("top", -20, -16, 410, 320, 1);
+		}
+	}
+
+	&__stats-2pt::after {
+		content: "31/54";
+		@include adaptiveValue("font-size", 18, 11, 1600, 991.98, 1);
+		font-weight: 500;
+		width: 100%;
+		position: absolute;
+		@include adaptiveValue("bottom", -18, -10, 1600, 991.98, 1);
+		left: 0;
+		@media (max-width: rem(450)) {
+			display: none;
+		}
+		@media (max-width: rem(410)) {
+			display: block;
+			@include adaptiveValue("font-size", 24, 16, 410, 320, 1);
+			@include adaptiveValue("bottom", -20, -16, 410, 320, 1);
+		}
+	}
+
+	&__stats-3pt {
+		font-weight: 900;
+		@include adaptiveValue("font-size", 40, 24, 1600, 991.98, 1);
+		width: 100%;
+		@media (max-width: rem(540)) {
+			@include adaptiveValue("font-size", 24, 17, 540, 410, 1);
+		}
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("font-size", 54, 34, 410, 320, 1);
+		}
+	}
+	&__stats-3pt::before {
+		content: "3-х";
+		@include adaptiveValue("font-size", 18, 11, 1600, 991.98, 1);
+		font-weight: 500;
+		position: absolute;
+		@include adaptiveValue("top", -18, -12, 1600, 991.98, 1);
+		left: 0;
+		width: 100%;
+		// @media (max-width: rem(540)) {
+		// 	@include adaptiveValue("top", -90, -70, 540, 410, 1);
+		// 	font-size: rem(18);
+		// }
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("font-size", 24, 16, 410, 320, 1);
+			@include adaptiveValue("top", -20, -16, 410, 320, 1);
+		}
+	}
+	&__stats-3pt::after {
+		content: "31/86";
+		@include adaptiveValue("font-size", 18, 11, 1600, 991.98, 1);
+		font-weight: 500;
+		width: 100%;
+		position: absolute;
+		@include adaptiveValue("bottom", -18, -10, 1600, 991.98, 1);
+		left: 0;
+		@media (max-width: rem(450)) {
+			display: none;
+		}
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("font-size", 24, 16, 410, 320, 1);
+			@include adaptiveValue("bottom", -20, -16, 410, 320, 1);
+		}
+	}
+
+	&__stats-ft {
+		font-weight: 900;
+		@include adaptiveValue("font-size", 40, 24, 1600, 991.98, 1);
+		width: 100%;
+		@media (max-width: rem(540)) {
+			@include adaptiveValue("font-size", 24, 17, 540, 410, 1);
+		}
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("font-size", 54, 34, 410, 320, 1);
+		}
+	}
+	&__stats-ft::before {
+		content: "шт";
+		@include adaptiveValue("font-size", 18, 11, 1600, 991.98, 1);
+		font-weight: 500;
+		position: absolute;
+		@include adaptiveValue("top", -18, -12, 1600, 991.98, 1);
+		left: 0;
+		width: 100%;
+
+		// @media (max-width: rem(540)) {
+		// 	@include adaptiveValue("top", -90, -70, 540, 410, 1);
+		// 	font-size: rem(18);
+
+		// }
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("font-size", 24, 16, 410, 320, 1);
+			@include adaptiveValue("top", -20, -16, 410, 320, 1);
+		}
+	}
+	&__stats-ft::after {
+		content: "79/99";
+		@include adaptiveValue("font-size", 18, 11, 1600, 991.98, 1);
+		font-weight: 500;
+		width: 100%;
+		position: absolute;
+		@include adaptiveValue("bottom", -18, -10, 1600, 991.98, 1);
+		left: 0;
+		@media (max-width: rem(450)) {
+			display: none;
+		}
+		@media (max-width: rem(410)) {
+			@include adaptiveValue("font-size", 24, 16, 410, 320, 1);
+			@include adaptiveValue("bottom", -20, -16, 410, 320, 1);
+		}
+	}
+
+	// === STATS CHART IMAGE === //
+	&__image {
+		position: relative;
+		text-align: center;
+		@include adaptiveValue("width", 650, 400, 1600, 991.98, 1);
+		min-width: rem(400);
+		height: auto;
+		overflow: hidden;
+		background-color: $mainColor;
+		@media (max-width: $tablet) {
+			align-self: flex-start;
+			width: 100%;
+			flex: 1, 1, auto;
+			min-width: rem(272);
+		}
+	}
+
+	&__image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	// === STATS CHART SVG === //
+	&__svg {
+		position: absolute;
+	}
+
+	// === STATS CHART SVG PART === //
+	&__part-corner {
+		fill: $white;
+		opacity: 0.6;
+		@media (any-hover: hover) {
+			&:hover {
+				transition: opacity 0.2s ease;
+				fill: $color-gold;
+				opacity: 1;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&__part-short-corner {
+		fill: $white;
+		opacity: 0.5;
+		@media (any-hover: hover) {
+			&:hover {
+				transition: opacity 0.2s ease;
+				fill: $color-gold;
+				opacity: 1;
+				cursor: pointer;
+			}
+		}
+	}
+	&__part-short-wing {
+		fill: $white;
+		opacity: 0.6;
+		@media (any-hover: hover) {
+			&:hover {
+				transition: opacity 0.2s ease;
+				fill: $color-gold;
+				opacity: 1;
+				cursor: pointer;
+			}
+		}
+	}
+	&__part-3pt-wing {
+		fill: $white;
+		opacity: 0.5;
+		@media (any-hover: hover) {
+			&:hover {
+				transition: opacity 0.2s ease;
+				fill: $color-gold;
+				opacity: 1;
+				cursor: pointer;
+			}
+		}
+	}
+	&__part-3pt-top {
+		fill: $white;
+		opacity: 0.6;
+		@media (any-hover: hover) {
+			&:hover {
+				transition: opacity 0.2s ease;
+				fill: $color-gold;
+				opacity: 1;
+				cursor: pointer;
+			}
+		}
+	}
+	&__part-top {
+		fill: $white;
+		opacity: 0.5;
+		@media (any-hover: hover) {
+			&:hover {
+				transition: opacity 0.2s ease;
+				fill: $color-gold;
+				opacity: 1;
+				cursor: pointer;
+			}
+		}
+	}
+	&__part-paint {
+		fill: $white;
+		opacity: 0.6;
+		@media (any-hover: hover) {
+			&:hover {
+				transition: opacity 0.2s ease;
+				fill: $color-gold;
+				opacity: 1;
+				cursor: pointer;
+			}
+		}
+	}
+}
+// === STATS PERCENT LABEL === //
+.paint-shoting-percent {
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+	font-weight: 500;
+	color: $mainColor;
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("top", 110, 60, 1600, 991.98, 1);
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@include adaptiveValue("font-size", 16, 10, 1600, 991.98, 1);
+	@media (max-width: $tablet) {
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("top", 140, 80, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("top", 150, 40, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+}
+.paint-shoting-percent::after {
+	content: "62/114";
+	position: absolute;
+	font-weight: 500;
+	text-align: center;
+	left: 0;
+	@include adaptiveValue("bottom", -18, -12, 1600, 991.98, 1);
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 14, 10, 1600, 991.98, 1);
+
+	@media (max-width: $tablet) {
+		@include adaptiveValue("bottom", -18, -12, 991.98, 767.98, 1);
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("bottom", -18, -12, 767.98, 360, 1);
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+	//opacity: 01;
+}
+
+.top-shoting-percent {
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+	font-weight: 500;
+	color: $mainColor;
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("top", 290, 180, 1600, 991.98, 1);
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@include adaptiveValue("font-size", 16, 10, 1600, 991.98, 1);
+	@media (max-width: $tablet) {
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("top", 330, 240, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("top", 330, 130, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+}
+.top-shoting-percent::after {
+	content: "31/56";
+	position: absolute;
+	font-weight: 500;
+	text-align: center;
+	left: 0;
+	@include adaptiveValue("bottom", -18, -12, 1600, 991.98, 1);
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 14, 10, 1600, 991.98, 1);
+
+	@media (max-width: $tablet) {
+		@include adaptiveValue("bottom", -18, -12, 991.98, 767.98, 1);
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("bottom", -18, -12, 767.98, 360, 1);
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+	//opacity: 0;
+}
+
+.t-top-shoting-percent {
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+	font-weight: 500;
+	color: $mainColor;
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("top", 420, 260, 1600, 991.98, 1);
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@include adaptiveValue("font-size", 16, 10, 1600, 991.98, 1);
+	@media (max-width: $tablet) {
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("top", 480, 350, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("top", 490, 200, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+}
+.t-top-shoting-percent::after {
+	content: "11/32";
+	position: absolute;
+	font-weight: 500;
+	text-align: center;
+	left: 0;
+	@include adaptiveValue("bottom", -18, -12, 1600, 991.98, 1);
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 14, 10, 1600, 991.98, 1);
+
+	@media (max-width: $tablet) {
+		@include adaptiveValue("bottom", -18, -12, 991.98, 767.98, 1);
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("bottom", -18, -12, 767.98, 360, 1);
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+	//opacity: 0;
+}
+
+.t-wing-l-shoting-percent {
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+	font-weight: 500;
+	color: $mainColor;
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("top", 250, 170, 1600, 991.98, 1);
+	@include adaptiveValue("left", 30, 20, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 16, 10, 1600, 991.98, 1);
+	@media (max-width: $tablet) {
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("top", 290, 210, 991.98, 767.98, 1);
+		@include adaptiveValue("left", 35, 25, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("top", 300, 130, 767.98, 360, 1);
+		@include adaptiveValue("left", 40, 15, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+}
+.t-wing-l-shoting-percent::after {
+	content: "9/23";
+	position: absolute;
+	font-weight: 500;
+	text-align: center;
+	left: 0;
+	@include adaptiveValue("bottom", -18, -12, 1600, 991.98, 1);
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 14, 10, 1600, 991.98, 1);
+
+	@media (max-width: $tablet) {
+		@include adaptiveValue("bottom", -18, -12, 991.98, 767.98, 1);
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("bottom", -18, -12, 767.98, 360, 1);
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+	//opacity: 0;
+}
+
+.t-wing-r-shoting-percent {
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+	font-weight: 500;
+	color: $mainColor;
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("top", 250, 170, 1600, 991.98, 1);
+	@include adaptiveValue("right", 30, 20, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 16, 10, 1600, 991.98, 1);
+	@media (max-width: $tablet) {
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("top", 290, 210, 991.98, 767.98, 1);
+		@include adaptiveValue("right", 35, 25, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("top", 300, 130, 767.98, 360, 1);
+		@include adaptiveValue("right", 40, 15, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+}
+.t-wing-r-shoting-percent::after {
+	content: "16/40";
+	position: absolute;
+	font-weight: 500;
+	text-align: center;
+	left: 0;
+	@include adaptiveValue("bottom", -18, -12, 1600, 991.98, 1);
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 14, 10, 1600, 991.98, 1);
+
+	@media (max-width: $tablet) {
+		@include adaptiveValue("bottom", -18, -12, 991.98, 767.98, 1);
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("bottom", -18, -12, 767.98, 360, 1);
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+	//opacity: 0;
+}
+
+.wing-l-shoting-percent {
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+	font-weight: 500;
+	color: $mainColor;
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("top", 190, 125, 1600, 991.98, 1);
+	@include adaptiveValue("left", 130, 80, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 16, 10, 1600, 991.98, 1);
+	@media (max-width: $tablet) {
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("top", 220, 170, 991.98, 767.98, 1);
+		@include adaptiveValue("left", 140, 100, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("top", 230, 90, 767.98, 360, 1);
+		@include adaptiveValue("left", 150, 55, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+}
+.wing-l-shoting-percent::after {
+	content: "19/31";
+	position: absolute;
+	font-weight: 500;
+	text-align: center;
+	left: 0;
+	@include adaptiveValue("bottom", -18, -12, 1600, 991.98, 1);
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 14, 10, 1600, 991.98, 1);
+
+	@media (max-width: $tablet) {
+		@include adaptiveValue("bottom", -18, -12, 991.98, 767.98, 1);
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("bottom", -18, -12, 767.98, 360, 1);
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+	//opacity: 0;
+}
+
+.wing-r-shoting-percent {
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+	font-weight: 500;
+	color: $mainColor;
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("top", 190, 125, 1600, 991.98, 1);
+	@include adaptiveValue("right", 130, 80, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 16, 10, 1600, 991.98, 1);
+	@media (max-width: $tablet) {
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("top", 220, 170, 991.98, 767.98, 1);
+		@include adaptiveValue("right", 140, 100, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("top", 230, 90, 767.98, 360, 1);
+		@include adaptiveValue("right", 150, 55, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+}
+.wing-r-shoting-percent::after {
+	content: "26/58";
+	position: absolute;
+	font-weight: 500;
+	text-align: center;
+	left: 0;
+	@include adaptiveValue("bottom", -18, -12, 1600, 991.98, 1);
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 14, 10, 1600, 991.98, 1);
+
+	@media (max-width: $tablet) {
+		@include adaptiveValue("bottom", -18, -12, 991.98, 767.98, 1);
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("bottom", -18, -12, 767.98, 360, 1);
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+	//opacity: 0;
+}
+
+.s-corner-r-shoting-percent {
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+	font-weight: 500;
+	color: $mainColor;
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("top", 60, 30, 1600, 991.98, 1);
+	@include adaptiveValue("right", 110, 70, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 16, 10, 1600, 991.98, 1);
+	@media (max-width: $tablet) {
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("top", 60, 30, 991.98, 767.98, 1);
+		@include adaptiveValue("right", 120, 90, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("top", 60, 25, 767.98, 360, 1);
+		@include adaptiveValue("right", 110, 40, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+}
+.s-corner-r-shoting-percent::after {
+	content: "24/49";
+	position: absolute;
+	font-weight: 500;
+	text-align: center;
+	left: 0;
+	@include adaptiveValue("bottom", -18, -12, 1600, 991.98, 1);
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 14, 10, 1600, 991.98, 1);
+
+	@media (max-width: $tablet) {
+		@include adaptiveValue("bottom", -18, -12, 991.98, 767.98, 1);
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("bottom", -18, -12, 767.98, 360, 1);
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+	//opacity: 0;
+}
+
+.s-corner-l-shoting-percent {
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+	font-weight: 500;
+	color: $mainColor;
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("top", 60, 30, 1600, 991.98, 1);
+	@include adaptiveValue("left", 110, 70, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 16, 10, 1600, 991.98, 1);
+	@media (max-width: $tablet) {
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("top", 60, 30, 991.98, 767.98, 1);
+		@include adaptiveValue("left", 120, 90, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("top", 60, 25, 767.98, 360, 1);
+		@include adaptiveValue("left", 110, 40, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+}
+.s-corner-l-shoting-percent::after {
+	content: "24/49";
+	position: absolute;
+	font-weight: 500;
+	text-align: center;
+	left: 0;
+	@include adaptiveValue("bottom", -18, -12, 1600, 991.98, 1);
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 14, 10, 1600, 991.98, 1);
+
+	@media (max-width: $tablet) {
+		@include adaptiveValue("bottom", -18, -12, 991.98, 767.98, 1);
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("bottom", -18, -12, 767.98, 360, 1);
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+	//opacity: 0;
+}
+
+.corner-l-shoting-percent {
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+	font-weight: 500;
+	color: $mainColor;
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("top", 80, 40, 1600, 991.98, 1);
+	@include adaptiveValue("left", 8, 0, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 16, 10, 1600, 991.98, 1);
+	@media (max-width: $tablet) {
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("top", 80, 40, 991.98, 767.98, 1);
+		@include adaptiveValue("left", 12, 6, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("top", 80, 30, 767.98, 360, 1);
+		@include adaptiveValue("left", 9, 0, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+}
+.corner-l-shoting-percent::after {
+	content: "4/28";
+	position: absolute;
+	font-weight: 500;
+	text-align: center;
+	left: 0;
+	@include adaptiveValue("bottom", -18, -12, 1600, 991.98, 1);
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 14, 10, 1600, 991.98, 1);
+
+	@media (max-width: $tablet) {
+		@include adaptiveValue("bottom", -18, -12, 991.98, 767.98, 1);
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("bottom", -18, -12, 767.98, 360, 1);
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+	//opacity: 0;
+}
+
+.corner-r-shoting-percent {
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+	font-weight: 500;
+	color: $mainColor;
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("top", 80, 40, 1600, 991.98, 1);
+	@include adaptiveValue("right", 8, 0, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 16, 10, 1600, 991.98, 1);
+	@media (max-width: $tablet) {
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("top", 80, 40, 991.98, 767.98, 1);
+		@include adaptiveValue("right", 12, 6, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("top", 80, 30, 767.98, 360, 1);
+		@include adaptiveValue("right", 9, 0, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+}
+.corner-r-shoting-percent::after {
+	content: "11/27";
+	position: absolute;
+	font-weight: 500;
+	text-align: center;
+	left: 0;
+	@include adaptiveValue("bottom", -18, -12, 1600, 991.98, 1);
+	@include adaptiveValue("width", 44, 38, 1600, 991.98, 1);
+	@include adaptiveValue("font-size", 14, 10, 1600, 991.98, 1);
+
+	@media (max-width: $tablet) {
+		@include adaptiveValue("bottom", -18, -12, 991.98, 767.98, 1);
+		@include adaptiveValue("width", 50, 42, 991.98, 767.98, 1);
+		@include adaptiveValue("font-size", 20, 12, 991.98, 767.98, 1);
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue("bottom", -18, -12, 767.98, 360, 1);
+		@include adaptiveValue("width", 52, 30, 767.98, 360, 1);
+		@include adaptiveValue("font-size", 18, 8, 767.98, 360, 1);
+	}
+	//opacity: 0;
+}

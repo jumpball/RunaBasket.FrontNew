@@ -1,0 +1,68 @@
+// === RATING PROFILE === //
+.rating-profile {
+	&__box {
+		position: relative;
+	}
+	&__header {
+		overflow: hidden;
+		margin: 0px 0px 40px 0px;
+	}
+	&__body {
+		//overflow: hidden;
+		margin: 0px 0px 40px 0px;
+	}
+	&__footer {
+		overflow: hidden;
+		margin: 0px 0px 40px 0px;
+	}
+	&__container {
+		overflow: hidden;
+	}
+
+	// === RATING PROFILE SPOLLERS === //
+
+	&__spollers {
+	}
+
+	&__spollers-item {
+	}
+
+	&__spollers-btn {
+		background-color: $white;
+		color: $mainColor;
+	}
+
+	&__spollers-body {
+		margin: 10px 0px 0px 0px;
+		padding: 20px;
+		background-color: $white;
+		width: 100%;
+		height: auto;
+		border-radius: rem(3);
+	}
+
+	&__spollers-title {
+		color: $mainColor;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 20px 0px 20px 0px;
+		@include adaptiveValue("font-size", 22, 16, 1600, 991.98, 1);
+		@include adaptiveValue("line-height", 28, 22, 1600, 991.98, 1);
+		font-weight: 900;
+		@media (max-width: $tablet) {
+			@include adaptiveValue("font-size", 16, 14, 991.98, 360, 1);
+		}
+	}
+	&__spollers-title span {
+		color: $color-base-1;
+	}
+
+	&__glossary {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: rem(10);
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+		}
+	}
+}

@@ -1,0 +1,383 @@
+// === TIME-LINE === //
+.timeline {
+	/* The actual timeline (the vertical ruler) */
+	position: relative;
+	margin: 0 auto;
+	padding: 40px 0px 0px 0px;
+
+	// === TIME-LINE BOX === //
+	&__box {
+		position: relative;
+		background-color: inherit;
+		width: 50%;
+	}
+	&__box-left {
+		padding: 10px 40px 10px 0px;
+		@media (max-width: rem(600)) {
+			padding: 30px 40px 30px 0px;
+		}
+	}
+	&__box-right {
+		padding: 10px 0px 10px 40px;
+	}
+	/* The circles on the timeline */
+	&__box::after {
+		content: "";
+		position: absolute;
+		width: 26px;
+		height: 26px;
+		right: -13px;
+		background-color: $color-base-7;
+		border: 6px solid $color-base-6;
+		top: 16px;
+		border-radius: 50%;
+		z-index: 1;
+		@media (max-width: rem(600)) {
+		}
+	}
+
+	// === TIME-LINE SIDES === //
+	&__left-side {
+		left: 0;
+		@media (max-width: rem(600)) {
+			width: 100%;
+			padding-left: 40px;
+			padding-right: 0px;
+		}
+	}
+	&__left-side::after {
+		@media (max-width: rem(600)) {
+			top: 38px;
+		}
+	}
+	&__left-side::before {
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 20px;
+		width: 0;
+		z-index: 1;
+		right: 30px;
+		border: medium solid $color-base-7;
+		border-width: 10px 0 10px 10px;
+		border-color: transparent transparent transparent $color-base-7;
+		@media (max-width: rem(600)) {
+			top: 40px;
+			left: 30px;
+			border: medium solid $color-base-7;
+			border-width: 10px 10px 10px 0;
+			border-color: transparent $color-base-7 transparent transparent;
+		}
+	}
+	&__right-side {
+		left: 50%;
+		@media (max-width: rem(600)) {
+			left: 0%;
+			width: 100%;
+			padding-left: 40px;
+			padding-right: 0px;
+		}
+	}
+	&__right-side::before {
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 20px;
+		width: 0;
+		z-index: 1;
+		left: 30px;
+		border: medium solid white;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent white transparent transparent;
+	}
+	&__right-side::after {
+		left: -13px;
+	}
+	&__left-side::after,
+	&__right-side::after {
+		@media (max-width: rem(600)) {
+			left: 0px;
+		}
+	}
+
+	// === TIME-LINE CONTENT === //
+	&__content {
+		background-color: $color-base-7;
+		position: relative;
+		border-radius: rem(10);
+		padding: rem(12);
+	}
+	&__content-left {
+		//padding: 15px 15px 15px 5px;
+		@media (max-width: rem(600)) {
+			//padding: 15px;
+		}
+	}
+	&__content-right {
+		//padding: 15px 5px 15px 15px;
+	}
+
+	// === TIME-LINE YEAR === //
+	&__year {
+		position: absolute;
+		display: inline-block;
+		@include adaptiveValue("top", -50, -30, 1600, 600, 1);
+		@include adaptiveValue("font-size", 40, 24, 1600, 600, 1);
+		@include adaptiveValue("line-height", 48, 30, 1600, 600, 1);
+		color: $white;
+		font-weight: 900;
+	}
+	&__year-left {
+		right: 0;
+		//@include adaptiveValue("right", 0, 10, 1600, 600, 1);
+	}
+
+	&__year-right {
+		left: 0;
+		//@include adaptiveValue("left", 0, 10, 1600, 600, 1);
+	}
+
+	// === TIME-LINE IMAGE === //
+	&__image {
+		position: absolute;
+		bottom: rem(5);
+		right: rem(10);
+		@include adaptiveValue("height", 90, 60, 1600, 600, 1);
+		@include adaptiveValue("width", 36, 24, 1600, 600, 1);
+		@media (max-width: rem(600)) {
+			//top: calc(90% - 60px);
+		}
+	}
+	&__image-left {
+	}
+	&__image-right {
+	}
+
+	// === TIME-LINE TITLE === //
+	&__title {
+		display: inline-block;
+		@include adaptiveValue("font-size", 24, 20, 1600, 600, 1);
+		@include adaptiveValue("line-height", 30, 24, 1600, 600, 1);
+		font-weight: 700;
+	}
+	&__title-left {
+	}
+
+	// === TIME-LINE SUBTITLE === //
+	&__subtitle {
+		@include adaptiveValue("font-size", 16, 12, 1600, 600, 1);
+		@include adaptiveValue("line-height", 22, 18, 1600, 600, 1);
+		font-weight: 600;
+		padding-left: rem(10);
+		text-transform: uppercase;
+		color: $color-zenit;
+	}
+	&__subtitle-left {
+	}
+
+	// === TIME-LINE TEXT === //
+	&__text {
+		text-align: start;
+		width: 100%;
+		font-weight: 400;
+		font-style: italic;
+		@include adaptiveValue("font-size", 16, 14, 1600, 600, 1);
+		@include adaptiveValue("line-height", 22, 18, 1600, 600, 1);
+		@media (max-width: rem(600)) {
+			@include adaptiveValue("font-size", 16, 12, 600, 320, 1);
+			@include adaptiveValue("line-height", 22, 16, 600, 320, 1);
+		}
+	}
+	&__text-left {
+	}
+
+	// === TIME-LINE TEAM NAME === //
+	&__team-name {
+		display: inline-block;
+		letter-spacing: 1;
+		width: 100%;
+		@include adaptiveValue("font-size", 24, 20, 1600, 600, 1);
+		@include adaptiveValue("line-height", 28, 22, 1600, 600, 1);
+		font-weight: 900;
+	}
+	&__team-name-left {
+		text-align: end;
+		@media (max-width: rem(600)) {
+			text-align: start;
+		}
+	}
+	&__team-name-right {
+	}
+
+	// === TIME-LINE LOGO === //
+	&__logo {
+		position: absolute;
+		top: rem(12);
+		@include adaptiveValue("height", 60, 40, 1600, 600, 1);
+		@include adaptiveValue("width", 60, 40, 1600, 600, 1);
+	}
+	&__logo-left {
+		@media (max-width: rem(600)) {
+			right: rem(12);
+		}
+	}
+	&__logo-left::before {
+		@media (max-width: rem(600)) {
+			right: -12px;
+		}
+	}
+	&__logo-right {
+		right: rem(12);
+	}
+	&__logo-right::before {
+		right: -12px;
+	}
+
+	&__logo::before {
+		content: "";
+		position: absolute;
+		@include adaptiveValue("top", -25, -10, 1600, 600, 1);
+		top: -20px;
+		@include adaptiveValue("height", 140, 90, 1600, 600, 1);
+		@include adaptiveValue("width", 140, 90, 1600, 600, 1);
+		opacity: 0.25;
+		background-repeat: no-repeat;
+		background-size: 80% auto;
+		background-position: center;
+	}
+	&__logo-1::before {
+		content: "";
+		background-image: url("@img/UBA/uba_team-logo/1.png");
+	}
+	&__logo-2::before {
+		content: "";
+		background-image: url("@img/UBA/uba_team-logo/2.png");
+	}
+	&__logo-3::before {
+		content: "";
+		background-image: url("@img/UBA/uba_team-logo/3.png");
+	}
+	&__logo-4::before {
+		content: "";
+		background-image: url("@img/logo/2.png");
+	}
+	&__logo-5::before {
+		content: "";
+		background-image: url("@img/UBA/UBA-1.png");
+	}
+	&__logo-6::before {
+		content: "";
+		background-image: url("@img/logo/tournaments/2017 FIBA EB.png");
+	}
+	&__logo-7::before {
+		content: "";
+		background-image: url("@img/logo/tournaments/EUROLEAGUE.png");
+	}
+	&__logo-8::before {
+		content: "";
+		background-image: url("@img/logo/tournaments/NBA DRAFT.png");
+	}
+	// === TIME-LINE LABEL === //
+	&__label {
+		font-style: italic;
+		font-weight: 400;
+		color: $color-zenit;
+		@include adaptiveValue("font-size", 16, 12, 1600, 600, 1);
+		@include adaptiveValue("line-height", 20, 18, 1600, 600, 1);
+	}
+	&__label-left {
+		text-align: end;
+		@media (max-width: rem(600)) {
+			text-align: start;
+		}
+	}
+	&__label-right {
+	}
+
+	// === TIME-LINE STATS === //
+	&__stats {
+	}
+	&__stats-left {
+	}
+	&__stats-right {
+	}
+
+	&__stats-list {
+		margin: 12px 0px 8px 0px;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		@include adaptiveValue("margin-top", 20, 12, 1600, 600, 1);
+		@include adaptiveValue("margin-bottom", 14, 8, 1600, 600, 1);
+	}
+
+	&__stats-item {
+		position: relative;
+		text-align: center;
+		min-width: rem(50);
+		width: 100%;
+		letter-spacing: rem(1);
+		@include adaptiveValue("font-size", 40, 18, 1600, 600, 1);
+		@include adaptiveValue("line-height", 42, 22, 1600, 600, 1);
+		font-weight: 900;
+		text-align: center;
+		@media (max-width: rem(600)) {
+			@include adaptiveValue("font-size", 40, 18, 600, 320, 1);
+			@include adaptiveValue("line-height", 42, 22, 600, 320, 1);
+		}
+	}
+	&__stats-item::before {
+		content: "";
+		width: 100%;
+		text-align: center;
+		@include adaptiveValue("font-size", 12, 8, 1600, 600, 1);
+		@include adaptiveValue("line-height", 12, 8, 1600, 600, 1);
+		font-weight: 400;
+		text-transform: lowercase;
+		color: $color-zenit;
+		position: absolute;
+		bottom: -8px;
+		left: 0;
+		@media (max-width: rem(600)) {
+			@include adaptiveValue("font-size", 12, 8, 600, 320, 1);
+			@include adaptiveValue("line-height", 12, 8, 600, 320, 1);
+		}
+	}
+
+	&__stats-item-g::before {
+		content: "игры";
+	}
+	&__stats-item-pt::before {
+		content: "очки";
+	}
+	&__stats-item-reb::before {
+		content: "подборы";
+	}
+	&__stats-item-as::before {
+		content: "передачи";
+	}
+	&__stats-item-w::before {
+		content: "победы";
+	}
+	&__stats-item-l::before {
+		content: "поражения";
+	}
+	&__stats-item-pr::before {
+		content: "%";
+	}
+}
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+	content: "";
+	position: absolute;
+	width: rem(6);
+	background-color: $white;
+	border-radius: rem(1);
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -3px;
+	@media (max-width: rem(600)) {
+		left: 13px;
+	}
+}

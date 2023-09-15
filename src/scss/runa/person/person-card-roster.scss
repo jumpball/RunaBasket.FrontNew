@@ -1,0 +1,252 @@
+// === PERSON CARD ROSTER === //
+.person-card-roster {
+	position: relative;
+	padding: 0px 0px 15px 0px;
+	transition: all 0.5s ease 0s;
+	border: rem(1) solid $color-base-1;
+	background-color: $white;
+	border-radius: rem(3);
+	height: 100%;
+
+	// = PERSON CARD ROSTER / HOVER = //
+	&:hover {
+		transition: all 0.5s ease 0s;
+		box-shadow: $shadow-1;
+		//border: 1px solid $color-base-1;
+
+		.person-card-roster__name {
+			transition: all 0.5s ease 0s;
+			color: $color-base-1;
+		}
+		.person-card-roster__tournament-logo {
+			transition: all 0.5s ease 0s;
+			opacity: 0.5;
+		}
+		.person-card-roster__image {
+			transition: all 0.5s ease 0s;
+			transform: scale(1.02);
+		}
+	}
+
+	// = BODY = //
+	&__body {
+		position: relative;
+		min-width: 270px;
+		width: 100%;
+		height: fit-content;
+		z-index: 1;
+	}
+
+	// = CORNER = //
+	&__corner {
+		transition: all 0.5s ease 0s;
+		z-index: 2;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		border-top: 0px solid transparent;
+		border-left: 60px solid $color-base-2;
+		border-bottom: 60px solid transparent;
+		@media (max-width: rem(549.98)) {
+			border-left: 40px solid $color-base-2;
+			border-bottom: 40px solid transparent;
+		}
+		@media (max-width: rem(429.98)) {
+			border-left: 50px solid $color-base-2;
+			border-bottom: 50px solid transparent;
+		}
+	}
+
+	// = TOURNAMENT LOGO = //
+	&__tournament-logo {
+		transition: all 0.5s ease 0s;
+		width: rem(70);
+		height: rem(70);
+		position: absolute;
+		top: rem(20);
+		right: rem(20);
+		opacity: 0.1;
+		z-index: 2;
+		@media (max-width: rem(549.98)) {
+			width: rem(60);
+			height: rem(60);
+		}
+		@media (max-width: rem(429.98)) {
+			top: rem(5);
+			right: rem(5);
+			width: rem(50);
+			height: rem(50);
+		}
+	}
+
+	// = LOGO = //
+	&__logo {
+		align-self: center;
+		display: block;
+		width: rem(36.4);
+		height: rem(30);
+		position: relative;
+		@media (max-width: rem(549.98)) {
+			display: none;
+		}
+	}
+	&__logo img {
+		padding: rem(2);
+	}
+
+	// = PHOTO = //
+
+	&__photo {
+		position: relative;
+		margin: 20px 0px 0px 0px;
+		height: rem(270);
+		width: rem(270);
+		overflow: hidden;
+		transition: all 0.5s ease 0s;
+		@media (max-width: rem(767.98)) {
+			height: rem(250);
+			width: rem(250);
+		}
+		@media (max-width: rem(649.98)) {
+			@include adaptiveValue("width", 240, 200, 649.98, 480, 1);
+			@include adaptiveValue("height", 240, 200, 649.98, 480, 1);
+		}
+		@media (max-width: rem(479.98)) {
+			@include adaptiveValue("width", 200, 138, 479.98, 320, 1);
+			@include adaptiveValue("height", 200, 138, 479.98, 320, 1);
+			border-bottom: 3px solid $color-base-1;
+		}
+		@media (max-width: rem(414.98)) {
+			margin: 5px 0px 0px 0px;
+		}
+		@media (max-width: rem(339.98)) {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+	&__photo::after {
+		content: "";
+		background: $white;
+		background-image: url("@img/RUNA/border/border-270-20-green.svg");
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+		height: rem(20);
+		@media (max-width: rem(479.98)) {
+			display: none;
+		}
+	}
+	&__image {
+		transition: all 0.5s ease 0s;
+		-webkit-filter: drop-shadow(-5px 13px 15px #05050580);
+		filter: drop-shadow(-5px 13px 14px rgba(5, 5, 5, 0.5));
+	}
+
+	// = CONTENT = //
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 0px 0px 20px 0px;
+	}
+
+	// = INFO = //
+	&__info {
+		margin: 8px 0px 0px 0px;
+		padding: 0px 10px 0px 10px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		color: $mainColor;
+		z-index: 1;
+		@media (max-width: em(767.98)) {
+			margin: 5px 0px 0px 0px;
+			padding: 0px 5px 0px 5px;
+		}
+	}
+
+	// = NAME = //
+	&__name {
+		color: $mainColor;
+		text-transform: uppercase;
+		font-weight: 900;
+
+		span {
+			font-size: 16px;
+			line-height: 18px;
+			letter-spacing: 1px;
+			@media (max-width: rem(767.98)) {
+				@include adaptiveValue("font-size", 14, 12, 767.98, 480, 1);
+			}
+			@media (max-width: rem(479.98)) {
+				@include adaptiveValue("font-size", 12, 9, 479.98, 340, 1);
+			}
+		}
+		h3 {
+			font-size: 19px;
+			line-height: 22px;
+			@media (max-width: rem(767.98)) {
+				@include adaptiveValue("font-size", 16, 14, 767.98, 480, 1);
+				@include adaptiveValue("line-height", 20, 16, 767.98, 480, 1);
+			}
+			@media (max-width: rem(479.98)) {
+				@include adaptiveValue("font-size", 14, 9, 479.98, 340, 1);
+				@include adaptiveValue("line-height", 16, 12, 479.98, 340, 1);
+			}
+		}
+	}
+
+	// = DESC = //
+	&__desc {
+		margin: 6px 0px 0px 0px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: rem(4);
+		@media (max-width: rem(479.98)) {
+			min-height: rem(40);
+		}
+		span {
+			display: inline-block;
+			font-family: $fontFamily;
+			font-size: 14px;
+			line-height: 16px;
+			letter-spacing: rem(2);
+			@media (max-width: rem(767.98)) {
+				@include adaptiveValue("font-size", 12, 10, 767.98, 480, 1);
+				letter-spacing: rem(1);
+			}
+			@media (max-width: rem(479.98)) {
+				@include adaptiveValue("font-size", 10, 9, 479.98, 340, 1);
+			}
+		}
+		p {
+			text-transform: uppercase;
+			font-size: 12px;
+			letter-spacing: rem(2);
+			@media (max-width: rem(767.98)) {
+				@include adaptiveValue("font-size", 12, 9, 767.98, 480, 1);
+				//letter-spacing: rem(1);
+				//color: $white;
+			}
+			@media (max-width: rem(479.98)) {
+				@include adaptiveValue("font-size", 10, 8, 479.98, 390, 1);
+			}
+		}
+	}
+
+	// = DATA = //
+	&__data {
+		display: flex;
+		justify-content: center;
+		gap: rem(4);
+	}
+}

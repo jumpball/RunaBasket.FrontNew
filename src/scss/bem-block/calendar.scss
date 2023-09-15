@@ -1,0 +1,205 @@
+// === TOURNAMENT CALENDAR === //
+.calendar {
+	&__section {
+	}
+
+	&__header {
+		position: relative;
+		//@include adaptiveValue("margin-top", 40, 20, 1600, 320, 1);
+	}
+
+	&__body {
+		//@include adaptiveValue("top", -110, -25, 1600, 320, 1);
+		//top: rem(-110);
+	}
+
+	&__box {
+		//@include adaptiveValue("width", 1200, 260, 1600, 320, 1);
+		//@include adaptiveValue("height", 300, 100, 1600, 320, 1);
+	}
+
+	&__tournament-logo {
+		z-index: 5;
+		position: absolute;
+		top: 0;
+		right: 0;
+		@include adaptiveValue("width", 500, 260, 1600, 320, 1);
+		@include adaptiveValue("height", 115.4, 60, 1600, 320, 1);
+	}
+
+	// === STATS CHART SPOLLERS === //
+	&__spollers {
+		display: grid;
+	}
+
+	&__spollers-item {
+		font-size: rem(18);
+		height: auto;
+	}
+
+	&__spollers-title {
+		width: 100%;
+		cursor: default;
+		text-align: left;
+		position: relative;
+		font-size: rem(16);
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: rem(1.5);
+		background-color: $color-base-1;
+		color: $white;
+		._spoller-init & {
+			cursor: pointer;
+			border: 1px solid $color-base-1;
+			padding: rem(10) rem(15);
+			border-radius: rem(3);
+			margin-bottom: rem(10);
+			//&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: rem(15);
+				height: 0;
+				width: 0;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-top: 10px solid $white;
+				transition: transform 0.5s ease 0s;
+			}
+			// &::before {
+			// 	left: rem(12);
+			// }
+			&::after {
+				right: rem(12);
+			}
+			&._spoller-active {
+				&::before {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+				&::after {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+			}
+		}
+		@media (min-width: rem(767.98)) {
+			display: none;
+		}
+	}
+	&__spollers-title-1 {
+		@media (min-width: rem(639.98)) {
+			display: none;
+		}
+	}
+	&__spollers-title-2 {
+		@media (min-width: rem(679.98)) {
+			display: none;
+		}
+	}
+
+	// === CALENDAR NAV & FORM === //
+	&__nav {
+		margin: 0px 0px 40px 0px;
+	}
+
+	&__form {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		@include adaptiveValue("gap", 40, 20, 1600, 991.98, 1);
+		@media (max-width: rem(767.98)) {
+			grid-template-columns: 1fr;
+			gap: rem(10);
+		}
+	}
+	&__form-1 {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		@include adaptiveValue("gap", 40, 20, 1600, 991.98, 1);
+		@media (max-width: rem(679.98)) {
+			grid-template-columns: 1fr;
+			gap: rem(10);
+		}
+	}
+
+	// === CALENDAR TABS === //
+	&__tabs {
+		position: relative;
+	}
+
+	&__tabs-navigation {
+		position: absolute;
+		@include adaptiveValue("top", -140, -110, 991.98, 540, 1);
+		right: 0;
+		display: flex;
+		gap: rem(30);
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: rem(900)) {
+			top: rem(15);
+		}
+	}
+	&__tabs-navigation-1 {
+		position: absolute;
+		@include adaptiveValue("top", -252, -240, 1600, 450, 1);
+		right: 0;
+		display: flex;
+		gap: rem(30);
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: rem(767.98)) {
+			top: rem(15);
+		}
+	}
+
+	&__tabs-title {
+		@include adaptiveValue("height", 50, 40, 1600, 420, 1);
+		@include adaptiveValue("width", 50, 40, 1600, 420, 1);
+		opacity: 0.3;
+		border-radius: rem(3);
+		transition: all 0.5s ease 0s;
+	}
+	&__tabs-title._tab-active {
+		transition: all 0.5s ease 0s;
+		opacity: 1;
+		background-color: transparent;
+	}
+
+	&__tabs-content {
+		//@include adaptiveValue("margin-top", 50, 40, 1600, 420, 1);
+	}
+
+	&__tabs-body {
+		padding-top: rem(20);
+		margin: 0px 0px 30px 0px;
+		overflow: hidden;
+		@media (max-width: rem(767.98)) {
+			padding-top: rem(70);
+		}
+	}
+	// === CALENDAR SHEDULE === //
+	&__full-shedule {
+		overflow: hidden;
+		margin: 0px 0px 40px 0px;
+	}
+	&__one-day-shedule {
+		position: relative;
+		margin: 20px 0px 0px 0px;
+	}
+	// === CALENDAR DATE === //
+	&__date {
+		display: flex;
+		align-items: center;
+		gap: rem(8);
+	}
+	&__date-icon {
+		@include adaptiveValue("margin-top", 12, 4, 992, 600, 1);
+		@include adaptiveValue("width", 30, 24, 1600, 420, 1);
+		@include adaptiveValue("height", 30, 24, 1600, 420, 1);
+	}
+}
+
+// === TOURNAMENT__PUBLICATIONS === //
+.tournament__publications {
+	margin: 40px 0px 40px 0px;
+}

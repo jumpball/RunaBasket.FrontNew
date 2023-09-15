@@ -1,0 +1,182 @@
+// === TEAMS === //
+.teams {
+	// === TEAMS PROFILE SPOLLERS === //
+	&__spollers {
+		display: grid;
+	}
+
+	&__spollers-item {
+		font-size: rem(18);
+		height: auto;
+	}
+
+	&__spollers-title {
+		width: 100%;
+		cursor: default;
+		text-align: left;
+		position: relative;
+		color: $color-base-1;
+		font-size: rem(16);
+		text-transform: uppercase;
+		font-weight: 900;
+		background-color: $white;
+		._spoller-init & {
+			cursor: pointer;
+			border: 1px solid $color-base-1;
+			padding: rem(10) rem(15);
+			border-radius: rem(3);
+			margin-bottom: rem(10);
+			//&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: rem(15);
+				height: 0;
+				width: 0;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-top: 10px solid $color-base-1;
+				transition: transform 0.5s ease 0s;
+			}
+			// &::before {
+			// 	left: rem(12);
+			// }
+			&::after {
+				right: rem(12);
+			}
+			&._spoller-active {
+				&::before {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+				&::after {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+			}
+		}
+		@media (min-width: rem(449.98)) {
+			display: none;
+		}
+	}
+
+	&__spollers-title-2 {
+		width: 100%;
+		cursor: default;
+		text-align: left;
+		position: relative;
+		color: $color-base-1;
+		font-size: rem(16);
+		text-transform: uppercase;
+		font-weight: 900;
+		background-color: $white;
+		._spoller-init & {
+			cursor: pointer;
+			border: 1px solid $color-base-1;
+			padding: rem(10) rem(15);
+			border-radius: rem(3);
+			margin-bottom: rem(10);
+			//&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: rem(15);
+				height: 0;
+				width: 0;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-top: 10px solid $color-base-1;
+				transition: transform 0.5s ease 0s;
+			}
+			// &::before {
+			// 	left: rem(12);
+			// }
+			&::after {
+				right: rem(12);
+			}
+			&._spoller-active {
+				&::before {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+				&::after {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+			}
+		}
+		@media (min-width: rem(649.98)) {
+			display: none;
+		}
+	}
+
+	&__spollers-body {
+	}
+	// === TEAMS PROFILE NAV & FORM === //
+	&__nav {
+		margin: 0px 0px 30px 0px;
+	}
+	&__nav-1 {
+		margin: 0px 0px 30px 0px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		@include adaptiveValue("gap", 40, 10, 1600, 649.98, 1);
+		@media (max-width: rem(649.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__form {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		@include adaptiveValue("gap", 40, 10, 1600, 449.98, 1);
+		@media (max-width: rem(450)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__form-1 {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		@include adaptiveValue("gap", 40, 10, 1600, 449.98, 1);
+
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__form-2 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: rem(10);
+		@media (max-width: rem(1349.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+	&__form-3 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		@include adaptiveValue("gap", 40, 10, 1600, 649.98, 1);
+
+		@media (max-width: rem(649.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	// === TEAMS BOX === //
+	&__box {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		margin: 0px 0px 50px 0px;
+		@include adaptiveValue("gap", 40, 10, 1600, 991.98, 1);
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: 1fr;
+		}
+	}
+}

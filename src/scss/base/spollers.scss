@@ -1,0 +1,99 @@
+// Базовые стили спойлеров
+// Сниппет (HTML): spoller
+
+// Блок со спойлерами
+.spollers {
+	display: grid;
+	gap: 15px;
+}
+// Спойлер
+.spollers__item {
+	//font-size: rem(20);
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	align-items: end;
+}
+// Заголовок спойлера
+.spollers__title {
+	transition: all 0.5s ease 0s;
+	border-radius: rem(3);
+	overflow: hidden;
+	width: rem(40);
+	height: rem(40);
+	cursor: default;
+	margin: 0px 0px 10px 0px;
+
+	//@media (max-width: rem(499.98)) {
+	//top: 0;
+	//right: 0;
+	//}
+	._spoller-init & {
+		cursor: pointer;
+	}
+}
+.spollers__title._spoller-active {
+	transition: all 0.5s ease 0s;
+	-webkit-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+}
+
+.spollers__title-499 {
+	@media (min-width: rem(499.98)) {
+		display: none;
+	}
+
+	._spoller-init & {
+		cursor: pointer;
+	}
+}
+.spollers__title-767 {
+	@media (min-width: rem(767.98)) {
+		display: none;
+	}
+
+	._spoller-init & {
+		cursor: pointer;
+	}
+}
+
+.spollers__title-991 {
+	@media (min-width: rem(991.98)) {
+		display: none;
+	}
+
+	._spoller-init & {
+		cursor: pointer;
+	}
+}
+
+.spollers__title-1274 {
+	@media (min-width: rem(1274.98)) {
+		display: none;
+	}
+
+	._spoller-init & {
+		cursor: pointer;
+	}
+}
+
+.spollers__title-1319 {
+	@media (min-width: rem(1319.98)) {
+		display: none;
+	}
+
+	._spoller-init & {
+		cursor: pointer;
+	}
+}
+
+// Контент спойлера
+.spollers__body {
+	width: 100%;
+	padding: 0px 0px 0px 0px;
+	//position: relative;
+	//padding: rem(20);
+	//border-radius: rem(5);
+	//border: 1px solid #eee;
+}

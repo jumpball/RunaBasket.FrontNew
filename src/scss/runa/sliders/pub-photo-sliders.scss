@@ -1,0 +1,148 @@
+// === CONTENT BLOCK / PHOTO SLIDER === //
+// = CLUB-PHOTO / SLIDER RIGHT = //
+.club-photo-slider-right {
+	// = BOX = //
+	&__box {
+		float: right;
+		margin: 10px 0px 10px 20px;
+		height: rem(260);
+		width: rem(440);
+		overflow: hidden;
+		border: rem(1) solid $color-base-1;
+		border-radius: rem(3);
+		@media (max-width: rem(749.98)) {
+			@include adaptiveValue("width", 355, 320, 749.98, 620, 1);
+			@include adaptiveValue("height", 209, 189, 749.98, 620, 1);
+			margin: 10px 0px 10px 10px;
+		}
+		@media (max-width: rem(539.98)) {
+			@include adaptiveValue("width", 509, 290, 539.98, 320, 1);
+			@include adaptiveValue("height", 300, 170, 539.98, 320, 1);
+			margin: 10px 0px 10px 0px;
+			float: none;
+		}
+	}
+
+	// = WRAPPER = //
+	&__wrapper {
+	}
+
+	// = ITEM = //
+	&__item {
+		height: rem(260);
+		width: rem(440);
+	}
+
+	// = IMAGE = //
+	&__image {
+		height: rem(260);
+		width: rem(440);
+		@media (max-width: rem(749.98)) {
+			@include adaptiveValue("width", 355, 320, 749.98, 620, 1);
+			@include adaptiveValue("height", 209, 189, 749.98, 620, 1);
+		}
+		@media (max-width: rem(539.98)) {
+			@include adaptiveValue("width", 509, 290, 539.98, 320, 1);
+			@include adaptiveValue("height", 300, 170, 539.98, 320, 1);
+		}
+	}
+}
+
+// = PUB-PHOTO / SLIDER LEFT = //
+.pub-photo-slider-left {
+	min-height: 0px;
+	// = BOX = //
+	&__box {
+		float: left;
+		margin: 0px 20px 10px 0px;
+		height: rem(260);
+		width: rem(440);
+		overflow: hidden;
+		border: rem(1) solid $color-base-1;
+		border-radius: rem(3);
+		@media (max-width: rem(749.98)) {
+			@include adaptiveValue("width", 355, 270, 749.98, 620, 1);
+			@include adaptiveValue("height", 209, 159, 749.98, 620, 1);
+			margin: 0px 10px 10px 0px;
+		}
+		@media (max-width: rem(539.98)) {
+			@include adaptiveValue("width", 509, 290, 539.98, 320, 1);
+			@include adaptiveValue("height", 300, 170, 539.98, 320, 1);
+			margin: 0px 0px 10px 0px;
+			float: none;
+		}
+	}
+
+	// = WRAPPER = //
+	&__wrapper {
+	}
+
+	// = ITEM = //
+	&__item {
+		//height: rem(260);
+		//width: rem(440);
+	}
+
+	// = IMAGE = //
+	&__image {
+		height: rem(260);
+		width: rem(440);
+		@media (max-width: rem(749.98)) {
+			@include adaptiveValue("width", 355, 270, 749.98, 620, 1);
+			@include adaptiveValue("height", 209, 159, 749.98, 620, 1);
+		}
+		@media (max-width: rem(539.98)) {
+			@include adaptiveValue("width", 509, 290, 539.98, 320, 1);
+			@include adaptiveValue("height", 300, 170, 539.98, 320, 1);
+		}
+	}
+}
+
+// = PUB-PHOTO / SLIDER RIGHT = //
+.pub-photo-slider-right {
+	// = BOX = //
+	&__box {
+		float: right;
+		margin: 10px 0px 10px 20px;
+		height: rem(260);
+		width: rem(440);
+		overflow: hidden;
+		border: rem(1) solid $color-base-1;
+		border-radius: rem(3);
+		@media (max-width: rem(749.98)) {
+			@include adaptiveValue("width", 355, 270, 749.98, 620, 1);
+			@include adaptiveValue("height", 209, 159, 749.98, 620, 1);
+			margin: 10px 0px 10px 10px;
+		}
+		@media (max-width: rem(539.98)) {
+			@include adaptiveValue("width", 509, 290, 539.98, 320, 1);
+			@include adaptiveValue("height", 300, 170, 539.98, 320, 1);
+			margin: 10px 0px 10px 0px;
+			float: none;
+		}
+	}
+
+	// = WRAPPER = //
+	&__wrapper {
+	}
+
+	// = ITEM = //
+	&__item {
+		height: rem(260);
+		width: rem(440);
+	}
+
+	// = IMAGE = //
+	&__image {
+		height: rem(260);
+		width: rem(440);
+		@media (max-width: rem(749.98)) {
+			@include adaptiveValue("width", 355, 270, 749.98, 620, 1);
+			@include adaptiveValue("height", 209, 159, 749.98, 620, 1);
+		}
+		@media (max-width: rem(539.98)) {
+			@include adaptiveValue("width", 509, 290, 539.98, 320, 1);
+			@include adaptiveValue("height", 300, 170, 539.98, 320, 1);
+		}
+	}
+}

@@ -1,0 +1,172 @@
+// === LEADERS TABS === // (AD)
+
+.leaders-tabs {
+	display: grid;
+	grid-template-columns: 1fr rem(354);
+	gap: rem(10);
+	@media (max-width: $tablet) {
+		grid-template-columns: 1fr;
+	}
+
+	// === NAVIGATION === //
+	&__navigation-box {
+		height: rem(590);
+		overflow: auto;
+		@media (max-width: rem(1100)) {
+			height: rem(440);
+		}
+		@media (max-width: $tablet) {
+			height: rem(154);
+		}
+		@media (max-width: rem(540)) {
+			height: rem(134);
+		}
+		@media (max-width: rem(540)) {
+			height: rem(114);
+		}
+	}
+
+	&__navigation {
+		// height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: start;
+		gap: rem(10);
+
+		// @media (max-width: rem(1100)) {
+		// 	height: rem(460);
+		// }
+		@media (max-width: $tablet) {
+			//display: grid;
+			//grid-template-columns: ;
+			flex-direction: row;
+			height: auto;
+			//width: 100%;
+		}
+	}
+
+	// === TITLE-1 === //
+	&__title-1 {
+		//display: block;
+		position: relative;
+		background-color: $white;
+		width: rem(340);
+		height: rem(140);
+		border: rem(5) solid $white;
+		border-radius: rem(3);
+		text-align: start;
+		@include adaptiveValue("font-size", 18, 14, 1250, 600, 1);
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: $shadow-1;
+			}
+		}
+
+		@media (max-width: $tablet) {
+			min-width: rem(270);
+		}
+		@media (max-width: rem(540)) {
+			height: rem(120);
+			min-width: rem(220);
+		}
+
+		@media (max-width: rem(410)) {
+			height: rem(100);
+			min-width: rem(200);
+			font-weight: 300;
+		}
+		@media (max-width: $mobileSmall) {
+		}
+	}
+	&__title-1 img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: top center;
+	}
+	&__text-title-1 {
+		display: block;
+		font-weight: 500;
+		position: absolute;
+		bottom: 0;
+		//font-size: rem(16);
+		line-height: rem(18);
+		left: 0;
+		color: $white;
+		padding: rem(8) rem(8) rem(8) rem(8);
+		-webkit-backdrop-filter: blur(1px);
+		backdrop-filter: blur(1px);
+		background-color: rgba(58, 58, 58, 0.5);
+		width: 100%;
+	}
+	&__title-1._tab-active {
+		@media (max-width: $tablet) {
+		}
+	}
+	// === CONTENT === //
+	&__content {
+		background-color: $white;
+		padding: rem(5);
+		height: rem(590);
+		width: 100%;
+		border-radius: rem(3);
+		@media (max-width: rem(1100)) {
+			height: rem(440);
+		}
+		@media (max-width: $tablet) {
+			height: auto;
+		}
+	}
+
+	&__body {
+	}
+
+	&__item {
+		position: relative;
+		height: rem(580);
+		border-radius: rem(3);
+		overflow: hidden;
+		@media (max-width: rem(1100)) {
+			height: rem(430);
+		}
+		@media (max-width: $mobile) {
+			height: rem(350);
+		}
+		@media (max-width: rem(620)) {
+			height: rem(300);
+		}
+		@media (max-width: rem(540)) {
+			height: rem(250);
+		}
+		@media (max-width: rem(440)) {
+			height: rem(200);
+		}
+		@media (max-width: rem(410)) {
+			height: auto;
+		}
+	}
+
+	&__item iframe {
+		object-fit: cover;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	// === LABEL === //
+	&__label {
+		position: absolute;
+		text-transform: uppercase;
+		color: $white;
+		-webkit-backdrop-filter: blur(5px);
+		backdrop-filter: blur(1px);
+		background-color: rgba(58, 58, 58, 0.4);
+		border-radius: rem(3);
+		text-align: end;
+		@include adaptiveValue("bottom", 20, 8, 992, 600, 1);
+		@include adaptiveValue("right", 20, 8, 992, 600, 1);
+		@include adaptiveValue("padding", 20, 8, 992, 600, 1);
+	}
+}

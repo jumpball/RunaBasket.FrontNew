@@ -1,0 +1,806 @@
+// // === KEY STATS === //
+
+// .stats-comparison {
+// 	position: relative;
+// }
+// .stats-comparison .wrap-bar {
+// 	//position: absolute;
+// 	//left: 0;
+// 	//right: 0;
+// 	//top: rem(40);
+// 	@media (max-width: rem(579.98)) {
+// 		//display: none;
+// 	}
+// }
+
+// .stats-comparison .wrap-bar .left,
+// .stats-comparison .wrap-bar .right {
+// 	width: 50%;
+// 	height: rem(20);
+// 	-webkit-box-sizing: border-box;
+// 	box-sizing: border-box;
+// 	position: relative;
+// }
+// .stats-comparison .wrap-bar .left span,
+// .stats-comparison .wrap-bar .right span {
+// 	content: "";
+// 	width: 100%;
+// 	height: 100%;
+// 	height: rem(20);
+// 	display: block;
+// }
+// .stats-comparison .wrap-bar .left {
+// 	float: left;
+// 	padding-right: rem(5);
+// }
+// .stats-comparison .wrap-bar .right {
+// 	float: right;
+// 	padding-left: rem(5);
+// }
+
+// .stats-comparison {
+// 	&__box {
+// 		padding: 8px 0px 8px 0px;
+// 	}
+
+// 	&__label {
+// 		text-transform: uppercase;
+// 		font-weight: 900;
+// 		color: $white;
+// 		text-align: center;
+// 		//font-size: rem(18);
+// 		@include adaptiveValue("font-size", 18, 14, 767.98, 420, 1);
+// 		line-height: rem(30);
+// 		letter-spacing: rem(2);
+// 	}
+
+// 	&__row {
+// 		display: grid;
+// 		grid-template-columns: rem(50) 1fr rem(50);
+// 		gap: rem(10);
+// 	}
+
+// 	&__digit {
+// 		text-align: center;
+// 		text-transform: uppercase;
+// 		font-weight: 900;
+// 		//@include adaptiveValue("font-size", 20, 16, 767.98, 420, 1);
+// 		font-size: rem(20);
+// 		color: $white;
+// 	}
+// }
+
+// // === KEY CHARTS === //
+// .progress-bg-box {
+// 	width: 100%;
+// 	height: rem(300);
+// 	display: flex;
+// 	//flex-direction: column;
+// 	gap: rem(20);
+// }
+// .progress-bg {
+// 	margin: 0 auto;
+// 	width: 100%;
+// 	height: rem(30);
+// 	border-radius: rem(3);
+// 	text-align: center;
+// 	background-color: $white;
+// 	overflow: hidden;
+// 	//-moz-box-shadow: inset 0 0 10px #ccc;
+// 	//-webkit-box-shadow: inset 0 0 10px #ccc;
+// 	//box-shadow: inset 0 0 10px #ccc;
+// }
+// .progress-bg-1 {
+// 	margin: 0 auto;
+// 	//width: 100%;
+// 	width: rem(30);
+// 	//height: rem(70);
+// 	height: 100%;
+// 	border-radius: rem(3);
+// 	text-align: center;
+// 	background-color: $white;
+// 	//-moz-box-shadow: inset 0 0 10px #ccc;
+// 	//-webkit-box-shadow: inset 0 0 10px #ccc;
+// 	//box-shadow: inset 0 0 10px #ccc;
+// }
+// .progress-bg-2 {
+// 	position: relative;
+// 	width: rem(100);
+// 	height: rem(30);
+// 	transform: rotate(90deg);
+// 	//margin: 0 auto;
+// 	border-radius: rem(3);
+// 	background-color: $white;
+// 	overflow: hidden;
+// }
+
+// .progress-bar {
+// 	height: rem(30);
+// 	//border-radius: rem(3);
+// 	float: right;
+// 	width: 50%;
+
+// 	/* fallback */
+// 	background-color: $color-gold;
+
+// 	// /* Safari 4-5, Chrome 1-9 */
+// 	// background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1c314a), to(#27425f));
+
+// 	// /* Safari 5.1, Chrome 10+ */
+// 	// background: -webkit-linear-gradient(top, #1c314a, #27425f);
+
+// 	// /* Firefox 3.6+ */
+// 	// background: -moz-linear-gradient(top, #1c314a, #27425f);
+
+// 	// /* IE 10 */
+// 	// background: -ms-linear-gradient(top, #1c314a, #27425f);
+
+// 	// /* Opera 11.10+ */
+// 	// background: -o-linear-gradient(top, #1c314a, #27425f);
+// }
+
+// .progress-bar-1 {
+// 	//height: rem(70);
+// 	border-radius: rem(3);
+// 	float: top;
+// 	//width: 50%;
+// 	width: rem(30);
+// 	//height: rem(70);
+// 	height: 50%;
+// 	/* fallback */
+// 	background-color: $color-gold;
+
+// 	// /* Safari 4-5, Chrome 1-9 */
+// 	// background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1c314a), to(#27425f));
+
+// 	// /* Safari 5.1, Chrome 10+ */
+// 	// background: -webkit-linear-gradient(top, #1c314a, #27425f);
+
+// 	// /* Firefox 3.6+ */
+// 	// background: -moz-linear-gradient(top, #1c314a, #27425f);
+
+// 	// /* IE 10 */
+// 	// background: -ms-linear-gradient(top, #1c314a, #27425f);
+
+// 	// /* Opera 11.10+ */
+// 	// background: -o-linear-gradient(top, #1c314a, #27425f);
+// }
+// .progress-bar-2 {
+// 	height: rem(30);
+// 	//border-radius: rem(3);
+// 	float: right;
+// 	width: 38%;
+// 	/* fallback */
+// 	background-color: $color-gold;
+
+// 	// /* Safari 4-5, Chrome 1-9 */
+// 	// background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1c314a), to(#27425f));
+
+// 	// /* Safari 5.1, Chrome 10+ */
+// 	// background: -webkit-linear-gradient(top, #1c314a, #27425f);
+
+// 	// /* Firefox 3.6+ */
+// 	// background: -moz-linear-gradient(top, #1c314a, #27425f);
+
+// 	// /* IE 10 */
+// 	// background: -ms-linear-gradient(top, #1c314a, #27425f);
+
+// 	// /* Opera 11.10+ */
+// 	// background: -o-linear-gradient(top, #1c314a, #27425f);
+// }
+
+// .progress-bg h3.goal,
+// .progress-bg h3.raised {
+// 	font-family: Arial, sans-serif;
+// 	font-size: 2em;
+// 	font-weight: 600;
+// 	line-height: 78px;
+// 	margin: 0;
+// 	padding: 0;
+// 	text-align: center;
+// 	display: inline;
+// }
+
+// .progress-bg h3.raised {
+// 	color: #fff;
+// 	margin: 14px 25px 0 50px;
+// 	padding: 0 25px 0 0;
+// }
+
+// .progress-bg h3.goal {
+// 	color: #b2b2b2;
+// 	text-align: center;
+// }
+
+// body .progress-bg h3.raised {
+// 	-webkit-animation: fadein 4s; /* Safari and Chrome */
+// 	-moz-animation: fadein 4s; /* Firefox */
+// 	-ms-animation: fadein 4s; /* Internet Explorer */
+// 	-o-animation: fadein 4s; /* Opera */
+// 	animation: fadein 4s;
+// }
+
+// @keyframes fadein {
+// 	from {
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		opacity: 1;
+// 	}
+// }
+
+// /* Firefox */
+// @-moz-keyframes fadein {
+// 	from {
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		opacity: 1;
+// 	}
+// }
+
+// /* Safari and Chrome */
+// @-webkit-keyframes fadein {
+// 	from {
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		opacity: 1;
+// 	}
+// }
+
+// /* Internet Explorer */
+// @-ms-keyframes fadein {
+// 	from {
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		opacity: 1;
+// 	}
+// }
+// ​ ​ .progress-bg h3.goal {
+// 	float: right;
+// 	display: inline;
+// 	padding: 0 25px 0 0;
+// 	text-align: center;
+// }
+
+// body .progress-bg div {
+// 	-webkit-animation: progress-bar 2s ease forwards;
+// 	-moz-animation: progress-bar 2s ease forwards;
+// 	-o-animation: progress-bar 2s ease forwards;
+// 	animation: progress-bar 2s ease forwards;
+// }
+// body .progress-bg-1 div {
+// 	-webkit-animation: progress-bar 2s ease forwards;
+// 	-moz-animation: progress-bar 2s ease forwards;
+// 	-o-animation: progress-bar 2s ease forwards;
+// 	animation: progress-bar 2s ease backwards;
+// }
+// body .progress-bg-2 div {
+// 	-webkit-animation: progress-bar 2s ease forwards;
+// 	-moz-animation: progress-bar 2s ease forwards;
+// 	-o-animation: progress-bar 2s ease forwards;
+// 	animation: progress-bar 2s ease backwards;
+// }
+
+// @-webkit-keyframes progress-bar {
+// 	from {
+// 		width: 0%;
+// 	}
+// 	to {
+// 		width: 50%;
+// 	}
+// }
+
+// @-moz-keyframes progress-bar {
+// 	from {
+// 		width: 0%;
+// 	}
+// 	to {
+// 		width: 50%;
+// 	}
+// }
+
+// @-o-keyframes progress-bar {
+// 	from {
+// 		width: 0%;
+// 	}
+// 	to {
+// 		width: 50%;
+// 	}
+// }
+
+// @keyframes progress-bar {
+// 	from {
+// 		width: 0%;
+// 	}
+// 	to {
+// 		width: 50%;
+// 	}
+// }
+
+// @-webkit-keyframes progress-bar-2 {
+// 	from {
+// 		width: 0%;
+// 	}
+// 	to {
+// 		width: 38%;
+// 	}
+// }
+
+// @-moz-keyframes progress-bar-2 {
+// 	from {
+// 		width: 0%;
+// 	}
+// 	to {
+// 		width: 38%;
+// 	}
+// }
+
+// @-o-keyframes progress-bar-2 {
+// 	from {
+// 		width: 0%;
+// 	}
+// 	to {
+// 		width: 38%;
+// 	}
+// }
+
+// @keyframes progress-bar-2 {
+// 	from {
+// 		width: 0%;
+// 	}
+// 	to {
+// 		width: 38%;
+// 	}
+// }
+
+// === KEY STATS - PROGRESS BAR === //
+
+.stats-comparison {
+	&__bar-block {
+		margin: 20px 0px 20px 0px;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		@include adaptiveValue("gap", 50, 20, 1600, 767.98, 1);
+		@media (max-width: $mobile) {
+			@include adaptiveValue("gap", 20, 14, 767.98, 420, 1);
+		}
+	}
+	&__bar-block-1 {
+		margin: 20px 0px 20px 0px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@include adaptiveValue("gap", 30, 10, 1600, 767.98, 1);
+	}
+	&__bar-box {
+	}
+	&__bar-box-hidden {
+		@media (max-width: rem(359.98)) {
+			display: none;
+		}
+	}
+
+	&__col {
+		display: flex;
+		@include adaptiveValue("gap", 30, 20, 1600, 767.98, 1);
+		@media (max-width: $mobile) {
+			@include adaptiveValue("gap", 20, 6, 767.98, 420, 1);
+		}
+	}
+	&__row {
+		display: flex;
+		@include adaptiveValue("gap", 30, 20, 1600, 767.98, 1);
+		@include adaptiveValue("gap", 20, 6, 767.98, 420, 1);
+	}
+	&__bar-box-label {
+		@include adaptiveValue("margin-top", 14, 8, 1600, 767.98, 1);
+		font-weight: 900;
+		text-align: center;
+		@include adaptiveValue("font-size", 20, 16, 1600, 767.98, 1);
+		@include adaptiveValue("line-height", 30, 26, 1600, 767.98, 1);
+		color: $white;
+		text-transform: uppercase;
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+	&__bar-box-label-1 {
+		margin: 10px 0px 0px 0px;
+		font-weight: 900;
+		text-align: center;
+		@include adaptiveValue("font-size", 20, 16, 1600, 767.98, 1);
+		@include adaptiveValue("line-height", 30, 26, 1600, 767.98, 1);
+		color: $white;
+		text-transform: uppercase;
+		@media (min-width: $mobile) {
+			display: none;
+		}
+		@media (max-width: $mobile) {
+			display: block;
+		}
+	}
+	&__bar-box-label-2 {
+		margin: 0px 0px 10px 0px;
+		font-weight: 900;
+		text-align: center;
+		@include adaptiveValue("font-size", 20, 16, 1600, 767.98, 1);
+		@include adaptiveValue("line-height", 30, 26, 1600, 767.98, 1);
+		color: $white;
+		text-transform: uppercase;
+	}
+}
+// === PROGRESS BAR - TEAM-1 STATS === //
+.progress-bar__wrap {
+	background-color: $white;
+	position: relative;
+	border-radius: rem(3);
+	@include adaptiveValue("width", 50, 40, 1600, 767.98, 1);
+	@include adaptiveValue("height", 320, 240, 1600, 767.98, 1);
+	@media (max-width: $mobile) {
+		@include adaptiveValue("width", 40, 24, 767.98, 420, 1);
+		@include adaptiveValue("height", 240, 160, 767.98, 420, 1);
+	}
+}
+
+.progress-bar__wrap-bage {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-top: rem(2) solid $mainColor;
+	background-color: $color-gold;
+	@include adaptiveValue("width", 50, 40, 1600, 767.98, 1);
+	@include adaptiveValue("height", 50, 40, 1600, 767.98, 1);
+	@media (max-width: $mobile) {
+		@include adaptiveValue("width", 40, 24, 767.98, 420, 1);
+		@include adaptiveValue("height", 40, 24, 767.98, 420, 1);
+	}
+}
+
+.bar-value {
+	background: $color-gold;
+	position: absolute;
+	@include adaptiveValue("bottom", 50, 40, 1600, 767.98, 1);
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	animation: grow 1.5s ease-out forwards;
+	transform-origin: bottom;
+	@media (max-width: $mobile) {
+		@include adaptiveValue("bottom", 40, 24, 767.98, 420, 1);
+	}
+}
+.bar-value::before {
+	content: "";
+	//content: attr(title) "8";
+	font-weight: 900;
+	text-align: center;
+	@include adaptiveValue("font-size", 34, 24, 1600, 767.98, 1);
+	position: absolute;
+	transform: translateX(-50%);
+	z-index: 3;
+	@include adaptiveValue("bottom", -42, -32, 1600, 767.98, 1);
+	left: 50%;
+	color: $mainColor;
+	@media (max-width: $mobile) {
+		@include adaptiveValue("font-size", 24, 16, 767.98, 420, 1);
+		@include adaptiveValue("bottom", -32, -20, 767.98, 420, 1);
+	}
+}
+.bar-value-as::before {
+	content: attr(title) "7";
+}
+.bar-value-st::before {
+	content: attr(title) "11";
+}
+.bar-value-bs::before {
+	content: attr(title) "4";
+}
+.bar-value-to::before {
+	content: attr(title) "12";
+}
+.bar-value-foul::before {
+	content: attr(title) "2";
+}
+// === PROGRESS BAR - TEAM-1 % FG === //
+.progress-bar__wrap-2 {
+	overflow: hidden;
+	background-color: $white;
+	position: relative;
+	border-radius: rem(3);
+	width: 100%;
+	//@include adaptiveValue("width", 770, 481, 1600, 767.98, 1);
+	@include adaptiveValue("height", 50, 40, 1600, 767.98, 1);
+	@media (max-width: $mobile) {
+		//@include adaptiveValue("width", 40, 24, 767.98, 420, 1);
+		@include adaptiveValue("height", 40, 24, 767.98, 420, 1);
+	}
+}
+.progress-bar__wrap-2-bage {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-right: rem(2) solid $mainColor;
+	background-color: $color-gold;
+	@include adaptiveValue("width", 115, 85, 1600, 767.98, 1);
+	@include adaptiveValue("height", 50, 40, 1600, 767.98, 1);
+	@media (max-width: $mobile) {
+		@include adaptiveValue("width", 85, 60, 767.98, 420, 1);
+		@include adaptiveValue("height", 40, 24, 767.98, 420, 1);
+	}
+}
+.bar-value-2 {
+	background: $color-gold;
+	position: absolute;
+	@include adaptiveValue("left", 115, 85, 1600, 767.98, 1);
+	width: auto;
+	height: 100%;
+	box-sizing: border-box;
+	animation: grow 1.5s ease-out forwards;
+	transform-origin: bottom;
+	z-index: 1;
+	@media (max-width: $mobile) {
+		@include adaptiveValue("left", 85, 60, 767.98, 420, 1);
+	}
+}
+.bar-value-2::before {
+	content: "";
+	//content: attr(title) "14";
+	font-weight: 900;
+	text-align: center;
+	@include adaptiveValue("font-size", 34, 24, 1600, 767.98, 1);
+	position: absolute;
+	transform: translateY(50%);
+	z-index: 3;
+	@include adaptiveValue("left", -107, -77, 1600, 767.98, 1);
+	bottom: 50%;
+	color: $mainColor;
+	@media (max-width: $mobile) {
+		@include adaptiveValue("left", -77, -55, 767.98, 420, 1);
+		@include adaptiveValue("font-size", 24, 16, 767.98, 420, 1);
+	}
+}
+.bar-value-2-fg::before {
+	content: attr(title) "45.7%";
+}
+.bar-value-2-fg2::before {
+	content: attr(title) "56.2%";
+}
+.bar-value-2-fg3::before {
+	content: attr(title) "26.7%";
+}
+.bar-value-2-ft::before {
+	content: attr(title) "85.4%";
+}
+.bar-value-2-rbt::before {
+	content: attr(title) "36";
+}
+.bar-value-2-rbo::before {
+	content: attr(title) "14";
+}
+.bar-value-2-rbd::before {
+	content: attr(title) "22";
+}
+// === PROGRESS BAR - TEAM-2 STATS === //
+.progress-bar__wrap-1 {
+	background-color: $white;
+	position: relative;
+	border-radius: rem(3);
+	@include adaptiveValue("width", 50, 40, 1600, 767.98, 1);
+	@include adaptiveValue("height", 320, 240, 1600, 767.98, 1);
+	@media (max-width: $mobile) {
+		@include adaptiveValue("width", 40, 24, 767.98, 420, 1);
+		@include adaptiveValue("height", 240, 160, 767.98, 420, 1);
+	}
+}
+
+.progress-bar__wrap-1-bage {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-top: rem(2) solid $color-gold;
+	background-color: $mainColor;
+	@include adaptiveValue("width", 50, 40, 1600, 767.98, 1);
+	@include adaptiveValue("height", 50, 40, 1600, 767.98, 1);
+	@media (max-width: $mobile) {
+		@include adaptiveValue("width", 40, 24, 767.98, 420, 1);
+		@include adaptiveValue("height", 40, 24, 767.98, 420, 1);
+	}
+}
+
+.bar-value-1 {
+	background: $mainColor;
+	position: absolute;
+	@include adaptiveValue("bottom", 50, 40, 1600, 767.98, 1);
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	animation: grow 1.5s ease-out forwards;
+	transform-origin: bottom;
+	z-index: 1;
+	@media (max-width: $mobile) {
+		@include adaptiveValue("bottom", 40, 24, 767.98, 420, 1);
+	}
+}
+
+.bar-value-1::before {
+	content: "";
+	//content: attr(title) "14";
+	font-weight: 900;
+	text-align: center;
+	@include adaptiveValue("font-size", 34, 24, 1600, 767.98, 1);
+	position: absolute;
+	transform: translateX(-50%);
+	z-index: 3;
+	@include adaptiveValue("bottom", -42, -32, 1600, 767.98, 1);
+	left: 50%;
+	color: $color-gold;
+	@media (max-width: $mobile) {
+		@include adaptiveValue("font-size", 24, 16, 767.98, 420, 1);
+		@include adaptiveValue("bottom", -32, -20, 767.98, 420, 1);
+	}
+}
+.bar-value-1-as::before {
+	content: attr(title) "12";
+}
+.bar-value-1-st::before {
+	content: attr(title) "10";
+}
+.bar-value-1-bs::before {
+	content: attr(title) "8";
+}
+.bar-value-1-to::before {
+	content: attr(title) "10";
+}
+.bar-value-1-foul::before {
+	content: attr(title) "6";
+}
+// === PROGRESS BAR - TEAM-2 % FG === //
+.progress-bar__wrap-3 {
+	overflow: hidden;
+	background-color: $white;
+	position: relative;
+	border-radius: rem(3);
+	width: 100%;
+	//@include adaptiveValue("width", 770, 481, 1600, 767.98, 1);
+	@include adaptiveValue("height", 50, 40, 1600, 767.98, 1);
+	@media (max-width: $mobile) {
+		//@include adaptiveValue("width", 40, 24, 767.98, 420, 1);
+		@include adaptiveValue("height", 40, 24, 767.98, 420, 1);
+	}
+}
+.progress-bar__wrap-3-bage {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border-left: rem(2) solid $color-gold;
+	background-color: $mainColor;
+	@include adaptiveValue("width", 115, 85, 1600, 767.98, 1);
+	@include adaptiveValue("height", 50, 40, 1600, 767.98, 1);
+	@media (max-width: $mobile) {
+		@include adaptiveValue("width", 85, 60, 767.98, 420, 1);
+		@include adaptiveValue("height", 40, 24, 767.98, 420, 1);
+	}
+}
+.bar-value-3 {
+	background: $mainColor;
+	position: absolute;
+	@include adaptiveValue("right", 115, 85, 1600, 767.98, 1);
+	width: auto;
+	height: 100%;
+	box-sizing: border-box;
+	animation: grow 1.5s ease-out forwards;
+	transform-origin: bottom;
+	z-index: 1;
+	@media (max-width: $mobile) {
+		@include adaptiveValue("right", 85, 60, 767.98, 420, 1);
+	}
+}
+.bar-value-3::before {
+	content: "";
+	//content: attr(title) "14";
+	font-weight: 900;
+	text-align: center;
+	@include adaptiveValue("font-size", 34, 24, 1600, 767.98, 1);
+	position: absolute;
+	transform: translateY(50%);
+	z-index: 3;
+	@include adaptiveValue("right", -107, -77, 1600, 767.98, 1);
+	bottom: 50%;
+	color: $color-gold;
+	@media (max-width: $mobile) {
+		@include adaptiveValue("right", -77, -55, 767.98, 420, 1);
+		@include adaptiveValue("font-size", 24, 16, 767.98, 420, 1);
+	}
+}
+.bar-value-3-fg::before {
+	content: attr(title) "36.2%";
+}
+.bar-value-3-fg2::before {
+	content: attr(title) "47.1%";
+}
+.bar-value-3-fg3::before {
+	content: attr(title) "21.4%";
+}
+.bar-value-3-ft::before {
+	content: attr(title) "100%";
+}
+.bar-value-3-rbt::before {
+	content: attr(title) "42";
+}
+.bar-value-3-rbo::before {
+	content: attr(title) "10";
+}
+.bar-value-3-rbd::before {
+	content: attr(title) "32";
+}
+
+@keyframes grow {
+	from {
+		transform: scaleY(0);
+		transform: scaleX(0);
+	}
+}
+.bar-value,
+.bar-value-1,
+.bar-value-2,
+.bar-value-3 {
+	-webkit-animation: slideIn 1s;
+	-moz-animation: slideIn 1s;
+	-o-animation: slideIn 1s;
+	animation: slideIn 1s;
+}
+@-webkit-keyframes slideIn {
+	0% {
+		height: 0;
+		width: 0;
+	}
+	100% {
+		height: normal;
+		width: normal;
+	}
+}
+@-moz-keyframes slideIn {
+	0% {
+		height: 0;
+		width: 0;
+	}
+	100% {
+		height: normal;
+		width: normal;
+	}
+}
+@-ms-keyframes slideIn {
+	0% {
+		height: 0;
+		width: 0;
+	}
+	100% {
+		height: normal;
+		width: normal;
+	}
+}
+@-o-keyframes slideIn {
+	0% {
+		height: 0;
+		width: 0;
+	}
+	100% {
+		height: normal;
+		width: normal;
+	}
+}
+@keyframes slideIn {
+	0% {
+		height: 0;
+		width: 0;
+	}
+	100% {
+		height: normal;
+		width: normal;
+	}
+}

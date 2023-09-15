@@ -1,0 +1,200 @@
+// === STORE CARD === //
+.store-card {
+	position: relative;
+	width: 100%;
+	height: fit-content;
+	border-radius: rem(10);
+	overflow: hidden;
+	background: $color-base-1;
+	transition: all 0.5s ease 0s;
+
+	// = STORE CARD / HOVER = //
+	&:hover {
+		transition: all 0.5s ease 0s;
+		box-shadow: $shadow-1;
+		.store-card__header {
+			background-color: $color-base-4;
+			color: $color-base-1;
+			transition: all 0.5s ease 0s;
+			h3 {
+				color: $color-base-1;
+			}
+		}
+		.store-card__photo {
+			transform: scale(1.05);
+			transition: all 0.5s ease 0s;
+		}
+	}
+
+	// = BODY = //
+	&__body {
+		//overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	// = HEADER = //
+	&__header {
+		width: fit-content;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 0px 24px 0px 24px;
+		background: $color-base-1;
+		border-radius: 0px rem(10) 0px 0px;
+		transition: all 0.5s ease 0s;
+		color: $color-base-4;
+		font-weight: 900;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		z-index: 2;
+		@media (max-width: rem(549.98)) {
+			padding: 0px 16px 0px 16px;
+		}
+		h3 {
+			color: $color-base-4;
+			display: inline-block;
+			font-family: $fontFamily;
+			font-size: rem(30);
+			line-height: rem(42);
+			@media (max-width: rem(549.98)) {
+				font-size: rem(24);
+				line-height: rem(34);
+			}
+			@media (max-width: rem(449.98)) {
+				font-size: rem(20);
+				line-height: rem(30);
+			}
+		}
+
+		h3::after {
+			content: "₽";
+			margin: 0px 0px 0px 5px;
+			font-weight: 600;
+			font-size: rem(30);
+			font-family: $fontFamily;
+			@media (max-width: rem(549.98)) {
+				font-size: rem(24);
+			}
+			@media (max-width: rem(449.98)) {
+				font-size: rem(20);
+			}
+		}
+
+		span {
+			display: inline-block;
+			font-family: $fontFamily;
+			font-size: rem(30);
+			@media (max-width: rem(549.98)) {
+				font-size: rem(24);
+			}
+			@media (max-width: rem(449.98)) {
+				font-size: rem(20);
+			}
+		}
+
+		span::after {
+			content: "%";
+			margin: 0px 0px 0px 5px;
+			font-weight: 600;
+			font-size: rem(24);
+			font-family: $fontFamily;
+			@media (max-width: rem(549.98)) {
+				font-size: rem(20);
+			}
+			@media (max-width: rem(449.98)) {
+				font-size: rem(16);
+			}
+		}
+	}
+
+	// = PRODUCT = //
+	&__product {
+		z-index: 2;
+	}
+
+	// = PHOTO = //
+
+	&__photo {
+		position: relative;
+		@include adaptiveValue("height", 442, 220, 1400, 480, 1);
+		@include adaptiveValue("width", 442, 220, 1400, 480, 1);
+		min-height: 100%;
+		min-width: 100%;
+		overflow: hidden;
+		transition: all 0.5s ease 0s;
+		z-index: 1;
+		@media (max-width: rem(767.98)) {
+			height: rem(250);
+			width: rem(250);
+		}
+		@media (max-width: rem(649.98)) {
+			@include adaptiveValue("width", 240, 200, 649.98, 480, 1);
+			@include adaptiveValue("height", 240, 200, 649.98, 480, 1);
+		}
+		@media (max-width: rem(479.98)) {
+			@include adaptiveValue("width", 200, 138, 479.98, 320, 1);
+			@include adaptiveValue("height", 200, 138, 479.98, 320, 1);
+		}
+	}
+
+	// = CONTENT = //
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 8px 0px 20px 0px;
+		padding: 0px 8px 0px 8px;
+		z-index: 2;
+	}
+	&__content span {
+		display: inline-block;
+		font-size: rem(12);
+		text-transform: uppercase;
+		margin: 8px 0px 10px 0px;
+		text-align: center;
+		color: $gray;
+		@media (max-width: rem(649.98)) {
+			@include adaptiveValue("font-size", 12, 8, 649.98, 340, 1);
+			padding: 0px 5px 0px 5px;
+		}
+	}
+
+	// = TITLE = //
+	&__title {
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 0;
+		padding: 0px 8px 0px 8px;
+		color: $mainColor;
+		text-transform: uppercase;
+		font-weight: 900;
+		text-align: center;
+		@media (max-width: rem(649.98)) {
+			@include adaptiveValue("font-size", 16, 9, 649.98, 340, 1);
+			@include adaptiveValue("line-height", 32, 24, 649.98, 340, 1);
+			padding: 0px 5px 0px 5px;
+		}
+	}
+
+	// = SUBTITLE = //
+	&__subtitle {
+		width: 100%;
+		margin-bottom: 0;
+		padding: 0px 8px 0px 8px;
+		color: $color-base-1;
+		font-size: rem(12);
+		line-height: rem(24);
+		text-transform: uppercase;
+		text-align: center;
+		@media (max-width: rem(649.98)) {
+			@include adaptiveValue("font-size", 12, 8, 649.98, 340, 1);
+			@include adaptiveValue("line-height", 24, 16, 649.98, 340, 1);
+			padding: 0px 5px 0px 5px;
+		}
+	}
+}

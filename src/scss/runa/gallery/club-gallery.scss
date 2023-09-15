@@ -1,0 +1,91 @@
+// === CLUB GALLERY === //
+.club-gallery {
+	// = BLOCK = //
+	&__block {
+		margin: 30px 0px 0px 0px;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-row: auto;
+		gap: rem(20);
+		@media (max-width: rem(991.98)) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: rem(649.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	// = ITEM = //
+	&__item {
+		position: relative;
+		overflow: hidden;
+	}
+
+	// = LINK = //
+	&__link {
+	}
+	&__link:hover .club-gallery__image {
+		transform: scale(1.2);
+		filter: blur(2px);
+	}
+	&__link:hover .club-gallery__overlay span:before,
+	&__link:hover .club-gallery__overlay span:after {
+		width: 100%;
+	}
+	&__link:hover .club-gallery__overlay {
+		opacity: 1;
+	}
+
+	// = IMAGE = //
+	&__image {
+	}
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transform: scale(1.05);
+		transition: transform 0.5s, filter 0.5s;
+	}
+
+	// = OVERLAY = //
+	&__overlay {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background: rgba(0, 0, 0, 0.4);
+		font-size: 1.5rem;
+		color: #fff;
+		font-weight: 700;
+		text-transform: uppercase;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.2s;
+	}
+	&__overlay span {
+		position: relative;
+		line-height: 3rem;
+	}
+	&__overlay span:before,
+	&__overlay span:after {
+		content: "";
+		position: absolute;
+		height: 2px;
+		width: 0;
+		background: #fff;
+		transition: width 0.3s ease-out 0.2s;
+	}
+	&__overlay span:before {
+		top: 0;
+		left: 0;
+	}
+	&__overlay span:after {
+		bottom: 0;
+		right: 0;
+	}
+}

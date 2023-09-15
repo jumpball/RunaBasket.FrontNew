@@ -1,0 +1,211 @@
+// === TIME-LINE === //
+.timeline {
+	/* The actual timeline (the vertical ruler) */
+	position: relative;
+	margin: 0 auto;
+	padding: 40px 0px 0px 0px;
+	@media (max-width: rem(600)) {
+	}
+
+	// = BOX = //
+	&__box {
+		position: relative;
+		background-color: inherit;
+		width: 50%;
+	}
+	&__box-left {
+		padding: 10px 30px 10px 0px;
+		@media (max-width: rem(600)) {
+			padding: 30px 40px 30px 0px;
+		}
+	}
+	&__box-right {
+		padding: 10px 0px 10px 30px;
+	}
+	/* The circles on the timeline */
+	&__box::after {
+		content: "";
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		right: -12px;
+		background-color: $color-base-7;
+		border: 2px solid $color-base-7;
+		top: 16px;
+		border-radius: rem(3);
+		z-index: 2;
+		@media (max-width: rem(600)) {
+		}
+	}
+
+	// = SIDES = //
+	&__left-side {
+		left: 0;
+		@media (max-width: rem(600)) {
+			width: 100%;
+			padding-left: 40px;
+			padding-right: 0px;
+		}
+	}
+	&__left-side::after {
+		@media (max-width: rem(600)) {
+			top: 38px;
+		}
+	}
+	&__right-side {
+		left: 50%;
+		@media (max-width: rem(600)) {
+			left: 0%;
+			width: 100%;
+			padding-left: 40px;
+			padding-right: 0px;
+		}
+	}
+	&__right-side::after {
+		left: -12px;
+	}
+	&__left-side::after,
+	&__right-side::after {
+		@media (max-width: rem(600)) {
+			left: 0px;
+		}
+	}
+
+	// = CONTENT = //
+	&__content {
+		background-color: $color-base-6;
+		position: relative;
+		border: rem(1) solid $color-base-7;
+		border-radius: rem(10);
+		padding: rem(12);
+	}
+
+	// = DATE = //
+	&__date {
+		position: absolute;
+		display: inline-block;
+		font-family: $fontFamily;
+		@include adaptiveValue("top", -50, -30, 1600, 600, 1);
+		@include adaptiveValue("font-size", 36, 24, 1600, 600, 1);
+		@include adaptiveValue("line-height", 48, 30, 1600, 600, 1);
+		color: $color-base-5;
+		font-weight: 900;
+	}
+	&__date-left {
+		right: rem(10);
+	}
+	&__date-right {
+		left: rem(10);
+		@media (max-width: rem(600)) {
+			left: auto;
+			right: rem(10);
+		}
+	}
+
+	// = TEXT = //
+	&__text {
+		color: $color-base-5;
+		text-align: start;
+		width: 100%;
+		font-weight: 400;
+		font-style: italic;
+		@include adaptiveValue("font-size", 16, 14, 1600, 600, 1);
+		@include adaptiveValue("line-height", 22, 18, 1600, 600, 1);
+		@media (max-width: rem(600)) {
+			@include adaptiveValue("font-size", 16, 11, 600, 320, 1);
+			@include adaptiveValue("line-height", 22, 16, 600, 320, 1);
+		}
+	}
+	&__text-left {
+	}
+
+	// = BAGE = //
+	&__bage {
+		color: $color-base-5;
+		display: inline-block;
+		letter-spacing: 1;
+		text-transform: uppercase;
+		width: 100%;
+		@include adaptiveValue("font-size", 20, 18, 1600, 600, 1);
+		@include adaptiveValue("line-height", 28, 24, 1600, 600, 1);
+		font-weight: 900;
+	}
+	&__bage-left {
+		text-align: end;
+		@media (max-width: rem(600)) {
+			text-align: start;
+		}
+	}
+	&__bage-right {
+	}
+
+	// = LOGO = //
+	&__logo {
+		position: absolute;
+		top: rem(12);
+		opacity: 1;
+		@include adaptiveValue("height", 80, 50, 1600, 600, 1);
+		@include adaptiveValue("width", 80, 50, 1600, 600, 1);
+	}
+	&__logo-l {
+		left: rem(12);
+		@media (max-width: rem(600)) {
+			left: auto;
+			right: rem(12);
+		}
+	}
+	&__logo-r {
+		right: rem(12);
+	}
+
+	// = LABEL = //
+	&__label {
+		font-style: italic;
+		font-weight: 400;
+		color: $color-base-5;
+		@include adaptiveValue("font-size", 16, 12, 1600, 600, 1);
+		@include adaptiveValue("line-height", 20, 18, 1600, 600, 1);
+	}
+	&__label-left {
+		text-align: end;
+		@media (max-width: rem(600)) {
+			text-align: start;
+		}
+	}
+	&__label-right {
+	}
+
+	// = TITLE = //
+	&__title {
+		position: relative;
+		text-align: center;
+		color: $color-base-5;
+		text-transform: uppercase;
+		width: 100%;
+		letter-spacing: rem(1);
+		@include adaptiveValue("font-size", 32, 16, 1600, 600, 1);
+		@include adaptiveValue("line-height", 42, 24, 1600, 600, 1);
+		font-weight: 900;
+		@media (max-width: rem(600)) {
+			@include adaptiveValue("font-size", 30, 16, 600, 320, 1);
+			@include adaptiveValue("line-height", 42, 24, 600, 320, 1);
+		}
+	}
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+	content: "";
+	position: absolute;
+	width: rem(6);
+	background-color: $color-base-6;
+	border-radius: rem(1);
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -3px;
+	z-index: 1;
+	@media (max-width: rem(600)) {
+		left: 13px;
+	}
+}

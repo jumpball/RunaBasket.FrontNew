@@ -1,0 +1,371 @@
+// === PLAYOFF-NET-8 === //
+.playoff-net-8 {
+	// = BODY = //
+	&__body {
+		width: 100%;
+		display: grid;
+		margin: 0px 0px 40px 0px;
+		grid-template-columns: 1fr rem(30) 1fr rem(30) 1fr;
+		@media (max-width: rem(1089.98)) {
+			grid-template-columns: 1fr;
+			gap: rem(10);
+			padding: 0px 0px 30px 0px;
+			margin: 0px 0px 0px 0px;
+		}
+	}
+
+	// = STAGE = //
+	&__stage-1 {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: rem(180) rem(180) rem(180) rem(180);
+		gap: rem(40);
+
+		@media (max-width: em(1089.98)) {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: rem(20);
+		}
+	}
+	&__stage-2 {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: rem(400) rem(400);
+		gap: rem(40);
+
+		@media (max-width: em(1089.98)) {
+			grid-template-rows: 1fr;
+			gap: rem(20);
+			border-top: rem(5) solid $color-base-1;
+			padding: 20px 0px 0px 0px;
+		}
+	}
+	&__stage-3 {
+		display: grid;
+		grid-template-columns: 1fr;
+		//gap: rem(40);
+
+		@media (max-width: rem(1089.98)) {
+			gap: rem(20);
+			border-top: rem(5) solid $color-base-1;
+			padding: 20px 0px 0px 0px;
+		}
+	}
+
+	// = PAIR = //
+	&__pair-1 {
+		height: fit-content;
+	}
+	&__pair-2 {
+		height: fit-content;
+		margin: 110px 0px 0px 0px;
+		@media (max-width: rem(1089.98)) {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+	&__pair-3 {
+		height: fit-content;
+		margin: 330px 0px 0px 0px;
+
+		@media (max-width: rem(1089.98)) {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+	&__pair-4 {
+		height: fit-content;
+		margin: 150px 0px 0px 0px;
+		@media (max-width: rem(1089.98)) {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+
+	// = BORDER = //
+	&__border-1 {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@media (max-width: rem(1089.98)) {
+			display: none;
+		}
+	}
+	&__border-2 {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@media (max-width: rem(1089.98)) {
+			display: none;
+		}
+	}
+
+	// = LINE BLOCK = //
+	&__line-block {
+		display: grid;
+		grid-template-columns: rem(63);
+		grid-template-rows: rem(90) rem(220) rem(90);
+	}
+	&__line-block-1 {
+		display: grid;
+		grid-template-columns: rem(63);
+		//grid-template-rows: rem(140) rem(340) rem(140);
+	}
+	&__line-block-2 {
+		display: grid;
+		grid-template-columns: rem(63);
+		grid-template-rows: rem(200) rem(440) rem(200);
+	}
+	// = LINE BOX = //
+	&__line-box-up {
+		border-bottom: rem(5) solid $color-base-1;
+	}
+	&__line-box-center {
+		border-right: rem(5) solid $color-base-1;
+	}
+	&__line-box-down {
+		border-top: rem(5) solid $color-base-1;
+	}
+
+	// = LINE = //
+	&__line-box-up-w {
+		border-bottom: rem(5) solid $white;
+	}
+	&__line-box-center-w {
+		border-right: rem(5) solid $white;
+	}
+	&__line-box-down-w {
+		border-top: rem(5) solid $white;
+	}
+}
+
+// === PLAYOFF-NET-16 === //
+.playoff-net-16 {
+	// = BODY = //
+	&__body {
+		width: 100%;
+		display: grid;
+		margin: 0px 0px 40px 0px;
+		grid-template-columns: 1fr rem(20) 1fr rem(20) 1fr rem(20) 1fr;
+		.table__card table td {
+			padding: 6px 5px 6px 5px;
+		}
+		.game-card-pl__body {
+			height: rem(160);
+			min-width: rem(250);
+			&:before {
+				height: rem(40);
+			}
+		}
+		.game-card-pl__back-body {
+			padding: 8px 8px 8px 8px;
+		}
+		.game-card-pl__teams {
+			margin: 45px 0px 0px 0px;
+			padding: 0px 10px 0px 10px;
+		}
+		.game-card-pl__bage {
+			padding: 8px 10px 0px 10px;
+
+			font-size: rem(24);
+		}
+		.game-card-pl__team-logo {
+			width: 35px;
+			height: 35px;
+		}
+		.game-card-pl__title {
+			@include adaptiveValue("font-size", 16, 13, 1600, 1090, 1);
+			line-height: rem(35);
+			@media (max-width: rem(1169.98)) {
+				font-weight: 400;
+			}
+			@media (max-width: rem(1099.98)) {
+				@include adaptiveValue("font-size", 18, 13, 1099.98, 360, 1);
+				font-weight: 900;
+			}
+		}
+		.game-card-pl__team-score {
+			@include adaptiveValue("font-size", 16, 14, 1600, 1090, 1);
+			line-height: rem(35);
+			@media (max-width: rem(1099.98)) {
+				@include adaptiveValue("font-size", 18, 13, 1099.98, 360, 1);
+			}
+		}
+
+		@media (max-width: rem(1099.98)) {
+			grid-template-columns: 1fr;
+			gap: rem(10);
+			padding: 0px 0px 30px 0px;
+			margin: 0px 0px 0px 0px;
+		}
+	}
+
+	// = STAGE = //
+	&__stage {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: rem(20);
+	}
+	&__stage-1 {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: rem(160) rem(160) rem(160) rem(160) rem(160) rem(160) rem(160) rem(160);
+		gap: rem(20);
+		@media (max-width: em(1099.98)) {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: rem(20);
+		}
+	}
+	&__stage-2 {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: rem(340) rem(340) rem(340) rem(340);
+		gap: rem(20);
+		@media (max-width: em(1099.98)) {
+			grid-template-rows: 1fr;
+			gap: rem(20);
+			border-top: rem(5) solid $color-base-1;
+			padding: 20px 0px 0px 0px;
+		}
+	}
+	&__stage-3 {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: rem(20);
+		@media (max-width: rem(1099.98)) {
+			gap: rem(20);
+			border-top: rem(5) solid $color-base-1;
+			padding: 20px 0px 0px 0px;
+		}
+	}
+	&__stage-4 {
+		display: grid;
+		grid-template-columns: 1fr;
+		@media (max-width: rem(1099.98)) {
+			gap: rem(20);
+			padding: 20px 0px 0px 0px;
+		}
+	}
+	&__stage-5 {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: rem(340) rem(340);
+		gap: rem(20);
+		@media (max-width: em(1099.98)) {
+			grid-template-rows: 1fr;
+			gap: rem(20);
+			border-top: rem(5) solid $color-base-1;
+			padding: 20px 0px 0px 0px;
+		}
+	}
+
+	// = PAIR = //
+
+	&__pair-1 {
+		height: fit-content;
+	}
+	&__pair-2 {
+		height: fit-content;
+		margin: 90px 0px 0px 0px;
+		@media (max-width: rem(1099.98)) {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+	&__pair-3 {
+		height: fit-content;
+		margin: 270px 0px 0px 0px;
+		@media (max-width: rem(1099.98)) {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+	&__pair-4 {
+		height: fit-content;
+		margin: 630px 0px 0px 0px;
+		@media (max-width: rem(1099.98)) {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+	&__pair-5 {
+		height: fit-content;
+		margin: 470px 0px 0px 0px;
+		@media (max-width: rem(1099.98)) {
+			margin: 10px 0px 0px 0px;
+		}
+	}
+	&__pair-6 {
+		height: fit-content;
+		margin: 100px 0px 0px 0px;
+		@media (max-width: rem(1099.98)) {
+			margin: 10px 0px 0px 0px;
+		}
+	}
+	&__pair-7 {
+		height: fit-content;
+		margin: 90px 0px 0px 0px;
+		@media (max-width: rem(1099.98)) {
+			margin: 10px 0px 0px 0px;
+		}
+	}
+
+	// = BORDER = //
+	&__border-1 {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@media (max-width: rem(1099.98)) {
+			display: none;
+		}
+	}
+
+	// = LINE-BLOCK = //
+	&__line-block {
+		display: grid;
+		grid-template-columns: rem(40);
+		grid-template-rows: rem(80) rem(180) rem(80);
+	}
+	&__line-block-1 {
+		display: grid;
+		grid-template-columns: rem(40);
+		//grid-template-rows: rem(140) rem(340) rem(140);
+	}
+	&__line-block-2 {
+		display: grid;
+		grid-template-columns: rem(40);
+		grid-template-rows: rem(170) rem(360) rem(170);
+	}
+	&__line-block-3 {
+		display: grid;
+		grid-template-columns: rem(40);
+		grid-template-rows: rem(350) rem(720) rem(350);
+	}
+	&__line-block-4 {
+		display: grid;
+		grid-template-columns: rem(40);
+		grid-template-rows: rem(80) rem(360) rem(80);
+	}
+
+	// = LINE-BOX = //
+	&__line-box-up {
+		border-bottom: rem(5) solid $color-base-1;
+	}
+	&__line-box-center {
+		border-right: rem(5) solid $color-base-1;
+	}
+	&__line-box-down {
+		border-top: rem(5) solid $color-base-1;
+	}
+	// = WHITE - LINE = //
+	&__line-box-up-w {
+		border-bottom: rem(5) solid $white;
+	}
+	&__line-box-center-w {
+		border-right: rem(5) solid $white;
+	}
+	&__line-box-down-w {
+		border-top: rem(5) solid $white;
+	}
+}

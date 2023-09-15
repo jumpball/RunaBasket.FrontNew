@@ -1,0 +1,11 @@
+<svg width="105" height="105" viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 40H30V55H0V40Z" fill="white"/>
+<path d="M8 55V0H23V55H8Z" fill="white"/>
+<rect x="7.5" y="70" width="15" height="35" fill="white"/>
+<path d="M67.5 90H37.5V75H67.5V90Z" fill="white"/>
+<path d="M59.5 75V105H44.5V75H59.5Z" fill="white"/>
+<rect x="60" y="60" width="15" height="60" transform="rotate(-180 60 60)" fill="white"/>
+<path d="M75 15H105V30H75V15Z" fill="white"/>
+<path d="M83 30V0H98V30H83Z" fill="white"/>
+<rect x="82.5" y="45" width="15" height="60" fill="white"/>
+</svg>

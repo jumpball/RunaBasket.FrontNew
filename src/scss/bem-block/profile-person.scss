@@ -1,0 +1,442 @@
+// === PROFILE PERSON === //
+.profile {
+	// === PROFILE PERSON SECTION === //
+	&__section {
+		@media (max-width: rem(720)) {
+		}
+	}
+
+	// === PROFILE PUBLICATIONS === //
+	&__publications {
+		margin-bottom: rem(50);
+		@media (max-width: rem(720)) {
+			margin-bottom: rem(30);
+		}
+	}
+	// === PROFILE PLAYER PUBLICATIONS === //
+	&__player-publications {
+		margin: -50px 0px 50px 0px;
+		@media (max-width: rem(720)) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+	// === PROFILE TEAM PUBLICATIONS === //
+	&__team-publications {
+		margin: 0px 0px 50px 0px;
+	}
+	// === PROFILE TOURNAMENT PUBLICATIONS === //
+	&__tournament-publications {
+		margin: 60px 0px 50px 0px;
+	}
+}
+
+// === PROFILE HEADER === //
+.profile-header {
+	@media (max-width: $tablet) {
+		margin-top: rem(20);
+	}
+
+	// === PROFILE HEADER BODY === //
+	&__body {
+		position: relative;
+	}
+
+	// === PROFILE HEADER LOGO === //
+	&__bg-logo {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		@media (max-width: rem(719.98)) {
+			width: 100%;
+			@include adaptiveValue("top", -60, -40, 719.98, 390, 1);
+			//top: -60px;
+		}
+	}
+
+	// === PROFILE HEADER ITEM === //
+	&__item {
+		position: relative;
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: rem(20);
+		@media (max-width: rem(719.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	// === PROFILE HEADER PHOTO === //
+	&__photo {
+		@include adaptiveValue("width", 430, 250, 1300, 320, 1);
+		@include adaptiveValue("height", 600, 350, 1300, 320, 1);
+		@media (max-width: rem(719.98)) {
+			margin: 0 auto;
+		}
+	}
+	&__photo-1 {
+		@include adaptiveValue("width", 430, 300, 1300, 320, 1);
+		@include adaptiveValue("height", 430, 300, 1300, 320, 1);
+		@include adaptiveValue("margin-top", 145, 65, 1600, 719.98, 1);
+		@media (max-width: rem(719.98)) {
+			margin: 0 auto;
+		}
+	}
+
+	// === PROFILE HEADER CONTENT === //
+	&__content {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		grid-template-rows: repeat(11, rem(26));
+		column-gap: rem(10);
+		padding-bottom: rem(80);
+		@include adaptiveValue("margin-top", 240, 125, 1300, 719.98, 1);
+		@media (max-width: rem(719.98)) {
+			position: absolute;
+			width: 100%;
+			@include adaptiveValue("bottom", -110, -74, 719.98, 320, 1);
+			left: 50%;
+			transform: translate(-50%, 0px);
+			z-index: 3;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-top: 0;
+			padding-bottom: rem(20);
+		}
+		@media (max-width: rem(500)) {
+			//padding-top: 20px;
+		}
+	}
+
+	&__content-1 {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		grid-template-rows: repeat(11, rem(26));
+		column-gap: rem(10);
+		padding-bottom: rem(80);
+		@include adaptiveValue("margin-top", 240, 125, 1300, 719.98, 1);
+		@media (max-width: rem(719.98)) {
+			position: absolute;
+			width: 100%;
+			@include adaptiveValue("bottom", -110, -74, 719.98, 320, 1);
+			left: 50%;
+			transform: translate(-50%, 0px);
+			z-index: 3;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-top: 0;
+			padding-bottom: rem(20);
+		}
+	}
+	// === PROFILE HEADER TITLE === //
+	&__title {
+		font-weight: 900;
+		color: $mainColor;
+		letter-spacing: rem(2);
+		text-transform: uppercase;
+		text-align: start;
+		@include adaptiveValue("font-size", 40, 24, 1600, 719.98, 1);
+		@include adaptiveValue("line-height", 48, 30, 1600, 719.98, 1);
+		grid-column: 2 / 1 span;
+		grid-row: 2 / 4 span;
+		@media (max-width: rem(880)) {
+			grid-column: 1 / 2 span;
+			grid-row: 4 / 3 span;
+		}
+		@media (max-width: rem(719.98)) {
+			color: $white;
+			@include adaptiveValue("font-size", 30, 18, 719.98, 320, 1);
+			@include adaptiveValue("line-height", 36, 22, 719.98, 320, 1);
+			@include adaptiveValue("font-weight", 900, 600, 719.98, 320, 1);
+			text-align: center;
+			padding: 0px 10px 6px 10px;
+		}
+	}
+	&__title-1 {
+		font-weight: 900;
+		color: $mainColor;
+		letter-spacing: rem(2);
+		text-transform: uppercase;
+		text-align: start;
+		@include adaptiveValue("font-size", 40, 24, 1600, 719.98, 1);
+		@include adaptiveValue("line-height", 48, 30, 1600, 719.98, 1);
+		grid-column: 1 / 2 span;
+		grid-row: 2 / 3 span;
+		@media (max-width: rem(719.98)) {
+			color: $white;
+			@include adaptiveValue("font-size", 30, 18, 719.98, 320, 1);
+			@include adaptiveValue("line-height", 36, 22, 719.98, 320, 1);
+			@include adaptiveValue("font-weight", 900, 600, 719.98, 320, 1);
+			text-align: center;
+			padding: 0px 10px 6px 10px;
+		}
+	}
+
+	// === PROFILE HEADER NUMBER === //
+	&__number {
+		@include adaptiveValue("font-size", 100, 74, 1600, 879.98, 1);
+		@include adaptiveValue("line-height", 110, 80, 1600, 879.98, 1);
+		font-weight: 900;
+		color: $color-base-1;
+		grid-row: 2 / 4 span;
+		@media (max-width: rem(880)) {
+			grid-row: 1 / 3 span;
+		}
+		@media (max-width: rem(719.98)) {
+			display: none;
+			//color: $color-base-1;
+			//position: absolute;
+			//@include adaptiveValue("top", 120, 52, 719.98, 360, 1);
+			//left: 0;
+			//@include adaptiveValue("font-size", 96, 54, 719.98, 360, 1);
+			//@include adaptiveValue("line-height", 106, 60, 719.98, 360, 1);
+		}
+	}
+	&__number-1 {
+		display: none;
+		@media (max-width: rem(719.98)) {
+			display: block;
+			font-weight: 900;
+			color: $color-base-1;
+			position: absolute;
+			@include adaptiveValue("top", 120, 52, 719.98, 360, 1);
+			left: 0;
+			@include adaptiveValue("font-size", 96, 54, 719.98, 360, 1);
+			@include adaptiveValue("line-height", 106, 60, 719.98, 360, 1);
+		}
+	}
+
+	// === PROFILE HEADER TEAM-LOGO === //
+	&__team-logo {
+		@include adaptiveValue("height", 100, 80, 1600, 719.98, 1);
+		@include adaptiveValue("width", 100, 80, 1600, 719.98, 1);
+		grid-row: 7 / 4 span;
+		@media (max-width: rem(719.98)) {
+			position: absolute;
+			@include adaptiveValue("height", 100, 60, 719.98, 360, 1);
+			@include adaptiveValue("width", 100, 60, 719.98, 360, 1);
+			@include adaptiveValue("top", 120, 50, 719.98, 360, 1);
+			right: 0;
+			z-index: 3;
+		}
+	}
+	&__team-logo img {
+		padding: rem(5);
+	}
+
+	&__team-logo-1 {
+		position: absolute;
+		background-color: $white;
+		border-radius: rem(3);
+		@include adaptiveValue("height", 100, 80, 1600, 719.98, 1);
+		@include adaptiveValue("width", 100, 80, 1600, 719.98, 1);
+		bottom: rem(10);
+		right: 0;
+		z-index: 3;
+		@media (max-width: rem(719.98)) {
+			@include adaptiveValue("height", 100, 60, 719.98, 360, 1);
+			@include adaptiveValue("width", 100, 60, 719.98, 360, 1);
+			@include adaptiveValue("top", 120, 50, 719.98, 360, 1);
+		}
+	}
+	&__team-logo-1 img {
+		padding: rem(5);
+	}
+
+	// === PROFILE HEADER SUBTITLE === //
+	&__subtitle {
+		font-weight: 600;
+		color: $mainColor;
+		letter-spacing: rem(2);
+		text-transform: uppercase;
+		text-align: start;
+		@include adaptiveValue("font-size", 20, 16, 1600, 719.98, 1);
+		@include adaptiveValue("line-height", 26, 22, 1600, 719.98, 1);
+		grid-column: 1 / 2 span;
+		grid-row: 1 / 1 span;
+		@media (max-width: rem(880)) {
+			grid-column: 2 / 1 span;
+			grid-row: 1 / 1 span;
+		}
+		@media (max-width: rem(719.98)) {
+			font-weight: 400;
+			color: $color-gold;
+			letter-spacing: rem(2);
+			font-size: rem(12);
+			line-height: rem(18);
+		}
+	}
+	&__subtitle-1 {
+		font-weight: 600;
+		color: $mainColor;
+		letter-spacing: rem(2);
+		text-transform: uppercase;
+		text-align: start;
+		@include adaptiveValue("font-size", 20, 16, 1600, 719.98, 1);
+		@include adaptiveValue("line-height", 26, 22, 1600, 719.98, 1);
+		grid-column: 1 / 2 span;
+		grid-row: 1 / 1 span;
+		@media (max-width: rem(719.98)) {
+			font-weight: 400;
+			color: $color-gold;
+			letter-spacing: rem(2);
+			font-size: rem(12);
+			line-height: rem(18);
+		}
+	}
+
+	// === PROFILE HEADER TEXT === //
+	&__text {
+		font-size: rem(20);
+		line-height: rem(24);
+		@include adaptiveValue("font-size", 20, 16, 1600, 719.98, 1);
+		@include adaptiveValue("line-height", 24, 20, 1600, 719.98, 1);
+		letter-spacing: rem(1);
+		font-weight: 500;
+		@media (max-width: rem(719.98)) {
+			@include adaptiveValue("font-size", 14, 12, 719.98, 320, 1);
+			@include adaptiveValue("line-height", 18, 16, 719.98, 320, 1);
+			color: $white;
+			text-align: center;
+		}
+	}
+	&__text-1 {
+		grid-row: 6 / 1 span;
+		grid-column: 1 / 2 span;
+		@media (max-width: rem(880)) {
+			grid-row: 7 / 1 span;
+		}
+		@media (max-width: rem(719.98)) {
+			display: none;
+		}
+	}
+	&__text-2 {
+		//background-color: $bgColor_4;
+		grid-row: 7 / 1 span;
+		grid-column: 1 / 2 span;
+		@media (max-width: rem(880)) {
+			grid-row: 8 / 1 span;
+		}
+		@media (max-width: rem(719.98)) {
+			display: none;
+		}
+	}
+	&__text-3 {
+		grid-row: 8 / 1 span;
+		grid-column: 1 / 2 span;
+		@media (max-width: rem(880)) {
+			grid-row: 9 / 1 span;
+		}
+		@media (max-width: rem(719.98)) {
+			padding-top: rem(6);
+			color: $bgColor_2;
+			border-top: rem(4) solid $color-gold;
+			border-radius: rem(2);
+		}
+	}
+	&__text-4 {
+		grid-row: 5 / 1 span;
+		grid-column: 1 / 2 span;
+		line-height: rem(26);
+		@media (max-width: rem(719.98)) {
+			padding-top: rem(6);
+			color: $bgColor_2;
+			border-top: rem(4) solid $color-gold;
+			border-radius: rem(1);
+		}
+	}
+	&__text-5 {
+		//background-color: $bgColor_6;
+		grid-row: 6 / 1 span;
+		grid-column: 1 / 2 span;
+		@media (max-width: rem(719.98)) {
+			display: none;
+		}
+	}
+
+	// === PROFILE HEADER IMAGE === //
+
+	&__image {
+		@include adaptiveValue("width", 70, 50, 1300, 879.98, 1);
+		@include adaptiveValue("height", 49, 35, 1300, 879.98, 1);
+		border: rem(1) solid $bgColor_2;
+		border-radius: rem(1);
+		grid-row: 9 / 2 span;
+		grid-column: 1 / 2 span;
+		@media (max-width: rem(880)) {
+			grid-row: 2 / 2 span;
+			grid-column: 2 / 1 span;
+		}
+		@media (max-width: rem(719.98)) {
+			display: none;
+		}
+	}
+}
+
+// === PROFILE BODY === //
+.profile-body {
+	position: relative;
+	top: -100px;
+	@media (max-width: rem(719.98)) {
+		top: -40px;
+	}
+	// === PROFILE BODY TEAM=== //
+	&__team {
+		position: relative;
+		top: -100px;
+	}
+	// === PROFILE BODY BOX=== //
+	&__box {
+	}
+
+	// === PROFILE BODY TEXT === //
+	&__text {
+		position: absolute;
+		top: -30px;
+		left: 0;
+		width: 100%;
+	}
+
+	// === PROFILE BODY TABS === //
+	&__tabs {
+		margin: 20px 0px 0px 0px;
+		@media (max-width: rem(719.98)) {
+			margin: 70px 0px 0px 0px;
+		}
+	}
+	&__team-tabs {
+	}
+
+	// === PROFILE BODY ITEM === //
+	&__item {
+	}
+
+	// === PROFILE BODY PHOTO === //
+	&__photo {
+	}
+
+	// === PROFILE BODY CONTENT === //
+	&__content {
+	}
+
+	// === PROFILE BODY TITLE === //
+	&__title {
+	}
+
+	// === PROFILE BODY POSITION === //
+
+	&__number {
+	}
+
+	&__subtitle {
+	}
+
+	&__digit {
+	}
+
+	&__btn {
+	}
+}

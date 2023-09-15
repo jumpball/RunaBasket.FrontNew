@@ -1,0 +1,350 @@
+// === GAME ONLINE === //
+.game-online {
+	// === GAME ONLINE BLOCK === //
+	&__block {
+	}
+
+	// === GAME ONLINE BOX === //
+	&__box {
+		width: 100%;
+		flex: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: rem(10);
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	&__box-1 {
+		width: 100%;
+		//flex: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+
+		gap: rem(10);
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr 1fr;
+			//grid-template-rows: 1fr 1fr;
+		}
+	}
+
+	// === GAME ONLINE ITEM === //
+	&__item {
+	}
+
+	// === GAME ONLINE PLAYER-LIST === //
+	&__players-list {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-end;
+		//display: grid;
+		//grid-template-columns: 1fr;
+		gap: rem(10);
+		@include adaptiveValue("width", 384, 221, 1600, 991.98, 1);
+		@media (max-width: $tablet) {
+			width: 100%;
+		}
+	}
+
+	&__players-list-l {
+		@media (max-width: $tablet) {
+			//width: 100%;
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+	}
+	&__players-list-r {
+		@media (max-width: $tablet) {
+			//width: 100%;
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+		}
+	}
+
+	// === GAME ONLINE COURT === //
+	&__full-court {
+		position: relative;
+		@include adaptiveValue("width", 782, 500, 1600, 991.98, 1);
+
+		@media (max-width: $tablet) {
+			margin: 10px 0px 10px 0px;
+			width: 100%;
+		}
+	}
+	&__item-court {
+		margin: 5px 0px 0px 0px;
+		@include adaptiveValue("height", 440, 282, 1600, 991.98, 1);
+		@include adaptiveValue("width", 782, 500, 1600, 991.98, 1);
+		@media (max-width: $tablet) {
+			margin: 0px 0px 0px 0px;
+			@include adaptiveValue("height", 541, 164, 991.98, 320, 1);
+			@include adaptiveValue("width", 961, 290, 991.98, 320, 1);
+		}
+	}
+	// === GAME ONLINE SCORE === //
+	&__score {
+		position: absolute;
+		right: 50%;
+		@include adaptiveValue("top", 15, 12, 1600, 991.98, 1);
+		transform: translate(50%, 0px);
+		background-color: $white;
+		display: flex;
+		z-index: 2;
+		@media (max-width: $tablet) {
+			@include adaptiveValue("top", 13, 5, 991.98, 320, 1);
+		}
+	}
+	&__score-team {
+		@include adaptiveValue("font-size", 40, 28, 1600, 991.98, 1);
+		font-weight: 900;
+		@media (max-width: $tablet) {
+			@include adaptiveValue("font-size", 40, 18, 991.98, 320, 1);
+		}
+	}
+	&__score-team-l {
+		text-align: right;
+		@include adaptiveValue("width", 80, 54, 1600, 991.98, 1);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("width", 80, 36, 991.98, 320, 1);
+		}
+	}
+	&__score-team-c {
+		text-align: center;
+		@include adaptiveValue("width", 20, 16, 1600, 991.98, 1);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("width", 20, 10, 991.98, 320, 1);
+		}
+	}
+	&__score-team-r {
+		text-align: left;
+		@include adaptiveValue("width", 80, 54, 1600, 991.98, 1);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("width", 80, 36, 991.98, 320, 1);
+		}
+	}
+	// === GAME ONLINE ACTIVE PLAYER === //
+
+	&__active-player {
+		margin: 0 auto;
+		//color: $white;
+		color: $mainColor;
+		background-color: $white;
+		border-radius: rem(3);
+		padding: rem(3);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: rem(4);
+		text-transform: uppercase;
+		@include adaptiveValue("font-size", 16, 12, 1600, 991.98, 1);
+		@include adaptiveValue("line-height", 30, 22, 1600, 991.98, 1);
+		font-weight: 900;
+		@media (max-width: $tablet) {
+			@include adaptiveValue("font-size", 18, 10, 991.98, 320, 1);
+			@include adaptiveValue("line-height", 30, 20, 991.98, 320, 1);
+		}
+	}
+
+	&__active-player-num {
+		color: $color-base-1;
+		@include adaptiveValue("font-size", 28, 20, 1600, 991.98, 1);
+		@include adaptiveValue("line-height", 30, 22, 1600, 991.98, 1);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("font-size", 28, 18, 991.98, 320, 1);
+			@include adaptiveValue("line-height", 30, 20, 991.98, 320, 1);
+		}
+	}
+
+	&__active-player-name {
+		white-space: nowrap;
+	}
+
+	&__active-player-name span {
+		@media (max-width: rem(600)) {
+			//display: none;
+		}
+	}
+
+	&__active-player-team {
+		@include adaptiveValue("height", 35, 30, 1600, 991.98, 1);
+		@include adaptiveValue("width", 35, 30, 1600, 991.98, 1);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("height", 40, 30, 991.98, 320, 1);
+			@include adaptiveValue("width", 40, 30, 991.98, 320, 1);
+		}
+		@media (max-width: rem(600)) {
+			display: none;
+		}
+	}
+	&__active-player-team img {
+		padding: rem(3);
+	}
+
+	// === GAME ONLINE COURT === //
+	&__team-logo {
+		z-index: 2;
+		@include adaptiveValue("height", 70, 60, 1600, 991.98, 1);
+		@include adaptiveValue("width", 70, 60, 1600, 991.98, 1);
+		position: absolute;
+		bottom: 50%;
+		transform: translate(0px, 50%);
+		opacity: 0.1;
+		@media (max-width: $tablet) {
+			@include adaptiveValue("height", 80, 44, 991.98, 320, 1);
+			@include adaptiveValue("width", 80, 44, 991.98, 320, 1);
+		}
+	}
+	&__team-logo-l {
+		left: 0;
+		margin: 0px 0px 0px 10px;
+		@media (max-width: $tablet) {
+			@include adaptiveValue("margin-left", 10, 5, 991.98, 320, 1);
+		}
+	}
+	&__team-logo-r {
+		right: 0;
+		margin: 0px 10px 0px 0px;
+		@media (max-width: $tablet) {
+			@include adaptiveValue("margin-right", 10, 5, 991.98, 320, 1);
+		}
+	}
+	&__logo-bg {
+		position: absolute;
+		right: 50%;
+		bottom: 50%;
+		transform: translate(50%, 50%);
+		//background-color: $white;
+		border-radius: 100%;
+		overflow: hidden;
+		opacity: 0.1;
+		z-index: 2;
+		@include adaptiveValue("height", 111, 72, 1600, 991.98, 1);
+		@include adaptiveValue("width", 111, 72, 1600, 991.98, 1);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("height", 138, 46, 991.98, 320, 1);
+			@include adaptiveValue("width", 138, 46, 991.98, 320, 1);
+		}
+	}
+	&__court-box {
+		position: relative;
+	}
+
+	&__ball {
+		position: absolute;
+		left: calc(23% - 9px);
+		top: calc(42% - 9px);
+		box-shadow: 2px 2px 2px 0px rgba(34, 60, 80, 0.6);
+		background-color: $white;
+		border-radius: 100%;
+		overflow: hidden;
+		z-index: 2;
+		height: rem(18);
+		width: rem(18);
+		@media (max-width: rem(459.98)) {
+			height: rem(12);
+			width: rem(12);
+			left: calc(23% - 6px);
+			top: calc(42% - 6px);
+		}
+	}
+
+	&__arrow {
+		@include adaptiveValue("height", 60, 40, 1600, 991.98, 1);
+		@include adaptiveValue("width", 90, 60, 1600, 991.98, 1);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("height", 60, 25, 991.98, 320, 1);
+			@include adaptiveValue("width", 90, 37.5, 991.98, 320, 1);
+		}
+	}
+	&__arrow img {
+		padding: 3px;
+	}
+
+	// === GAME ONLINE DESC === //
+	&__desc {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@media (max-width: $tablet) {
+			width: 100%;
+			grid-column: 1 / 3;
+			grid-row: 1 / 2;
+		}
+	}
+
+	// === GAME ONLINE TABLO === //
+	&__game-tablo {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__team-fouls {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__team-fouls-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: flex-start;
+		text-align: right;
+	}
+	&__team-foul-list {
+		@include adaptiveValue("gap", 5, 3, 991.98, 320, 1);
+		display: flex;
+		padding: 0px 0px 10px 0px;
+	}
+
+	&__team-foul-item {
+		border-radius: 50%;
+		background-color: $white;
+		@include adaptiveValue("height", 24, 16, 991.98, 320, 1);
+		@include adaptiveValue("width", 24, 16, 991.98, 320, 1);
+	}
+	&__team-foul-item-1 {
+		background-color: $color-gold;
+	}
+	&__team-foul-item-2 {
+		background-color: $ny_orange;
+		border: rem(2) solid $white;
+	}
+	&__team-foul-text {
+		width: 100%;
+		font-weight: 900;
+		color: $white;
+		text-transform: uppercase;
+		text-align: center;
+		@include adaptiveValue("font-size", 20, 16, 991.98, 450, 1);
+		@include adaptiveValue("line-height", 30, 26, 991.98, 450, 1);
+	}
+	&__team-foul-text-l {
+		text-align: left;
+	}
+	&__team-foul-text-r {
+		text-align: right;
+	}
+
+	&__game-time {
+	}
+
+	&__game-quarter {
+		font-weight: 900;
+		color: $white;
+		text-transform: uppercase;
+		text-align: center;
+		@include adaptiveValue("font-size", 20, 16, 991.98, 450, 1);
+		@include adaptiveValue("line-height", 30, 26, 991.98, 450, 1);
+	}
+
+	&__game-clock {
+		font-weight: 900;
+		color: $white;
+		text-align: center;
+		@include adaptiveValue("font-size", 75, 55, 991.98, 450, 1);
+		@include adaptiveValue("line-height", 85, 65, 991.98, 450, 1);
+	}
+}

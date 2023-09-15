@@ -1,0 +1,149 @@
+// === DAY SLIDER === // (AD)
+.day-slider {
+	//@include adaptiveValue("margin-bottom", 40, 20, 1600, 320, 1);
+
+	// = ROW = //
+	&__row {
+		//border: rem(1) solid $bgColor_2;
+		//border-radius: rem(3) rem(3) 0px 0px;
+		max-width: 100%;
+		//background-color: $bgColor_2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__block {
+		position: relative;
+
+		height: fit-content;
+		//align-items: center;
+		@include adaptiveValue("width", 460, 280, 1600, 600, 1);
+		padding: 20px 0px 20px 0px;
+		@media (max-width: rem(429.98)) {
+			width: 100%;
+			padding: 20px 20px 20px 20px;
+		}
+	}
+
+	// = BOX = //
+	&__box {
+		overflow: hidden;
+	}
+
+	// = TITLE = //
+	&__title {
+		color: $color-base-1;
+		text-transform: uppercase;
+		font-weight: 900;
+		//font-size: rem(80);
+		font-family: $fontFamily;
+
+		@include adaptiveValue("font-size", 70, 60, 1600, 768, 1);
+		@include adaptiveValue("line-height", 74, 62, 1600, 768, 1);
+
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 60, 50, 767.98, 430, 1);
+			@include adaptiveValue("line-height", 64, 52, 499.98, 340, 1);
+		}
+	}
+	//&__title span {
+	//font-family: $fontFamily;
+	//@include adaptiveValue("font-size", 38, 22, 1600, 768, 1);
+	//}
+	&__subtitle {
+		color: $mainColor;
+		text-transform: uppercase;
+		font-weight: 900;
+		@include adaptiveValue("font-size", 24, 20, 1600, 768, 1);
+		@include adaptiveValue("line-height", 30, 24, 1600, 768, 1);
+
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 20, 18, 767.98, 430, 1);
+			@include adaptiveValue("line-height", 24, 20, 499.98, 340, 1);
+		}
+	}
+	&__info {
+		color: $mainColor;
+		text-transform: uppercase;
+		font-weight: 900;
+		@include adaptiveValue("font-size", 18, 14, 1600, 768, 1);
+		@include adaptiveValue("line-height", 24, 20, 1600, 768, 1);
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 14, 12, 767.98, 430, 1);
+			@include adaptiveValue("line-height", 20, 16, 499.98, 340, 1);
+		}
+	}
+	&__info span {
+		display: none;
+	}
+
+	// = WRAPPER = //
+	&__wrapper {
+	}
+
+	// = ITEM = //
+	&__item {
+		//width: rem(220);
+		//height: rem(90);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+	}
+
+	// = PAGINATION = //
+	&__pagination {
+	}
+	.swiper-pagination {
+	}
+
+	// = NAVIGATION = //
+	&__navigation {
+		width: 100%;
+		padding: 0px 10px 0px 10px;
+		position: absolute;
+		top: 40%;
+		left: 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		//@include adaptiveValue("gap", 30, 20, 1600, 767.98, 1);
+		z-index: 2;
+		@media (max-width: rem(429.98)) {
+			padding: 0px 12px 0px 12px;
+		}
+		// @media (max-width: rem(767.98)) {
+		// 	display: flex;
+		// }
+		// @media (max-width: rem(649.98)) {
+		// 	display: none;
+		// }
+	}
+	&__nav-prev,
+	&__nav-next {
+		//@include adaptiveValue("width", 50, 40, 1600, 767.98, 1);
+		//@include adaptiveValue("height", 50, 40, 1600, 767.98, 1);
+		height: rem(40);
+		width: rem(40);
+		opacity: 0.3;
+		transition: all 0.5s ease 0s;
+		cursor: pointer;
+		@media (max-width: rem(991.98)) {
+			opacity: 1;
+		}
+		@media (max-width: rem(499.98)) {
+			@include adaptiveValue("width", 40, 30, 499.98, 340, 1);
+			@include adaptiveValue("height", 40, 30, 499.98, 340, 1);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				transition: all 0.5s ease 0s;
+				transform: scale(1.3);
+				opacity: 1;
+			}
+		}
+	}
+}

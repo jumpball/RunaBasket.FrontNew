@@ -1,0 +1,89 @@
+// === SITE PAGE - SECTION === //
+
+// = SECTION BOX = //
+.section-box {
+	position: relative;
+}
+
+// = SECTION OFFSET = //
+.first-section {
+	margin-top: -20px;
+}
+.section-offset {
+	@include adaptiveValue("padding-top", 50, 20, 1600, 767.98, 1);
+	@include adaptiveValue("padding-bottom", 30, 20, 1600, 767.98, 1);
+}
+.section-offset-border {
+	@include adaptiveValue("padding-top", 30, 20, 1600, 991.98, 1);
+	@include adaptiveValue("padding-bottom", 40, 30, 1600, 991.98, 1);
+}
+
+// = SECTION REVERS CONTENT = //
+.section-revers {
+	display: flex;
+	flex-direction: column;
+	//justify-content: center;
+	//align-items: center;
+	min-width: 0;
+}
+
+.section-revers-768 {
+	@media (max-width: rem(767.98)) {
+		flex-direction: column-reverse;
+	}
+}
+
+// = SITE BG = //
+.site-bg {
+	position: relative;
+	background-color: $mainColor;
+}
+
+// .site-bg-color-1 {
+// 	position: relative;
+// 	background-color: $mainColor;
+// }
+//.site-bg::after {
+//content: "";
+//background-image: url("@img/RUNA/border/border-1-green.svg");
+//position: absolute;
+//width: 100%;
+//height: rem(20);
+//}
+
+.site-bg-1 {
+	background-color: $color-base-1;
+}
+// .site-bg-1::before {
+// 	content: "";
+// 	background-image: url("@img/RUNA/border/border-1-white.svg");
+// 	position: absolute;
+// 	width: 100%;
+// 	height: rem(20);
+// }
+
+.site-bg-2 {
+	background-color: $color-base-2;
+}
+
+// = SITE BG / IMG = //
+.site-bg-img-1 {
+	position: absolute;
+	top: 30px;
+	right: rem(16);
+	width: rem(706.7);
+	height: rem(400);
+	opacity: 0.1;
+	z-index: 0;
+	@media (max-width: rem(739.98)) {
+		top: 20px;
+		right: -130px;
+		@include adaptiveValue("width", 706.7, 280, 739.98, 320, 1);
+		@include adaptiveValue("height", 400, 158.5, 739.98, 320, 1);
+	}
+}
+.site-bg-img-1 img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}

@@ -1,0 +1,303 @@
+// === CARD PUBLICATION === //
+.card {
+	position: relative;
+	width: 100%;
+	height: auto;
+	min-width: 290px;
+	background: $white;
+	border: 1px solid $mainColor;
+	transition: box-shadow 0.3s;
+
+	// === CARD THUMB === //
+	&__thumb {
+		height: 235px;
+		overflow: hidden;
+		background-color: $mainColor;
+		-webkit-transition: height 0.3s;
+		transition: height 0.3s;
+	}
+	&__thumb img {
+		max-width: 100%;
+		min-height: 235px;
+		object-fit: cover;
+		display: block;
+		opacity: 1;
+		-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+		transition: opacity 0.3s, transform 0.3s;
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+
+	// === CARD CATEGORY-LOGO === //
+	&__category-logo {
+		background: $white;
+		position: absolute;
+		display: flex;
+		overflow: hidden;
+		justify-content: center;
+		align-items: center;
+		top: 20px;
+		right: 20px;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+	}
+	&__category-logo img {
+		padding: rem(3);
+	}
+
+	// === CARD BODY === //
+	&__body {
+		position: relative;
+		padding: 20px;
+		height: 185px;
+		-webkit-transition: height 0.3s;
+		transition: height 0.3s;
+	}
+
+	// === CARD CATEGORY === //
+	&__category {
+		position: absolute;
+		top: -25px;
+		left: 0;
+		height: 25px;
+		padding: 0 15px;
+		background: $color-base-1;
+		color: $white;
+		font-size: 11px;
+		line-height: 25px;
+		letter-spacing: 2px;
+	}
+
+	&__category a {
+		color: $white;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+	// === CARD TITLE === //
+	&__title {
+		height: 80px;
+		padding: 0 0 10px 0;
+		margin: 0;
+		font-size: 18px;
+		color: $mainColor;
+		font-weight: 700;
+		@media (max-width: 1450px) {
+			font-size: 17px;
+			font-weight: 600;
+		}
+		@media (max-width: 1300px) {
+			font-size: 18px;
+			font-weight: 700;
+		}
+		@media (max-width: 1150px) {
+			font-size: 17px;
+			font-weight: 600;
+		}
+		@media (max-width: 950px) {
+			font-size: 18px;
+			font-weight: 700;
+		}
+		@media (max-width: 750px) {
+			font-size: 17px;
+			font-weight: 600;
+		}
+	}
+	&__title a {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-box;
+		display: -webkit-box;
+		line-clamp: 3;
+		box-orient: vertical;
+		-moz-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+	}
+
+	// === CARD SUBTITLE === //
+	&__subtitle {
+		margin: 0;
+		padding: 0 0 10px 0;
+		color: $color-base-1;
+		font-size: 14px;
+		letter-spacing: 2px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+
+	// === CARD DESCRIPTION === //
+	&__description {
+		position: absolute;
+		left: 20px;
+		right: 20px;
+		bottom: 70px;
+		margin: 0;
+		padding: 0;
+		color: $black_l;
+		font-size: 14px;
+		line-height: 22px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-box;
+		display: -webkit-box;
+		line-clamp: 3;
+		box-orient: vertical;
+		-moz-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		opacity: 0;
+		-webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+		transition: opacity 0.2s, transform 0.2s;
+		-webkit-transition-delay: 0s;
+		transition-delay: 0s;
+		-webkit-transform: translateY(25px);
+		-ms-transform: translateY(25px);
+		transform: translateY(25px);
+	}
+
+	// === CARD TAGS === //
+	&__tags-list {
+		position: absolute;
+		left: 20px;
+		right: 20px;
+		top: 124px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		gap: rem(4);
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		max-height: rem(118);
+		opacity: 0;
+		-webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+		transition: opacity 0.2s, transform 0.2s;
+		-webkit-transition-delay: 0s;
+		transition-delay: 0s;
+		-webkit-transform: translateY(25px);
+		-ms-transform: translateY(25px);
+		transform: translateY(25px);
+	}
+	&__tags-item {
+		color: $blue;
+		border: 0.0625rem solid $blue;
+		border-radius: 0.1875rem;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $white;
+				background-color: $blue;
+			}
+		}
+	}
+
+	&__tags-item a {
+		position: relative;
+		display: block;
+		padding: 0.125rem 0.25rem 0.0625rem;
+
+		font-size: 0.75rem;
+		line-height: 125%;
+		text-transform: uppercase;
+		letter-spacing: 0.0625rem;
+	}
+
+	// === CARD FOOTER === //
+	&__footer {
+		position: absolute;
+		color: $black_l;
+		bottom: 20px;
+		left: 20px;
+		right: 20px;
+		font-size: 11px;
+	}
+	// === CARD PUB-DATE === //
+	&__pub-date {
+	}
+}
+
+@-webkit-keyframes titleBlur {
+	0% {
+		opacity: 0.6;
+		text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6);
+	}
+	100% {
+		opacity: 1;
+		text-shadow: 0px 5px 5px transparent;
+	}
+}
+
+@keyframes titleBlur {
+	0% {
+		opacity: 0.6;
+		text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6);
+	}
+	100% {
+		opacity: 1;
+		text-shadow: 0px 5px 5px transparent;
+	}
+}
+@-webkit-keyframes subtitleBlur {
+	0% {
+		opacity: 0.6;
+		text-shadow: 0px 5px 5px rgba(0, 136, 204, 0.6);
+	}
+	100% {
+		opacity: 1;
+		text-shadow: 0px 5px 5px rgba(0, 136, 204, 0);
+	}
+}
+@keyframes subtitleBlur {
+	0% {
+		opacity: 0.6;
+		text-shadow: 0px 5px 5px rgba(0, 136, 204, 0.6);
+	}
+	100% {
+		opacity: 1;
+		text-shadow: 0px 5px 5px rgba(0, 136, 204, 0);
+	}
+}
+// === CARD:HOVER === //
+.card:hover {
+	box-shadow: $shadow-1;
+}
+.card a {
+	color: inherit;
+	text-decoration: none;
+}
+.card:hover .card__thumb img {
+	opacity: 0.6;
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+}
+.card:hover .card__thumb {
+	height: 140px;
+}
+.card:hover .card__body {
+	height: 280px;
+}
+.card:hover .card__title {
+	-webkit-animation: titleBlur 0.3s;
+	animation: titleBlur 0.3s;
+}
+.card:hover .card__description {
+	opacity: 1;
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}
+.card:hover .card__tags-list {
+	opacity: 1;
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}

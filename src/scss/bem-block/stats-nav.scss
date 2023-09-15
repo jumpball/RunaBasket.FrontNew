@@ -1,0 +1,356 @@
+// === PERSON-STATS (SELECTED) === //
+.person-stats {
+	// === PERSON-STATS NAV === //
+	&__nav {
+		margin: 0px 0px 40px 0px;
+	}
+	// === PERSON-STATS FORM === //
+	&__form {
+		display: grid;
+		grid-template-columns: 1fr 140px;
+		@include adaptiveValue("gap", 40, 20, 1600, 767.98, 1);
+		align-items: flex-end;
+
+		@media (max-width: rem(767.98)) {
+			grid-template-columns: 1fr 100px;
+		}
+		@media (max-width: rem(369.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__form-1 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		@include adaptiveValue("gap", 40, 20, 1600, 479.98, 1);
+
+		@media (max-width: rem(479.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__form-2 {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		@include adaptiveValue("gap", 40, 10, 1600, 991.98, 1);
+
+		@media (max-width: rem(991.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__form-3 {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		@include adaptiveValue("gap", 40, 10, 1600, 991.98, 1);
+
+		@media (max-width: rem(679.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__form-4 {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		@include adaptiveValue("gap", 40, 10, 1600, 991.98, 1);
+
+		@media (max-width: rem(749.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+	// === PERSON-STATS BOX=== //
+	&__box {
+		width: 100%;
+
+		@media (any-hover: hover) {
+			&:hover {
+				.person-stats__label,
+				.person-stats__label-1,
+				.person-stats__label-3 {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	// === PERSON-STATS LABEL === //
+	&__label {
+		//font-style: italic;
+		opacity: 0;
+		display: inline-block;
+		@include adaptiveValue("font-size", 16, 14, 1600, 415, 1);
+		text-transform: lowercase;
+		color: $white;
+		font-weight: 400;
+		padding: 0px 0px 3px 5px;
+	}
+
+	&__label-1 {
+		//font-style: italic;
+		opacity: 0;
+		display: inline-block;
+		@include adaptiveValue("font-size", 16, 14, 1600, 415, 1);
+		text-transform: lowercase;
+		color: $mainColor;
+		font-weight: 400;
+		padding: 0px 0px 3px 5px;
+	}
+
+	&__label-2 {
+		opacity: 1;
+		display: inline-block;
+		@include adaptiveValue("font-size", 16, 14, 1600, 415, 1);
+		text-transform: lowercase;
+		color: $white;
+		font-weight: 400;
+		padding: 0px 0px 3px 5px;
+	}
+
+	&__label-3 {
+		opacity: 1;
+		display: inline-block;
+		@include adaptiveValue("font-size", 16, 14, 1600, 415, 1);
+		color: $black;
+		font-weight: 400;
+		padding: 0px 0px 3px 5px;
+	}
+	// === PERSON-STATS LIST === //
+	&__list {
+	}
+	// === PERSON-STATS ITEM === //
+	&__item {
+	}
+}
+
+// === TEAM PROFILE NAV (SELECTED) === //
+.team-profile-nav {
+	margin: 0px 0px 40px 0px;
+	// === TEAM PROFILE FORM === //
+	&__form {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include adaptiveValue("gap", 40, 20, 991.98, 650, 1);
+		//@media (max-width: rem(480)) {
+		//flex-direction: column;
+		//gap: rem(10);
+		//}
+	}
+	// === TEAM PROFILE BOX=== //
+	&__box {
+		width: 100%;
+
+		@media (any-hover: hover) {
+			&:hover {
+				.team-profile-nav__label {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	// === TEAM PROFILE LABEL === //
+	&__label {
+		opacity: 0;
+		display: inline-block;
+		@include adaptiveValue("font-size", 16, 14, 1600, 415, 1);
+		text-transform: lowercase;
+		color: $mainColor;
+		font-weight: 400;
+		padding: 0px 0px 3px 5px;
+	}
+
+	&__list {
+	}
+
+	&__item {
+	}
+}
+
+// === SELECT === //
+.select {
+	position: relative;
+	//Тело селекта
+	&__body {
+		position: relative;
+	}
+	// Заголовок
+	&__title {
+		border: rem(1) solid $mainColor;
+		border-radius: rem(3);
+		width: 100%;
+		position: relative;
+		//height: rem(40);
+		background-color: $white;
+		cursor: pointer;
+		//color: inherit;
+		color: $mainColor;
+		text-align: left;
+	}
+	// Значение в заголовке
+	&__value {
+		//display: inline-block;
+		//width: 100%;
+		//text-align: start;
+		//padding: 5px 5px 5px 8px;
+		display: flex;
+		align-items: center;
+		height: rem(40);
+		padding: 0 rem(12);
+		gap: rem(10);
+
+		//overflow: hidden;
+		//text-overflow: ellipsis;
+		//white-space: nowrap;
+
+		> * {
+			flex: 1 1 auto;
+		}
+
+		&:after {
+			content: "";
+			// align-self: stretch;
+			// flex: 0 0 10px;
+			// transition: all 0.3s ease 0s;
+			// display: flex;
+			// justify-content: center;
+			// align-items: center;
+			position: absolute;
+			top: rem(15);
+			right: rem(10);
+			height: 0;
+			width: 0;
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-top: 10px solid $mainColor;
+			transition: transform 0.5s ease 0s;
+
+			._select-open & {
+				transform: rotate(-180deg);
+				transition: transform 0.5s ease 0s;
+			}
+		}
+
+		&._select-pseudo-label {
+			&::before {
+				content: attr(data-pseudo-label);
+				opacity: 0.5;
+			}
+		}
+	}
+	// Лейбл
+	&__label {
+		font-style: italic;
+		@include adaptiveValue("font-size", 14, 12, 1600, 415, 1);
+		text-transform: uppercase;
+		color: $white;
+		font-weight: 400;
+	}
+
+	&__label-1 {
+		font-style: italic;
+		@include adaptiveValue("font-size", 14, 12, 1600, 415, 1);
+		text-transform: uppercase;
+		color: $mainColor;
+		font-weight: 400;
+	}
+	// Поле ввода
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		height: 100%;
+	}
+	// Оболочка текстовых данных
+	&__text {
+		flex: 1 1 auto;
+	}
+	// Ссылка в элементе
+	&__link {
+	}
+	// Выпадающий список
+	&__options {
+		color: $mainColor;
+		position: absolute;
+		top: rem(39);
+		border-radius: 0 0 3px 3px;
+		min-width: 100%;
+		left: 0;
+		background-color: $white;
+		border-top: 0;
+		border: 1px solid $mainColor;
+		border-top: 0;
+		padding: 10px 0px 5px 0px;
+		z-index: 2;
+	}
+	// Оболочка при скролле
+	&__scroll {
+		overflow-y: auto;
+		overflow-x: hidden;
+		// Максимальная высота
+		max-height: 200px;
+		// Стили скроллбара
+		.simplebar-scrollbar {
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+	// Пункт
+	&__option {
+		width: 100%;
+		text-align: left;
+		@include adaptiveValue("font-size", 18, 16, 1600, 991.98, 1);
+		cursor: pointer;
+		padding: 8px 12px;
+		color: inherit;
+
+		&._select-selected {
+			background-color: #eee;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background: #d9d9d9;
+			}
+		}
+	}
+	// Оболочка контента в заголовке
+	&__content {
+		width: 100%;
+		text-align: start;
+		@include adaptiveValue("font-size", 18, 16, 1600, 991.98, 1);
+	}
+	// Ряд
+	&__row {
+		display: inline-flex;
+		align-items: center;
+	}
+	// Дополнительные данные
+	&__asset {
+	}
+	// === ДОПОЛНИТЕЛЬНЫЕ КЛАССЫ === //
+	// Список выбран
+	&._select-active {
+	}
+	// Запрещен
+	&._select-disabled {
+	}
+	// Список открыт
+	&._select-open {
+		z-index: 5;
+	}
+	// Список в фокусе
+	&._select-focus {
+	}
+	// Мультивыбор
+	&._select-multiple {
+	}
+	// Стиль чекбокса
+	&._select-checkbox {
+	}
+	// Выбранный пункт
+	&._select-selected {
+	}
+}
+// Класс тега
+._select-tag {
+	cursor: pointer;
+}

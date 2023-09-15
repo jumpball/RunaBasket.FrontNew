@@ -1,0 +1,271 @@
+// === GAME PROFILE HEADER === //
+
+.game-profile-header {
+	.calendar-slider__item.swiper-slide > div > div
+	// = BODY = //
+	&__body {
+		position: relative;
+		margin: 0px 0px 20px 0px;
+	}
+
+	// = BG LOGO = //
+	&__bg-logo {
+		display: none;
+		// @include adaptiveValue("width", 200, 180, 1600, 991.98, 1);
+		// @include adaptiveValue("height", 200, 180, 1600, 991.98, 1);
+		// opacity: 0.1;
+		// position: absolute;
+		// @include adaptiveValue("top", 0, 20, 1600, 720, 1);
+		// right: 50%;
+		// transform: translate(50%);
+		// @media (max-width: rem(720)) {
+		// 	@include adaptiveValue("top", -60, -40, 720, 390, 1);
+		// }
+	}
+
+	// = TEAMS = //
+	&__teams {
+		margin: 50px 0px 20px 0px;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		@media (max-width: rem(449.98)) {
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr auto;
+			margin: 40px 0px 10px 0px;
+		}
+	}
+	&__team {
+		display: flex;
+		flex-direction: column;
+		@media (max-width: rem(767.98)) {
+			min-width: rem(170);
+		}
+		@media (max-width: rem(599.98)) {
+			min-width: 0;
+		}
+	}
+	&__team-left {
+		align-items: center;
+		@media (max-width: rem(449.98)) {
+			grid-column: 1/1 span;
+			grid-row: 1/1 span;
+		}
+	}
+	&__team-right {
+		align-items: center;
+		@media (max-width: rem(449.98)) {
+			grid-column: 2/1 span;
+			grid-row: 1/1 span;
+		}
+	}
+
+	// = TEAM LOGO = //
+	&__team-logo {
+		@include adaptiveValue("height", 200, 180, 1600, 992, 1);
+		@include adaptiveValue("width", 200, 180, 1600, 992, 1);
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("height", 180, 150, 767.98, 620, 1);
+			@include adaptiveValue("width", 180, 150, 767.98, 620, 1);
+		}
+		@media (max-width: rem(619.98)) {
+			@include adaptiveValue("height", 150, 100, 619.98, 450, 1);
+			@include adaptiveValue("width", 150, 100, 619.98, 450, 1);
+		}
+	}
+	&__team-logo-left {
+		//align-self: flex-end;
+	}
+	&__team-logo-right {
+		//align-self: flex-start;
+	}
+
+	// = TEAM NAME = //
+	&__team-name {
+		@media (max-width: rem(599.98)) {
+			display: none;
+		}
+	}
+	&__team-name-left {
+		text-align: center;
+	}
+	&__team-name-right {
+		text-align: center;
+	}
+	&__team-title {
+		font-weight: 900;
+		text-transform: uppercase;
+		@include adaptiveValue("font-size", 28, 22, 1600, 992, 1);
+		@include adaptiveValue("line-height", 32, 26, 1600, 992, 1);
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("font-size", 22, 18, 991.98, 768, 1);
+			@include adaptiveValue("line-height", 26, 22, 991.98, 768, 1);
+		}
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 18, 16, 767.98, 620, 1);
+			@include adaptiveValue("line-height", 22, 20, 767.98, 620, 1);
+		}
+		@media (max-width: rem(619.98)) {
+			@include adaptiveValue("font-size", 16, 14, 619.98, 360, 1);
+			@include adaptiveValue("line-height", 20, 18, 619.98, 360, 1);
+		}
+	}
+	&__team-subtitle {
+		font-weight: 700;
+		color: $gray;
+		@include adaptiveValue("font-size", 18, 16, 1600, 992, 1);
+		@include adaptiveValue("line-height", 24, 22, 1600, 992, 1);
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("font-size", 16, 14, 991.98, 768, 1);
+			@include adaptiveValue("line-height", 20, 18, 991.98, 768, 1);
+		}
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 14, 12, 767.98, 620, 1);
+			@include adaptiveValue("line-height", 18, 16, 767.98, 620, 1);
+		}
+		@media (max-width: rem(619.98)) {
+			@include adaptiveValue("font-size", 12, 10, 619.98, 360, 1);
+			@include adaptiveValue("line-height", 16, 12, 619.98, 360, 1);
+		}
+	}
+
+	// = SCORE = //
+	&__score-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		@media (max-width: rem(767.98)) {
+			min-width: rem(250);
+		}
+		@media (max-width: rem(619.98)) {
+			min-width: rem(200);
+		}
+		@media (max-width: rem(449.98)) {
+			grid-column: 1/2 span;
+			grid-row: 2/1 span;
+		}
+	}
+	&__score-game {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include adaptiveValue("gap", 10, 6, 1600, 992, 1);
+		font-weight: 900;
+		color: $mainColor;
+		font-family: $fontFamily;
+		@include adaptiveValue("font-size", 110, 80, 1600, 992, 1);
+		@include adaptiveValue("line-height", 110, 80, 1600, 992, 1);
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("font-size", 80, 70, 991.98, 768, 1);
+			@include adaptiveValue("line-height", 80, 70, 991.98, 768, 1);
+		}
+		@media (max-width: rem(619.98)) {
+			@include adaptiveValue("font-size", 60, 50, 619.98, 360, 1);
+			@include adaptiveValue("line-height", 60, 50, 619.98, 360, 1);
+		}
+	}
+	&__score-team {
+		@include adaptiveValue("width", 170, 110, 1600, 992, 1);
+		@media (max-width: rem(619.98)) {
+			@include adaptiveValue("width", 90, 70, 619.98, 360, 1);
+		}
+	}
+	&__score-team-left {
+		text-align: right;
+	}
+	&__score-team-right {
+		text-align: left;
+	}
+
+	// = SCORE BORDER = //
+	&__score-border {
+		text-align: center;
+		font-weight: 100;
+	}
+
+	// = SCORE QUARTER = //
+	&__score-quarter {
+		font-weight: 900;
+		letter-spacing: rem(2);
+		font-family: $fontFamily;
+		padding: 8px 0px 8px 0px;
+		color: $gray;
+		@include adaptiveValue("font-size", 22, 18, 1600, 992, 1);
+		@include adaptiveValue("line-height", 24, 20, 1600, 992, 1);
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-align: center;
+		align-items: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		padding: 15px 0px 5px 0px;
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("font-size", 18, 15, 991.98, 768, 1);
+			@include adaptiveValue("line-height", 20, 17, 991.98, 768, 1);
+		}
+		@media (max-width: rem(619.98)) {
+			display: none;
+		}
+		@media (max-width: rem(449.98)) {
+			display: block;
+			@include adaptiveValue("font-size", 18, 16, 449.98, 320, 1);
+			@include adaptiveValue("line-height", 22, 20, 449.98, 320, 1);
+		}
+	}
+	&__score-quarter > span + span::before {
+		display: inline-block;
+		font-weight: 100;
+		color: $color-base-1;
+		position: relative;
+		margin: 0px 8px 0px 8px;
+		content: "|";
+		@media (max-width: rem(991.98)) {
+			margin: 0px 6px 0px 6px;
+		}
+	}
+
+	// = INFO = //
+	&__info {
+		width: 100%;
+		color: $gray;
+		text-align: center;
+		text-transform: uppercase;
+		margin: 8px 0px 0px 0px;
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("font-size", 16, 14, 991.98, 768, 1);
+			@include adaptiveValue("line-height", 18, 16, 991.98, 768, 1);
+		}
+		@media (max-width: rem(449.98)) {
+			@include adaptiveValue("font-size", 14, 11, 449.98, 340, 1);
+			@include adaptiveValue("line-height", 18, 15, 449.98, 340, 1);
+		}
+	}
+	&__info > span + span::before {
+		display: inline-block;
+		position: relative;
+		margin: 0px 5px 0px 5px;
+		content: "|";
+	}
+
+	// = DATE = //
+	&__date {
+		padding: 20px 0px 0px 0px;
+		@media (max-width: rem(449.98)) {
+			padding: 10px 0px 0px 0px;
+			border-top: rem(1) solid $gray;
+		}
+	}
+
+	// = TOURNAMENT = //
+	&__tournament {
+	}
+
+	// = LOCATION = //
+	&__location {
+		@media (max-width: rem(449.98)) {
+			padding: 10px 0px 0px 0px;
+			border-top: rem(1) solid $gray;
+		}
+	}
+}

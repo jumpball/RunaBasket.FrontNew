@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/runa/_head.htm',{
+"title":"Матч Центр"
+})
+<!-- BODY -->
+
+<body>
+	<!-- WRAPPER -->
+	<div data-sticky class="wrapper">
+		<!-- HEADER -->
+		@@include('html/runa/_header.htm',{})
+		<!-- MAIN - PAGE -->
+		<main class="page">
+
+			<!-- BREADCRUMS -->
+			<div class="section__container">
+				<ul class="page__breadcrumb">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">календарь</a></li>
+					<li>Матч-центр</li>
+
+				</ul>
+			</div>
+
+			<!-- MATCH CENTER HEADER -->
+			<section class="site-bg section-offset">
+				<div class="section__container">
+					<!-- MATCH CENTER  / TITLE -->
+					<h2 class="section-title section-title-h1 section-title-white section-title-center element-animation">
+						Матч-центр
+					</h2>
+					<!-- DAY SLIDER / CALENDAR -->
+					<div class="day-slider__row">
+						<div class="day-slider__block">
+							<div class="day-slider__navigation">
+								<div class="day-slider__nav-prev -ibg">
+									<img src="@img/RUNA/icons/arrow-mini-left-green.svg" alt="стрелка назад">
+								</div>
+								<div class="day-slider__nav-next -ibg">
+									<img src="@img/RUNA/icons/arrow-mini-right-green.svg" alt="стрелка вперед">
+								</div>
+							</div>
+							<div class="day-slider__box">
+								<div class="day-slider">
+									<div class="swiper-wrapper day-slider__wrapper">
+										<div class="day-slider__item swiper-slide">
+											<div class="day-slider__subtitle">февраль</div>
+											<div class="day-slider__title">26</div>
+											<div class="day-slider__info">вс<span>вс</span></div>
+										</div>
+										<div class="day-slider__item swiper-slide">
+											<div class="day-slider__subtitle">февраль</div>
+											<div class="day-slider__title">27</div>
+											<div class="day-slider__info">пн<span>пн</span></div>
+										</div>
+										<div class="day-slider__item swiper-slide">
+											<div class="day-slider__subtitle">февраль</div>
+											<div class="day-slider__title">28</div>
+											<div class="day-slider__info">вт<span>вт</span></div>
+										</div>
+										<div class="day-slider__item swiper-slide">
+											<div class="day-slider__subtitle">март</div>
+											<div class="day-slider__title">01</div>
+											<div class="day-slider__info">ср<span>ср</span></div>
+										</div>
+										<div class="day-slider__item swiper-slide">
+											<div class="day-slider__subtitle">март</div>
+											<div class="day-slider__title">02</div>
+											<div class="day-slider__info">чт<span>чт</span></div>
+										</div>
+										<div class="day-slider__item swiper-slide">
+											<div class="day-slider__subtitle">март</div>
+											<div class="day-slider__title">03</div>
+											<div class="day-slider__info">пт<span>пт</span></div>
+										</div>
+										<div class="day-slider__item swiper-slide">
+											<div class="day-slider__subtitle">март</div>
+											<div class="day-slider__title">04</div>
+											<div class="day-slider__info">сб<span>сб</span></div>
+										</div>
+									</div>
+
+									<!-- <div class="day-slider__pagination swiper-pagination"></div> -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+
+
+				<div class="profile-team__menu-block">
+					<!-- TABS HORIZONTAL MENU -->
+					<div class="tabs-hor-menu">
+						<div data-tabs class="tabs-hor-menu__box section__container">
+
+							<nav data-tabs-titles class="tabs-hor-menu__tabs-mini-nav">
+								<button type="button" class="tabs-hor-menu__tabs-mini-title _tab-active">все игры</button>
+								<button type="button" class="tabs-hor-menu__tabs-mini-title"><span>онлайн</span></button>
+								<button type="button" class="tabs-hor-menu__tabs-mini-title">руна</button>
+							</nav>
+
+
+							<div data-tabs-body class="tabs-hor-menu__tabs-content">
+								<div class="tabs-hor-menu__tabs-body">
+
+									<!-- <h2 class="section-title section-title-h3 section-title-black element-animation">
+										все игры
+									</h2> -->
+
+									<div data-spollers data-one-spoller class="vertical-spollers">
+										<div class="vertical-spollers__item">
+											<button type="button" data-spoller class="vertical-spollers__title _spoller-active">
+												<div class="vertical-spollers__bage">
+													<div class="vertical-spollers__logo -ibg">
+														<img src="@img/RUNA/LOGO/league-logo/vtb-logo.png" alt="">
+													</div>
+													<div class="vertical-spollers__desc">
+														<h3 class="vertical-spollers__desc-title">суперлига</h3>
+														<p class="vertical-spollers__desc-subtitle">мужчины</p>
+													</div>
+												</div>
+												<div class="vertical-spollers__icon -ibg">
+													<img src="@img/RUNA/icons/icon-select-green.svg" alt="">
+												</div>
+											</button>
+											<div class="vertical-spollers__body">
+												<!-- TABLE DAY / LEAGUE CALENDAR -->
+												<div class="table__wrapper-dark">
+													<div class="table__block">
+														<table>
+															<thead>
+																<tr>
+																	<th class="th-thead">время</th>
+																	<th colspan="2">дома</th>
+																	<th>игра</th>
+																	<th colspan="2">в гостях</th>
+																	<th>турнир</th>
+																	<th>смотреть</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td class="td-tbody3">17:00</td>
+																	<td>
+																		<a href="#">Купол-Родники</a>
+																	</td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/kupol.png">
+																		</div>
+																	</td>
+																	<td><a href="#">91-78</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/uralmash.png">
+																		</div>
+																	</td>
+																	<td><a href="#">Уралмаш</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg">
+																			<img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
+																		</div>
+																	</td>
+																	<td>
+																		<button
+																			class="base-button mini-button black-button">статистика</button>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="td-tbody3">18:00</td>
+																	<td>
+																		<a href="#">Руна</a>
+																	</td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/runa.png">
+																		</div>
+																	</td>
+																	<td><a href="#">82-69</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/khimki.png">
+																		</div>
+																	</td>
+																	<td><a href="#">Химки</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg">
+																			<img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
+																		</div>
+																	</td>
+																	<td>
+																		<button
+																			class="base-button mini-button black-button">статистика</button>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="td-tbody3">20:00</td>
+																	<td>
+																		<a href="#">Иркут</a>
+																	</td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/irkut.png">
+																		</div>
+																	</td>
+																	<td><a href="#">9-5</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/zenit.png">
+																		</div>
+																	</td>
+																	<td><a href="#">Зенит-2</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg">
+																			<img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
+																		</div>
+																	</td>
+																	<td>
+																		<button class="base-button mini-button red-button">онлайн</button>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="td-tbody3">23:00</td>
+																	<td>
+																		<a href="#">ТЕМП СУМЗ УГМК</a>
+																	</td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/temp.png">
+																		</div>
+																	</td>
+																	<td><a href="#">0-0</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/loko.png">
+																		</div>
+																	</td>
+																	<td><a href="#">Локомотив-Кубань</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg">
+																			<img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
+																		</div>
+																	</td>
+																	<td>
+																		<button
+																			class="base-button mini-button green-button">превью</button>
+																	</td>
+																</tr>
+
+
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="vertical-spollers__item">
+											<button type="button" data-spoller class="vertical-spollers__title">
+												<div class="vertical-spollers__bage">
+													<div class="vertical-spollers__logo -ibg">
+														<img src="@img/RUNA/LOGO/league-logo/vtb-logo.png" alt="">
+													</div>
+													<div class="vertical-spollers__desc">
+														<h3 class="vertical-spollers__desc-title">Молодежная Лига ВТБ</h3>
+														<p class="vertical-spollers__desc-subtitle">юноши</p>
+													</div>
+												</div>
+												<div class="vertical-spollers__icon -ibg">
+													<img src="@img/RUNA/icons/icon-select-green.svg" alt="">
+												</div>
+											</button>
+											<div class="vertical-spollers__body">
+												<!-- TABLE DAY / LEAGUE CALENDAR -->
+												<div class="table__wrapper-dark">
+													<div class="table__block">
+														<table>
+															<thead>
+																<tr>
+																	<th class="th-thead">время</th>
+																	<th colspan="2">дома</th>
+																	<th>игра</th>
+																	<th colspan="2">в гостях</th>
+																	<th>турнир</th>
+																	<th>смотреть</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td class="td-tbody3">17:00</td>
+																	<td>
+																		<a href="#">Нижний Новгород-2</a>
+																	</td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/ml_vtb-logo/nn.png">
+																		</div>
+																	</td>
+																	<td><a href="#">74-81</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/ml_vtb-logo/mba.png">
+																		</div>
+																	</td>
+																	<td><a href="#">МБА</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg">
+																			<img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
+																		</div>
+																	</td>
+																	<td>
+																		<button
+																			class="base-button mini-button black-button">статистика</button>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="td-tbody3">18:00</td>
+																	<td>
+																		<a href="#">Руна-2</a>
+																	</td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/runa.png">
+																		</div>
+																	</td>
+																	<td><a href="#">100-81</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/ml_vtb-logo/parma.png">
+																		</div>
+																	</td>
+																	<td><a href="#">Парма-2</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg">
+																			<img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
+																		</div>
+																	</td>
+																	<td>
+																		<button
+																			class="base-button mini-button black-button">статистика</button>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="td-tbody3">20:00</td>
+																	<td>
+																		<a href="#">Самара-2</a>
+																	</td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/ml_vtb-logo/samara.png">
+																		</div>
+																	</td>
+																	<td><a href="#">18-21</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/ml_vtb-logo/zenit.png">
+																		</div>
+																	</td>
+																	<td><a href="#">Зенит-М</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg">
+																			<img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
+																		</div>
+																	</td>
+																	<td>
+																		<button class="base-button mini-button red-button">онлайн</button>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="td-tbody3">20:30</td>
+																	<td>
+																		<a href="#">ЦСКА-Юниор</a>
+																	</td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/ml_vtb-logo/cska.png">
+																		</div>
+																	</td>
+																	<td><a href="#">0-0</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/ml_vtb-logo/unics.png">
+																		</div>
+																	</td>
+																	<td><a href="#">Уникс-2</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg">
+																			<img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
+																		</div>
+																	</td>
+																	<td>
+																		<button
+																			class="base-button mini-button green-button">превью</button>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="vertical-spollers__item">
+											<button type="button" data-spoller class="vertical-spollers__title">
+												<div class="vertical-spollers__bage">
+													<div class="vertical-spollers__logo -ibg">
+														<img src="@img/RUNA/LOGO/league-logo/dubl-logo.png" alt="">
+													</div>
+													<div class="vertical-spollers__desc">
+														<h3 class="vertical-spollers__desc-title">ДЮБЛ</h3>
+														<p class="vertical-spollers__desc-subtitle">юноши</p>
+													</div>
+												</div>
+												<div class="vertical-spollers__icon -ibg">
+													<img src="@img/RUNA/icons/icon-select-green.svg" alt="">
+												</div>
+											</button>
+											<div class="vertical-spollers__body">
+												<!-- TABLE DAY / LEAGUE CALENDAR -->
+												<div class="table__wrapper-dark">
+													<div class="table__block">
+														<table>
+															<thead>
+																<tr>
+																	<th class="th-thead">время</th>
+																	<th colspan="2">дома</th>
+																	<th>игра</th>
+																	<th colspan="2">в гостях</th>
+																	<th>турнир</th>
+																	<th>смотреть</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td class="td-tbody3">17:00</td>
+																	<td>
+																		<a href="#">Нижний Новгород-2</a>
+																	</td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/ml_vtb-logo/nn.png">
+																		</div>
+																	</td>
+																	<td><a href="#">74-81</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/ml_vtb-logo/unics.png">
+																		</div>
+																	</td>
+																	<td><a href="#">Уникс</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg">
+																			<img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/league-logo/dubl-logo.png">
+																		</div>
+																	</td>
+																	<td>
+																		<button
+																			class="base-button mini-button black-button">статистика</button>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="td-tbody3">18:00</td>
+																	<td>
+																		<a href="#">Руна-2</a>
+																	</td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/runa.png">
+																		</div>
+																	</td>
+																	<td><a href="#">100-81</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/ml_vtb-logo/parma.png">
+																		</div>
+																	</td>
+																	<td><a href="#">Парма-2</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg">
+																			<img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/league-logo/dubl-logo.png">
+																		</div>
+																	</td>
+																	<td>
+																		<button
+																			class="base-button mini-button black-button">статистика</button>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="td-tbody3">20:00</td>
+																	<td>
+																		<a href="#">Самара-2</a>
+																	</td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/ml_vtb-logo/samara.png">
+																		</div>
+																	</td>
+																	<td><a href="#">18-21</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/team-logo/ml_vtb-logo/zenit.png">
+																		</div>
+																	</td>
+																	<td><a href="#">Зенит-М</a></td>
+																	<td class="table__body-col-logo">
+																		<div class="table__image -ibg">
+																			<img nophotoplaceholder="" alt=""
+																				src="@img/RUNA/LOGO/league-logo/dubl-logo.png">
+																		</div>
+																	</td>
+																	<td>
+																		<button class="base-button mini-button red-button">онлайн</button>
+																	</td>
+																</tr>
+
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+								</div>
+								<div class="tabs-hor-menu__tabs-body">
+									<div class="section__container">
+										<h2 class="section-title section-title-h3 section-title-black element-animation">онлайн
+										</h2>
+
+									</div>
+								</div>
+								<div class="tabs-hor-menu__tabs-body">
+									<div class="section__container">
+										<h2 class="section-title section-title-h3 section-title-black element-animation">Руна
+										</h2>
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- MEDIA -->
+			<section class="site-bg section-offset">
+				<div class="section__container">
+					<div class="title-block">
+						<h2 class="section-title section-title-h1 section-title-white section-title-center element-animation">
+							Трансляции</h2>
+						<div class="video-slider__navigation">
+							<div class="video-slider__nav-prev -ibg">
+								<img src="@img/RUNA/icons/arrow-mini-left-green.svg" alt="стрелка назад">
+							</div>
+							<div class="video-slider__nav-next -ibg">
+								<img src="@img/RUNA/icons/arrow-mini-right-green.svg" alt="стрелка вперед">
+							</div>
+						</div>
+					</div>
+
+					@@include('html/runa/_media-main.htm',{})
+				</div>
+				<div class="section__container">
+					<h2 class="section-title section-title-h1 section-title-white section-title-center element-animation">
+						медиа</h2>
+					@@include('html/runa/_tabs-video.htm',{})
+				</div>
+				<div class="site-bg-img-1">
+					<img src="@img/RUNA/LOGO/runa-mini-green.svg" alt="">
+				</div>
+			</section>
+
+			<!-- PHOTO GALLERY -->
+			<section class="site-bg section-offset">
+				<div class="section__container">
+					<h2 class="section-title section-title-h1 section-title-white section-title-center element-animation">
+						Фотогалерея
+					</h2>
+					@@include('html/runa/_gallery.htm',{})
+				</div>
+			</section>
+
+			<!-- PARTNERS -->
+			<section class="site-bg section-offset">
+
+				<div class="section__container">
+					<div class="publication-selector__title-block">
+						<h2 class="section-title section-title-h1 section-title-white section-title-center element-animation">
+							партнеры</h2>
+					</div>
+					@@include('html/runa/_partners-slider.htm',{})
+				</div>
+				<div class="site-bg-img-1">
+					<img src="@img/RUNA/LOGO/runa-mini-green.svg" alt="">
+				</div>
+			</section>
+
+
+
+		</main>
+		<!-- FOOTER -->
+		@@include('html/runa/_footer.htm',{})
+	</div>
+	@@include('html/runa/_popup.htm',{})
+	@@include('html/runa/_js.htm',{})
+</body>
+
+</html>

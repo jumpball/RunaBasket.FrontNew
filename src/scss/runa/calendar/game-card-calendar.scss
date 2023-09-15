@@ -1,0 +1,346 @@
+// === GAME CARD CALENDAR === //
+.game-card-calendar {
+	width: 100%;
+	height: fit-content;
+	background: transparent;
+	transition: all 0.5s ease 0s;
+	padding: 0px 8px 0px 8px;
+	@media (max-width: rem(1199.98)) {
+		padding: 0px;
+	}
+	@media (max-width: rem(449.98)) {
+		padding: 0px 8px 0px 8px;
+	}
+
+	// = CARD / HOVER = //
+	&:hover {
+		transition: all 0.5s ease 0s;
+	}
+
+	// = BODY = //
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr;
+		@media (max-width: rem(991.98)) {
+			grid-template-columns: rem(100) 1fr rem(140);
+			gap: rem(10);
+		}
+		@media (max-width: rem(767.98)) {
+			//grid-template-columns: rem(44) 1fr rem(124);
+			//gap: rem(5);
+		}
+		@media (max-width: rem(539.98)) {
+			//gap: rem(10);
+		}
+		@media (max-width: rem(449.98)) {
+			grid-template-columns: 1fr;
+			gap: rem(0);
+		}
+	}
+
+	// = HEADER = //
+	&__header {
+		width: 100%;
+		text-align: center;
+		padding: 0px 5px 4px 5px;
+		transition: all 0.5s ease 0s;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		@media (max-width: rem(991.98)) {
+			padding: 0px 0px 5px 0px;
+		}
+		@media (max-width: rem(599.98)) {
+			padding: 0px 0px 0px 0px;
+		}
+
+		h3 {
+			display: inline-block;
+			color: $color-base-4;
+			width: 100%;
+			text-align: center;
+			//color: $color-base-5;
+			font-weight: 900;
+			font-family: $fontFamily;
+			@include adaptiveValue("font-size", 20, 18, 1600, 992, 1);
+			line-height: rem(30);
+			@media (max-width: rem(991.98)) {
+				@include adaptiveValue("font-size", 24, 18, 991.98, 768, 1);
+				line-height: rem(40);
+			}
+			@media (max-width: rem(599.98)) {
+				line-height: rem(75);
+			}
+			@media (max-width: rem(449.98)) {
+				line-height: rem(24);
+			}
+		}
+
+		span {
+			display: inline-block;
+			width: 100%;
+			font-family: $fontFamily;
+			@include adaptiveValue("font-size", 12, 10, 1400, 992, 1);
+			color: $color-base-5;
+			font-weight: 300;
+			text-transform: uppercase;
+			text-align: center;
+			//@media (max-width: rem(549.98)) {
+			//font-size: rem(12);
+			//}
+			//@media (max-width: rem(449.98)) {
+			//font-size: rem(14);
+			//}
+		}
+	}
+
+	// = TEAMS = //
+	&__teams {
+		padding: 0px 0px 0px 0px;
+		display: flex;
+		justify-content: center;
+		gap: rem(5);
+		@media (max-width: rem(991.98)) {
+			flex-direction: column;
+		}
+		@media (max-width: rem(449.98)) {
+			flex-direction: row;
+		}
+	}
+
+	// = TEAM ROW = //
+	&__team-row {
+		@media (max-width: rem(991.98)) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	&__team-row-l {
+		@media (max-width: rem(449.98)) {
+			flex-direction: row;
+		}
+	}
+	&__team-row-r {
+		@media (max-width: rem(449.98)) {
+			flex-direction: row-reverse;
+		}
+	}
+
+	// = TEAM NAME = //
+	&__team-name {
+		display: flex;
+		flex-direction: column;
+		@media (max-width: rem(991.98)) {
+			flex-direction: row;
+			gap: rem(10);
+		}
+		@media (max-width: rem(767.98)) {
+			gap: rem(8);
+		}
+	}
+	&__team-1-name {
+		justify-content: flex-end;
+		align-items: flex-end;
+		@media (max-width: rem(991.98)) {
+			justify-content: flex-start;
+			align-items: center;
+		}
+	}
+	&__team-2-name {
+		justify-content: flex-start;
+		align-items: flex-start;
+		@media (max-width: rem(991.98)) {
+			align-items: center;
+		}
+	}
+
+	// = TITLE = //
+	&__title {
+		display: none;
+		@media (max-width: rem(991.98)) {
+			display: block;
+			color: $white;
+			@include adaptiveValue("font-size", 26, 22, 991.98, 768, 1);
+			line-height: rem(40);
+			text-transform: uppercase;
+			font-weight: 900;
+			text-align: left;
+		}
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 22, 15, 767.98, 650, 1);
+			@include adaptiveValue("line-height", 40, 35, 767.98, 650, 1);
+		}
+		@media (max-width: rem(599.98)) {
+			display: none;
+		}
+	}
+
+	// = SCORE = //
+	&__score-column {
+		width: rem(10);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		@media (max-width: rem(991.98)) {
+			display: none;
+		}
+		@media (max-width: rem(449.98)) {
+			display: block;
+		}
+	}
+	&__score-border {
+		font-family: $fontFamily;
+		color: $white;
+		text-align: center;
+		font-size: rem(20);
+		font-weight: 900;
+		line-height: rem(34);
+		@media (max-width: rem(991.98)) {
+			display: none;
+		}
+		@media (max-width: rem(449.98)) {
+			display: block;
+		}
+	}
+	&__team-score {
+		font-family: $fontFamily;
+		color: $white;
+		min-width: rem(38);
+		font-size: rem(20);
+		line-height: rem(34);
+		text-transform: uppercase;
+		font-weight: 900;
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("font-size", 32, 24, 991.98, 768, 1);
+			line-height: rem(40);
+		}
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 24, 16, 767.98, 650, 1);
+			@include adaptiveValue("line-height", 40, 35, 767.98, 650, 1);
+		}
+		@media (max-width: rem(599.98)) {
+			min-width: rem(32);
+		}
+	}
+	&__team-1-score {
+		padding: 0px 0px 0px 0px;
+		text-align: right;
+	}
+	&__team-2-score {
+		padding: 0px 0px 0px 0px;
+		text-align: left;
+		@media (max-width: rem(991.98)) {
+			text-align: right;
+		}
+		@media (max-width: rem(449.98)) {
+			text-align: left;
+		}
+	}
+
+	// = TEAM LOGO = //
+	&__team-logo {
+		@include adaptiveValue("width", 60, 40, 1600, 992, 1);
+		@include adaptiveValue("height", 60, 40, 1600, 992, 1);
+		margin: 0px 0px 0px 0px;
+		background-color: $white;
+		border-radius: 100%;
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("width", 40, 35, 767.98, 650, 1);
+			@include adaptiveValue("height", 40, 35, 767.98, 650, 1);
+		}
+		@media (max-width: rem(599.98)) {
+			//display: none;
+		}
+		@media (max-width: rem(539.98)) {
+			//display: block;
+		}
+	}
+	&__team-logo img {
+		padding: 5px;
+	}
+
+	// = ICON = //
+	&__icon {
+		display: none;
+		@media (max-width: rem(991.98)) {
+			position: relative;
+			width: 14px;
+			height: 14px;
+		}
+	}
+
+	// = CONTENT = //
+	&__content {
+		margin: 0px 0px 5px 0px;
+		text-align: center;
+		@media (max-width: rem(991.98)) {
+			align-self: flex-end;
+		}
+		@media (max-width: rem(449.98)) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin: 0px 0px 0px 0px;
+		}
+	}
+
+	// = GYM = //
+	&__gym {
+		display: flex;
+		color: $color-base-5;
+		align-items: center;
+		justify-content: center;
+		gap: rem(3);
+		margin: 0px 0px 5px 0px;
+		p {
+			margin: 2px 0px 0px 0px;
+			@include adaptiveValue("font-size", 10, 8, 1600, 992, 1);
+			line-height: 12px;
+
+			@media (max-width: rem(1199.98)) {
+				display: none;
+			}
+			@media (max-width: rem(449.98)) {
+				display: inline-block;
+			}
+		}
+	}
+
+	// = TOURNAMENT = //
+	&__tournament {
+		display: flex;
+		color: $color-base-5;
+		flex-direction: column;
+		text-align: center;
+		margin: 10px 0px 0px 0px;
+		padding: 0px 10px 0px 10px;
+	}
+	&__tournament span {
+		font-size: 11px;
+		letter-spacing: rem(1.5);
+		text-transform: uppercase;
+		line-height: 16px;
+		@media (max-width: rem(649.98)) {
+			display: none;
+		}
+	}
+}
+
+.game-end-card-calendar {
+	.game-card-calendar__header h3 {
+		visibility: hidden;
+	}
+}
+
+.game-live-card-calendar {
+	.game-card-calendar__header h3 {
+	}
+}
+
+.game-before-card-calendar {
+	.game-card-calendar__header h3 {
+		//visibility: hidden;
+	}
+}

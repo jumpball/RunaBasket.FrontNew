@@ -1,0 +1,106 @@
+// === GAME TIMER === //
+.game-timer {
+	// = BLOCK = //
+	&__block {
+		position: relative;
+		margin: 40px 0px 40px 0px;
+		@media (max-width: rem(767.98)) {
+			margin: 20px 0px 20px 0px;
+		}
+	}
+
+	// = TIME BOX = //
+	&__time-box {
+		display: flex;
+		justify-content: space-between;
+		//gap: rem(20);
+		@include adaptiveValue("gap", 20, 8, 1600, 992, 1);
+		//grid-template-columns: 1fr rem(340) 1fr;
+		align-items: baseline;
+		@media (max-width: rem(767.98)) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__time-box-white {
+		color: $white;
+	}
+
+	// = BORDER = //
+	&__border {
+	}
+
+	// = TITLE = //
+	&__title {
+		display: inline-block;
+		width: 100%;
+		color: $white;
+		font-weight: 900;
+		@include adaptiveValue("font-size", 40, 23, 1600, 992, 1);
+		text-transform: uppercase;
+		letter-spacing: rem(1.5);
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("font-size", 23, 16, 991.98, 768, 1);
+		}
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 40, 16, 767.98, 340, 1);
+		}
+	}
+	&__title-left {
+		text-align: right;
+		@media (max-width: rem(767.98)) {
+			text-align: center;
+		}
+	}
+	&__title-right {
+		text-align: left;
+		@media (max-width: rem(767.98)) {
+			display: none;
+		}
+	}
+
+	// = TIME LIST = //
+	&__time-list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		gap: rem(8);
+		@media (max-width: rem(949.98)) {
+			justify-content: end;
+		}
+		@media (max-width: rem(767.98)) {
+			justify-content: center;
+		}
+	}
+
+	// = TIME ITEM = //
+	&__time-item {
+		//width: rem(70);
+		@include adaptiveValue("width", 60, 44, 1600, 992, 1);
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("width", 60, 40, 767.98, 340, 1);
+		}
+	}
+
+	&__time-item span {
+		padding: 0px 0px 8px 0px;
+		display: inline-block;
+		font-family: $fontFamily;
+		font-weight: 900;
+		@include adaptiveValue("font-size", 40, 23, 1600, 992, 1);
+		color: $gold;
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 40, 20, 767.98, 340, 1);
+		}
+	}
+	&__time-item p {
+		//font-size: rem(10);
+		@include adaptiveValue("font-size", 11, 9, 1600, 992, 1);
+		letter-spacing: rem(1);
+		text-transform: uppercase;
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 11, 9, 767.98, 340, 1);
+		}
+	}
+}

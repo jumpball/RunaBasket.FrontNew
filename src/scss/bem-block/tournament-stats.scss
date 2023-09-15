@@ -1,0 +1,121 @@
+// === TOURNAMENT STATS === //
+.tournament-stats {
+	// === TOURNAMENT STATS TABS === //
+	&__tabs {
+		position: relative;
+	}
+
+	&__tabs-navigation {
+		position: absolute;
+		@include adaptiveValue("top", -150, -140, 1600, 450, 1);
+		right: 0;
+		display: flex;
+		gap: rem(30);
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: rem(679.98)) {
+			top: rem(15);
+			//@include adaptiveValue("top", 20, 10, 540, 320, 1);
+		}
+	}
+	&__tabs-title {
+		@include adaptiveValue("height", 50, 40, 1600, 420, 1);
+		@include adaptiveValue("width", 50, 40, 1600, 420, 1);
+		opacity: 0.2;
+		border-radius: rem(3);
+		transition: all 0.5s ease 0s;
+	}
+	&__tabs-title._tab-active {
+		transition: all 0.5s ease 0s;
+		opacity: 1;
+		background-color: transparent;
+	}
+
+	&__tabs-content {
+		overflow: hidden;
+	}
+
+	&__tabs-body {
+		padding-top: rem(20);
+		margin: 0px 0px 30px 0px;
+		@media (max-width: rem(679.98)) {
+			padding-top: rem(70);
+		}
+	}
+
+	// === TOURNAMENT STATS SPOLLERS === //
+	&__spollers {
+		display: grid;
+	}
+
+	&__spollers-item {
+		font-size: rem(18);
+		height: auto;
+	}
+
+	&__spollers-title {
+		width: 100%;
+		cursor: default;
+		text-align: left;
+		position: relative;
+		color: $color-base-1;
+		._spoller-init & {
+			cursor: pointer;
+			border: 1px solid $color-base-1;
+			padding: rem(10) rem(15);
+			border-radius: rem(3);
+			margin-bottom: rem(10);
+			//&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: rem(15);
+				height: 0;
+				width: 0;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-top: 10px solid $color-base-1;
+				transition: transform 0.5s ease 0s;
+			}
+			// &::before {
+			// 	left: rem(12);
+			// }
+			&::after {
+				right: rem(12);
+			}
+			&._spoller-active {
+				&::before {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+				&::after {
+					transition: transform 0.5s ease 0s;
+					transform: rotate(180deg);
+				}
+			}
+		}
+		@media (min-width: rem(679.98)) {
+			display: none;
+		}
+	}
+
+	// === TOURNAMENT STATS BOX === //
+	&__box {
+		//margin: 0px 0px 50px 0px;
+	}
+
+	// === TOURNAMENT STATS NAV & FORM === //
+	&__nav {
+		margin: 0px 0px 30px 0px;
+	}
+
+	&__form {
+		display: grid;
+		grid-template-columns: 25% 1fr 25%;
+		@include adaptiveValue("gap", 40, 10, 1600, 780, 1);
+
+		@media (max-width: rem(679.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+}

@@ -1,0 +1,94 @@
+// === SIDEBAR SLIDERS === //
+
+// === SIDEBAR BANNER SLIDER === //
+.sidebar-banner-slider {
+	margin: 0px 0px 15px 0px;
+	max-height: rem(572);
+	@media (max-width: rem(1249.98)) {
+		max-height: rem(788);
+	}
+	@media (max-width: rem(1149.98)) {
+		max-height: rem(990);
+	}
+	@media (max-width: rem(991.98)) {
+		max-height: none;
+	}
+
+	// = BOX = //
+	&__box {
+		position: relative;
+		overflow: hidden;
+	}
+
+	// = WRAPPER = //
+	&__wrapper {
+	}
+
+	// = ITEM = //
+	&__item {
+		border: rem(1) solid $color-base-1;
+		border-radius: rem(10);
+		overflow: hidden;
+		@media (max-width: $tablet) {
+			border: none;
+		}
+	}
+
+	// = IMAGE = //
+	&__image {
+		position: relative;
+		padding: 0 0 58% 0;
+		overflow: hidden;
+	}
+
+	// = PAGINATION = //
+	&__pagination {
+	}
+
+	// = NAVIGATION = //
+	&__navigation {
+	}
+	&__nav-prev {
+	}
+	&__nav-next {
+	}
+}
+
+// === SIDEBAR STORE SLIDER === //
+.sidebar-store-slider {
+	@media (max-width: $tablet) {
+	}
+
+	// = BOX = //
+	&__box {
+		position: relative;
+		overflow: hidden;
+	}
+
+	// = WRAPPER = //
+	&__wrapper {
+	}
+
+	// = ITEM = //
+	&__item {
+		border: rem(1) solid $color-base-1;
+		border-radius: rem(3);
+		@media (max-width: $tablet) {
+			border: none;
+		}
+	}
+
+	// = PAGINATION = //
+	&__pagination {
+	}
+
+	// = NAVIGATION = //
+	&__navigation {
+	}
+
+	&__nav-prev {
+	}
+
+	&__nav-next {
+	}
+}

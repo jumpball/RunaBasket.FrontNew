@@ -1,0 +1,79 @@
+// === PUBLICATION SLIDER === // (AD)
+
+.pub-cards-slider {
+	margin: 20px 0px 0px 0px;
+	position: relative;
+
+	.card {
+		border: rem(1) solid $color-base-1;
+	}
+	// = BOX = //
+	&__box {
+		position: relative;
+	}
+
+	// = WRAPPER = //
+	&__wrapper {
+		//overflow: hidden;
+		//justify-content: flex-start;
+	}
+
+	// = ITEM = //
+	&__item {
+		//
+	}
+
+	// = NAVIGATION = //
+	&__navigation {
+		//margin: 0px 0px 20px 0px;
+		display: flex;
+		align-items: center;
+		justify-content: right;
+		@include adaptiveValue("gap", 30, 20, 1600, 767.98, 1);
+		@media (max-width: rem(1359.98)) {
+			z-index: 2;
+		}
+		@media (max-width: rem(649.98)) {
+			//display: none;
+		}
+	}
+	&__nav-prev,
+	&__nav-next {
+		z-index: 3;
+		overflow: hidden;
+		opacity: 0.3;
+		@include adaptiveValue("width", 50, 40, 1600, 767.98, 1);
+		@include adaptiveValue("height", 50, 40, 1600, 767.98, 1);
+		transition: all 0.5s ease 0s;
+		cursor: pointer;
+		@media (max-width: rem(991.98)) {
+			opacity: 1;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				transition: all 0.5s ease 0s;
+				transform: scale(1.3);
+				opacity: 1;
+			}
+		}
+	}
+
+	// = PAGINATION = //
+	&__pagination {
+		position: relative;
+		height: rem(30);
+	}
+	.swiper-pagination {
+		position: relative;
+		margin: 20px 0px 0px 0px;
+	}
+
+	.swiper-pagination-bullet {
+		@include adaptiveValue("width", 20, 14, 992, 600, 1);
+		@include adaptiveValue("height", 20, 14, 992, 600, 1);
+		@include adaptiveValue("line-height", 20, 14, 992, 600, 1);
+		background-color: $color-base-1;
+		border: rem(1) solid $white;
+	}
+}

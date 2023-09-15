@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/runa/_head.htm',{
+"title":"Клубный календарь"
+})
+<!-- BODY -->
+
+<body>
+	<!-- WRAPPER -->
+	<div data-sticky class="wrapper">
+		<!-- HEADER -->
+		@@include('html/runa/_header.htm',{})
+		<!-- MAIN - PAGE -->
+		<main class="page">
+
+			<!-- BREADCRUMS -->
+			<div class="section__container">
+				<ul class="page__breadcrumb">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Клубный календарь</a></li>
+				</ul>
+			</div>
+			<!-- CLUB CALENDAR -->
+			<section class="site-bg section-offset">
+				<div class="section__container">
+					<!-- CLUB CALENDAR / NAME -->
+					<h2 class="section-title section-title-h1 section-title-white section-title-center element-animation">
+						календарь
+					</h2>
+					<!-- CLUB CALENDAR SPOLLERS / NAV SELECT - 3 BOX -->
+					<div data-spollers="767.98,max" class="spollers spollers__box spollers__box-767">
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title spollers__title-767 -ibg">
+								<img src="@img/RUNA/icons/icon-select-green.svg" alt="">
+							</button>
+							<div class="spollers__body">
+								<!-- CLUB CALENDAR NAV SELECT -->
+								<div class="nav-select__nav-on-tab">
+									<!-- CLUB CALENDAR - FORM / 3 BOXES -->
+									<form action="#" class="nav-select__form-3-box">
+										<!-- CLUB CALENDAR - FORM - SELECT / SEASON -->
+										<div class="nav-select__box">
+											<label class="nav-select__label nav-select__label-white" for="select-season">Выбрать
+												сезон</label>
+											<select data-label data-scroll data-show name="form[]" id="select-season"
+												class="nav-select__list">
+												<option class="nav-select__item" value="1" selected="selected">2022/2023</option>
+												<option class="nav-select__item" value="2">2021/2022</option>
+												<option class="nav-select__item" value="3">2020/2021</option>
+												<option class="nav-select__item" value="4">2019/2020</option>
+												<option class="nav-select__item" value="5">2018/2019</option>
+											</select>
+										</div>
+										<!-- CLUB CALENDAR - FORM - SELECT / TEAM -->
+										<div class="nav-select__box">
+											<label class="nav-select__label nav-select__label-white" for="select-team">Выбрать
+												команду</label>
+											<select data-label data-scroll data-show name="form[]" id="select-team"
+												class="nav-select__list">
+												<option class="nav-select__item" value="1" selected="selected">Руна / мужчины
+												</option>
+												<option class="nav-select__item" value="2">Руна / женщины</option>
+												<option class="nav-select__item" value="3">Руна-2 / юноши</option>
+												<option class="nav-select__item" value="4">Руна-ДЮБЛ / юноши</option>
+												<option class="nav-select__item" value="5">Руна-ДЮБЛ / девушки</option>
+												<option class="nav-select__item" value="6">Руна 3х3 / мужчины</option>
+												<option class="nav-select__item" value="7">РУНА-POWERCELL / мужчины</option>
+											</select>
+										</div>
+										<!-- CLUB CALENDAR - FORM - SELECT / TOURNAMENT -->
+										<div class="nav-select__box">
+											<label class="nav-select__label nav-select__label-white"
+												for="select-tournament-1">Выбрать
+												турнир</label>
+											<select data-label data-scroll data-show name="form[]" id="select-tournament-1"
+												class="nav-select__list">
+												<option class="nav-select__item" value="1" selected="selected">все турниры
+												</option>
+												<option class="nav-select__item" value="2">Единая Лига ВТБ</option>
+												<option class="nav-select__item" value="3">женская суперлига</option>
+												<option class="nav-select__item" value="4">кубок России муж.</option>
+												<option class="nav-select__item" value="5">кубок России жен.</option>
+												<option class="nav-select__item" value="6">молодежная Лига ВТБ</option>
+												<option class="nav-select__item" value="7">ДЮБЛ юноши</option>
+												<option class="nav-select__item" value="8">ДЮБЛ девушки</option>
+												<option class="nav-select__item" value="9">UBA</option>
+												<option class="nav-select__item" value="10">МЛБЛ</option>
+											</select>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- TABS / TABLE or CARDS -->
+					<div data-tabs class="tabs tabs-selector__tabs">
+
+						<div class="month-calendar__header">
+							<div class="month-slider__block-on-tab">
+								<div class="month-slider__navigation">
+									<div class="month-slider__nav-prev -ibg">
+										<img src="@img/RUNA/icons/arrow-wh-l.svg" alt="стрелка назад">
+									</div>
+									<div class="month-slider__nav-next -ibg">
+										<img src="@img/RUNA/icons/arrow-wh-r.svg" alt="стрелка вперед">
+									</div>
+								</div>
+								<div class="month-slider__box">
+									<div class="month-slider">
+										<div class="swiper-wrapper month-slider__wrapper">
+											<div class="month-slider__item swiper-slide">
+												<div class="month-slider__title">январь 2023</div>
+											</div>
+											<div class="month-slider__item swiper-slide">
+												<div class="month-slider__title">февраль 2023</div>
+											</div>
+											<div class="month-slider__item swiper-slide">
+												<div class="month-slider__title">март 2023</div>
+											</div>
+										</div>
+
+										<!-- <div class="month-slider__pagination swiper-pagination"></div> -->
+									</div>
+								</div>
+							</div>
+							<nav data-tabs-titles class="tabs-selector__tabs-navigation">
+
+								<button type="button" class="tabs-selector__tabs-title _tab-active -ibg">
+									<img src="@img/RUNA/icons/icon-cards-white.svg" alt="">
+								</button>
+								<button type="button" class="tabs-selector__tabs-title -ibg">
+									<img src="@img/RUNA/icons/icon-table-white.svg" alt="">
+								</button>
+
+								<button type="button" class="tabs-selector__tabs-title -ibg">
+									<img src="@img/RUNA/icons/icon-slider-white.svg" alt="">
+								</button>
+
+							</nav>
+						</div>
+
+						<div data-tabs-body class="tabs-selector__tabs-content">
+
+							<div class="tabs-selector__tabs-body">
+								<!-- CARDS - TEAM SEASON CALENDAR -->
+								@@include('html/runa/_team-month-calendar.htm',{})
+							</div>
+
+							<div class="tabs-selector__tabs-body">
+								<!-- TABLE - TEAM SEASON CALENDAR -->
+								<div class="table__box-club">
+									<div class="table__wrapper-dark">
+										<div class="table__block">
+											<table>
+												<thead>
+													<tr>
+														<th class="th-thead">дата</th>
+														<th>турнир</th>
+														<th>время</th>
+														<th colspan="2">дома</th>
+														<th>игра</th>
+														<th colspan="2">в гостях</th>
+														<th>билеты</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="td-tbody3">24.01.23</td>
+														<td class="table__body-col-logo">
+															<div class="table__image -ibg">
+																<img nophotoplaceholder="" alt=""
+																	src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
+															</div>
+														</td>
+														<td>19:00</td>
+														<td>
+															<a href="#">Руна</a>
+														</td>
+														<td class="table__body-col-logo">
+															<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																	src="@img/RUNA/LOGO/team-logo/runa.png">
+															</div>
+														</td>
+														<td><a href="#">91-78</a></td>
+														<td class="table__body-col-logo">
+															<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																	src="@img/RUNA/LOGO/team-logo/uralmash.png">
+															</div>
+														</td>
+														<td><a href="#">Уралмаш</a></td>
+														<td>
+															<button type="button"
+																class="base-button calendar-button mini-button black-button">статистика</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="td-tbody3"> 29.01.23</td>
+														<td class="table__body-col-logo">
+															<div class="table__image -ibg">
+																<img nophotoplaceholder="" alt=""
+																	src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
+															</div>
+														</td>
+														<td>18:30</td>
+														<td>
+															<a href="#">Руна</a>
+														</td>
+														<td class="table__body-col-logo">
+															<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																	src="@img/RUNA/LOGO/team-logo/runa.png">
+															</div>
+														</td>
+														<td><a href="#">82-69</a></td>
+														<td class="table__body-col-logo">
+															<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																	src="@img/RUNA/LOGO/team-logo/ml_vtb-logo/avtodor.png">
+															</div>
+														</td>
+														<td><a href="#">Автодор</a></td>
+														<td>
+															<button type="button"
+																class="base-button calendar-button mini-button black-button">статистика</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="td-tbody3">03.02.23</td>
+														<td class="table__body-col-logo">
+															<div class="table__image -ibg">
+																<img nophotoplaceholder="" alt=""
+																	src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
+															</div>
+														</td>
+														<td>16:00</td>
+														<td>
+															<a href="#">ЦСКА</a>
+														</td>
+														<td class="table__body-col-logo">
+															<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																	src="@img/RUNA/LOGO/team-logo/cska.png">
+															</div>
+														</td>
+														<td><a href="#">36-30</a></td>
+														<td class="table__body-col-logo">
+															<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																	src="@img/RUNA/LOGO/team-logo/runa.png">
+															</div>
+														</td>
+														<td><a href="#">Руна</a></td>
+														<td>
+															<button type="button"
+																class="base-button calendar-button mini-button purple-button">смотреть</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="td-tbody3">18.02.23</td>
+														<td class="table__body-col-logo">
+															<div class="table__image -ibg">
+																<img nophotoplaceholder="" alt=""
+																	src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
+															</div>
+														</td>
+														<td>18:00</td>
+														<td>
+															<a href="#">Руна</a>
+														</td>
+														<td class="table__body-col-logo">
+															<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																	src="@img/RUNA/LOGO/team-logo/runa.png">
+															</div>
+														</td>
+														<td><a href="#">0-0</a></td>
+														<td class="table__body-col-logo">
+															<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																	src="@img/RUNA/LOGO/team-logo/loko.png">
+															</div>
+														</td>
+														<td><a href="#">Локомотив-Кубань</a></td>
+														<td>
+															<button type="button"
+																class="base-button calendar-button mini-button green-button">купить
+																билет</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="td-tbody3">20.02.23</td>
+														<td class="table__body-col-logo">
+															<div class="table__image -ibg">
+																<img nophotoplaceholder="" alt=""
+																	src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
+															</div>
+														</td>
+														<td>12:00</td>
+														<td>
+															<a href="#">Уникс</a>
+														</td>
+														<td class="table__body-col-logo">
+															<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																	src="@img/RUNA/LOGO/team-logo/ml_vtb-logo/unics.png">
+															</div>
+														</td>
+														<td><a href="#">0-0</a></td>
+														<td class="table__body-col-logo">
+															<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																	src="@img/RUNA/LOGO/team-logo/runa.png">
+															</div>
+														</td>
+														<td><a href="#">Руна</a></td>
+														<td>
+															<button type="button"
+																class="base-button calendar-button mini-button white-button">превью</button>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="tabs-selector__tabs-body">
+								<!-- SLIDER - TEAM SEASON CALENDAR -->
+
+								@@include('html/runa/_calendar-slider.htm',{})
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- PARTNERS -->
+			<section class="site-bg section-offset">
+				<div class="section__container">
+					<div class="publication-selector__title-block">
+						<h2 class="section-title section-title-h1 section-title-white section-title-center element-animation">
+							партнеры</h2>
+					</div>
+					@@include('html/runa/_partners-slider.htm',{})
+				</div>
+
+			</section>
+
+		</main>
+		<!-- FOOTER -->
+		@@include('html/runa/_footer.htm',{})
+	</div>
+	@@include('html/runa/_popup.htm',{})
+	@@include('html/runa/_js.htm',{})
+</body>
+
+</html>

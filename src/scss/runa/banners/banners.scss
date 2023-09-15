@@ -1,0 +1,18 @@
+// === BANNER === //
+.banner {
+	position: relative;
+	margin: 40px 0px 0px 0px;
+
+	// = LINK = //
+	&__link {
+		cursor: pointer;
+	}
+
+	// = IMAGE = //
+	&__image {
+		border-radius: rem(10);
+		overflow: hidden;
+		position: relative;
+		padding: 0px 0px 40% 0px;
+	}
+}

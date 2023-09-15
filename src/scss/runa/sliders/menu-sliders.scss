@@ -1,0 +1,269 @@
+// === PUB MENU SLIDER === //
+.pub-menu-slider {
+	// === BOX === //
+	&__box {
+		overflow: hidden;
+	}
+
+	// === WRAPPER === //
+	&__wrapper {
+	}
+
+	// === ITEM === //
+	&__item {
+		width: auto;
+	}
+
+	// === NAVIGATION & PAGINATION === //
+
+	&__navigation {
+		display: flex;
+		align-items: center;
+		justify-content: right;
+		@include adaptiveValue("gap", 30, 20, 1600, 767.98, 1);
+	}
+	&__nav-prev,
+	&__nav-next {
+		z-index: 3;
+		opacity: 0.3;
+		@include adaptiveValue("width", 50, 40, 1600, 767.98, 1);
+		@include adaptiveValue("height", 50, 40, 1600, 767.98, 1);
+		transition: all 0.5s ease 0s;
+		cursor: pointer;
+		@media (max-width: rem(991.98)) {
+			opacity: 1;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				transition: all 0.5s ease 0s;
+				transform: scale(1.3);
+				opacity: 1;
+			}
+		}
+	}
+
+	// === SLIDE-ACTIVE === //
+	.swiper-slide-active {
+	}
+	.swiper-slide-active &__slide-label {
+	}
+}
+
+// === ROSTER MENU SLIDER === //
+.roster-menu-slider {
+	// === BOX === //
+	&__box {
+		overflow: hidden;
+	}
+
+	// === WRAPPER === //
+	&__wrapper {
+	}
+
+	// === ITEM === //
+	&__item {
+		//width: auto;
+		width: fit-content;
+		//min-width: rem(290);
+	}
+
+	// === NAVIGATION & PAGINATION === //
+
+	&__navigation {
+		display: flex;
+		align-items: center;
+		justify-content: right;
+		@include adaptiveValue("gap", 30, 20, 1600, 767.98, 1);
+		z-index: 2;
+	}
+	&__nav-prev,
+	&__nav-next {
+		@include adaptiveValue("width", 50, 40, 1600, 767.98, 1);
+		@include adaptiveValue("height", 50, 40, 1600, 767.98, 1);
+		opacity: 0.3;
+		transition: all 0.5s ease 0s;
+		cursor: pointer;
+		z-index: 2;
+		@media (max-width: rem(991.98)) {
+			opacity: 1;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				transition: all 0.5s ease 0s;
+				transform: scale(1.3);
+				opacity: 1;
+			}
+		}
+	}
+
+	// === SLIDE-ACTIVE === //
+	.swiper-slide-active {
+	}
+	.swiper-slide-active &__slide-label {
+	}
+}
+
+// === LEADERS MENU SLIDER === //
+.leaders-menu-slider {
+	// === BOX === //
+	&__box {
+		overflow: hidden;
+	}
+
+	// === WRAPPER === //
+	&__wrapper {
+	}
+
+	// === ITEM === //
+	&__item {
+		//width: auto;
+		width: fit-content;
+		//min-width: rem(290);
+	}
+
+	// === NAVIGATION & PAGINATION === //
+
+	&__navigation {
+		display: flex;
+		align-items: center;
+		justify-content: right;
+		@include adaptiveValue("gap", 30, 20, 1600, 767.98, 1);
+		z-index: 2;
+	}
+	&__nav-prev,
+	&__nav-next {
+		@include adaptiveValue("width", 50, 40, 1600, 767.98, 1);
+		@include adaptiveValue("height", 50, 40, 1600, 767.98, 1);
+		opacity: 0.3;
+		transition: all 0.5s ease 0s;
+		cursor: pointer;
+		z-index: 2;
+		@media (max-width: rem(991.98)) {
+			opacity: 1;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				transition: all 0.5s ease 0s;
+				transform: scale(1.3);
+				opacity: 1;
+			}
+		}
+	}
+
+	// === SLIDE-ACTIVE === //
+	.swiper-slide-active {
+	}
+	.swiper-slide-active &__slide-label {
+	}
+}
+
+// === TEAM LEAD MENU SLIDER === //
+.team-lead-menu-slider {
+	// === BOX === //
+	&__box {
+		overflow: hidden;
+	}
+
+	// === WRAPPER === //
+	&__wrapper {
+	}
+
+	// === ITEM === //
+	&__item {
+		width: auto;
+		//min-width: rem(290);
+	}
+
+	// === NAVIGATION & PAGINATION === //
+
+	&__navigation {
+		display: flex;
+		align-items: center;
+		justify-content: right;
+		@include adaptiveValue("gap", 30, 20, 1600, 767.98, 1);
+		z-index: 2;
+	}
+	&__nav-prev,
+	&__nav-next {
+		@include adaptiveValue("width", 50, 40, 1600, 767.98, 1);
+		@include adaptiveValue("height", 50, 40, 1600, 767.98, 1);
+		opacity: 0.3;
+		transition: all 0.5s ease 0s;
+		cursor: pointer;
+		z-index: 2;
+		@media (max-width: rem(991.98)) {
+			//opacity: 1;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				transition: all 0.5s ease 0s;
+				transform: scale(1.3);
+				opacity: 1;
+			}
+		}
+	}
+
+	// === SLIDE-ACTIVE === //
+	.swiper-slide-active {
+	}
+	.swiper-slide-active &__slide-label {
+	}
+}
+
+// === CLUB HISTORY MENU SLIDER === //
+.club-history-menu-slider {
+	// === BOX === //
+	&__box {
+		overflow: hidden;
+	}
+
+	// === WRAPPER === //
+	&__wrapper {
+	}
+
+	// === ITEM === //
+	&__item {
+		width: auto;
+		//min-width: rem(290);
+	}
+
+	// === NAVIGATION & PAGINATION === //
+
+	&__navigation {
+		display: flex;
+		align-items: center;
+		justify-content: right;
+		@include adaptiveValue("gap", 30, 20, 1600, 767.98, 1);
+		z-index: 2;
+	}
+	&__nav-prev,
+	&__nav-next {
+		@include adaptiveValue("width", 50, 40, 1600, 767.98, 1);
+		@include adaptiveValue("height", 50, 40, 1600, 767.98, 1);
+		opacity: 0.3;
+		transition: all 0.5s ease 0s;
+		cursor: pointer;
+		z-index: 2;
+		@media (max-width: rem(991.98)) {
+			//opacity: 1;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				transition: all 0.5s ease 0s;
+				transform: scale(1.3);
+				opacity: 1;
+			}
+		}
+	}
+
+	// === SLIDE-ACTIVE === //
+	.swiper-slide-active {
+	}
+	.swiper-slide-active &__slide-label {
+	}
+}

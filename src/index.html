@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Верстка «NEW_PROJECT_NAME»</title>
+</head>
+
+<body>
+	<div class="rootpage">
+		<div class="client-logo">
+			<img src="@img/RUNA/LOGO/Runa-Logo-new-green.svg" alt="лого Руна">
+		</div>
+		<h1>ПБК «РУНА»</h1>
+		<div class="rootpage__info">
+			Сайт Баскетбольного Клуба: Эксклюзивный дизайн, адаптивная кроссбраузерная вёрстка, интегрированная
+			баскетбольная статистика всех турниров с участием команд клуба,
+			интерактивные профайлы команд, игроков и тренеров, онлайн трансляции матчей, инфографика клубных достижений и
+			многое другое.
+		</div>
+		<h2>Демо страниц сайта:</h2>
+		<ol class="rootpage__list">
+			<li><a target="_blank" href="home.html">Главная страница (New)</a></li>
+			<li><a target="_blank" href="player-profile.html">Профайл игрока (New)</a></li>
+			<li><a target="_blank" href="coach-profile.html">Профайл тренера (New)</a></li>
+			<li><a target="_blank" href="team-profile.html">Профайл Команды</a></li>
+			<li><a target="_blank" href="match-center.html">Матч-центр</a></li>
+			<li><a target="_blank" href="game.html">Профайл игры</a></li>
+			<li><a target="_blank" href="publication.html">Публикация (New)</a></li>
+			<li><a target="_blank" href="club.html">О клубе</a></li>
+			<li><a target="_blank" href="club-calendar.html">Клубный календарь (New)</a></li>
+			<li><a target="_blank" href="news-line.html">Лента новостей (New)</a></li>
+		</ol>
+		<!-- <h2>Попапы:</h2>
+		<ol class="rootpage__list">
+			<li><a target="_blank" href="home.html#"></a></li>
+		</ol> 
+		<div class="rootpage__tnx">
+			<h2>Спасибо за заказ!</h2>
+			<p>Буду рад (а) хорошему отзыву.</p>
+			<p>Обращайтесь еще!</p>
+		</div>-->
+		<div class="rootpage__contacts">
+			<h2>Наши контакты:</h2>
+			<p><a href="mailto:email@gmail.com">jumpball.it@gmail.com</a></p>
+			<p><a href="tel:89257402741">8 925 7402741</a></p>
+		</div>
+	</div>
+</body>
+<style>
+	@charset "UTF-8";
+	/* @import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap"); */
+
+	*,
+	*::before,
+	*::after {
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		min-width: 320px;
+		width: 100%;
+		color: #fff;
+		background-color: #5b2a98;
+	}
+
+	body {
+		font-family: Bebas Neue Pro;
+		font-size: 100%;
+		line-height: 1;
+		font-size: 24px;
+	}
+
+	a {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	a:visited {
+		text-decoration: none;
+
+	}
+
+	a:hover {
+		text-decoration: underline;
+		color: #A3D43F;
+	}
+
+	ol li {
+		font-weight: 900;
+
+	}
+
+	img {
+
+		display: block;
+		margin-left: auto;
+		margin-right: auto
+	}
+
+	.wrapper {
+		width: 100%;
+		min-height: 100%;
+		overflow: hidden;
+	}
+
+	.client-logo {
+		width: 100%;
+	}
+
+	.client-logo img {
+		width: 200px;
+		height: 148.99px;
+
+	}
+
+	.rootpage {
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+
+
+
+	@media (max-width: 767px) {
+		.rootpage {
+			padding: 30px 15px;
+		}
+	}
+
+	h1 {
+		color: #A3D43F;
+		width: 100%;
+		font-size: 50px;
+		text-align: center;
+		margin: 1.25rem 0px 1.25rem 0px;
+	}
+
+	@media (max-width: 767px) {
+		h1 {
+			font-size: 50px;
+			margin: 1rem 0px 1rem 0px;
+		}
+	}
+
+	h2 {
+		color: #A3D43F;
+		font-size: 30px;
+		margin: 0px 0px 1rem 0px;
+	}
+
+	@media (max-width: 767px) {
+		h2 {
+			font-size: 26;
+			margin: 0px 0px 1rem 0px;
+		}
+	}
+
+	.rootpage__info {
+		width: 98%;
+		font-size: 20px;
+		line-height: 140%;
+		letter-spacing: 1.3px;
+		font-weight: 500;
+
+		margin: 0px 0px 1.5rem 0px;
+	}
+
+	.rootpage__list {
+		margin: 0px 0px 2.25rem 1.25rem;
+	}
+
+	.rootpage__list li:not(:last-child) {
+		margin: 0px 0px 15px 0px;
+	}
+
+	.rootpage__contacts,
+	.rootpage__tnx {
+		border-radius: 200px;
+		padding: 20px 65px;
+		line-height: 140%;
+	}
+
+	@media (max-width: 767px) {
+
+		.rootpage__contacts,
+		.rootpage__tnx {
+			border-radius: 40px;
+			padding: 20px;
+		}
+	}
+
+	.rootpage__contacts {
+		background: #181220;
+
+	}
+
+	.rootpage__contacts a {
+		color: #fff;
+	}
+</style>
+
+</html>
