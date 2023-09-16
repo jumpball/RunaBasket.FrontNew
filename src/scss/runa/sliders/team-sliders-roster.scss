@@ -1,6 +1,7 @@
 // === TEAM SLIDER / ROSTER === //
 .team-slider {
 	position: relative;
+	overflow: hidden;
 
 	// === TEAM SLIDER WRAPPER === //
 	&__wrapper {

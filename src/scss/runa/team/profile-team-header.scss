@@ -1,5 +1,10 @@
 // === PROFILE TEAM HEADER == //
 .profile-team {
+	&__nav {
+		.tabs-selector__tabs-navigation {
+			margin: 20px 0px 20px 0px;
+		}
+	}
 	&__header {
 		//margin: 40px 0px 0px 0px;
 	}
