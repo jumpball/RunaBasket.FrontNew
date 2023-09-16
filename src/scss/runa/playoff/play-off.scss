@@ -155,7 +155,7 @@
 			padding: 6px 5px 6px 5px;
 		}
 		.game-card-pl__body {
-			height: rem(160);
+			height: rem(210);
 			min-width: rem(250);
 			&:before {
 				height: rem(40);
@@ -165,34 +165,33 @@
 			padding: 8px 8px 8px 8px;
 		}
 		.game-card-pl__teams {
-			margin: 45px 0px 0px 0px;
+			margin: 60px 0px 0px 0px;
 			padding: 0px 10px 0px 10px;
 		}
 		.game-card-pl__bage {
 			padding: 8px 10px 0px 10px;
-
 			font-size: rem(24);
 		}
 		.game-card-pl__team-logo {
-			width: 35px;
-			height: 35px;
+			width: 50px;
+			height: 50px;
 		}
 		.game-card-pl__title {
-			@include adaptiveValue("font-size", 16, 13, 1600, 1090, 1);
-			line-height: rem(35);
+			@include adaptiveValue("font-size", 20, 15, 1600, 1090, 1);
+			line-height: rem(50);
 			@media (max-width: rem(1169.98)) {
 				font-weight: 400;
 			}
 			@media (max-width: rem(1099.98)) {
-				@include adaptiveValue("font-size", 18, 13, 1099.98, 360, 1);
+				@include adaptiveValue("font-size", 22, 16, 1099.98, 360, 1);
 				font-weight: 900;
 			}
 		}
 		.game-card-pl__team-score {
-			@include adaptiveValue("font-size", 16, 14, 1600, 1090, 1);
-			line-height: rem(35);
+			@include adaptiveValue("font-size", 24, 16, 1600, 1090, 1);
+			line-height: rem(50);
 			@media (max-width: rem(1099.98)) {
-				@include adaptiveValue("font-size", 18, 13, 1099.98, 360, 1);
+				@include adaptiveValue("font-size", 24, 16, 1099.98, 360, 1);
 			}
 		}
 
@@ -214,7 +213,7 @@
 	&__stage-1 {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: rem(160) rem(160) rem(160) rem(160) rem(160) rem(160) rem(160) rem(160);
+		grid-template-rows: rem(210) rem(210) rem(210) rem(210) rem(210) rem(210) rem(210) rem(210);
 		gap: rem(20);
 		@media (max-width: em(1099.98)) {
 			display: flex;
@@ -226,7 +225,7 @@
 	&__stage-2 {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: rem(340) rem(340) rem(340) rem(340);
+		grid-template-rows: rem(440) rem(440) rem(440) rem(440);
 		gap: rem(20);
 		@media (max-width: em(1099.98)) {
 			grid-template-rows: 1fr;
@@ -250,13 +249,17 @@
 		grid-template-columns: 1fr;
 		@media (max-width: rem(1099.98)) {
 			gap: rem(20);
-			padding: 20px 0px 0px 0px;
+			//padding: 20px 0px 0px 0px;
+			display: flex;
+			flex-direction: column-reverse;
+			justify-content: flex-start;
+			align-items: stretch;
 		}
 	}
 	&__stage-5 {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: rem(340) rem(340);
+		grid-template-rows: rem(440) rem(440);
 		gap: rem(20);
 		@media (max-width: em(1099.98)) {
 			grid-template-rows: 1fr;
@@ -273,28 +276,28 @@
 	}
 	&__pair-2 {
 		height: fit-content;
-		margin: 90px 0px 0px 0px;
+		margin: 115px 0px 0px 0px;
 		@media (max-width: rem(1099.98)) {
 			margin: 0px 0px 0px 0px;
 		}
 	}
 	&__pair-3 {
 		height: fit-content;
-		margin: 270px 0px 0px 0px;
+		margin: 345px 0px 0px 0px;
 		@media (max-width: rem(1099.98)) {
 			margin: 0px 0px 0px 0px;
 		}
 	}
 	&__pair-4 {
 		height: fit-content;
-		margin: 630px 0px 0px 0px;
+		margin: 805px 0px 0px 0px;
 		@media (max-width: rem(1099.98)) {
 			margin: 0px 0px 0px 0px;
 		}
 	}
 	&__pair-5 {
 		height: fit-content;
-		margin: 470px 0px 0px 0px;
+		margin: 595px 0px 0px 0px;
 		@media (max-width: rem(1099.98)) {
 			margin: 10px 0px 0px 0px;
 		}
@@ -308,7 +311,7 @@
 	}
 	&__pair-7 {
 		height: fit-content;
-		margin: 90px 0px 0px 0px;
+		margin: 115px 0px 0px 0px;
 		@media (max-width: rem(1099.98)) {
 			margin: 10px 0px 0px 0px;
 		}
@@ -329,7 +332,7 @@
 	&__line-block {
 		display: grid;
 		grid-template-columns: rem(40);
-		grid-template-rows: rem(80) rem(180) rem(80);
+		grid-template-rows: rem(100) rem(240) rem(100);
 	}
 	&__line-block-1 {
 		display: grid;
@@ -339,12 +342,12 @@
 	&__line-block-2 {
 		display: grid;
 		grid-template-columns: rem(40);
-		grid-template-rows: rem(170) rem(360) rem(170);
+		grid-template-rows: rem(230) rem(440) rem(230);
 	}
 	&__line-block-3 {
 		display: grid;
 		grid-template-columns: rem(40);
-		grid-template-rows: rem(350) rem(720) rem(350);
+		grid-template-rows: rem(450) rem(920) rem(450);
 	}
 	&__line-block-4 {
 		display: grid;
@@ -354,22 +357,22 @@
 
 	// = LINE-BOX = //
 	&__line-box-up {
-		border-bottom: rem(5) solid $color-base-1;
+		border-bottom: rem(5) solid $color-base-4;
 	}
 	&__line-box-center {
-		border-right: rem(5) solid $color-base-1;
+		border-right: rem(5) solid $color-base-4;
 	}
 	&__line-box-down {
-		border-top: rem(5) solid $color-base-1;
+		border-top: rem(5) solid $color-base-4;
 	}
 	// = WHITE - LINE = //
-	&__line-box-up-w {
-		border-bottom: rem(5) solid $white;
-	}
-	&__line-box-center-w {
-		border-right: rem(5) solid $white;
-	}
-	&__line-box-down-w {
-		border-top: rem(5) solid $white;
-	}
+	// &__line-box-up-w {
+	// 	border-bottom: rem(5) solid $white;
+	// }
+	// &__line-box-center-w {
+	// 	border-right: rem(5) solid $white;
+	// }
+	// &__line-box-down-w {
+	// 	border-top: rem(5) solid $white;
+	// }
 }

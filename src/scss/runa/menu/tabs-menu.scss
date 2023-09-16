@@ -16,12 +16,20 @@
 		justify-content: center;
 		align-items: center;
 		//gap: rem(3);
+		@media (max-width: rem(767.98)) {
+			//justify-content: start;
+			padding: 0px 10px 0px 10px;
+		}
 		@media (max-width: rem(599.98)) {
 			justify-content: start;
+			//padding: 0px 10px 0px 10px;
 		}
 	}
 	&__tabs-nav::-webkit-scrollbar {
-		display: none;
+		//margin: 20px 0px 0px 0px;
+		//padding: 20px 0px 0px 0px;
+		//background-color: $color-base-1;
+		//display: none;
 	}
 	&__tabs-mini-nav {
 		background-color: $white;
@@ -44,7 +52,7 @@
 	// = TABS TITLE = //
 	&__tabs-title {
 		padding: 26px 24px 16px 24px;
-		@include adaptiveValue("font-size", 20, 16, 1600, 768, 1);
+		@include adaptiveValue("font-size", 24, 20, 1600, 768, 1);
 		font-weight: 700;
 		color: $color-base-5;
 		background-color: $mainColor;
@@ -57,7 +65,7 @@
 		transition: all 0.5s ease 0s;
 		@media (max-width: rem(767.98)) {
 			padding: 22px 20px 12px 20px;
-			@include adaptiveValue("font-size", 16, 14, 767.98, 600, 1);
+			@include adaptiveValue("font-size", 20, 16, 767.98, 600, 1);
 			//min-width: rem(140);
 			flex-basis: rem(182);
 			width: fit-content;
@@ -67,7 +75,7 @@
 			&:hover {
 				color: $color-base-5;
 				//background-color: $color-base-7;
-				border-bottom: rem(10) solid $color-base-1;
+				border-bottom: rem(10) solid $color-base-7;
 				transition: all 0.5s ease 0s;
 			}
 		}

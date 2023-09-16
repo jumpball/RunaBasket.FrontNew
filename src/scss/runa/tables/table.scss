@@ -167,12 +167,13 @@
 		width: 100%;
 	}
 	&__card table a {
-		color: $blue;
+		color: $color-base-4;
 		text-decoration: underline;
 	}
 
 	&__card table td {
-		background: #fff;
+		background-color: $color-base-6;
+		color: $white;
 		padding: 8px;
 		text-align: center;
 		vertical-align: middle;
@@ -184,10 +185,14 @@
 		min-width: 3.4375rem;
 	}
 	&__card table tbody tr:hover td {
-		background-color: #abafb3;
-		color: $white;
+		background-color: $color-base-5;
+		color: $mainColor;
 		border-top: none;
 		border-bottom: none;
+	}
+
+	&__card table tbody tr:hover a {
+		color: $color-base-2;
 	}
 
 	// = BLOCK / TEXT = //
