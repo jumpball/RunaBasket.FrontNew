@@ -17,6 +17,18 @@
 		}
 	}
 
+	&__nav-out-tab {
+		margin: 30px 0px 20px 0px;
+		padding: 10px 16px 20px 16px;
+		background-color: $color-base-7;
+		border-radius: rem(10);
+		@media (max-width: rem(767.98)) {
+			margin: 0px 0px 0px 0px;
+			padding: 10px 0px 20px 0px;
+			background-color: $mainColor;
+		}
+	}
+
 	// === nav-select FORM === //
 	&__form-2-box {
 		display: grid;
@@ -46,12 +58,16 @@
 	&__form-4-box {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: auto;
 		gap: rem(20);
 		align-items: flex-start;
 		@media (max-width: rem(991.98)) {
 			gap: rem(10);
 		}
-		@media (max-width: rem(767.98)) {
+		@media (max-width: rem(849.98)) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: rem(499.98)) {
 			grid-template-columns: 1fr;
 			gap: rem(4);
 		}
