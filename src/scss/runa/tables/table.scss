@@ -352,7 +352,7 @@
 		align-items: center;
 		-ms-flex-pack: distribute;
 		justify-content: space-around;
-		gap: 0.1875rem;
+		gap: rem(5);
 	}
 	&__icon-item {
 		width: 1.1875rem;
@@ -368,10 +368,10 @@
 		border-radius: 100%;
 	}
 	&__circle-l {
-		background-color: #8b2231;
+		background-color: $color-base-5;
 	}
 	&__circle-w {
-		background-color: #0f524d;
+		background-color: $color-base-4;
 	}
 
 	&__th-colspan {
@@ -444,7 +444,7 @@
 	}
 	td.home-team a {
 		font-weight: 900;
-		color: #0f524d;
+		color: $color-base-4;
 	}
 	tfoot tr:hover td {
 		background-color: #3a3a3a;

@@ -3,16 +3,17 @@
 	// = BODY = //
 	&__body {
 		position: relative;
+		overflow: hidden;
 		min-width: rem(270);
 		width: 100%;
 		height: rem(180);
-		border-radius: rem(3);
-		background: $white;
-		border: 1px solid $mainColor;
+		border-radius: rem(10);
+		background-color: $color-base-7;
+		border: 1px solid $color-base-4;
 		transition: transform all 0.5s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
-				box-shadow: $shadow-1;
+				//box-shadow: $shadow-1;
 				transition: transform all 0.5s ease 0s;
 			}
 		}
@@ -22,7 +23,7 @@
 			display: block;
 			width: 100%;
 			height: 50px;
-			background: $mainColor;
+			background: $color-base-6;
 			border-radius: rem(3) rem(3) 0px 0px;
 			transition: all 0.5s ease 0s;
 		}
@@ -30,7 +31,7 @@
 		&:hover {
 			/*%% Card on hover %%*/
 			&:before {
-				background: $color-base-1;
+				//background: $color-base-1;
 				transition: transform all 0.5s ease 0s;
 			}
 			.game-card-pl__front {
@@ -47,7 +48,7 @@
 	&__back {
 		width: 100%;
 		height: 100%;
-		border-radius: rem(3);
+		border-radius: rem(10);
 		overflow: hidden;
 		backface-visibility: hidden;
 		position: absolute;
@@ -58,7 +59,7 @@
 	}
 	&__back {
 		transform: perspective(600px) rotateY(180deg);
-		background-color: $white;
+		background-color: $color-base-7;
 	}
 	&__back-body {
 		padding: 10px 16px 10px 16px;
@@ -102,7 +103,7 @@
 		background: $white;
 	}
 	&__team-logo img {
-		padding: rem(2);
+		padding: rem(3);
 	}
 
 	// = CONTENT = //
@@ -110,32 +111,33 @@
 		margin-top: rem(10);
 		text-align: center;
 		padding: 0px 10px;
-		color: $mainColor;
+		color: $color-base-5;
 		transition: margin-top 0.5s ease;
 		p {
 			margin: 4px 0px 0px 0px;
 			font-size: 12px;
 			line-height: 14px;
-			color: $mainColor;
+			color: $color-base-5;
 		}
 	}
 
 	// = TITLE = //
 	&__title {
 		margin-bottom: 0;
-		color: $mainColor;
+		color: $white;
 		@include adaptiveValue("font-size", 18, 14, 399.98, 340, 1);
 		padding: 0px 0px 0px 5px;
 		line-height: rem(40);
 		text-transform: uppercase;
 		font-weight: 900;
+		letter-spacing: rem(1);
 		text-align: left;
 	}
 
 	// = SCORE = //
 	&__team-score {
 		margin-bottom: 0;
-		color: $mainColor;
+		color: $white;
 		text-align: end;
 		min-width: rem(40);
 		font-size: 22px;
@@ -148,7 +150,7 @@
 	&__bage {
 		position: absolute;
 		padding: 10px 10px 0px 10px;
-		color: $white;
+		color: $color-base-5;
 		width: 100%;
 		top: 0;
 		left: 0;

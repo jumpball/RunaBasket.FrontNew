@@ -1205,8 +1205,9 @@
 									</div>
 									<!-- STANDING TABLES -->
 									@@include('html/runa/_table-standing.htm',{})
-
-									@@include('html/runa/_playoff-16.htm',{})
+									<div class="playoff-box">
+										@@include('html/runa/_playoff-16.htm',{})
+									</div>
 								</div>
 								<div class="tabs-hor-menu__tabs-body">
 									<div class="section__container">
@@ -1260,7 +1261,19 @@
 
 			</section>
 
-
+			<!-- PERSON PUBLICATION SELECTOR -->
+			<section class="site-bg section-offset">
+				<div class="section__container">
+					<div class="title-block">
+						<h2 class="section-title section-title-h1 section-title-center section-title-white element-animation">
+							О Команде</h2>
+					</div>
+					<!-- === SLIDER - PUBLICATION CARDS === -->
+					<div class="pulications-slider__box">
+						@@include('html/runa/_net-to-slider.htm',{})
+					</div>
+				</div>
+			</section>
 			<!-- PARTNERS -->
 			<section class="site-bg section-offset">
 				<div class="section__container">
