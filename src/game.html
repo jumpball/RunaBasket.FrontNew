@@ -17,8 +17,8 @@
 			<div class="section__container">
 				<ul class="page__breadcrumb">
 					<li><a href="#">Главная</a></li>
-					<li><a href="#">календарь</a></li>
-					<li><a href="#">суперлига</a></li>
+					<li><a href="#">Матч-центр</a></li>
+					<li><a href="#">Единая Лига ВТБ</a></li>
 					<li>игра 162489</li>
 				</ul>
 			</div>
@@ -36,10 +36,10 @@
 									<img src="@img/RUNA/LOGO/league-logo/vtb-logo.png" alt="">
 								</div>
 								<div class="vertical-spollers__desc">
-									<h3 class="vertical-spollers__desc-title">Матч-центр</h3>
+									<h3 class="vertical-spollers__desc-title">Единая Лига ВТБ</h3>
 									<div class="vertical-spollers__desc-subtitle">
-										<span>суперлига</span>
-										<span>мужчины</span>
+										<span>Матч-центр</span>
+
 									</div>
 								</div>
 							</div>
@@ -49,310 +49,203 @@
 
 						</button>
 						<div class="vertical-spollers__body">
-							<!-- MATCH CENTER / LEAGUE CALENDAR -->
-							<!-- DAY SLIDER / CALENDAR -->
-							<div class="day-slider__row">
-								<div class="day-slider__block">
-									<div class="day-slider__navigation">
-										<div class="day-slider__nav-prev -ibg">
-											<img src="@img/RUNA/icons/arrow-mini-left-green.svg" alt="стрелка назад">
-										</div>
-										<div class="day-slider__nav-next -ibg">
-											<img src="@img/RUNA/icons/arrow-mini-right-green.svg" alt="стрелка вперед">
-										</div>
-									</div>
-									<div class="day-slider__box">
-										<div class="day-slider">
-											<div class="swiper-wrapper day-slider__wrapper">
-												<div class="day-slider__item swiper-slide">
-													<div class="day-slider__subtitle">февраль</div>
-													<div class="day-slider__title">26</div>
-													<div class="day-slider__info">вс<span>вс</span></div>
-												</div>
-												<div class="day-slider__item swiper-slide">
-													<div class="day-slider__subtitle">февраль</div>
-													<div class="day-slider__title">27</div>
-													<div class="day-slider__info">пн<span>пн</span></div>
-												</div>
-												<div class="day-slider__item swiper-slide">
-													<div class="day-slider__subtitle">февраль</div>
-													<div class="day-slider__title">28</div>
-													<div class="day-slider__info">вт<span>вт</span></div>
-												</div>
-												<div class="day-slider__item swiper-slide">
-													<div class="day-slider__subtitle">март</div>
-													<div class="day-slider__title">01</div>
-													<div class="day-slider__info">ср<span>ср</span></div>
-												</div>
-												<div class="day-slider__item swiper-slide">
-													<div class="day-slider__subtitle">март</div>
-													<div class="day-slider__title">02</div>
-													<div class="day-slider__info">чт<span>чт</span></div>
-												</div>
-												<div class="day-slider__item swiper-slide">
-													<div class="day-slider__subtitle">март</div>
-													<div class="day-slider__title">03</div>
-													<div class="day-slider__info">пт<span>пт</span></div>
-												</div>
-												<div class="day-slider__item swiper-slide">
-													<div class="day-slider__subtitle">март</div>
-													<div class="day-slider__title">04</div>
-													<div class="day-slider__info">сб<span>сб</span></div>
-												</div>
-											</div>
+							<!-- MONTHS SLIDER -->
 
-											<!-- <div class="day-slider__pagination swiper-pagination"></div> -->
+							<div class="month-slider__block-on-spoller">
+
+
+								<div class="month-slider__box month-slider__box-1">
+									<div class="month-slider">
+										<div class="swiper-wrapper month-slider__wrapper">
+											<div class="month-slider__item swiper-slide">
+												<div class="month-slider__title">январь 2023</div>
+											</div>
+											<div class="month-slider__item swiper-slide">
+												<div class="month-slider__title">февраль 2023</div>
+											</div>
+											<div class="month-slider__item swiper-slide">
+												<div class="month-slider__title">март 2023</div>
+											</div>
 										</div>
+										<div class="month-slider__navigation">
+											<div class="month-slider__nav-prev -ibg">
+												<img src="@img/RUNA/icons/arrow-wh-l.svg" alt="стрелка назад">
+											</div>
+											<div class="month-slider__nav-next -ibg">
+												<img src="@img/RUNA/icons/arrow-wh-r.svg" alt="стрелка вперед">
+											</div>
+										</div>
+										<!-- <div class="month-slider__pagination swiper-pagination"></div> -->
 									</div>
 								</div>
 							</div>
-							<!-- GAME SLIDER / LEAGUE -->
-							<div class="calendar-slider__box">
-								<div class="calendar-slider">
-									<div class="swiper-wrapper calendar-slider__wrapper">
-
-										<div class="calendar-slider__item swiper-slide">
-											<div class="game-mini-card">
-												<div class="game-mini-card__body">
-													<div class="game-mini-card__header">
-														<h3>26 <span>фев</span></h3>
-														<h3>16:00</h3>
-													</div>
-
-													<div class="game-mini-card__tournament">
-														<div class="game-mini-card__tournament-logo -ibg">
-															<img data-src="@img/RUNA/LOGO/league-logo/vtb-logo.png" alt="">
+							<!-- GAME LEAGUE TABLE -->
+							<!-- TABLE - TEAM SEASON CALENDAR -->
+							<div class="table__box-club">
+								<div class="table__wrapper-dark">
+									<div class="table__block">
+										<table>
+											<thead>
+												<tr>
+													<th class="th-thead">дата</th>
+													<th>турнир</th>
+													<th>время</th>
+													<th colspan="2">дома</th>
+													<th>игра</th>
+													<th colspan="2">в гостях</th>
+													<th>билеты</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="td-tbody3">24.01.23</td>
+													<td class="table__body-col-logo">
+														<div class="table__image -ibg">
+															<img nophotoplaceholder="" alt=""
+																src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
 														</div>
-														<span>суперлига</span>
-													</div>
-													<div class="game-mini-card__teams">
-														<div class="game-mini-card__team-row">
-															<div class="game-mini-card__team-name">
-																<div class="game-mini-card__team-logo -ibg">
-																	<img data-src="@img/RUNA/LOGO/team-logo/cska.png" alt="">
-																</div>
-																<a href="#" class="game-mini-card__title">ЦСКА-2</a>
-															</div>
-															<h3 class="game-mini-card__team-score">103</h3>
+													</td>
+													<td>19:00</td>
+													<td>
+														<a href="#">Руна</a>
+													</td>
+													<td class="table__body-col-logo">
+														<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																src="@img/RUNA/LOGO/team-logo/runa.png">
 														</div>
-														<div class="game-mini-card__team-row">
-															<div class="game-mini-card__team-name">
-																<div class="game-mini-card__team-logo -ibg">
-																	<img data-src="@img/RUNA/LOGO/team-logo/loko.png" alt="">
-																</div>
-																<a href="#" class="game-mini-card__title">СШОР Локомотив-Кубань</a>
-															</div>
-															<h3 class="game-mini-card__team-score">86</h3>
+													</td>
+													<td><a href="#">91-78</a></td>
+													<td class="table__body-col-logo">
+														<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																src="@img/RUNA/LOGO/team-logo/uralmash.png">
 														</div>
-													</div>
-													<div class="game-mini-card__content">
-														<div class="game-mini-card__gym">
-															<div class="game-mini-card__icon -ibg">
-																<img data-src="@img/RUNA/icons/icon-home.svg" alt="">
-															</div>
-															<p>ДС "Динамо" Москва</p>
+													</td>
+													<td><a href="#">Уралмаш</a></td>
+													<td>
+														<button type="button"
+															class="base-button calendar-button mini-button black-button">статистика</button>
+													</td>
+												</tr>
+												<tr>
+													<td class="td-tbody3"> 29.01.23</td>
+													<td class="table__body-col-logo">
+														<div class="table__image -ibg">
+															<img nophotoplaceholder="" alt=""
+																src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
 														</div>
-														<button class="base-button average-button black-button">статистика</button>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="calendar-slider__item swiper-slide">
-											<div class="game-mini-card">
-												<div class="game-mini-card__body">
-													<div class="game-mini-card__header">
-														<h3>26 <span>фев</span></h3>
-														<h3>18:30</h3>
-													</div>
-
-													<div class="game-mini-card__tournament">
-														<div class="game-mini-card__tournament-logo -ibg">
-															<img data-src="@img/RUNA/LOGO/league-logo/vtb-logo.png" alt="">
+													</td>
+													<td>18:30</td>
+													<td>
+														<a href="#">Руна</a>
+													</td>
+													<td class="table__body-col-logo">
+														<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																src="@img/RUNA/LOGO/team-logo/runa.png">
 														</div>
-														<span>суперлига</span>
-													</div>
-													<div class="game-mini-card__teams">
-														<div class="game-mini-card__team-row">
-															<div class="game-mini-card__team-name">
-																<div class="game-mini-card__team-logo -ibg">
-																	<img data-src="@img/RUNA/LOGO/team-logo/runa.png" alt="">
-																</div>
-																<a href="#" class="game-mini-card__title">Руна</a>
-															</div>
-															<h3 class="game-mini-card__team-score">38</h3>
+													</td>
+													<td><a href="#">82-69</a></td>
+													<td class="table__body-col-logo">
+														<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																src="@img/RUNA/LOGO/team-logo/ml_vtb-logo/avtodor.png">
 														</div>
-														<div class="game-mini-card__team-row">
-															<div class="game-mini-card__team-name">
-																<div class="game-mini-card__team-logo -ibg">
-																	<img data-src="@img/RUNA/LOGO/team-logo/uralmash.png" alt="">
-																</div>
-																<a href="#" class="game-mini-card__title">Уралмаш</a>
-															</div>
-															<h3 class="game-mini-card__team-score">29</h3>
+													</td>
+													<td><a href="#">Автодор</a></td>
+													<td>
+														<button type="button"
+															class="base-button calendar-button mini-button black-button">статистика</button>
+													</td>
+												</tr>
+												<tr>
+													<td class="td-tbody3">03.02.23</td>
+													<td class="table__body-col-logo">
+														<div class="table__image -ibg">
+															<img nophotoplaceholder="" alt=""
+																src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
 														</div>
-													</div>
-													<div class="game-mini-card__content">
-														<div class="game-mini-card__gym">
-															<div class="game-mini-card__icon -ibg">
-																<img data-src="@img/RUNA/icons/icon-home.svg" alt="">
-															</div>
-															<p>ДС "Динамо" Москва</p>
+													</td>
+													<td>16:00</td>
+													<td>
+														<a href="#">ЦСКА</a>
+													</td>
+													<td class="table__body-col-logo">
+														<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																src="@img/RUNA/LOGO/team-logo/cska.png">
 														</div>
-														<button class="base-button average-button red-button">онлайн</button>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="calendar-slider__item swiper-slide">
-											<div class="game-mini-card">
-												<div class="game-mini-card__body">
-													<div class="game-mini-card__header">
-														<h3>26 <span>фев</span></h3>
-														<h3>18:30</h3>
-													</div>
-
-													<div class="game-mini-card__tournament">
-														<div class="game-mini-card__tournament-logo -ibg">
-															<img data-src="@img/RUNA/LOGO/league-logo/vtb-logo.png" alt="">
+													</td>
+													<td><a href="#">36-30</a></td>
+													<td class="table__body-col-logo">
+														<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																src="@img/RUNA/LOGO/team-logo/runa.png">
 														</div>
-														<span>суперлига</span>
-													</div>
-													<div class="game-mini-card__teams">
-														<div class="game-mini-card__team-row">
-															<div class="game-mini-card__team-name">
-																<div class="game-mini-card__team-logo -ibg">
-																	<img data-src="@img/RUNA/LOGO/team-logo/novosib.png" alt="">
-																</div>
-																<a href="#" class="game-mini-card__title">БК Новосибирск</a>
-															</div>
-															<h3 class="game-mini-card__team-score">0</h3>
+													</td>
+													<td><a href="#">Руна</a></td>
+													<td>
+														<button type="button"
+															class="base-button calendar-button mini-button purple-button">смотреть</button>
+													</td>
+												</tr>
+												<tr>
+													<td class="td-tbody3">18.02.23</td>
+													<td class="table__body-col-logo">
+														<div class="table__image -ibg">
+															<img nophotoplaceholder="" alt=""
+																src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
 														</div>
-														<div class="game-mini-card__team-row">
-															<div class="game-mini-card__team-name">
-																<div class="game-mini-card__team-logo -ibg">
-																	<img data-src="@img/RUNA/LOGO/team-logo/kupol.png" alt="">
-																</div>
-																<a href="#" class="game-mini-card__title">Купол-Родники</a>
-															</div>
-															<h3 class="game-mini-card__team-score">0</h3>
+													</td>
+													<td>18:00</td>
+													<td>
+														<a href="#">Руна</a>
+													</td>
+													<td class="table__body-col-logo">
+														<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																src="@img/RUNA/LOGO/team-logo/runa.png">
 														</div>
-
-													</div>
-													<div class="game-mini-card__content">
-														<div class="game-mini-card__gym">
-															<div class="game-mini-card__icon -ibg">
-																<img data-src="@img/RUNA/icons/icon-plane.svg" alt="">
-															</div>
-															<p>СК "Север" Новосибирск</p>
+													</td>
+													<td><a href="#">0-0</a></td>
+													<td class="table__body-col-logo">
+														<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																src="@img/RUNA/LOGO/team-logo/loko.png">
 														</div>
-														<button class="base-button average-button green-button">превью</button>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="calendar-slider__item swiper-slide">
-											<div class="game-mini-card">
-												<div class="game-mini-card__body">
-													<div class="game-mini-card__header">
-														<h3>26 <span>фев</span></h3>
-														<h3>19:30</h3>
-													</div>
-
-													<div class="game-mini-card__tournament">
-														<div class="game-mini-card__tournament-logo -ibg">
-															<img data-src="@img/RUNA/LOGO/league-logo/vtb-logo.png" alt="">
+													</td>
+													<td><a href="#">Локомотив-Кубань</a></td>
+													<td>
+														<button type="button"
+															class="base-button calendar-button mini-button green-button">купить
+															билет</button>
+													</td>
+												</tr>
+												<tr>
+													<td class="td-tbody3">20.02.23</td>
+													<td class="table__body-col-logo">
+														<div class="table__image -ibg">
+															<img nophotoplaceholder="" alt=""
+																src="@img/RUNA/LOGO/league-logo/vtb-logo.png">
 														</div>
-														<span>суперлига</span>
-													</div>
-													<div class="game-mini-card__teams">
-														<div class="game-mini-card__team-row">
-															<div class="game-mini-card__team-name">
-																<div class="game-mini-card__team-logo -ibg">
-																	<img data-src="@img/RUNA/LOGO/team-logo/khimki.png" alt="">
-																</div>
-																<a href="#" class="game-mini-card__title">Химки</a>
-															</div>
-															<h3 class="game-mini-card__team-score">0</h3>
+													</td>
+													<td>12:00</td>
+													<td>
+														<a href="#">Уникс</a>
+													</td>
+													<td class="table__body-col-logo">
+														<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																src="@img/RUNA/LOGO/team-logo/ml_vtb-logo/unics.png">
 														</div>
-														<div class="game-mini-card__team-row">
-															<div class="game-mini-card__team-name">
-																<div class="game-mini-card__team-logo -ibg">
-																	<img data-src="@img/RUNA/LOGO/team-logo/dinamo.png" alt="">
-																</div>
-																<a href="#" class="game-mini-card__title">Динамо Владивосток</a>
-															</div>
-															<h3 class="game-mini-card__team-score">0</h3>
+													</td>
+													<td><a href="#">0-0</a></td>
+													<td class="table__body-col-logo">
+														<div class="table__image -ibg"><img nophotoplaceholder="" alt=""
+																src="@img/RUNA/LOGO/team-logo/runa.png">
 														</div>
-													</div>
-													<div class="game-mini-card__content">
-														<div class="game-mini-card__gym">
-															<div class="game-mini-card__icon -ibg">
-																<img data-src="@img/RUNA/icons/icon-plane.svg" alt="">
-															</div>
-															<p>"Баскетбольный Центр МО" Химки</p>
-														</div>
-														<button class="base-button average-button green-button">превью</button>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="calendar-slider__item swiper-slide">
-											<div class="game-mini-card">
-												<div class="game-mini-card__body">
-													<div class="game-mini-card__header">
-														<h3>26 <span>фев</span></h3>
-														<h3>20:00</h3>
-													</div>
-
-													<div class="game-mini-card__tournament">
-														<div class="game-mini-card__tournament-logo -ibg">
-															<img data-src="@img/RUNA/LOGO/league-logo/vtb-logo.png" alt="">
-														</div>
-														<span>суперлига</span>
-													</div>
-													<div class="game-mini-card__teams">
-														<div class="game-mini-card__team-row">
-															<div class="game-mini-card__team-name">
-																<div class="game-mini-card__team-logo -ibg">
-																	<img data-src="@img/RUNA/LOGO/team-logo/barnaul.png" alt="">
-																</div>
-																<a href="#" class="game-mini-card__title">Барнаул</a>
-															</div>
-															<h3 class="game-mini-card__team-score">0</h3>
-														</div>
-														<div class="game-mini-card__team-row">
-															<div class="game-mini-card__team-name">
-																<div class="game-mini-card__team-logo -ibg">
-																	<img data-src="@img/RUNA/LOGO/team-logo/novosib.png" alt="">
-																</div>
-																<a href="#" class="game-mini-card__title">БК Новосибирск</a>
-															</div>
-															<h3 class="game-mini-card__team-score">0</h3>
-														</div>
-													</div>
-													<div class="game-mini-card__content">
-														<div class="game-mini-card__gym">
-															<div class="game-mini-card__icon -ibg">
-																<img data-src="@img/RUNA/icons/icon-home.svg" alt="">
-															</div>
-															<p>СК "Олимпиец" Барнаул</p>
-														</div>
-														<button class="base-button average-button green-button">превью</button>
-													</div>
-												</div>
-											</div>
-										</div>
+													</td>
+													<td><a href="#">Руна</a></td>
+													<td>
+														<button type="button"
+															class="base-button calendar-button mini-button white-button">превью</button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
 									</div>
-									<div class="calendar-slider__pagination swiper-pagination"></div>
-									<!-- <div class="calendar-slider__navigation">
-											<div class="calendar-slider__nav-prev -ibg">
-												<img src="@img/RUNA/icons/axe-arrow-left.svg" alt="стрелка назад">
-											</div>
-											<div class="calendar-slider__nav-next -ibg">
-												<img src="@img/RUNA/icons/axe-arrow-right.svg" alt="стрелка вперед">
-											</div>
-										</div> -->
 								</div>
 							</div>
 
@@ -427,9 +320,10 @@
 							<!-- SPOLLERS ITEM -->
 							<div class="button-spollers__item">
 								<!-- SPOLLERS BUTTON -->
-								<button type="button" data-spoller class="spollers-button green-button">
+								<!-- <button type="button" data-spoller class="spollers-button green-button">
 									видео
-								</button>
+								</button> -->
+								<button type="button" data-spoller class="base-button cards-button green-button">видео</button>
 								<!-- SPOLLERS BODY -->
 								<div class="button-spollers__body">
 									<!-- GAME VIDEO / SPOLLERS BODY -->
@@ -465,22 +359,15 @@
 								<div class="tabs-hor-menu__tabs-body">
 									<!-- TEAMS LEADERS -->
 									<div class="title-block">
-										<h2 class="section-title section-title-h2 section-title-black element-animation">лидеры
-										</h2>
-										<div class="team-lead-menu-slider__navigation">
-											<div class="team-lead-menu-slider__nav-prev -ibg">
-												<img src="@img/RUNA/icons/arrow-mini-left-green.svg" alt="">
-											</div>
-											<div class="team-lead-menu-slider__nav-next -ibg">
-												<img src="@img/RUNA/icons/arrow-mini-right-green.svg" alt="">
-											</div>
-										</div>
+										<!-- <h2
+											class="section-title section-title-h1 section-title-white section-title-center element-animation">
+											лидеры</h2> -->
 									</div>
 									@@include('html/runa/_teams-leaders-selector.htm',{})
 									<div class="title-block">
-										<h2 class="section-title section-title-h2 section-title-black element-animation">
-											противостояние
-										</h2>
+										<h2
+											class="section-title section-title-h1 section-title-white section-title-center element-animation">
+											противостояние</h2>
 										<!-- <div class="team-lead-menu-slider__navigation">
 											<div class="team-lead-menu-slider__nav-prev -ibg">
 												<img src="@img/RUNA/icons/arrow-mini-left-green.svg" alt="">
@@ -515,96 +402,99 @@
 								<!-- TABS BOX SCORE -->
 								<div class="tabs-hor-menu__tabs-body">
 									<!-- TEAM COMPARE BOX SCORE / TABLE -->
-									<div class="table__block table__wrapper-dark">
-										<table>
-											<thead>
-												<tr>
-													<th rowspan="2" class="th-thead2">
-														<div class="table__head-image -ibg">
-															<img src="@img/RUNA/LOGO/league-logo/vtb-logo.png" alt="Логотип турнира">
-														</div>
-													</th>
-													<th rowspan="2" class="text-bottom">команда</th>
-													<th rowspan="2" class="text-bottom">очки</th>
-													<th colspan="8" class="table__th-colspan">броски</th>
-													<th colspan="3" class="table__th-colspan">подборы</th>
-													<th rowspan="2" class="text-bottom">гп</th>
-													<th rowspan="2" class="text-bottom">пх</th>
-													<th rowspan="2" class="text-bottom">пт</th>
-													<th rowspan="2" class="text-bottom">бш</th>
-													<th rowspan="2" class="text-bottom">ф</th>
-												</tr>
-												<tr>
-													<th>2-х</th>
-													<th>%</th>
-													<th>3-х</th>
-													<th>%</th>
-													<th>с игры</th>
-													<th>%</th>
-													<th>шб</th>
-													<th>%</th>
-													<th>сщ</th>
-													<th>чщ</th>
-													<th>вс</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td class="td-tbody1">
-														<div class="table__image -ibg">
-															<img nophotoplaceholder="" src="@img/RUNA/LOGO/team-logo/runa.png">
-														</div>
-													</td>
-													<td>
-														<a href="#">Руна</a>
-													</td>
-													<td> 81 </td>
-													<td> 13/27 </td>
-													<td> 48.1% </td>
-													<td> 14/44 </td>
-													<td> 31.8% </td>
-													<td> 27/71 </td>
-													<td> 38.0% </td>
-													<td> 13/18 </td>
-													<td> 72.2% </td>
-													<td> 24 </td>
-													<td> 18 </td>
-													<td> 42 </td>
-													<td> 16 </td>
-													<td> 10 </td>
-													<td> 15 </td>
-													<td> 0 </td>
-													<td> 10 </td>
-												</tr>
-												<tr>
-													<td class="td-tbody1">
-														<div class="table__image -ibg">
-															<img nophotoplaceholder="" src="@img/RUNA/LOGO/team-logo/uralmash.png">
-														</div>
-													</td>
-													<td>
-														<a href="#">Уралмаш</a>
-													</td>
-													<td> 79 </td>
-													<td> 25/47 </td>
-													<td> 53.2% </td>
-													<td> 8/22 </td>
-													<td> 36.4% </td>
-													<td> 33/69 </td>
-													<td> 47.8% </td>
-													<td> 5/5 </td>
-													<td> 100.0% </td>
-													<td> 26 </td>
-													<td> 10 </td>
-													<td> 36 </td>
-													<td> 19 </td>
-													<td> 9 </td>
-													<td> 15 </td>
-													<td> 3 </td>
-													<td> 21 </td>
-												</tr>
-											</tbody>
-										</table>
+									<div class="table__wrapper-dark">
+										<div class="table__block">
+											<table>
+												<thead>
+													<tr>
+														<th rowspan="2" class="th-thead2">
+															<div class="table__head-image -ibg">
+																<img src="@img/RUNA/LOGO/league-logo/vtb-logo.png"
+																	alt="Логотип турнира">
+															</div>
+														</th>
+														<th rowspan="2" class="text-bottom">команда</th>
+														<th rowspan="2" class="text-bottom">очки</th>
+														<th colspan="8" class="table__th-colspan">броски</th>
+														<th colspan="3" class="table__th-colspan">подборы</th>
+														<th rowspan="2" class="text-bottom">гп</th>
+														<th rowspan="2" class="text-bottom">пх</th>
+														<th rowspan="2" class="text-bottom">пт</th>
+														<th rowspan="2" class="text-bottom">бш</th>
+														<th rowspan="2" class="text-bottom">ф</th>
+													</tr>
+													<tr>
+														<th>2-х</th>
+														<th>%</th>
+														<th>3-х</th>
+														<th>%</th>
+														<th>с игры</th>
+														<th>%</th>
+														<th>шб</th>
+														<th>%</th>
+														<th>сщ</th>
+														<th>чщ</th>
+														<th>вс</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="td-tbody1">
+															<div class="table__image -ibg">
+																<img nophotoplaceholder="" src="@img/RUNA/LOGO/team-logo/runa.png">
+															</div>
+														</td>
+														<td>
+															<a href="#">Руна</a>
+														</td>
+														<td> 81 </td>
+														<td> 13/27 </td>
+														<td> 48.1% </td>
+														<td> 14/44 </td>
+														<td> 31.8% </td>
+														<td> 27/71 </td>
+														<td> 38.0% </td>
+														<td> 13/18 </td>
+														<td> 72.2% </td>
+														<td> 24 </td>
+														<td> 18 </td>
+														<td> 42 </td>
+														<td> 16 </td>
+														<td> 10 </td>
+														<td> 15 </td>
+														<td> 0 </td>
+														<td> 10 </td>
+													</tr>
+													<tr>
+														<td class="td-tbody1">
+															<div class="table__image -ibg">
+																<img nophotoplaceholder="" src="@img/RUNA/LOGO/team-logo/uralmash.png">
+															</div>
+														</td>
+														<td>
+															<a href="#">Уралмаш</a>
+														</td>
+														<td> 79 </td>
+														<td> 25/47 </td>
+														<td> 53.2% </td>
+														<td> 8/22 </td>
+														<td> 36.4% </td>
+														<td> 33/69 </td>
+														<td> 47.8% </td>
+														<td> 5/5 </td>
+														<td> 100.0% </td>
+														<td> 26 </td>
+														<td> 10 </td>
+														<td> 36 </td>
+														<td> 19 </td>
+														<td> 9 </td>
+														<td> 15 </td>
+														<td> 3 </td>
+														<td> 21 </td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
 									</div>
 									<!-- BOX SCORE / TABS -->
 									<div data-tabs class="tabs-logo-menu">
@@ -627,771 +517,775 @@
 										<div data-tabs-body class="tabs-logo-menu__tabs-content">
 											<div class="tabs-logo-menu__tabs-body">
 												<!-- BOX SCORE / TEAM 1 -->
-												<div class="table__block table__wrapper-dark">
-													<table class="table">
-														<thead>
-															<tr>
-																<th rowspan="2" class="th-thead2 sortable"> № </th>
-																<th rowspan="2" class="th-thead2-1">
-																	<div class="table__head-image -ibg">
-																		<img alt="" src="@img/RUNA/LOGO/team-logo/runa.png">
-																	</div>
-																</th>
-																<th rowspan="2" class="text-bottom sortable">игрок</th>
-																<th rowspan="2" class="text-bottom sortable">мин</th>
-																<th rowspan="2" class="text-bottom sortable">очки</th>
-																<th colspan="4" class="table__th-colspan not-sort">броски</th>
-																<th colspan="3" class="table__th-colspan not-sort">подборы</th>
-																<th rowspan="2" class="text-bottom sortable">гп</th>
-																<th rowspan="2" class="text-bottom sortable">пх</th>
-																<th rowspan="2" class="text-bottom sortable">пт</th>
-																<th rowspan="2" class="text-bottom sortable">бш</th>
-																<th rowspan="2" class="text-bottom sortable">ф</th>
-																<th rowspan="2" class="text-bottom sortable">фс</th>
-																<th rowspan="2" class="text-bottom sortable">+/-</th>
-																<th rowspan="2" class="text-bottom sortable">кпи</th>
+												<div class="table__wrapper-dark">
+													<div class="table__block">
+														<table class="table">
+															<thead>
+																<tr>
+																	<th rowspan="2" class="th-thead2 sortable"> № </th>
+																	<th rowspan="2" class="th-thead2-1">
+																		<div class="table__head-image -ibg">
+																			<img alt="" src="@img/RUNA/LOGO/team-logo/runa.png">
+																		</div>
+																	</th>
+																	<th rowspan="2" class="text-bottom sortable">игрок</th>
+																	<th rowspan="2" class="text-bottom sortable">мин</th>
+																	<th rowspan="2" class="text-bottom sortable">очки</th>
+																	<th colspan="4" class="table__th-colspan not-sort">броски</th>
+																	<th colspan="3" class="table__th-colspan not-sort">подборы</th>
+																	<th rowspan="2" class="text-bottom sortable">гп</th>
+																	<th rowspan="2" class="text-bottom sortable">пх</th>
+																	<th rowspan="2" class="text-bottom sortable">пт</th>
+																	<th rowspan="2" class="text-bottom sortable">бш</th>
+																	<th rowspan="2" class="text-bottom sortable">ф</th>
+																	<th rowspan="2" class="text-bottom sortable">фс</th>
+																	<th rowspan="2" class="text-bottom sortable">+/-</th>
+																	<th rowspan="2" class="text-bottom sortable">кпи</th>
 
-															</tr>
-															<tr>
-																<th class="sortable">2-х</th>
-																<th class="sortable">3-х</th>
-																<th class="sortable">с игры</th>
-																<th class="sortable">шб</th>
-																<th class="sortable">сщ</th>
-																<th class="sortable">чщ</th>
-																<th class="sortable">вс</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td class="td-tbody1">2</td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/2.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Ключников Федор</a>
-																</td>
-																<td> 33:00 </td>
-																<td> 34 </td>
-																<td> 4/7 </td>
-																<td> 7/17 </td>
-																<td> 11/24 </td>
-																<td> 5/7 </td>
-																<td> 3 </td>
-																<td> </td>
-																<td> 3 </td>
-																<td> 2 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> 8 </td>
-																<td> -12 </td>
-																<td> 28 </td>
+																</tr>
+																<tr>
+																	<th class="sortable">2-х</th>
+																	<th class="sortable">3-х</th>
+																	<th class="sortable">с игры</th>
+																	<th class="sortable">шб</th>
+																	<th class="sortable">сщ</th>
+																	<th class="sortable">чщ</th>
+																	<th class="sortable">вс</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td class="td-tbody1">2</td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/2.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Ключников Федор</a>
+																	</td>
+																	<td> 33:00 </td>
+																	<td> 34 </td>
+																	<td> 4/7 </td>
+																	<td> 7/17 </td>
+																	<td> 11/24 </td>
+																	<td> 5/7 </td>
+																	<td> 3 </td>
+																	<td> </td>
+																	<td> 3 </td>
+																	<td> 2 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> 8 </td>
+																	<td> -12 </td>
+																	<td> 28 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1">1</td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/1.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Заряжко Виктор</a>
-																</td>
-																<td> 29:56 </td>
-																<td> 18 </td>
-																<td> 4/5 </td>
-																<td> 3/11 </td>
-																<td> 7/16 </td>
-																<td> 1/1 </td>
-																<td> 2 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> 1 </td>
-																<td> 3 </td>
-																<td> 2 </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> 2 </td>
-																<td> 10 </td>
-																<td> 14 </td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1">1</td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/1.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Заряжко Виктор</a>
+																	</td>
+																	<td> 29:56 </td>
+																	<td> 18 </td>
+																	<td> 4/5 </td>
+																	<td> 3/11 </td>
+																	<td> 7/16 </td>
+																	<td> 1/1 </td>
+																	<td> 2 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> 1 </td>
+																	<td> 3 </td>
+																	<td> 2 </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> 2 </td>
+																	<td> 10 </td>
+																	<td> 14 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1">8</td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/8.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Комиссаров Артем</a>
-																</td>
-																<td> 14:14 </td>
-																<td> </td>
-																<td> </td>
-																<td> 0/2 </td>
-																<td> 0/2 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> 3 </td>
-																<td> </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> -3 </td>
-																<td> -1 </td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1">8</td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/8.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Комиссаров Артем</a>
+																	</td>
+																	<td> 14:14 </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> 0/2 </td>
+																	<td> 0/2 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> 3 </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> -3 </td>
+																	<td> -1 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1"> 11 </td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/3.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Комиссаров Артем</a>
-																</td>
-																<td> 32:09 </td>
-																<td> 5 </td>
-																<td> 2/5 </td>
-																<td> </td>
-																<td> 2/5 </td>
-																<td> 1/2 </td>
-																<td> 7 </td>
-																<td> 6 </td>
-																<td> 13 </td>
-																<td> 6 </td>
-																<td> 3 </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> 3 </td>
-																<td> </td>
-																<td> 23 </td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1"> 11 </td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/3.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Комиссаров Артем</a>
+																	</td>
+																	<td> 32:09 </td>
+																	<td> 5 </td>
+																	<td> 2/5 </td>
+																	<td> </td>
+																	<td> 2/5 </td>
+																	<td> 1/2 </td>
+																	<td> 7 </td>
+																	<td> 6 </td>
+																	<td> 13 </td>
+																	<td> 6 </td>
+																	<td> 3 </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> 3 </td>
+																	<td> </td>
+																	<td> 23 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1"> 13 </td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/4.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Комиссаров Артем</a>
-																</td>
-																<td> 29:35 </td>
-																<td> 10 </td>
-																<td> 3/3 </td>
-																<td> 0/2 </td>
-																<td> 3/5 </td>
-																<td> 4/4 </td>
-																<td> 4 </td>
-																<td> 4 </td>
-																<td> 8 </td>
-																<td> 5 </td>
-																<td> 1 </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> </td>
-																<td> 3 </td>
-																<td> 5 </td>
-																<td> 24 </td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1"> 13 </td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/4.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Комиссаров Артем</a>
+																	</td>
+																	<td> 29:35 </td>
+																	<td> 10 </td>
+																	<td> 3/3 </td>
+																	<td> 0/2 </td>
+																	<td> 3/5 </td>
+																	<td> 4/4 </td>
+																	<td> 4 </td>
+																	<td> 4 </td>
+																	<td> 8 </td>
+																	<td> 5 </td>
+																	<td> 1 </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> 3 </td>
+																	<td> 5 </td>
+																	<td> 24 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1"> 18 </td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/5.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Комиссаров Артем</a>
-																</td>
-																<td> 00:00 </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> 0/0 </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> 0 </td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1"> 18 </td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/5.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Комиссаров Артем</a>
+																	</td>
+																	<td> 00:00 </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> 0/0 </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> 0 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1"> 24 </td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/11.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Комиссаров Артем</a>
-																</td>
-																<td> 20:41 </td>
-																<td> 3 </td>
-																<td> 0/4 </td>
-																<td> 1/3 </td>
-																<td> 1/7 </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> 2 </td>
-																<td> 3 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> 3 </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> 3 </td>
-																<td> -2 </td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1"> 24 </td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/11.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Комиссаров Артем</a>
+																	</td>
+																	<td> 20:41 </td>
+																	<td> 3 </td>
+																	<td> 0/4 </td>
+																	<td> 1/3 </td>
+																	<td> 1/7 </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> 2 </td>
+																	<td> 3 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> 3 </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> 3 </td>
+																	<td> -2 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1"> 27 </td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/7.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Комиссаров Артем</a>
-																</td>
-																<td> 06:43 </td>
-																<td> </td>
-																<td> 0/1 </td>
-																<td> 0/1 </td>
-																<td> 0/2 </td>
-																<td> 0/2 </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> 2 </td>
-																<td> -5 </td>
-																<td> -3 </td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1"> 27 </td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/7.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Комиссаров Артем</a>
+																	</td>
+																	<td> 06:43 </td>
+																	<td> </td>
+																	<td> 0/1 </td>
+																	<td> 0/1 </td>
+																	<td> 0/2 </td>
+																	<td> 0/2 </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> 2 </td>
+																	<td> -5 </td>
+																	<td> -3 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1"> 33 </td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/9.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Комиссаров Артем</a>
-																</td>
-																<td> 11:18 </td>
-																<td> 2 </td>
-																<td> 0/2 </td>
-																<td> </td>
-																<td> 0/2 </td>
-																<td> 2/2 </td>
-																<td> 1 </td>
-																<td> 3 </td>
-																<td> 4 </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> 2 </td>
-																<td> 4 </td>
-																<td> 5 </td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1"> 33 </td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/9.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Комиссаров Артем</a>
+																	</td>
+																	<td> 11:18 </td>
+																	<td> 2 </td>
+																	<td> 0/2 </td>
+																	<td> </td>
+																	<td> 0/2 </td>
+																	<td> 2/2 </td>
+																	<td> 1 </td>
+																	<td> 3 </td>
+																	<td> 4 </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> 2 </td>
+																	<td> 4 </td>
+																	<td> 5 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1"> 34 </td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/10.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Комиссаров Артем</a>
-																</td>
-																<td> 22:24 </td>
-																<td> 9 </td>
-																<td> </td>
-																<td> 3/8 </td>
-																<td> 3/8 </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> 8 </td>
-																<td> 2 </td>
-															</tr>
-															<tr class="not-sort">
-																<td colspan="2" class="td-tbody1">Тренер</td>
-																<td>Бартунов Олег</td>
-																<td colspan="13"></td>
-																<td></td>
-																<td colspan="4"></td>
-															</tr>
-															<tr class="not-sort">
-																<td colspan="2" class="td-tbody1">Команда</td>
-																<td></td>
-																<td></td>
-																<td></td>
-																<td>13/27</td>
-																<td>14/44</td>
-																<td> 27/71 </td>
-																<td>13/18</td>
-																<td>3</td>
-																<td>3</td>
-																<td>6</td>
-																<td></td>
-																<td></td>
-																<td></td>
-																<td></td>
-																<td></td>
-																<td></td>
-																<td></td>
-																<td></td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1"> 34 </td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/10.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Комиссаров Артем</a>
+																	</td>
+																	<td> 22:24 </td>
+																	<td> 9 </td>
+																	<td> </td>
+																	<td> 3/8 </td>
+																	<td> 3/8 </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> 8 </td>
+																	<td> 2 </td>
+																</tr>
+																<tr class="not-sort">
+																	<td colspan="2" class="td-tbody1">Тренер</td>
+																	<td>Бартунов Олег</td>
+																	<td colspan="13"></td>
+																	<td></td>
+																	<td colspan="4"></td>
+																</tr>
+																<tr class="not-sort">
+																	<td colspan="2" class="td-tbody1">Команда</td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td>13/27</td>
+																	<td>14/44</td>
+																	<td> 27/71 </td>
+																	<td>13/18</td>
+																	<td>3</td>
+																	<td>3</td>
+																	<td>6</td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
 
-															</tr>
-														</tbody>
-														<tfoot class="not-sort">
-															<tr>
-																<td colspan="2" class="td-tbody1">всего</td>
-																<td></td>
-																<td> 200:00 </td>
-																<td> 81 </td>
-																<td> 48.1% </td>
-																<td> 31.8% </td>
-																<td> 38.0% </td>
-																<td> 72.2% </td>
-																<td> 24 </td>
-																<td> 18 </td>
-																<td> 42 </td>
-																<td> 16 </td>
-																<td> 10 </td>
-																<td> 15 </td>
-																<td> 0 </td>
-																<td> 10 </td>
-																<td> 21 </td>
-																<td> </td>
-																<td></td>
+																</tr>
+															</tbody>
+															<tfoot class="not-sort">
+																<tr>
+																	<td colspan="2" class="td-tbody1">всего</td>
+																	<td></td>
+																	<td> 200:00 </td>
+																	<td> 81 </td>
+																	<td> 48.1% </td>
+																	<td> 31.8% </td>
+																	<td> 38.0% </td>
+																	<td> 72.2% </td>
+																	<td> 24 </td>
+																	<td> 18 </td>
+																	<td> 42 </td>
+																	<td> 16 </td>
+																	<td> 10 </td>
+																	<td> 15 </td>
+																	<td> 0 </td>
+																	<td> 10 </td>
+																	<td> 21 </td>
+																	<td> </td>
+																	<td></td>
 
-															</tr>
-														</tfoot>
-													</table>
+																</tr>
+															</tfoot>
+														</table>
+													</div>
 												</div>
 											</div>
 											<div class="tabs-logo-menu__tabs-body">
 												<!-- BOX SCORE / TEAM 2 -->
-												<div class="table__block table__wrapper-dark">
-													<table>
-														<thead>
-															<tr>
-																<th rowspan="2" class="th-thead2 sortable"> № </th>
-																<th rowspan="2" class="th-thead2-1">
-																	<div class="table__head-image -ibg">
-																		<img alt="" src="@img/RUNA/LOGO/team-logo/uralmash.png">
-																	</div>
-																</th>
-																<th rowspan="2" class="text-bottom sortable">игрок</th>
-																<th rowspan="2" class="text-bottom sortable">мин</th>
-																<th rowspan="2" class="text-bottom sortable">очки</th>
-																<th colspan="4" class="table__th-colspan">броски</th>
-																<th colspan="3" class="table__th-colspan">подборы</th>
-																<th rowspan="2" class="text-bottom sortable">гп</th>
-																<th rowspan="2" class="text-bottom sortable">пх</th>
-																<th rowspan="2" class="text-bottom sortable">пт</th>
-																<th rowspan="2" class="text-bottom sortable">бш</th>
-																<th rowspan="2" class="text-bottom sortable">ф</th>
-																<th rowspan="2" class="text-bottom sortable">фс</th>
-																<th rowspan="2" class="text-bottom sortable">+/-</th>
-																<th rowspan="2" class="text-bottom sortable">кпи</th>
+												<div class="table__wrapper-dark">
+													<div class="table__block">
+														<table>
+															<thead>
+																<tr>
+																	<th rowspan="2" class="th-thead2 sortable"> № </th>
+																	<th rowspan="2" class="th-thead2-1">
+																		<div class="table__head-image -ibg">
+																			<img alt="" src="@img/RUNA/LOGO/team-logo/uralmash.png">
+																		</div>
+																	</th>
+																	<th rowspan="2" class="text-bottom sortable">игрок</th>
+																	<th rowspan="2" class="text-bottom sortable">мин</th>
+																	<th rowspan="2" class="text-bottom sortable">очки</th>
+																	<th colspan="4" class="table__th-colspan">броски</th>
+																	<th colspan="3" class="table__th-colspan">подборы</th>
+																	<th rowspan="2" class="text-bottom sortable">гп</th>
+																	<th rowspan="2" class="text-bottom sortable">пх</th>
+																	<th rowspan="2" class="text-bottom sortable">пт</th>
+																	<th rowspan="2" class="text-bottom sortable">бш</th>
+																	<th rowspan="2" class="text-bottom sortable">ф</th>
+																	<th rowspan="2" class="text-bottom sortable">фс</th>
+																	<th rowspan="2" class="text-bottom sortable">+/-</th>
+																	<th rowspan="2" class="text-bottom sortable">кпи</th>
 
-															</tr>
-															<tr>
-																<th class="sortable">2-х</th>
-																<th class="sortable">3-х</th>
-																<th class="sortable">с игры</th>
-																<th class="sortable">шб</th>
-																<th class="sortable">сщ</th>
-																<th class="sortable">чщ</th>
-																<th class="sortable">вс</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td class="td-tbody1">2</td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/2.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Ключников Федор</a>
-																</td>
-																<td> 33:00 </td>
-																<td> 34 </td>
-																<td> 4/7 </td>
-																<td> 7/17 </td>
-																<td> 11/24 </td>
-																<td> 5/7 </td>
-																<td> 3 </td>
-																<td> </td>
-																<td> 3 </td>
-																<td> 2 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> 8 </td>
-																<td> -12 </td>
-																<td> 28 </td>
+																</tr>
+																<tr>
+																	<th class="sortable">2-х</th>
+																	<th class="sortable">3-х</th>
+																	<th class="sortable">с игры</th>
+																	<th class="sortable">шб</th>
+																	<th class="sortable">сщ</th>
+																	<th class="sortable">чщ</th>
+																	<th class="sortable">вс</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td class="td-tbody1">2</td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/2.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Ключников Федор</a>
+																	</td>
+																	<td> 33:00 </td>
+																	<td> 34 </td>
+																	<td> 4/7 </td>
+																	<td> 7/17 </td>
+																	<td> 11/24 </td>
+																	<td> 5/7 </td>
+																	<td> 3 </td>
+																	<td> </td>
+																	<td> 3 </td>
+																	<td> 2 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> 8 </td>
+																	<td> -12 </td>
+																	<td> 28 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1">1</td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/1.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Заряжко Виктор</a>
-																</td>
-																<td> 29:56 </td>
-																<td> 18 </td>
-																<td> 4/5 </td>
-																<td> 3/11 </td>
-																<td> 7/16 </td>
-																<td> 1/1 </td>
-																<td> 2 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> 1 </td>
-																<td> 3 </td>
-																<td> 2 </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> 2 </td>
-																<td> 10 </td>
-																<td> 14 </td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1">1</td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/1.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Заряжко Виктор</a>
+																	</td>
+																	<td> 29:56 </td>
+																	<td> 18 </td>
+																	<td> 4/5 </td>
+																	<td> 3/11 </td>
+																	<td> 7/16 </td>
+																	<td> 1/1 </td>
+																	<td> 2 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> 1 </td>
+																	<td> 3 </td>
+																	<td> 2 </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> 2 </td>
+																	<td> 10 </td>
+																	<td> 14 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1">8</td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/8.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Комиссаров Артем</a>
-																</td>
-																<td> 14:14 </td>
-																<td> </td>
-																<td> </td>
-																<td> 0/2 </td>
-																<td> 0/2 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> 3 </td>
-																<td> </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> -3 </td>
-																<td> -1 </td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1">8</td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/8.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Комиссаров Артем</a>
+																	</td>
+																	<td> 14:14 </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> 0/2 </td>
+																	<td> 0/2 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> 3 </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> -3 </td>
+																	<td> -1 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1"> 11 </td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/3.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Комиссаров Артем</a>
-																</td>
-																<td> 32:09 </td>
-																<td> 5 </td>
-																<td> 2/5 </td>
-																<td> </td>
-																<td> 2/5 </td>
-																<td> 1/2 </td>
-																<td> 7 </td>
-																<td> 6 </td>
-																<td> 13 </td>
-																<td> 6 </td>
-																<td> 3 </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> 3 </td>
-																<td> </td>
-																<td> 23 </td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1"> 11 </td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/3.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Комиссаров Артем</a>
+																	</td>
+																	<td> 32:09 </td>
+																	<td> 5 </td>
+																	<td> 2/5 </td>
+																	<td> </td>
+																	<td> 2/5 </td>
+																	<td> 1/2 </td>
+																	<td> 7 </td>
+																	<td> 6 </td>
+																	<td> 13 </td>
+																	<td> 6 </td>
+																	<td> 3 </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> 3 </td>
+																	<td> </td>
+																	<td> 23 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1"> 13 </td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/4.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Комиссаров Артем</a>
-																</td>
-																<td> 29:35 </td>
-																<td> 10 </td>
-																<td> 3/3 </td>
-																<td> 0/2 </td>
-																<td> 3/5 </td>
-																<td> 4/4 </td>
-																<td> 4 </td>
-																<td> 4 </td>
-																<td> 8 </td>
-																<td> 5 </td>
-																<td> 1 </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> </td>
-																<td> 3 </td>
-																<td> 5 </td>
-																<td> 24 </td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1"> 13 </td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/4.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Комиссаров Артем</a>
+																	</td>
+																	<td> 29:35 </td>
+																	<td> 10 </td>
+																	<td> 3/3 </td>
+																	<td> 0/2 </td>
+																	<td> 3/5 </td>
+																	<td> 4/4 </td>
+																	<td> 4 </td>
+																	<td> 4 </td>
+																	<td> 8 </td>
+																	<td> 5 </td>
+																	<td> 1 </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> 3 </td>
+																	<td> 5 </td>
+																	<td> 24 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1"> 18 </td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/5.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Комиссаров Артем</a>
-																</td>
-																<td> 00:00 </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> 0/0 </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> 0 </td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1"> 18 </td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/5.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Комиссаров Артем</a>
+																	</td>
+																	<td> 00:00 </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> 0/0 </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> 0 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1"> 24 </td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/11.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Комиссаров Артем</a>
-																</td>
-																<td> 20:41 </td>
-																<td> 3 </td>
-																<td> 0/4 </td>
-																<td> 1/3 </td>
-																<td> 1/7 </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> 2 </td>
-																<td> 3 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> 3 </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> 3 </td>
-																<td> -2 </td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1"> 24 </td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/11.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Комиссаров Артем</a>
+																	</td>
+																	<td> 20:41 </td>
+																	<td> 3 </td>
+																	<td> 0/4 </td>
+																	<td> 1/3 </td>
+																	<td> 1/7 </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> 2 </td>
+																	<td> 3 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> 3 </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> 3 </td>
+																	<td> -2 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1"> 27 </td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/7.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Комиссаров Артем</a>
-																</td>
-																<td> 06:43 </td>
-																<td> </td>
-																<td> 0/1 </td>
-																<td> 0/1 </td>
-																<td> 0/2 </td>
-																<td> 0/2 </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> 2 </td>
-																<td> -5 </td>
-																<td> -3 </td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1"> 27 </td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/7.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Комиссаров Артем</a>
+																	</td>
+																	<td> 06:43 </td>
+																	<td> </td>
+																	<td> 0/1 </td>
+																	<td> 0/1 </td>
+																	<td> 0/2 </td>
+																	<td> 0/2 </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> 2 </td>
+																	<td> -5 </td>
+																	<td> -3 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1"> 33 </td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/9.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Комиссаров Артем</a>
-																</td>
-																<td> 11:18 </td>
-																<td> 2 </td>
-																<td> 0/2 </td>
-																<td> </td>
-																<td> 0/2 </td>
-																<td> 2/2 </td>
-																<td> 1 </td>
-																<td> 3 </td>
-																<td> 4 </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> 2 </td>
-																<td> 4 </td>
-																<td> 5 </td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1"> 33 </td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/9.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Комиссаров Артем</a>
+																	</td>
+																	<td> 11:18 </td>
+																	<td> 2 </td>
+																	<td> 0/2 </td>
+																	<td> </td>
+																	<td> 0/2 </td>
+																	<td> 2/2 </td>
+																	<td> 1 </td>
+																	<td> 3 </td>
+																	<td> 4 </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> 2 </td>
+																	<td> 4 </td>
+																	<td> 5 </td>
 
-															</tr>
-															<tr>
-																<td class="td-tbody1"> 34 </td>
-																<td class="td-tbody2">
-																	<div class="table__photo -ibg">
-																		<img alt="" src="@img/RUNA/players/10.webp">
-																	</div>
-																</td>
-																<td class="text-left">
-																	<a href="#">Комиссаров Артем</a>
-																</td>
-																<td> 22:24 </td>
-																<td> 9 </td>
-																<td> </td>
-																<td> 3/8 </td>
-																<td> 3/8 </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> 2 </td>
-																<td> </td>
-																<td> 1 </td>
-																<td> </td>
-																<td> 8 </td>
-																<td> 2 </td>
+																</tr>
+																<tr>
+																	<td class="td-tbody1"> 34 </td>
+																	<td class="td-tbody2">
+																		<div class="table__photo -ibg">
+																			<img alt="" src="@img/RUNA/players/10.webp">
+																		</div>
+																	</td>
+																	<td class="text-left">
+																		<a href="#">Комиссаров Артем</a>
+																	</td>
+																	<td> 22:24 </td>
+																	<td> 9 </td>
+																	<td> </td>
+																	<td> 3/8 </td>
+																	<td> 3/8 </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> 2 </td>
+																	<td> </td>
+																	<td> 1 </td>
+																	<td> </td>
+																	<td> 8 </td>
+																	<td> 2 </td>
 
-															</tr><!---->
-															<tr>
-																<td colspan="2" class="td-tbody1">Тренер</td>
-																<td>Бартунов Олег</td>
-																<td colspan="13"></td>
-																<td></td>
-																<td colspan="4"></td>
-															</tr>
-															<tr>
-																<td colspan="2" class="td-tbody1">Команда</td>
-																<td></td>
-																<td></td>
-																<td></td>
-																<td>13/27</td>
-																<td>14/44</td>
-																<td> 27/71 </td>
-																<td>13/18</td>
-																<td>3</td>
-																<td>3</td>
-																<td>6</td>
-																<td></td>
-																<td></td>
-																<td></td>
-																<td></td>
-																<td></td>
-																<td></td>
-																<td></td>
-																<td></td>
+																</tr><!---->
+																<tr>
+																	<td colspan="2" class="td-tbody1">Тренер</td>
+																	<td>Бартунов Олег</td>
+																	<td colspan="13"></td>
+																	<td></td>
+																	<td colspan="4"></td>
+																</tr>
+																<tr>
+																	<td colspan="2" class="td-tbody1">Команда</td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td>13/27</td>
+																	<td>14/44</td>
+																	<td> 27/71 </td>
+																	<td>13/18</td>
+																	<td>3</td>
+																	<td>3</td>
+																	<td>6</td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
 
-															</tr>
-														</tbody>
-														<tfoot>
-															<tr>
-																<td colspan="2" class="td-tbody1">всего</td>
-																<td></td>
-																<td> 200:00 </td>
-																<td> 81 </td>
-																<td> 48.1% </td>
-																<td> 31.8% </td>
-																<td> 38.0% </td>
-																<td> 72.2% </td>
-																<td> 24 </td>
-																<td> 18 </td>
-																<td> 42 </td>
-																<td> 16 </td>
-																<td> 10 </td>
-																<td> 15 </td>
-																<td> 0 </td>
-																<td> 10 </td>
-																<td> 21 </td>
-																<td> </td>
-																<td></td>
+																</tr>
+															</tbody>
+															<tfoot>
+																<tr>
+																	<td colspan="2" class="td-tbody1">всего</td>
+																	<td></td>
+																	<td> 200:00 </td>
+																	<td> 81 </td>
+																	<td> 48.1% </td>
+																	<td> 31.8% </td>
+																	<td> 38.0% </td>
+																	<td> 72.2% </td>
+																	<td> 24 </td>
+																	<td> 18 </td>
+																	<td> 42 </td>
+																	<td> 16 </td>
+																	<td> 10 </td>
+																	<td> 15 </td>
+																	<td> 0 </td>
+																	<td> 10 </td>
+																	<td> 21 </td>
+																	<td> </td>
+																	<td></td>
 
-															</tr>
-														</tfoot>
-													</table>
+																</tr>
+															</tfoot>
+														</table>
+													</div>
 												</div>
 											</div>
 
@@ -1576,9 +1470,6 @@
 							партнеры</h2>
 					</div>
 					@@include('html/runa/_partners-slider.htm',{})
-				</div>
-				<div class="site-bg-img-1">
-					<img src="@img/RUNA/LOGO/runa-mini-green.svg" alt="">
 				</div>
 			</section>
 

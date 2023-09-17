@@ -9,8 +9,9 @@
 		grid-template-columns: 1fr 1fr;
 		gap: rem(20);
 		.player-card-vh-slider {
-			border-radius: rem(3);
-			border: rem(1) solid $color-base-1;
+			border-radius: rem(10);
+			border: rem(1) solid $color-base-4;
+			overflow: hidden;
 		}
 		.player-card-vh-slider__image {
 			filter: none;
@@ -67,6 +68,8 @@
 	// .team-leaders-game__team-logo
 
 	&__team-logo {
+		background-color: $color-base-5;
+		border-radius: 100%;
 		position: absolute;
 		right: 0;
 		top: rem(-30);
@@ -77,6 +80,7 @@
 		@media (max-width: rem(1299.98)) {
 			right: auto;
 			left: rem(90);
+			opacity: 1;
 		}
 		@media (max-width: rem(767.98)) {
 			@include adaptiveValue("left", 90, 30, 767.98, 320, 1);
@@ -95,6 +99,9 @@
 
 	&__team-score {
 		font-family: $fontFamily;
+		color: $color-base-4;
+		-webkit-text-stroke-width: rem(1);
+		-webkit-text-stroke-color: $color-base-1;
 		font-size: rem(68);
 		font-weight: 900;
 		position: absolute;
@@ -115,7 +122,7 @@
 		font-weight: 900;
 		text-transform: uppercase;
 		letter-spacing: rem(1.5);
-		color: $color-base-1;
+		color: $color-base-5;
 		position: absolute;
 		text-align: left;
 		left: 0;
@@ -143,6 +150,8 @@
 	// .team-leaders-game__team-logo
 
 	&__team-logo {
+		background-color: $color-base-5;
+		border-radius: 100%;
 		position: absolute;
 		left: 0;
 		top: rem(-30);
@@ -153,6 +162,7 @@
 		@media (max-width: rem(1299.98)) {
 			left: auto;
 			right: rem(90);
+			opacity: 1;
 		}
 		@media (max-width: rem(767.98)) {
 			@include adaptiveValue("right", 90, 30, 767.98, 320, 1);
@@ -171,6 +181,9 @@
 
 	&__team-score {
 		font-family: $fontFamily;
+		color: $color-base-4;
+		-webkit-text-stroke-width: rem(1);
+		-webkit-text-stroke-color: $color-base-1;
 		font-size: rem(68);
 		font-weight: 900;
 		position: absolute;
@@ -191,7 +204,7 @@
 		font-weight: 900;
 		text-transform: uppercase;
 		letter-spacing: rem(1.5);
-		color: $color-base-1;
+		color: $color-base-5;
 		position: absolute;
 		text-align: right;
 		right: 0;

@@ -28,6 +28,7 @@
 	}
 	&__team-title {
 		@include adaptiveValue("font-size", 24, 16, 1600, 768, 1);
+		color: $color-base-5;
 		font-weight: 900;
 		text-align: center;
 		text-transform: uppercase;
@@ -43,11 +44,17 @@
 
 	// = TEAM LOGO = //
 	&__team-logo {
+		background-color: $color-base-5;
+		border-radius: 100%;
+		//opacity: 0.3;
 		@include adaptiveValue("height", 80, 70, 1600, 992, 1);
 		@include adaptiveValue("width", 80, 70, 1600, 992, 1);
 		@media (max-width: rem(767.98)) {
 			@include adaptiveValue("height", 70, 60, 767.98, 650, 1);
 			@include adaptiveValue("width", 70, 60, 767.98, 650, 1);
 		}
+	}
+	&__team-logo img {
+		padding: rem(5);
 	}
 }

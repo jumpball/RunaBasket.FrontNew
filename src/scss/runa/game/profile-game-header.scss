@@ -62,6 +62,10 @@
 
 	// = TEAM LOGO = //
 	&__team-logo {
+		background-color: $color-base-5;
+		border-radius: 100%;
+		border: rem(1) solid $color-base-4;
+
 		@include adaptiveValue("height", 200, 180, 1600, 992, 1);
 		@include adaptiveValue("width", 200, 180, 1600, 992, 1);
 		@media (max-width: rem(767.98)) {
@@ -72,6 +76,9 @@
 			@include adaptiveValue("height", 150, 100, 619.98, 450, 1);
 			@include adaptiveValue("width", 150, 100, 619.98, 450, 1);
 		}
+	}
+	&__team-logo img {
+		padding: rem(10);
 	}
 	&__team-logo-left {
 		//align-self: flex-end;
@@ -95,6 +102,7 @@
 	&__team-title {
 		font-weight: 900;
 		text-transform: uppercase;
+		color: $white;
 		@include adaptiveValue("font-size", 28, 22, 1600, 992, 1);
 		@include adaptiveValue("line-height", 32, 26, 1600, 992, 1);
 		@media (max-width: rem(991.98)) {
@@ -112,7 +120,7 @@
 	}
 	&__team-subtitle {
 		font-weight: 700;
-		color: $gray;
+		color: $color-base-5;
 		@include adaptiveValue("font-size", 18, 16, 1600, 992, 1);
 		@include adaptiveValue("line-height", 24, 22, 1600, 992, 1);
 		@media (max-width: rem(991.98)) {
@@ -152,7 +160,7 @@
 		align-items: center;
 		@include adaptiveValue("gap", 10, 6, 1600, 992, 1);
 		font-weight: 900;
-		color: $mainColor;
+		color: $white;
 		font-family: $fontFamily;
 		@include adaptiveValue("font-size", 110, 80, 1600, 992, 1);
 		@include adaptiveValue("line-height", 110, 80, 1600, 992, 1);
@@ -190,7 +198,7 @@
 		letter-spacing: rem(2);
 		font-family: $fontFamily;
 		padding: 8px 0px 8px 0px;
-		color: $gray;
+		color: $color-base-4;
 		@include adaptiveValue("font-size", 22, 18, 1600, 992, 1);
 		@include adaptiveValue("line-height", 24, 20, 1600, 992, 1);
 		display: -ms-flexbox;
@@ -216,7 +224,7 @@
 	&__score-quarter > span + span::before {
 		display: inline-block;
 		font-weight: 100;
-		color: $color-base-1;
+		color: $color-base-7;
 		position: relative;
 		margin: 0px 8px 0px 8px;
 		content: "|";
@@ -228,7 +236,7 @@
 	// = INFO = //
 	&__info {
 		width: 100%;
-		color: $gray;
+		color: $color-base-5;
 		text-align: center;
 		text-transform: uppercase;
 		margin: 8px 0px 0px 0px;
@@ -246,6 +254,7 @@
 		position: relative;
 		margin: 0px 5px 0px 5px;
 		content: "|";
+		color: $color-base-7;
 	}
 
 	// = DATE = //
@@ -253,7 +262,7 @@
 		padding: 20px 0px 0px 0px;
 		@media (max-width: rem(449.98)) {
 			padding: 10px 0px 0px 0px;
-			border-top: rem(1) solid $gray;
+			border-top: rem(1) solid $color-base-5;
 		}
 	}
 
@@ -265,7 +274,7 @@
 	&__location {
 		@media (max-width: rem(449.98)) {
 			padding: 10px 0px 0px 0px;
-			border-top: rem(1) solid $gray;
+			border-top: rem(1) solid $color-base-5;
 		}
 	}
 }

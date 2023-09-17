@@ -74,9 +74,10 @@
 		background-color: $white;
 		text-align: right;
 		display: flex;
+		overflow: hidden;
 		justify-content: space-between;
 		border: rem(1) solid $color-base-1;
-		border-radius: rem(3);
+		border-radius: rem(10);
 
 		@media (max-width: $mobile) {
 			text-align: left;
@@ -87,7 +88,8 @@
 		color: $mainColor;
 		background-color: $white;
 		border: rem(1) solid $color-base-1;
-		border-radius: rem(3);
+		border-radius: rem(10);
+		overflow: hidden;
 		text-align: left;
 		display: flex;
 		justify-content: space-between;
@@ -125,10 +127,10 @@
 		width: 0;
 		height: 0;
 		border-top: 0px solid transparent;
-		border-right: 60px solid $gold;
+		border-right: 60px solid $color-base-4;
 		border-bottom: 60px solid transparent;
 		@media (max-width: rem(499.98)) {
-			border-right: 40px solid $gold;
+			border-right: 40px solid $color-base-4;
 			border-bottom: 40px solid transparent;
 		}
 	}
@@ -138,8 +140,8 @@
 	&__item-photo {
 		@include adaptiveValue("width", 120, 100, 1600, 1250, 1);
 		@include adaptiveValue("height", 120, 100, 1600, 1250, 1);
-		border-radius: 100%;
-		border: rem(1) solid $color-base-1;
+		border-radius: rem(10);
+		border: rem(1) solid $color-base-5;
 		margin: rem(6);
 		overflow: hidden;
 		background-color: $white;
@@ -269,7 +271,7 @@
 	}
 	&__item-title-bg {
 		font-weight: 900;
-		color: $mia_red;
+		color: $color-base-1;
 		text-transform: uppercase;
 		padding: rem(5);
 		opacity: 0.1;
@@ -364,7 +366,7 @@
 	&__item-event {
 		padding: 10px 5px 10px 5px;
 		text-align: center;
-		border-radius: rem(3);
+		border-radius: rem(10);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -383,20 +385,20 @@
 	&__item-event-score {
 		font-family: $fontFamily;
 		color: $white;
-		background-color: $mia_red;
-		border: rem(1) solid $white;
+		background-color: $color-base-1;
+		border: rem(1) solid $color-base-4;
 	}
 
 	&__item-event-time {
 		font-family: $fontFamily;
 		color: $mainColor;
-		background-color: $bgColor_2;
-		border: rem(1) solid $color-base-1;
+		background-color: $color-base-5;
+		border: rem(1) solid $color-base-4;
 	}
 
 	&__item-event-info {
-		background-color: $color-base-1;
-		border: rem(1) solid $white;
+		background-color: $color-base-7;
+		border: rem(1) solid $color-base-4;
 		color: $white;
 	}
 	// === GAME PROGRESS ITEM EVENT-CONTENT === //
@@ -467,7 +469,7 @@
 	&__event-border {
 		width: 60%;
 		height: rem(5);
-		background-color: $gold;
+		background-color: $color-base-4;
 		border-radius: rem(3);
 	}
 

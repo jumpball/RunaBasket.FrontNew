@@ -59,6 +59,227 @@
 	// = ITEM = //
 	&__item {
 		position: relative;
+
+		.game-card-calendar {
+			background-color: $color-base-7;
+			width: 100%;
+			border-radius: rem(10);
+			height: fit-content;
+			transition: all 0.5s ease 0s;
+			padding: 20px 8px 20px 8px;
+
+			// = CARD / HOVER = //
+			&:hover {
+				transition: all 0.5s ease 0s;
+			}
+		}
+
+		// = BODY = //
+		.game-card-calendar__body {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: rem(10);
+		}
+
+		// = HEADER = //
+		.game-card-calendar__header {
+			width: 100%;
+			text-align: center;
+			padding: 0px 5px 10px 5px;
+			transition: all 0.5s ease 0s;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			@media (max-width: rem(991.98)) {
+				padding: 0px 0px 5px 0px;
+			}
+
+			h3 {
+				display: inline-block;
+				color: $color-base-4;
+				width: 100%;
+				text-align: center;
+				font-weight: 900;
+				font-family: $fontFamily;
+				@include adaptiveValue("font-size", 20, 18, 1600, 992, 1);
+				line-height: rem(30);
+				@media (max-width: rem(991.98)) {
+					@include adaptiveValue("font-size", 24, 18, 991.98, 768, 1);
+					line-height: rem(40);
+				}
+				@media (max-width: rem(599.98)) {
+					line-height: rem(75);
+				}
+				@media (max-width: rem(449.98)) {
+					line-height: rem(24);
+				}
+			}
+
+			span {
+				display: inline-block;
+				width: 100%;
+				font-family: $fontFamily;
+				@include adaptiveValue("font-size", 12, 10, 1400, 992, 1);
+				color: $color-base-5;
+				font-weight: 300;
+				text-transform: uppercase;
+				text-align: center;
+			}
+		}
+
+		// = TEAMS = //
+		.game-card-calendar__teams {
+			padding: 0px 0px 0px 0px;
+			display: flex;
+			justify-content: center;
+			gap: rem(5);
+			@media (max-width: rem(991.98)) {
+				flex-direction: row;
+			}
+		}
+
+		// = TEAM ROW = //
+		.game-card-calendar__team-row {
+			@media (max-width: rem(991.98)) {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+
+		// = TEAM NAME = //
+		.game-card-calendar__team-name {
+			display: flex;
+			flex-direction: column;
+		}
+		.game-card-calendar__team-1-name {
+			justify-content: flex-end;
+			align-items: flex-end;
+			@media (max-width: rem(991.98)) {
+				justify-content: flex-end;
+				align-items: flex-end;
+			}
+		}
+		.game-card-calendar__team-2-name {
+			justify-content: flex-start;
+			align-items: flex-start;
+			@media (max-width: rem(991.98)) {
+				align-items: flex-start;
+			}
+		}
+
+		// = TITLE = //
+		.game-card-calendar__title {
+			display: none;
+		}
+
+		// = SCORE = //
+		.game-card-calendar__score-column {
+			width: rem(10);
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+		.game-card-calendar__score-border {
+			font-family: $fontFamily;
+			color: $color-base-4;
+			text-align: center;
+			font-size: rem(24);
+			font-weight: 900;
+			line-height: rem(34);
+			@media (max-width: rem(991.98)) {
+				display: block;
+			}
+		}
+		.game-card-calendar__team-score {
+			font-family: $fontFamily;
+			color: $color-base-4;
+			min-width: rem(38);
+			font-size: rem(24);
+			line-height: rem(34);
+			text-transform: uppercase;
+			font-weight: 900;
+		}
+		.game-card-calendar__team-1-score {
+			padding: 0px 0px 0px 0px;
+			text-align: right;
+		}
+		.game-card-calendar__team-2-score {
+			padding: 0px 0px 0px 0px;
+			text-align: left;
+			@media (max-width: rem(991.98)) {
+				text-align: left;
+			}
+		}
+
+		// = TEAM LOGO = //
+		.game-card-calendar__team-logo {
+			@include adaptiveValue("width", 60, 40, 1600, 992, 1);
+			@include adaptiveValue("height", 60, 40, 1600, 992, 1);
+			margin: 0px 0px 0px 0px;
+			background-color: $white;
+			border-radius: 100%;
+			@media (max-width: rem(767.98)) {
+				@include adaptiveValue("width", 60, 40, 767.98, 650, 1);
+				@include adaptiveValue("height", 60, 40, 767.98, 650, 1);
+			}
+			@media (max-width: rem(599.98)) {
+				display: block;
+			}
+		}
+		.game-card-calendar__team-logo img {
+			padding: 3px;
+		}
+
+		// = CONTENT = //
+		.game-card-calendar__content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin: 0px 0px 5px 0px;
+			text-align: center;
+		}
+		.game-card-calendar__content button {
+			max-width: rem(220);
+		}
+
+		// = GYM = //
+		.game-card-calendar__gym {
+			display: flex;
+			color: $color-base-5;
+			align-items: center;
+			justify-content: center;
+			gap: rem(3);
+			margin: 0px 0px 5px 0px;
+			p {
+				margin: 2px 0px 0px 0px;
+				@include adaptiveValue("font-size", 10, 8, 1600, 992, 1);
+				line-height: 12px;
+			}
+		}
+
+		// = TOURNAMENT = //
+		.game-card-calendar__tournament {
+			display: flex;
+			color: $color-base-5;
+			flex-direction: column;
+			text-align: center;
+			margin: 10px 0px 0px 0px;
+			padding: 0px 10px 0px 10px;
+		}
+		.game-card-calendar__tournament span {
+			font-size: 11px;
+			letter-spacing: rem(1.5);
+			text-transform: uppercase;
+			line-height: 16px;
+		}
+
+		.game-end-card-calendar {
+			.game-card-calendar__header h3 {
+				visibility: visible;
+			}
+		}
 	}
 
 	// = NAVIGATION = //

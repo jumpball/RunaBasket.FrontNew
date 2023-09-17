@@ -12,7 +12,7 @@
 	justify-content: space-between;
 	background-color: $white;
 	border: rem(1) solid $white;
-	border-radius: rem(3);
+	border-radius: rem(10);
 	overflow: hidden;
 
 	@media (max-width: rem(767.98)) {
@@ -67,7 +67,7 @@
 		width: 0;
 		height: 0;
 		border-top: 0px solid transparent;
-		border-left: 40px solid $gold;
+		border-left: 40px solid $color-base-4;
 		border-bottom: 40px solid transparent;
 		@media (max-width: rem(767.98)) {
 			//border-left: none;
@@ -175,10 +175,10 @@
 			@include adaptiveValue("font-size", 16, 14, 1149.98, 768, 1);
 		}
 		@media (max-width: rem(767.98)) {
-			@include adaptiveValue("font-size", 14, 12, 767.98, 480, 1);
+			@include adaptiveValue("font-size", 20, 12, 767.98, 480, 1);
 		}
 		@media (max-width: rem(479.98)) {
-			@include adaptiveValue("font-size", 12, 9, 479.98, 340, 1);
+			@include adaptiveValue("font-size", 12, 10, 479.98, 340, 1);
 		}
 	}
 	&__name h2 {
@@ -191,8 +191,8 @@
 			@include adaptiveValue("line-height", 26, 21, 1149.98, 768, 1);
 		}
 		@media (max-width: rem(767.98)) {
-			@include adaptiveValue("font-size", 16, 14, 767.98, 480, 1);
-			@include adaptiveValue("line-height", 20, 16, 767.98, 480, 1);
+			@include adaptiveValue("font-size", 24, 14, 767.98, 480, 1);
+			@include adaptiveValue("line-height", 26, 16, 767.98, 480, 1);
 		}
 		@media (max-width: rem(479.98)) {
 			@include adaptiveValue("font-size", 14, 9, 479.98, 340, 1);

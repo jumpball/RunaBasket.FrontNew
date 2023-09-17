@@ -12,13 +12,17 @@
 	// = LEGEND - BLOCK / BOX = //
 	&__legend-block {
 		//margin: 0px 0px 0px 0px;
-		//
+		border-radius: rem(10);
+		overflow: hidden;
+		background-color: $color-base-7;
 	}
 	&__legend-box {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
 		font-family: $fontFamily;
+		border-radius: rem(10);
+		overflow: hidden;
 		@media (max-width: rem(991.98)) {
 			flex-direction: column;
 			.table__block .text-center {
