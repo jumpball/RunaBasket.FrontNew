@@ -13,7 +13,6 @@
 	// === BOX === //
 	&__box {
 		@include adaptiveValue("margin-top", 155, 160, 1920, 768, 1);
-		//margin-top: rem(150);
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: auto;
@@ -31,7 +30,6 @@
 
 	// === ITEM === //
 	&__item {
-		//background: linear-gradient(180deg, rgba(46, 0, 106, 0.6) 0%, rgba(46, 0, 106, 0) 100%);
 		position: relative;
 		border: rem(1) solid $color-base-1;
 		border-radius: rem(10);
@@ -70,12 +68,14 @@
 		height: auto;
 		@include adaptiveValue("padding-right", 40, 16, 1920, 768, 1);
 		@include adaptiveValue("padding-left", 40, 16, 1920, 768, 1);
-		@include adaptiveValue("padding-bottom", 50, 30, 1920, 768, 1);
-		@include adaptiveValue("font-size", 40, 18, 1920, 768, 1);
-		@include adaptiveValue("line-height", 56, 20, 1920, 768, 1);
+		@include adaptiveValue("padding-bottom", 50, 40, 1920, 768, 1);
+		@include adaptiveValue("font-size", 40, 30, 1920, 768, 1);
+		@include adaptiveValue("line-height", 56, 34, 1920, 768, 1);
 		@include adaptiveValue("letter-spacing", 3, 2, 1920, 768, 1);
-		@media (max-width: rem(449.98)) {
-			@include adaptiveValue("padding-bottom", 30, 10, 449.98, 360, 1);
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("padding-bottom", 30, 10, 767.98, 400, 1);
+			@include adaptiveValue("font-size", 30, 20, 767.98, 400, 1);
+			@include adaptiveValue("line-height", 32, 22, 767.98, 400, 1);
 		}
 	}
 	&__slide-subtitle {

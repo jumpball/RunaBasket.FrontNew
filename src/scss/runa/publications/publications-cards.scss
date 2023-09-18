@@ -2,38 +2,32 @@
 .card {
 	position: relative;
 	width: 100%;
-	//height: 100%;
 	height: 100%;
-	min-height: rem(360);
+	@include adaptiveValue("max-height", 500, 320, 1400, 768, 1);
 	min-width: rem(230);
 	background: $color-base-1;
-	//border: 1px solid $mainColor;
 	overflow: hidden;
 	border-radius: rem(10);
-	transition: box-shadow 0.3s;
 	z-index: 2;
-	@media (max-width: rem(799.98)) {
-		//min-height: rem(320);
+	@media (max-width: rem(767.98)) {
 		@include adaptiveValue("min-height", 320, 250, 799.98, 360, 1);
 	}
 
 	// === CARD THUMB === //
 	&__thumb {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: flex-start;
-		background-color: transparent;
+		position: relative;
+		overflow: hidden;
+		@include adaptiveValue("max-height", 530, 330, 1400, 768, 1);
+		min-width: 100%; /* Ширина области */
 	}
 	&__thumb img {
-		max-width: 180%;
-		height: fit-content;
+		aspect-ratio: 8 / 10;
+		object-position: top;
+		height: 100%;
+		width: 100%;
 		object-fit: cover;
-		display: block;
-		opacity: 1;
-		transition: all 0.8s ease 0s;
 		@media (max-width: rem(991.98)) {
-			max-width: 210%;
+			aspect-ratio: 3 / 5;
 		}
 	}
 
@@ -96,8 +90,12 @@
 		font-style: normal;
 		font-weight: 700;
 		text-transform: uppercase;
-		@include adaptiveValue("font-size", 30, 18, 1920, 768, 1);
-		@include adaptiveValue("line-height", 36, 20, 1920, 768, 1);
+		@include adaptiveValue("font-size", 30, 24, 1920, 768, 1);
+		@include adaptiveValue("line-height", 36, 26, 1920, 768, 1);
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 24, 20, 767.98, 400, 1);
+			@include adaptiveValue("line-height", 26, 22, 767.98, 400, 1);
+		}
 	}
 
 	// === CARD SUBTITLE === //

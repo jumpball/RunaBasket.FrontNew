@@ -134,7 +134,7 @@ $var-color-gray-dark: #7c7c7c;
 			}
 
 			td {
-				background: #ffffff;
+				background: $color-base-7;
 				padding: 15px;
 				text-align: center;
 				vertical-align: middle;
@@ -149,13 +149,13 @@ $var-color-gray-dark: #7c7c7c;
 			a {
 				@media (any-hover: hover) {
 					&:hover {
-						color: $sibur;
+						color: $color-base-4;
 					}
 				}
 			}
 
 			tbody tr:hover td {
-				background-color: $gray;
+				background-color: $color-base-1;
 				color: $white;
 				border-top: none;
 				border-bottom: none;
@@ -163,15 +163,15 @@ $var-color-gray-dark: #7c7c7c;
 
 			tfoot {
 				& tr:hover td {
-					background-color: $mainColor;
-					color: $white;
+					background-color: $color-base-2;
+					color: $color-base-4;
 					/*border-top: none;*/
 					border-bottom: none;
 				}
 
 				& td {
 					border-top: 1px solid rgba(113, 166, 220, 0.2);
-					background-color: $gray-dark;
+					background-color: $color-base-2;
 					color: $white;
 					font-weight: 300;
 					padding: 15px;
