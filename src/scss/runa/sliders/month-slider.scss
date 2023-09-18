@@ -103,8 +103,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background-color: $color-base-6;
-		border: rem(1) solid $white;
+		//background-color: $color-base-6;
+		//border: rem(1) solid $white;
 		border-radius: rem(3);
 	}
 
@@ -144,8 +144,8 @@
 		width: rem(40);
 		//opacity: 0.3;
 		border-radius: rem(3);
-		background-color: $color-base-6;
-		border: rem(1) solid $white;
+		//background-color: $color-base-6;
+		//border: rem(1) solid $white;
 		transition: all 0.5s ease 0s;
 		cursor: pointer;
 		@media (max-width: rem(991.98)) {
@@ -160,7 +160,7 @@
 			&:hover {
 				transition: all 0.5s ease 0s;
 				transform: scale(1.2);
-				border: rem(1) solid $white;
+				//border: rem(1) solid $white;
 				opacity: 1;
 			}
 		}

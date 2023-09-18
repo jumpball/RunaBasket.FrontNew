@@ -319,7 +319,6 @@
 		width: rem(40);
 		height: rem(40);
 		margin: 0 auto;
-		background-color: $white;
 		border-radius: 50%;
 	}
 	&__head-image-1 {
@@ -425,7 +424,7 @@
 		border-bottom: 0.0625rem solid transparent;
 	}
 	tbody tr:nth-child(odd) td {
-		background-color: #eef0f2;
+		//background-color: #eef0f2;
 	}
 	tbody tr:nth-child(odd):hover td {
 		background-color: #a4a9ad;
