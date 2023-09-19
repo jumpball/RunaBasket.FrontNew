@@ -270,7 +270,7 @@
 		width: 100%;
 		font-family: $fontFamily;
 		font-weight: 900;
-		color: $mainColor;
+		color: $color-base-4;
 		text-align: left;
 		@include adaptiveValue("font-size", 66, 54, 1600, 992, 1);
 		@media (max-width: rem(1099.98)) {

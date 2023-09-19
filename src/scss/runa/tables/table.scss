@@ -315,6 +315,7 @@
 
 	// = IMAGE / PHOTO = //
 	&__head-image {
+		background-color: $color-base-5;
 		position: relative;
 		width: rem(40);
 		height: rem(40);
@@ -327,9 +328,12 @@
 		height: 2.5rem;
 		margin: 0 auto;
 		border-radius: 6.25rem;
-		background-color: #fff;
+		background-color: $color-base-5;
 	}
 	&__head-image img {
+		padding: rem(3);
+	}
+	&__head-image-1 img {
 		padding: rem(3);
 	}
 	&__image {

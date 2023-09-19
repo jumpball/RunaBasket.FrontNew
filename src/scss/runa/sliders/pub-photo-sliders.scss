@@ -9,7 +9,7 @@
 		width: rem(440);
 		overflow: hidden;
 		border: rem(1) solid $color-base-1;
-		border-radius: rem(3);
+		border-radius: rem(10);
 		@media (max-width: rem(749.98)) {
 			@include adaptiveValue("width", 355, 320, 749.98, 620, 1);
 			@include adaptiveValue("height", 209, 189, 749.98, 620, 1);
@@ -59,7 +59,7 @@
 		width: rem(440);
 		overflow: hidden;
 		border: rem(1) solid $color-base-1;
-		border-radius: rem(3);
+		border-radius: rem(10);
 		@media (max-width: rem(749.98)) {
 			@include adaptiveValue("width", 355, 270, 749.98, 620, 1);
 			@include adaptiveValue("height", 209, 159, 749.98, 620, 1);
