@@ -198,7 +198,7 @@
 
 // = TABS VIDEO  = //
 .tabs-video {
-	margin: 40px 0px 40px 0px;
+	margin: 20px 0px 20px 0px;
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: space-between;
@@ -246,7 +246,7 @@
 		border: rem(1) solid $color-base-1;
 		border-radius: rem(10);
 		color: $white;
-		background-color: $color-base-2;
+		background-color: $color-base-1;
 		display: flex;
 		align-items: flex-start;
 		justify-content: flex-start;
@@ -333,19 +333,20 @@
 
 	&__box {
 		width: rem(960);
-		height: rem(540);
+		//height: rem(540);
+		height: auto;
 		position: relative;
-		//aspect-ratio: 16/9;
+		aspect-ratio: 16/9;
 		overflow: hidden;
 		z-index: 2;
 		@media (max-width: rem(1469.98)) {
-			padding: 0px 0px 56% 0px;
+			//padding: 0px 0px 56% 0px;
 			@include adaptiveValue("width", 960, 560, 1469.98, 992, 1);
-			@include adaptiveValue("height", 540, 320, 1469.98, 992, 1);
+			//@include adaptiveValue("height", 540, 320, 1469.98, 992, 1);
 		}
 		@media (max-width: rem(991.98)) {
 			@include adaptiveValue("width", 960, 290, 991.98, 320, 1);
-			@include adaptiveValue("height", 540, 162, 991.98, 320, 1);
+			//@include adaptiveValue("height", 540, 162, 991.98, 320, 1);
 		}
 	}
 	&__box video,

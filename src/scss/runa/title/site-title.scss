@@ -6,9 +6,12 @@
 	font-weight: 900;
 	letter-spacing: rem(2);
 	text-transform: uppercase;
-	//padding: 20px 0px 10px 0px;
-	@include adaptiveValue("padding-top", 20, 10, 991.98, 500, 1);
-	@include adaptiveValue("padding-botom", 10, 6, 991.98, 500, 1);
+	padding: 20px 0px 20px 0px;
+	@media (max-width: rem(767.98)) {
+		padding: 12px 0px 12px 0px;
+	}
+	//@include adaptiveValue("padding-top", 20, 10, 991.98, 500, 1);
+	//@include adaptiveValue("padding-botom", 10, 6, 991.98, 500, 1);
 }
 .section-title span {
 	letter-spacing: rem(1);
