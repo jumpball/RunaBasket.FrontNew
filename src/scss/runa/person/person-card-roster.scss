@@ -2,11 +2,14 @@
 .person-card-roster {
 	position: relative;
 	padding: 0px 0px 15px 0px;
+	height: 100%;
+	overflow: hidden;
 	transition: all 0.5s ease 0s;
 	border: rem(1) solid $color-base-1;
-	background-color: $white;
-	border-radius: rem(3);
-	height: 100%;
+	background-color: $color-base-4;
+	background-image: url("@img/RUNA/patterns/patterns-3.svg");
+	border-radius: rem(10);
+	border: 1px solid $color-base-1;
 
 	// = PERSON CARD ROSTER / HOVER = //
 	&:hover {
@@ -125,20 +128,20 @@
 			margin: 0px 0px 0px 0px;
 		}
 	}
-	&__photo::after {
-		content: "";
-		background: $white;
-		background-image: url("@img/RUNA/border/border-270-20-green.svg");
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 100%;
-		height: rem(20);
-		@media (max-width: rem(479.98)) {
-			display: none;
-		}
-	}
+	// &__photo::after {
+	// 	content: "";
+	// 	background: $white;
+	// 	background-image: url("@img/RUNA/border/border-270-20-green.svg");
+	// 	position: absolute;
+	// 	bottom: 0;
+	// 	left: 50%;
+	// 	transform: translateX(-50%);
+	// 	width: 100%;
+	// 	height: rem(20);
+	// 	@media (max-width: rem(479.98)) {
+	// 		display: none;
+	// 	}
+	// }
 	&__image {
 		transition: all 0.5s ease 0s;
 		-webkit-filter: drop-shadow(-5px 13px 15px #05050580);
@@ -147,17 +150,22 @@
 
 	// = CONTENT = //
 	&__content {
+		padding: 15px 0px 15px 0px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		margin: 0px 0px 20px 0px;
+		//margin: 0px 0px 20px 0px;
 	}
 
 	// = INFO = //
 	&__info {
-		margin: 8px 0px 0px 0px;
-		padding: 0px 10px 0px 10px;
+		width: 100%;
+		background-color: $color-base-1;
+		color: $white;
+		border-radius: rem(10) 0px rem(10) 0px;
+		//margin: 8px 0px 0px 0px;
+		padding: 10px 8px 10px 8px;
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -174,7 +182,7 @@
 
 	// = NAME = //
 	&__name {
-		color: $mainColor;
+		color: $color-base-4;
 		text-transform: uppercase;
 		font-weight: 900;
 
@@ -205,7 +213,8 @@
 
 	// = DESC = //
 	&__desc {
-		margin: 6px 0px 0px 0px;
+		//margin: 6px 0px 0px 0px;
+		color: $white;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

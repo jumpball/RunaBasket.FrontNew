@@ -14,6 +14,7 @@
 		position: relative;
 	}
 	&__header-cards-grid {
+		margin: 20px 0px 0px 0px;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 		grid-template-rows: auto;
@@ -34,6 +35,7 @@
 
 	// = HEADER TABLE = //
 	&__header-table-box {
+		margin: 20px 0px 0px 0px;
 	}
 
 	// = MENU BLOCK = //

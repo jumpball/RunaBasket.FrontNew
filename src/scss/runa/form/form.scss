@@ -2,8 +2,8 @@
 .contact-form {
 	// = MAP = //
 	&__map {
-		background-color: $white;
-		border-radius: rem(3) rem(3) 0px 0px;
+		background-color: $color-base-7;
+		border-radius: rem(10) rem(10) 0px 0px;
 		border: rem(1) solid $color-base-1;
 	}
 
@@ -15,9 +15,10 @@
 	&__content {
 		display: grid;
 		grid-template-columns: rem(400) 1fr;
-		background: $white;
+		background: $color-base-7;
+		color: $white;
 		padding: 40px 40px 40px 40px;
-		border-radius: 0px 0px rem(3) rem(3);
+		border-radius: 0px 0px rem(10) rem(10);
 		border: rem(1) solid $color-base-1;
 		@media (any-hover: hover) {
 			&:hover {
@@ -131,7 +132,7 @@
 	&__topic-text {
 		font-size: rem(24);
 		font-weight: 600;
-		color: $color-base-1;
+		color: $color-base-4;
 		margin: 0px 0px 10px 0px;
 		@media (max-width: rem(549.98)) {
 			@include adaptiveValue("font-size", 24, 20, 549.98, 340, 1);
@@ -187,21 +188,56 @@
 		}
 	}
 	&__button input[type="submit"] {
-		color: $white;
-		letter-spacing: rem(1.5);
-		font-size: rem(14);
+		display: inline-flex;
+		width: 100%;
+		font-family: $fontFamily;
+		font-size: rem(18);
+		background-color: $color-base-4;
+		padding: rem(16) rem(24);
+		border-radius: rem(10);
+
+		color: $color-base-1;
+		//border: rem(1) solid $color-base-1;
+		text-decoration: none;
+		font-weight: 700;
+		justify-content: center;
+		text-align: center;
+		letter-spacing: 1px;
+		cursor: pointer;
 		text-transform: uppercase;
-		background-color: $color-base-1;
+		white-space: nowrap;
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 15, 12, 767.98, 450, 1);
+			padding: rem(16) rem(18);
+		}
+		@media (max-width: rem(449.98)) {
+			@include adaptiveValue("font-size", 15, 12, 767.98, 450, 1);
+			padding: rem(10) rem(16);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $color-base-1;
+				color: $white;
+				transition: all 0.5s ease 0s;
+			}
+		}
+
+		// color: $white;
+		// letter-spacing: rem(1.5);
+		// font-size: rem(14);
+		// text-transform: uppercase;
+		// background-color: $color-base-1;
 		outline: none;
 		border: none;
-		padding: 14px 24px;
-		border-radius: rem(3);
-		transition: 0.5s;
+		// padding: 14px 24px;
+		// border-radius: rem(3);
+		// transition: 0.5s;
 		@media (max-width: rem(549.98)) {
 			width: 100%;
 		}
 	}
 	&__button input[type="submit"]:hover {
-		background-color: $mia_red;
+		background-color: $color-base-4;
+		color: $color-base-1;
 	}
 }
