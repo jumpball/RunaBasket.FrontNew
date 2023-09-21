@@ -1,9 +1,11 @@
+// === BANNER SLIDER === //
+
 .banner-slider {
 	// === BOX === //
 	&__box {
 		position: relative;
-		//@include adaptiveValue("margin-top", 20, 10, 1050, 600, 1);
 		overflow: hidden;
+		min-height: rem(300);
 	}
 
 	// === WRAPPER === //
@@ -14,6 +16,7 @@
 	&__item {
 		width: 100%;
 		border: rem(1) solid $color-base-1;
+		min-height: rem(300);
 		border-radius: rem(10);
 		overflow: hidden;
 	}
@@ -22,7 +25,30 @@
 	&__image {
 		position: relative;
 		padding: 0px 0px 30% 0px;
-		//overflow: hidden;
+		@media (max-width: rem(1049.98)) {
+			padding: 0px 0px 40% 0px;
+		}
+		@media (max-width: rem(799.98)) {
+			padding: 0px 0px 50% 0px;
+		}
+		@media (max-width: rem(639.98)) {
+			padding: 0px 0px 60% 0px;
+		}
+		@media (max-width: rem(539.98)) {
+			padding: 0px 0px 70% 0px;
+		}
+		@media (max-width: rem(469.98)) {
+			padding: 0px 0px 80% 0px;
+		}
+		@media (max-width: rem(409.98)) {
+			padding: 0px 0px 90% 0px;
+		}
+		@media (max-width: rem(369.98)) {
+			padding: 0px 0px 100% 0px;
+		}
+		@media (max-width: rem(339.98)) {
+			padding: 0px 0px 105% 0px;
+		}
 	}
 	// === NAVIGATION & PAGINATION === //
 
@@ -46,7 +72,6 @@
 		@include adaptiveValue("height", 20, 14, 992, 768, 1);
 		@include adaptiveValue("line-height", 20, 14, 992, 768, 1);
 		background-color: $color-base-1;
-		//border: rem(1) solid $white;
 	}
 	// === SLIDE-ACTIVE === //
 	.swiper-slide-active {
