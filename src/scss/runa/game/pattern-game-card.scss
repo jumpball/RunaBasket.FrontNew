@@ -12,11 +12,9 @@
 	background-color: $color-base-2;
 	background-image: url("@img/RUNA/patterns/patterns-8.svg");
 	background-size: cover;
-	//background-blend-mode: multiply;
 	border-radius: rem(10);
 	overflow: hidden;
 	border: rem(1) solid $color-base-1;
-	//cursor: pointer;
 	transition: all 0.5s ease 0s;
 
 	// = HOVER = //
@@ -51,20 +49,26 @@
 		width: fit-content;
 		margin: 8px 0px 10px 0px;
 		padding: 0px 16px 0px 16px;
-		//border-radius: rem(10);
+		border-radius: rem(5);
+		color: $white;
 		display: flex;
-		@include adaptiveValue("font-size", 18, 14, 1400, 768, 1);
-		@include adaptiveValue("line-height", 24, 18, 1400, 768, 1);
+		font-weight: 700;
+		text-transform: uppercase;
+		@include adaptiveValue("font-size", 22, 18, 1400, 768, 1);
+		@include adaptiveValue("line-height", 24, 20, 1400, 768, 1);
 	}
 	&__subtitle-white {
 		width: fit-content;
 		background-color: $white;
-		margin: 20px 0px 10px 0px;
+		color: $color-base-2;
+		text-transform: uppercase;
+		margin: 0px 0px 2px 0px;
 		padding: 8px 16px 8px 16px;
 		display: flex;
-		@include adaptiveValue("font-size", 18, 14, 1920, 768, 1);
-		@include adaptiveValue("line-height", 24, 18, 1920, 768, 1);
-		border-radius: rem(10);
+		font-weight: 700;
+		@include adaptiveValue("font-size", 22, 18, 1400, 768, 1);
+		@include adaptiveValue("line-height", 24, 20, 1400, 768, 1);
+		border-radius: rem(5);
 
 		p {
 			color: $color-base-2;
@@ -76,11 +80,6 @@
 	&__time {
 		display: inline-block;
 		vertical-align: middle;
-		color: $white;
-		text-transform: uppercase;
-		font-weight: 400;
-		@include adaptiveValue("font-size", 22, 18, 1400, 768, 1);
-		@include adaptiveValue("line-height", 24, 20, 1400, 768, 1);
 	}
 
 	// = BORDERS = //
@@ -111,9 +110,9 @@
 		vertical-align: middle;
 		color: $white;
 		font-weight: 700;
-		@include adaptiveValue("font-size", 40, 20, 1400, 768, 1);
-		@include adaptiveValue("line-height", 56, 20, 1400, 768, 1);
-		padding: 0px 10px 0px 10px;
+		@include adaptiveValue("font-size", 48, 24, 1400, 768, 1);
+		@include adaptiveValue("line-height", 56, 32, 1400, 768, 1);
+		padding: 0px 6px 0px 6px;
 	}
 	&__score-dark {
 		color: $color-base-2;
@@ -121,25 +120,22 @@
 
 	// = TEAMS = //
 	&__teams {
-		padding: 0px 30px 10px 30px;
+		padding: 0px 24px 10px 24px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		@media (max-width: $tablet) {
-			padding: 0px 20px 10px 20px;
+			padding: 0px 16px 10px 16px;
 		}
 		@media (max-width: rem(549.98)) {
-			justify-content: center;
 			gap: rem(10);
 		}
 	}
 
 	&__team-home,
 	&__team-away {
-		@include adaptiveValue("width", 130, 70, 1400, 768, 1);
-		@include adaptiveValue("height", 130, 70, 1400, 768, 1);
-		//width: rem(110);
-		//height: rem(110);
+		@include adaptiveValue("width", 120, 64, 1400, 768, 1);
+		@include adaptiveValue("height", 120, 64, 1400, 768, 1);
 		border-radius: rem(100);
 		background-color: $white;
 		overflow: hidden;
@@ -166,20 +162,24 @@
 		width: 100%;
 		color: $white;
 		text-align: center;
+		font-weight: 400;
 		span {
 			margin: 10px 0px 0px 0px;
-			@include adaptiveValue("font-size", 18, 14, 1920, 768, 1);
-			@include adaptiveValue("line-height", 24, 18, 1920, 768, 1);
+			text-transform: uppercase;
+			@include adaptiveValue("font-size", 16, 14, 1400, 768, 1);
+			@include adaptiveValue("line-height", 22, 20, 1400, 768, 1);
 		}
 	}
 	&__tournament-dark {
 		width: 100%;
 		color: $color-base-2;
 		text-align: center;
+		font-weight: 400;
 		span {
 			margin: 10px 0px 0px 0px;
-			@include adaptiveValue("font-size", 18, 14, 1920, 768, 1);
-			@include adaptiveValue("line-height", 24, 18, 1920, 768, 1);
+			text-transform: uppercase;
+			@include adaptiveValue("font-size", 16, 14, 1400, 768, 1);
+			@include adaptiveValue("line-height", 22, 20, 1400, 768, 1);
 		}
 	}
 }
@@ -187,12 +187,8 @@
 .pattern-game-card-1 {
 	background-color: $color-base-4;
 	background-image: url("@img/RUNA/patterns/patterns-2.svg");
-	//margin-top: rem(20);
-	//padding: 0px 0px 40px 0px;
 }
 .pattern-game-card-2 {
 	background-color: $color-base-4;
 	background-image: url("@img/RUNA/patterns/patterns-3.svg");
-	//margin-top: rem(20);
-	//padding: 0px 0px 40px 0px;
 }
