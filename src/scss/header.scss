@@ -404,11 +404,15 @@
 		}
 	}
 	&__tickets-btn {
+		width: rem(90);
+		height: rem(30);
 		color: $color-base-2;
-		font-size: rem(16);
 		line-height: rem(30);
+		text-align: center;
+		@include adaptiveValue("font-size", 22, 16, 1400, 450, 1);
+		font-weight: 700;
 		text-transform: uppercase;
-		padding: 0px 18px;
+		//padding: 0px 16px;
 		margin: 0px 0px 0px 10px;
 		background-image: url("@img/RUNA/patterns/ticket.svg");
 		background-size: contain;
@@ -591,7 +595,8 @@
 	&__menu-sub-link {
 		display: inline-block;
 		color: $white;
-		font-size: rem(16);
+		font-weight: 700;
+		@include adaptiveValue("font-size", 22, 18, 1600, 991.98, 1);
 		line-height: rem(40);
 		width: 100%;
 		@media (max-width: rem(991.98)) {
@@ -619,11 +624,10 @@
 		line-height: rem(80);
 		white-space: nowrap;
 		height: rem(80);
-		@include adaptiveValue("font-size", 16, 15, 1600, 991.98, 1);
-		//@include adaptiveValue("line-height", 50, 40, 1600, 991.98, 1);
+		font-weight: 700;
+		@include adaptiveValue("font-size", 22, 18, 1600, 991.98, 1);
 		@media (max-width: $tablet) {
-			font-size: 24px;
-			font-weight: 700;
+			font-size: 22px;
 		}
 	}
 
