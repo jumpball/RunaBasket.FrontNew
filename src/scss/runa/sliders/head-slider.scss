@@ -8,6 +8,10 @@
 	min-width: 100%;
 	@media (max-width: rem(767.98)) {
 		grid-column: 1 / 4;
+		min-height: rem(420);
+	}
+	@media (max-width: rem(549.98)) {
+		min-height: rem(400);
 	}
 
 	// === BOX === //
@@ -34,8 +38,11 @@
 		border: rem(1) solid $color-base-1;
 		border-radius: rem(10);
 		overflow: hidden;
-		@media (min-width: rem(1920.98)) {
-			max-width: 100%;
+		// @media (min-width: rem(1920.98)) {
+		// 	max-width: 100%;
+		// }
+		@media (min-width: rem(767.98)) {
+			min-height: rem(420);
 		}
 	}
 	&__link {
@@ -46,6 +53,30 @@
 		position: relative;
 		padding: 0px 0px 66% 0px;
 		overflow: hidden;
+		@media (max-width: rem(991.98)) {
+			padding: 0px 0px 76% 0px;
+		}
+		@media (max-width: rem(879.98)) {
+			padding: 0px 0px 86% 0px;
+		}
+		@media (max-width: rem(767.98)) {
+			padding: 0px 0px 76% 0px;
+		}
+		@media (max-width: rem(649.98)) {
+			padding: 0px 0px 86% 0px;
+		}
+		@media (max-width: rem(499.98)) {
+			padding: 0px 0px 96% 0px;
+		}
+		@media (max-width: rem(449.98)) {
+			padding: 0px 0px 106% 0px;
+		}
+		@media (max-width: rem(409.98)) {
+			padding: 0px 0px 120% 0px;
+		}
+		@media (max-width: rem(369.98)) {
+			padding: 0px 0px 140% 0px;
+		}
 	}
 	// === SLIDE LABEL === //
 	&__slide-label {
@@ -69,13 +100,12 @@
 		@include adaptiveValue("padding-right", 40, 16, 1920, 768, 1);
 		@include adaptiveValue("padding-left", 40, 16, 1920, 768, 1);
 		@include adaptiveValue("padding-bottom", 50, 40, 1920, 768, 1);
-		@include adaptiveValue("font-size", 40, 30, 1920, 768, 1);
-		@include adaptiveValue("line-height", 56, 34, 1920, 768, 1);
-		@include adaptiveValue("letter-spacing", 3, 2, 1920, 768, 1);
+		@include adaptiveValue("font-size", 48, 30, 1920, 768, 1);
+		@include adaptiveValue("line-height", 56, 36, 1920, 768, 1);
 		@media (max-width: rem(767.98)) {
 			@include adaptiveValue("padding-bottom", 30, 10, 767.98, 400, 1);
 			@include adaptiveValue("font-size", 30, 20, 767.98, 400, 1);
-			@include adaptiveValue("line-height", 32, 22, 767.98, 400, 1);
+			@include adaptiveValue("line-height", 32, 24, 767.98, 400, 1);
 		}
 	}
 	&__slide-subtitle {
@@ -110,8 +140,12 @@
 		bottom: rem(20);
 		width: fit-content;
 		//@include adaptiveValue("margin-top", 30, 20, 992, 768, 1);
-		@media (max-width: rem(449.98)) {
-			display: none;
+		@media (max-width: rem(649.98)) {
+			//display: none;
+			left: 60%;
+			//right: rem(20);
+			//width: rem(160);
+			bottom: 92%;
 		}
 	}
 

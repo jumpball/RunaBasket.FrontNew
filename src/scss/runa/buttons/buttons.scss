@@ -78,13 +78,16 @@
 	align-items: center;
 	gap: 10px;
 	height: rem(56);
-	//min-width: rem(220);
-	@include adaptiveValue("min-width", 220, 190, 1920, 768, 1);
+
+	@include adaptiveValue("min-width", 250, 200, 1920, 768, 1);
 	padding: 16px 32px;
 	border-radius: 10px 0px 10px 0px;
-	@include adaptiveValue("font-size", 22, 16, 1920, 768, 1);
-	@include adaptiveValue("line-height", 24, 20, 1920, 768, 1);
+	font-size: rem(22);
+	line-height: rem(24);
 	font-weight: 700;
+	@media (max-width: rem(767.98)) {
+		min-width: rem(220);
+	}
 }
 
 // = CALENDAR BUTTON = //

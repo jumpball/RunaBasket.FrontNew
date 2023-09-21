@@ -2,11 +2,13 @@
 .pattern-game-card {
 	height: 100%;
 	width: 100%;
+	@include adaptiveValue("min-height", 550, 320, 1400, 768, 1);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: stretch;
-	padding: 20px 0px 30px 0px;
+	@include adaptiveValue("padding-top", 40, 20, 1400, 768, 1);
+	@include adaptiveValue("padding-bottom", 40, 20, 1400, 768, 1);
 	background-color: $color-base-2;
 	background-image: url("@img/RUNA/patterns/patterns-8.svg");
 	background-size: cover;
@@ -37,20 +39,22 @@
 		font-weight: 700;
 		color: $white;
 		text-transform: uppercase;
-		@include adaptiveValue("font-size", 40, 18, 1920, 768, 1);
-		@include adaptiveValue("line-height", 56, 20, 1920, 768, 1);
-		@include adaptiveValue("letter-spacing", 3, 2, 1920, 768, 1);
+		@include adaptiveValue("font-size", 48, 30, 1400, 768, 1);
+		@include adaptiveValue("line-height", 56, 36, 1400, 768, 1);
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("font-size", 30, 20, 767.98, 400, 1);
+			@include adaptiveValue("line-height", 32, 24, 767.98, 400, 1);
+		}
 	}
 
 	&__subtitle {
 		width: fit-content;
-		background-color: $white;
-		margin: 20px 0px 10px 0px;
-		padding: 8px 16px 8px 16px;
-		border-radius: rem(10);
+		margin: 8px 0px 10px 0px;
+		padding: 0px 16px 0px 16px;
+		//border-radius: rem(10);
 		display: flex;
-		@include adaptiveValue("font-size", 18, 14, 1920, 768, 1);
-		@include adaptiveValue("line-height", 24, 18, 1920, 768, 1);
+		@include adaptiveValue("font-size", 18, 14, 1400, 768, 1);
+		@include adaptiveValue("line-height", 24, 18, 1400, 768, 1);
 	}
 	&__subtitle-white {
 		width: fit-content;
@@ -72,18 +76,18 @@
 	&__time {
 		display: inline-block;
 		vertical-align: middle;
-		color: $color-base-2;
+		color: $white;
 		text-transform: uppercase;
 		font-weight: 400;
-		@include adaptiveValue("font-size", 18, 14, 1920, 768, 1);
-		@include adaptiveValue("line-height", 24, 18, 1920, 768, 1);
+		@include adaptiveValue("font-size", 22, 18, 1400, 768, 1);
+		@include adaptiveValue("line-height", 24, 20, 1400, 768, 1);
 	}
 
 	// = BORDERS = //
 	&__border {
 		display: inline-block;
 		vertical-align: middle;
-		color: $color-base-1;
+		color: $white;
 		padding: 0px 5px 0px 5px;
 		@include adaptiveValue("font-size", 12, 8, 1920, 768, 1);
 		@include adaptiveValue("line-height", 24, 18, 1920, 768, 1);
@@ -93,8 +97,8 @@
 		vertical-align: middle;
 		color: $white;
 		font-weight: 700;
-		@include adaptiveValue("font-size", 18, 14, 1920, 768, 1);
-		@include adaptiveValue("line-height", 24, 18, 1920, 768, 1);
+		@include adaptiveValue("font-size", 20, 16, 1920, 768, 1);
+		@include adaptiveValue("line-height", 24, 20, 1920, 768, 1);
 		padding: 0px 20px 0px 20px;
 		@media (max-width: $tablet) {
 			padding: 0px 8px 0px 8px;
@@ -107,8 +111,8 @@
 		vertical-align: middle;
 		color: $white;
 		font-weight: 700;
-		@include adaptiveValue("font-size", 40, 20, 1920, 768, 1);
-		@include adaptiveValue("line-height", 56, 20, 1920, 768, 1);
+		@include adaptiveValue("font-size", 40, 20, 1400, 768, 1);
+		@include adaptiveValue("line-height", 56, 20, 1400, 768, 1);
 		padding: 0px 10px 0px 10px;
 	}
 	&__score-dark {
@@ -117,12 +121,12 @@
 
 	// = TEAMS = //
 	&__teams {
-		padding: 0px 20px 10px 20px;
+		padding: 0px 30px 10px 30px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		@media (max-width: $tablet) {
-			padding: 0px 10px 10px 10px;
+			padding: 0px 20px 10px 20px;
 		}
 		@media (max-width: rem(549.98)) {
 			justify-content: center;
@@ -132,8 +136,8 @@
 
 	&__team-home,
 	&__team-away {
-		@include adaptiveValue("width", 130, 70, 1920, 768, 1);
-		@include adaptiveValue("height", 130, 70, 1920, 768, 1);
+		@include adaptiveValue("width", 130, 70, 1400, 768, 1);
+		@include adaptiveValue("height", 130, 70, 1400, 768, 1);
 		//width: rem(110);
 		//height: rem(110);
 		border-radius: rem(100);
@@ -143,7 +147,7 @@
 
 	&__team-home img,
 	&__team-away img {
-		padding: 10px;
+		padding: 8px;
 	}
 
 	// = FOOTER = //
@@ -153,7 +157,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
-		gap: rem(40);
+		gap: rem(20);
 	}
 
 	// = TOURNAMENT & GYM = //
