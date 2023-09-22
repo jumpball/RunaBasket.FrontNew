@@ -26,6 +26,10 @@
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
+		@media (max-width: rem(409.98)) {
+			flex-direction: column;
+			justify-content: flex-end;
+		}
 	}
 	// = INFO = //
 	&__info {
@@ -66,13 +70,17 @@
 		text-transform: uppercase;
 		color: $color-base-4;
 		text-transform: uppercase;
-		@media (max-width: rem(949.98)) {
-			@include adaptiveValue("font-size", 30, 22, 949.98, 768, 1);
-			@include adaptiveValue("line-height", 32, 24, 949.98, 768, 1);
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("font-size", 30, 22, 991.98, 768, 1);
+			@include adaptiveValue("line-height", 32, 24, 991.98, 768, 1);
 		}
 		@media (max-width: rem(767.98)) {
-			@include adaptiveValue("font-size", 34, 30, 767.98, 400, 1);
-			@include adaptiveValue("line-height", 36, 32, 767.98, 400, 1);
+			@include adaptiveValue("font-size", 34, 32, 767.98, 550, 1);
+			@include adaptiveValue("line-height", 36, 34, 767.98, 550, 1);
+		}
+		@media (max-width: rem(549.98)) {
+			@include adaptiveValue("font-size", 40, 30, 549.98, 360, 1);
+			@include adaptiveValue("line-height", 42, 32, 549.98, 360, 1);
 		}
 	}
 	&__surname {
@@ -82,13 +90,17 @@
 		text-transform: uppercase;
 		font-size: 54px;
 		font-style: normal;
-		@media (max-width: rem(949.98)) {
-			@include adaptiveValue("font-size", 54, 40, 949.98, 768, 1);
-			@include adaptiveValue("line-height", 56, 42, 949.98, 768, 1);
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("font-size", 54, 40, 991.98, 768, 1);
+			@include adaptiveValue("line-height", 56, 42, 991.98, 768, 1);
 		}
 		@media (max-width: rem(767.98)) {
 			@include adaptiveValue("font-size", 34, 30, 767.98, 400, 1);
 			@include adaptiveValue("line-height", 36, 32, 767.98, 400, 1);
+		}
+		@media (max-width: rem(549.98)) {
+			@include adaptiveValue("font-size", 40, 30, 549.98, 360, 1);
+			@include adaptiveValue("line-height", 42, 32, 549.98, 360, 1);
 		}
 	}
 
@@ -104,10 +116,15 @@
 		p {
 			color: $color-base-2;
 		}
+		@media (max-width: rem(991.98)) {
+			//border-radius: rem(10) 0px rem(10) 0px;
+			padding: 8px 10px;
+			gap: 4px;
+		}
 		@media (max-width: rem(699.98)) {
 			//border-radius: rem(10) 0px rem(10) 0px;
-			padding: 10px 12px;
-			gap: 5px;
+			//padding: 10px 12px;
+			//gap: 5px;
 		}
 	}
 
@@ -147,11 +164,15 @@
 		color: $color-base-1;
 		text-transform: uppercase;
 		font-weight: 700;
-		@include adaptiveValue("font-size", 22, 16, 1920, 768, 1);
-		@include adaptiveValue("line-height", 24, 18, 1920, 768, 1);
+		@include adaptiveValue("font-size", 22, 16, 1400, 768, 1);
+		@include adaptiveValue("line-height", 24, 18, 1400, 768, 1);
 		@media (max-width: rem(699.98)) {
-			@include adaptiveValue("font-size", 16, 12, 699.98, 320, 1);
-			@include adaptiveValue("line-height", 18, 16, 699.98, 320, 1);
+			@include adaptiveValue("font-size", 16, 14, 699.98, 550, 1);
+			@include adaptiveValue("line-height", 18, 16, 699.98, 550, 1);
+		}
+		@media (max-width: rem(549.98)) {
+			@include adaptiveValue("font-size", 16, 14, 549.98, 360, 1);
+			@include adaptiveValue("line-height", 18, 16, 549.98, 360, 1);
 		}
 	}
 
@@ -196,8 +217,9 @@
 		line-height: 24px; /* 109.091% */
 		text-transform: uppercase;
 		color: $color-base-2;
-		@media (max-width: rem(449.98)) {
-			@include adaptiveValue("font-size", 22, 16, 449.98, 360, 1);
+		@media (max-width: rem(699.98)) {
+			@include adaptiveValue("font-size", 20, 14, 699.98, 420, 1);
+			@include adaptiveValue("line-height", 22, 16, 699.98, 420, 1);
 		}
 	}
 
@@ -209,34 +231,35 @@
 		line-height: normal;
 		text-transform: uppercase;
 		@media (max-width: rem(767.98)) {
-			@include adaptiveValue("font-size", 54, 30, 767.98, 450, 1);
+			@include adaptiveValue("font-size", 54, 30, 767.98, 700, 1);
 		}
-		@media (max-width: rem(449.98)) {
-			@include adaptiveValue("font-size", 30, 24, 449.98, 360, 1);
+		@media (max-width: rem(699.98)) {
+			@include adaptiveValue("font-size", 30, 18, 699.98, 420, 1);
 		}
 	}
 
 	// = PHOTO = //
 	&__photo {
-		width: rem(508);
+		width: rem(500);
 		height: rem(544);
-		//flex-shrink: 0;
-		//background: cover no-repeat;
+		margin-top: -20px;
 		z-index: 2;
 		@include adaptiveValue("margin-left", 100, 300, 1250, 991.98, 1);
-		@media (max-width: rem(991.98)) {
-			@include adaptiveValue("height", 544, 436.91, 991.98, 768, 1);
-			@include adaptiveValue("width", 508, 408, 991.98, 768, 1);
-		}
-		@media (max-width: rem(767.98)) {
-			@include adaptiveValue("margin-top", 140, 120, 767.98, 450, 1);
-		}
+
 		@media (max-width: rem(699.98)) {
-			@include adaptiveValue("margin-left", 200, 0, 699.98, 450, 1);
+			width: rem(363);
+			height: rem(395);
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			//@include adaptiveValue("margin-left", 200, 0, 699.98, 450, 1);
 		}
-		@media (max-width: rem(449.98)) {
-			@include adaptiveValue("height", 436.91, 310.55, 699.98, 320, 1);
-			@include adaptiveValue("width", 408, 290, 699.98, 320, 1);
+		@media (max-width: rem(409.98)) {
+			position: relative;
+			margin-left: 0;
+
+			//@include adaptiveValue("height", 436.91, 310.55, 699.98, 320, 1);
+			//@include adaptiveValue("width", 408, 290, 699.98, 320, 1);
 		}
 	}
 
@@ -245,7 +268,7 @@
 		position: absolute;
 		top: 0;
 		text-align: center;
-		color: $color-base-4;
+		color: $color-base-2;
 		@include adaptiveValue("right", 120, 70, 1920, 991.98, 1);
 		@include adaptiveValue("width", 400, 200, 1920, 991.98, 1);
 		@include adaptiveValue("font-size", 480, 200, 1920, 991.98, 1);

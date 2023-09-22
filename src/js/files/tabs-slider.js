@@ -103,6 +103,10 @@ var swiper = new Swiper('.leaders-slider', {
 	breakpoints: {
 
 		320: {
+			slidesPerView: 1.05,
+			spaceBetween: 10,
+		},
+		549.98: {
 			slidesPerView: 1,
 			spaceBetween: 10,
 		},

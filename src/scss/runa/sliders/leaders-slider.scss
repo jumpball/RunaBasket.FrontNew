@@ -11,7 +11,8 @@
 	// === ITEM === //
 	&__item {
 		width: 100%;
-		height: fit-content;
+		height: rem(544);
+		min-height: rem(544);
 		//border: rem(1) solid $color-base-1;
 		border-radius: rem(10);
 		overflow: hidden;
@@ -31,6 +32,9 @@
 		align-items: center;
 		justify-content: space-between;
 		@include adaptiveValue("gap", 30, 20, 1600, 767.98, 1);
+		@media (max-width: rem(549.98)) {
+			display: none;
+		}
 	}
 	&__nav-prev,
 	&__nav-next {
@@ -62,11 +66,11 @@
 	}
 
 	.swiper-pagination {
+		//display: none;
 		position: relative;
 		margin-top: rem(30);
-		@media (max-width: rem(767.98)) {
-			display: none;
-		}
+		//width: 100%;
+		//height: rem(20);
 	}
 	.swiper-pagination-bullet {
 		width: rem(10);

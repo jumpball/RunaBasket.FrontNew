@@ -107,9 +107,24 @@
 
 // === LEADERS MENU SLIDER === //
 .leaders-menu-slider {
+	@media (max-width: rem(749.98)) {
+		display: none;
+	}
 	// === BOX === //
 	&__box {
 		overflow: hidden;
+		@media (min-width: rem(749.98)) {
+			.nav-select__form-1-box {
+				display: none;
+			}
+		}
+		@media (max-width: rem(749.98)) {
+			overflow: visible;
+			.nav-select__form-1-box {
+				display: block;
+				z-index: 4;
+			}
+		}
 	}
 
 	// === WRAPPER === //

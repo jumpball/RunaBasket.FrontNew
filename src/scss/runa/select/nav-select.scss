@@ -30,6 +30,11 @@
 	}
 
 	// === nav-select FORM === //
+	&__form-1-box {
+		display: grid;
+		grid-template-columns: 1fr;
+		align-items: flex-start;
+	}
 	&__form-2-box {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
