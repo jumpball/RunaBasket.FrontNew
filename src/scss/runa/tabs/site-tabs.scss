@@ -198,51 +198,67 @@
 
 // = TABS VIDEO  = //
 .tabs-video {
-	margin: 20px 0px 20px 0px;
+	position: relative;
+	margin: 20px 0px 30px 0px;
+	@include adaptiveValue("height", 540, 428, 1400, 1195, 1);
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: space-between;
-	gap: rem(10);
+	gap: rem(20);
 	align-items: flex-start;
 	z-index: 2;
+	overflow: hidden;
+	@media (max-width: rem(1194.98)) {
+		@include adaptiveValue("height", 429, 330, 1194.98, 992, 1);
+		gap: rem(15);
+	}
 	@media (max-width: rem(991.98)) {
 		flex-direction: column-reverse;
-		//margin: 20px 0px 20px 0px;
+		height: fit-content;
 	}
-	//@media (max-width: rem(449.98)) {
-	//	margin: 0px 0px 20px 0px;
-	//}
+	@media (max-width: rem(389.98)) {
+		gap: rem(10);
+	}
+
 	// = TABS NAV  = //
 	&__tabs-nav {
-		height: rem(540);
+		@include adaptiveValue("height", 540, 428, 1400, 1195, 1);
 		width: 100%;
-		overflow-y: scroll;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: flex-start;
-		gap: rem(10);
-		@media (max-width: rem(1469.98)) {
-			@include adaptiveValue("height", 538, 320, 1469.98, 992, 1);
+		gap: rem(20);
+		@media (max-width: rem(1194.98)) {
+			@include adaptiveValue("height", 429, 330, 1194.98, 992, 1);
+			gap: rem(15);
+			overflow-y: scroll;
 		}
 		@media (max-width: rem(991.98)) {
 			flex-direction: row;
-			height: rem(102);
+			overflow-x: scroll;
+			height: fit-content;
+			gap: rem(20);
+			max-width: 100%;
 		}
-		@media (max-width: rem(549.98)) {
-			height: rem(180);
+		@media (max-width: rem(699.98)) {
+			gap: rem(15);
+		}
+		@media (max-width: rem(389.98)) {
+			gap: rem(10);
 		}
 	}
 	&__tabs-nav::-webkit-scrollbar {
-		display: none;
+		//display: none;
 	}
 
 	&__tabs-title-box {
+		position: relative;
 		overflow: hidden;
-		min-height: rem(100);
+		@include adaptiveValue("height", 120, 92, 1400, 1195, 1);
+		@include adaptiveValue("min-height", 120, 92, 1400, 1195, 1);
 		width: 100%;
-		min-width: 100%;
-		//min-width: rem(420);
+		min-height: rem(92);
 		border: rem(1) solid $color-base-1;
 		border-radius: rem(10);
 		color: $white;
@@ -251,30 +267,59 @@
 		align-items: flex-start;
 		justify-content: flex-start;
 		z-index: 2;
-		@media (max-width: rem(991.98)) {
-			min-height: rem(95);
-			min-width: rem(400);
-			//min-height: 100%;
-			//min-width: 100%;
+		@media (max-width: rem(1194.98)) {
+			@include adaptiveValue("height", 133, 100, 1194.98, 992, 1);
+			@include adaptiveValue("min-height", 133, 100, 1194.98, 992, 1);
 		}
-		@media (max-width: rem(549.98)) {
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("height", 120, 100, 991.98, 700, 1);
+			@include adaptiveValue("min-height", 120, 100, 991.98, 700, 1);
+			@include adaptiveValue("min-width", 470, 325, 991.98, 700, 1);
+		}
+		@media (max-width: rem(699.98)) {
 			flex-direction: column;
-			@include adaptiveValue("font-size", 12, 10, 549.98, 340, 1);
-			@include adaptiveValue("min-width", 170, 140, 549.98, 340, 1);
-			min-height: 100%;
+			min-height: fit-content;
+			height: fit-content;
+			@include adaptiveValue("min-width", 213, 170, 699.98, 570, 1);
+			@include adaptiveValue("width", 213, 170, 699.98, 570, 1);
+		}
+		@media (max-width: rem(569.98)) {
+			@include adaptiveValue("min-width", 262.5, 170, 569.98, 390, 1);
+			@include adaptiveValue("width", 262.5, 170, 569.98, 390, 1);
+		}
+		@media (max-width: rem(389.98)) {
+			@include adaptiveValue("min-width", 290, 220, 389.98, 330, 1);
+			@include adaptiveValue("width", 290, 220, 389.98, 330, 1);
 		}
 	}
 
 	&__tabs-mini-img {
-		height: rem(98);
-		min-width: rem(177);
-		@media (max-width: rem(991.98)) {
-			height: rem(93);
-			min-width: rem(170);
+		@include adaptiveValue("height", 120, 92, 1400, 1195, 1);
+		@include adaptiveValue("min-width", 184, 141, 1400, 1195, 1);
+
+		@media (max-width: rem(1194.98)) {
+			@include adaptiveValue("height", 133, 100, 1194.98, 992, 1);
+			@include adaptiveValue("min-width", 203, 153, 1194.98, 992, 1);
 		}
-		@media (max-width: rem(549.98)) {
-			@include adaptiveValue("min-width", 170, 140, 549.98, 340, 1);
-			@include adaptiveValue("height", 95, 78, 549.98, 340, 1);
+		@media (max-width: rem(991.98)) {
+			@include adaptiveValue("height", 120, 100, 991.98, 700, 1);
+			@include adaptiveValue("width", 184, 153, 991.98, 700, 1);
+			min-width: none;
+		}
+		@media (max-width: rem(699.98)) {
+			@include adaptiveValue("min-width", 213, 170, 699.98, 570, 1);
+			@include adaptiveValue("width", 213, 170, 699.98, 570, 1);
+			@include adaptiveValue("height", 139, 111, 699.98, 570, 1);
+		}
+		@media (max-width: rem(569.98)) {
+			@include adaptiveValue("min-width", 262.5, 170, 569.98, 390, 1);
+			@include adaptiveValue("width", 262.5, 170, 569.98, 390, 1);
+			@include adaptiveValue("height", 171.2, 111, 569.98, 390, 1);
+		}
+		@media (max-width: rem(389.98)) {
+			@include adaptiveValue("min-width", 290, 220, 389.98, 330, 1);
+			@include adaptiveValue("width", 290, 220, 389.98, 330, 1);
+			@include adaptiveValue("height", 189, 143.5, 389.98, 330, 1);
 		}
 	}
 
@@ -284,40 +329,46 @@
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: flex-start;
-		@media (max-width: rem(549.98)) {
-			padding: 8px 6px 8px 6px;
+		@media (max-width: rem(991.98)) {
+			width: 100%;
+		}
+		@media (max-width: rem(699.98)) {
+			height: rem(100);
+		}
+		@media (max-width: rem(389.98)) {
+			height: rem(85);
 		}
 	}
 
 	&__tag {
-		font-size: rem(16);
+		font-size: rem(22);
 		text-align: left;
 		text-transform: uppercase;
-		line-height: 150%;
-		font-weight: 900;
-		letter-spacing: rem(1.2);
-		//border-bottom: rem(1) solid $sa_silver;
+		line-height: rem(24);
+		font-weight: 700;
+		@media (max-width: rem(1194.98)) {
+			font-size: rem(20);
+		}
 		@media (max-width: rem(991.98)) {
-			font-size: rem(14);
-			font-weight: 700;
+			font-size: rem(22);
 		}
 		@media (max-width: rem(549.98)) {
-			@include adaptiveValue("font-size", 12, 10, 549.98, 340, 1);
-			font-weight: 500;
+			//@include adaptiveValue("font-size", 12, 10, 549.98, 340, 1);
+			//font-weight: 500;
 		}
 	}
 
 	&__tabs-title {
 		display: inline-block;
 		padding: 4px 0px 0px 0px;
-		font-size: rem(15);
+		font-size: rem(16);
 		text-align: left;
-		line-height: 120%;
+		line-height: rem(20);
+
 		@media (max-width: rem(991.98)) {
-			font-size: rem(14);
+			@include adaptiveValue("font-size", 18, 16, 991.98, 700, 1);
 		}
-		@media (max-width: rem(549.98)) {
-			@include adaptiveValue("font-size", 12, 10, 549.98, 340, 1);
+		@media (max-width: rem(569.98)) {
 		}
 	}
 
@@ -332,21 +383,20 @@
 	}
 
 	&__box {
-		width: rem(960);
-		//height: rem(540);
-		height: auto;
+		//width: rem(960);
+		@include adaptiveValue("width", 960, 760, 1400, 1195, 1);
+		@include adaptiveValue("height", 540, 428, 1400, 1195, 1);
 		position: relative;
-		aspect-ratio: 16/9;
-		overflow: hidden;
+		padding: 0px 0px 56% 0px;
 		z-index: 2;
-		@media (max-width: rem(1469.98)) {
-			//padding: 0px 0px 56% 0px;
-			@include adaptiveValue("width", 960, 560, 1469.98, 992, 1);
-			//@include adaptiveValue("height", 540, 320, 1469.98, 992, 1);
+		@media (max-width: rem(1194.98)) {
+			@include adaptiveValue("height", 429, 330, 1194.98, 992, 1);
+			@include adaptiveValue("width", 760, 586, 1194.98, 992, 1);
 		}
+
 		@media (max-width: rem(991.98)) {
 			@include adaptiveValue("width", 960, 290, 991.98, 320, 1);
-			//@include adaptiveValue("height", 540, 162, 991.98, 320, 1);
+			@include adaptiveValue("height", 540, 163, 991.98, 320, 1);
 		}
 	}
 	&__box video,
