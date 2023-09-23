@@ -268,6 +268,7 @@
 		width: rem(40);
 		height: rem(40);
 		margin: 0 auto;
+		overflow: hidden;
 	}
 	&__arrow {
 		position: relative;
@@ -293,6 +294,7 @@
 		margin: 0 auto;
 		border-radius: rem(100);
 		background-color: $white;
+		overflow: hidden;
 	}
 	&__image-1 img {
 		padding: rem(4);
