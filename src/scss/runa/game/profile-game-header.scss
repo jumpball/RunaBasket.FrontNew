@@ -65,7 +65,7 @@
 		background-color: $color-base-5;
 		border-radius: 100%;
 		border: rem(1) solid $color-base-4;
-
+		overflow: hidden;
 		@include adaptiveValue("height", 200, 180, 1600, 992, 1);
 		@include adaptiveValue("width", 200, 180, 1600, 992, 1);
 		@media (max-width: rem(767.98)) {

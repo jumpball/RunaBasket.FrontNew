@@ -4,14 +4,15 @@
 .sidebar-banner-slider {
 	margin: 0px 0px 15px 0px;
 	max-height: rem(572);
-	@media (max-width: rem(1249.98)) {
-		max-height: rem(788);
-	}
-	@media (max-width: rem(1149.98)) {
-		max-height: rem(990);
-	}
+	// @media (max-width: rem(1249.98)) {
+	// 	max-height: rem(788);
+	// }
+	// @media (max-width: rem(1149.98)) {
+	// 	max-height: rem(990);
+	// }
 	@media (max-width: rem(991.98)) {
-		max-height: none;
+		//max-height: none;
+		display: none;
 	}
 
 	// = BOX = //

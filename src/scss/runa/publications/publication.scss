@@ -104,6 +104,28 @@
 			flex-direction: column-reverse;
 		}
 	}
+	&__video-box {
+		// = ICONS = //
+		.publication__icons {
+			margin: 20px 0px 0px 0px;
+			width: 100%;
+			height: rem(54);
+			grid-row: 2 / span 1;
+		}
+		.publication__icons-list {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+		}
+
+		.publication__icons-link {
+			cursor: pointer;
+			margin-bottom: 0px;
+			display: block;
+			width: rem(56);
+			height: rem(56);
+		}
+	}
 
 	// = CONTENT = //
 	&__content {

@@ -35,7 +35,7 @@ var CalendarSwiper = new Swiper('.calendar-slider', {
 	},
 	breakpoints: {
 		320: {
-			slidesPerView: 1.05,
+			slidesPerView: 1.1,
 			spaceBetween: 10,
 		},
 		549.98: {
@@ -976,7 +976,7 @@ var SidebarBannerSwiper = new Swiper('.sidebar-banner-slider', {
 	slideToClickedSlide: true,
 	//autoHeight: true,
 	//centeredSlides: true,
-
+	direction: 'vertical',
 	autoplay: {
 		delay: 6000,
 		stopOnLastSlide: false,
@@ -996,30 +996,30 @@ var SidebarBannerSwiper = new Swiper('.sidebar-banner-slider', {
 	},
 	breakpoints: {
 		320: {
-			slidesPerView: 1,
-			spaceBetween: 16,
-			direction: 'horizontal',
-		},
-		599.98: {
-			slidesPerView: 2,
-			spaceBetween: 16,
-			direction: 'horizontal',
-		},
-		991.98: {
-			slidesPerView: 5,
-			spaceBetween: 16,
-			direction: 'vertical',
-		},
-		1149.98: {
-			slidesPerView: 4,
-			spaceBetween: 16,
-			direction: 'vertical',
-		},
-		1249.98: {
 			slidesPerView: 3,
 			spaceBetween: 16,
-			direction: 'vertical',
+			//direction: 'horizontal',
 		},
+		// 599.98: {
+		// 	slidesPerView: 2,
+		// 	spaceBetween: 16,
+		// 	direction: 'horizontal',
+		// },
+		// 991.98: {
+		// 	slidesPerView: 3,
+		// 	spaceBetween: 16,
+		// 	direction: 'vertical',
+		// },
+		// 1149.98: {
+		// 	slidesPerView: 3,
+		// 	spaceBetween: 16,
+		// 	direction: 'vertical',
+		// },
+		// 1249.98: {
+		// 	slidesPerView: 3,
+		// 	spaceBetween: 16,
+		// 	direction: 'vertical',
+		// },
 	}
 });
 

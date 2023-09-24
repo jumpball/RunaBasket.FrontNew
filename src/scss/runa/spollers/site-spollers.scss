@@ -70,14 +70,19 @@
 
 	// = LOGO = //
 	&__logo {
+		background-color: $color-base-5;
+		border-radius: rem(5);
+		overflow: hidden;
 		@include adaptiveValue("height", 60, 50, 1600, 992, 1);
 		@include adaptiveValue("width", 60, 50, 1600, 992, 1);
 		@media (max-width: rem(767.98)) {
-			@include adaptiveValue("height", 50, 40, 767.98, 340, 1);
-			@include adaptiveValue("width", 50, 40, 767.98, 340, 1);
+			@include adaptiveValue("height", 50, 45, 767.98, 340, 1);
+			@include adaptiveValue("width", 50, 45, 767.98, 340, 1);
 		}
 	}
-
+	&__logo img {
+		padding: 5px;
+	}
 	// = DESC = //
 	&__desc {
 		display: flex;
