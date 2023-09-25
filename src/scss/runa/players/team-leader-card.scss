@@ -15,6 +15,9 @@
 	border: rem(1) solid $color-base-1;
 	cursor: pointer;
 	transition: all 0.5s ease 0s;
+	@media (max-width: rem(699.98)) {
+		min-height: rem(544);
+	}
 
 	// = HOVER = //
 	&:hover {
