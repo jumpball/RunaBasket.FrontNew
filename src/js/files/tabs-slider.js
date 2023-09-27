@@ -56,13 +56,14 @@ var swiper = new Swiper('.team-slider', {
 	},
 	breakpoints: {
 		320: {
+			slidesPerView: 1.1,
+
+		},
+		359.98: {
 			slidesPerView: 2.1,
 			spaceBetween: 10,
 		},
-		509.98: {
-			slidesPerView: 2.1,
-			spaceBetween: 10,
-		},
+
 		879.98: {
 			slidesPerView: 3,
 			spaceBetween: 10,

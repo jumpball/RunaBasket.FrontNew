@@ -228,9 +228,13 @@
 		margin: 6px 0px 0px 0px;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
 		gap: rem(4);
+		min-height: rem(40);
+		@media (max-width: rem(479.98)) {
+			min-height: rem(30);
+		}
 		span {
 			display: inline-block;
 			font-family: $fontFamily;
