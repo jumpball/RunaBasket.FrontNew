@@ -6,7 +6,7 @@
 	display: flex;
 	justify-content: center;
 	padding: 20px 0px 0px 0px;
-	background-color: $color-base-1;
+	//background-color: $color-base-1;
 	background-image: url("@img/RUNA/patterns/patterns-7.svg");
 	background-size: cover;
 	background-blend-mode: multiply;
@@ -47,7 +47,7 @@
 		gap: rem(20);
 		@media (max-width: rem(767.98)) {
 			@include adaptiveValue("top", 40, 16, 767.98, 400, 1);
-			@include adaptiveValue("left", 40, 16, 767.98, 400, 1);
+			@include adaptiveValue("left", 40, 10, 767.98, 400, 1);
 		}
 		@media (max-width: rem(699.98)) {
 			height: 93%;
@@ -101,6 +101,10 @@
 			@include adaptiveValue("font-size", 34, 30, 767.98, 400, 1);
 			@include adaptiveValue("line-height", 36, 32, 767.98, 400, 1);
 		}
+		@media (max-width: rem(699.98)) {
+			@include adaptiveValue("font-size", 54, 40, 699.98, 550, 1);
+			@include adaptiveValue("line-height", 56, 42, 699.98, 550, 1);
+		}
 		@media (max-width: rem(549.98)) {
 			@include adaptiveValue("font-size", 40, 30, 549.98, 360, 1);
 			@include adaptiveValue("line-height", 42, 32, 549.98, 360, 1);
@@ -118,16 +122,14 @@
 		border-radius: rem(10) 0px rem(10) 0px;
 		p {
 			color: $color-base-2;
+			@media (max-width: rem(699.98)) {
+				//@include adaptiveValue("font-size", 18, 16, 699.98, 550, 1);
+				@include adaptiveValue("line-height", 20, 18, 699.98, 550, 1);
+			}
 		}
 		@media (max-width: rem(991.98)) {
-			//border-radius: rem(10) 0px rem(10) 0px;
 			padding: 8px 10px;
 			gap: 4px;
-		}
-		@media (max-width: rem(699.98)) {
-			//border-radius: rem(10) 0px rem(10) 0px;
-			//padding: 10px 12px;
-			//gap: 5px;
 		}
 	}
 
@@ -170,8 +172,8 @@
 		@include adaptiveValue("font-size", 22, 16, 1400, 768, 1);
 		@include adaptiveValue("line-height", 24, 18, 1400, 768, 1);
 		@media (max-width: rem(699.98)) {
-			@include adaptiveValue("font-size", 16, 14, 699.98, 550, 1);
-			@include adaptiveValue("line-height", 18, 16, 699.98, 550, 1);
+			@include adaptiveValue("font-size", 18, 16, 699.98, 550, 1);
+			@include adaptiveValue("line-height", 20, 18, 699.98, 550, 1);
 		}
 		@media (max-width: rem(549.98)) {
 			@include adaptiveValue("font-size", 16, 14, 549.98, 360, 1);
@@ -202,6 +204,7 @@
 		justify-content: center;
 		align-items: flex-start;
 		gap: 2px;
+		border: rem(1) solid $color-base-1;
 		border-radius: 15px 0px;
 		@media (max-width: rem(699.98)) {
 			@include adaptiveValue("width", 140, 115, 767.98, 450, 1);
@@ -221,8 +224,8 @@
 		text-transform: uppercase;
 		color: $color-base-2;
 		@media (max-width: rem(699.98)) {
-			@include adaptiveValue("font-size", 20, 14, 699.98, 420, 1);
-			@include adaptiveValue("line-height", 22, 16, 699.98, 420, 1);
+			@include adaptiveValue("font-size", 20, 18, 699.98, 420, 1);
+			@include adaptiveValue("line-height", 22, 20, 699.98, 420, 1);
 		}
 	}
 
@@ -237,7 +240,7 @@
 			@include adaptiveValue("font-size", 54, 30, 767.98, 700, 1);
 		}
 		@media (max-width: rem(699.98)) {
-			@include adaptiveValue("font-size", 30, 18, 699.98, 420, 1);
+			@include adaptiveValue("font-size", 30, 24, 699.98, 420, 1);
 		}
 	}
 
@@ -289,9 +292,9 @@
 			@include adaptiveValue("letter-spacing", 4, 2, 991.98, 768, 1);
 		}
 
-		@media (max-width: rem(767.98)) {
+		@media (max-width: rem(699.98)) {
 			//@include adaptiveValue("width", 180, 100, 767.98, 450, 1);
-			//@include adaptiveValue("font-size", 180, 100, 767.98, 450, 1);
+			@include adaptiveValue("font-size", 200, 160, 699.98, 450, 1);
 			//@include adaptiveValue("line-height", 180, 100, 767.98, 450, 1);
 		}
 
