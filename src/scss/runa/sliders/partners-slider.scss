@@ -39,36 +39,36 @@
 	// }
 
 	&__image-1 {
-		@include adaptiveValue("width", 200, 150, 1600, 320, 1);
-		@include adaptiveValue("height", 68, 51, 1600, 320, 1);
+		//@include adaptiveValue("width", 200, 150, 1600, 320, 1);
+		//@include adaptiveValue("height", 68, 51, 1600, 320, 1);
 	}
 	&__image-2 {
-		@include adaptiveValue("width", 200, 150, 1600, 320, 1);
-		@include adaptiveValue("height", 33, 24.73, 1600, 320, 1);
+		//@include adaptiveValue("width", 200, 150, 1600, 320, 1);
+		//@include adaptiveValue("height", 33, 24.73, 1600, 320, 1);
 	}
 	&__image-3 {
-		@include adaptiveValue("width", 150, 130, 1600, 320, 1);
-		@include adaptiveValue("height", 52.5, 45.5, 1600, 320, 1);
+		//@include adaptiveValue("width", 150, 130, 1600, 320, 1);
+		//@include adaptiveValue("height", 52.5, 45.5, 1600, 320, 1);
 	}
 	&__image-4 {
-		@include adaptiveValue("width", 200, 150, 1600, 320, 1);
-		@include adaptiveValue("height", 44.88, 33.66, 1600, 320, 1);
+		//@include adaptiveValue("width", 200, 150, 1600, 320, 1);
+		//@include adaptiveValue("height", 44.88, 33.66, 1600, 320, 1);
 	}
 	&__image-5 {
-		@include adaptiveValue("width", 200, 150, 1600, 320, 1);
-		@include adaptiveValue("height", 78, 58.8, 1600, 320, 1);
+		//@include adaptiveValue("width", 200, 150, 1600, 320, 1);
+		//@include adaptiveValue("height", 78, 58.8, 1600, 320, 1);
 	}
 	&__image-6 {
-		@include adaptiveValue("width", 200, 150, 1600, 320, 1);
-		@include adaptiveValue("height", 22.86, 17.14, 1600, 320, 1);
+		//@include adaptiveValue("width", 200, 150, 1600, 320, 1);
+		//@include adaptiveValue("height", 22.86, 17.14, 1600, 320, 1);
 	}
 	&__image-7 {
-		@include adaptiveValue("width", 150, 130, 1600, 320, 1);
-		@include adaptiveValue("height", 81, 70.2, 1600, 320, 1);
+		//@include adaptiveValue("width", 150, 130, 1600, 320, 1);
+		//@include adaptiveValue("height", 81, 70.2, 1600, 320, 1);
 	}
 	&__image-8 {
-		@include adaptiveValue("width", 150, 120, 1600, 320, 1);
-		@include adaptiveValue("height", 123.78, 99.03, 1600, 320, 1);
+		//@include adaptiveValue("width", 150, 120, 1600, 320, 1);
+		//@include adaptiveValue("height", 123.78, 99.03, 1600, 320, 1);
 	}
 	&__image-9 {
 		@include adaptiveValue("width", 200, 150, 1600, 320, 1);
@@ -90,6 +90,9 @@
 	&__image-8,
 	&__image-9,
 	&__image-10 {
+		width: rem(220);
+		height: rem(130);
+
 		@media (any-hover: hover) {
 			&:hover {
 				.partners-slider__img-hover {

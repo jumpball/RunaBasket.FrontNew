@@ -664,12 +664,12 @@ var swiper = new Swiper('.video-slider', {
 	observeParents: true,
 	observeSlideChildren: true,
 	//freeMode: true,
-	loop: true,
+	loop: false,
 	//slideToClickedSlide: true,
 	//autoHeight: true,
 	//centeredSlides: true,
 	autoplay: {
-		delay: 7000,
+		delay: 12000,
 		stopOnLastSlide: false,
 		disableOnInteraction: false,
 	},
@@ -684,21 +684,21 @@ var swiper = new Swiper('.video-slider', {
 		prevEl: '.video-slider__nav-prev',
 		nextEl: '.video-slider__nav-next',
 	},
-	breakpoints: {
-		320: {
-			slidesPerView: 1,
+	// breakpoints: {
+	// 	320: {
+	// 		slidesPerView: 1,
 
-		},
-		679.98: {
-			slidesPerView: 2,
+	// 	},
+	// 	679.98: {
+	// 		slidesPerView: 2,
 
-			//centeredSlides: false,
-		},
-		991.98: {
-			slidesPerView: 3,
+	// 		//centeredSlides: false,
+	// 	},
+	// 	991.98: {
+	// 		slidesPerView: 3,
 
-		},
-	}
+	// 	},
+	// }
 });
 
 // === TEAM LEADER SLIDER === //
