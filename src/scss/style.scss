@@ -304,6 +304,32 @@ ul.page__breadcrumb li a:hover {
 	}
 }
 
+.site-error {
+	&__block {
+		margin-top: 200px;
+		margin-bottom: 60px;
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("margin-top", 200, 140, 767.98, 320, 1);
+		}
+	}
+
+	&__box {
+		width: 100%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__image {
+		width: rem(420);
+		height: rem(260);
+		@media (max-width: rem(767.98)) {
+			@include adaptiveValue("width", 420, 260, 767.98, 320, 1);
+			@include adaptiveValue("height", 260, 160.95, 767.98, 320, 1);
+		}
+	}
+}
+
 // Borders ======================================================================================================================================================================================================================
 .border__runa-1-white {
 	height: rem(16);

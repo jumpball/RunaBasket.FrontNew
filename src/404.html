@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/runa/_head.htm',{
+"title":"404"
+})
+<!-- BODY -->
+
+<body>
+	<!-- WRAPPER -->
+	<div data-sticky class="wrapper">
+		<!-- HEADER -->
+		@@include('html/runa/_header.htm',{})
+		<!-- MAIN - PAGE -->
+		<main class="page">
+
+			<!-- ОШИБКА 404 -->
+			<div class="first-section site-bg section-offset">
+				<div class="section__container">
+
+					<div class="site-error__block">
+						<h2 class="section-title section-title-h1 section-title-center section-title-white element-animation">
+							Ошибка</h2>
+						<div class="site-error__box">
+							<div class="site-error__image -ibg">
+								<img data-src="@img/RUNA/banner/404.svg" alt="">
+							</div>
+						</div>
+						<h2 class="section-title section-title-h1 section-title-center section-title-white element-animation">
+							страница в разработке</h2>
+					</div>
+					<div class="button__box-center">
+						<!-- === BUTTON - ALL PUBLICATION === -->
+						<button type="button" class="base-button cards-button grey-button">на главную</button>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- PARTNERS -->
+			<section class="site-bg section-offset">
+				<div class="section__container">
+					<div class="publication-selector__title-block">
+						<h2 class="section-title section-title-h1 section-title-white section-title-center element-animation">
+							партнеры</h2>
+					</div>
+					@@include('html/runa/_partners-slider.htm',{})
+				</div>
+			</section>
+		</main>
+
+		<!-- FOOTER -->
+		@@include('html/runa/_footer.htm',{})
+	</div>
+	@@include('html/runa/_popup.htm',{})
+	@@include('html/runa/_js.htm',{})
+</body>
+
+</html>
